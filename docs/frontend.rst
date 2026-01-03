@@ -1,7 +1,8 @@
 Frontend - React + TypeScript
 =============================
 
-El frontend es una **SPA** construida con React 18, TypeScript y Vite.
+El frontend es una **SPA estática** construida con React 18, TypeScript y Vite,
+desplegada en Cloudflare Workers.
 
 Estructura del Proyecto
 -----------------------
@@ -13,8 +14,7 @@ Estructura del Proyecto
     ├── package.json          # Dependencias npm
     ├── vite.config.ts        # Configuración Vite
     ├── tsconfig.json         # Configuración TypeScript
-    ├── .env                  # Variables de entorno (no commitear)
-    ├── .env.example          # Plantilla de variables
+    ├── wrangler.jsonc        # Configuración Cloudflare Workers
     ├── public/               # Assets estáticos
     └── src/
         ├── main.tsx          # Entry point React
@@ -29,8 +29,10 @@ Estructura del Proyecto
         │   ├── Skills.css
         │   ├── Contact.tsx   # Página de contacto
         │   └── Contact.css
+        ├── data/
+        │   └── portfolio.ts  # Datos estáticos del portfolio
         └── utils/
-            └── analytics.ts  # Google Analytics 4
+            └── analytics.ts  # Logging en desarrollo
 
 Configuración
 -------------
@@ -49,28 +51,24 @@ Dependencias Principales
       "devDependencies": {
         "@vitejs/plugin-react": "^4.x",
         "typescript": "^5.x",
-        "vite": "^5.x"
+        "vite": "^5.x",
+        "wrangler": "^4.x"
       }
     }
 
-Proxy de API
-^^^^^^^^^^^^
+Datos Estáticos
+^^^^^^^^^^^^^^^
 
-Configurado en ``vite.config.ts``:
+Todos los datos del portfolio están en ``src/data/portfolio.ts``:
 
 .. code-block:: typescript
 
-    export default defineConfig({
-      plugins: [react()],
-      server: {
-        proxy: {
-          '/api': {
-            target: 'http://localhost:8000',
-            changeOrigin: true
-          }
-        }
-      }
-    })
+    // Importar datos en componentes
+    import * as portfolio from './data/portfolio'
+    
+    // Usar directamente
+    <h1>{portfolio.personalInfo.name}</h1>
+    <p>{portfolio.hero.headline}</p>
 
 Componentes
 -----------
@@ -128,7 +126,13 @@ Información de contacto con:
 - LinkedIn
 - GitHub
 
-Flujo de Navegación
--------------------
+Build y Despliegue
+------------------
 
-.. uml:: 05_sequence_navigation.puml
+.. code-block:: bash
+
+    # Build de producción
+    npm run build
+    
+    # Desplegar a Cloudflare Workers
+    npx wrangler deploy

@@ -9,18 +9,24 @@ package "Frontend" #LightBlue {
     component "CSS3" as css
 }
 
-package "Backend" #LightGreen {
-    component "Python 3.x" as python
-    component "FastAPI" as fastapi
-    component "Pydantic" as pydantic
-    component "Uvicorn" as uvicorn
+package "Hosting & Infrastructure" #LightGreen {
+    component "Cloudflare Workers" as workers
+    component "Cloudflare CDN" as cdn
+    component "Cloudflare Analytics" as analytics
+    component "Cloudflare Registrar" as registrar
 }
 
 package "Development Tools" #LightYellow {
     component "VS Code" as vscode
     component "npm" as npm
-    component "pip" as pip
+    component "Wrangler CLI" as wrangler
     component "Git" as git
+    component "GitHub" as github
+}
+
+package "Documentation" #LightCoral {
+    component "Sphinx" as sphinx
+    component "PlantUML" as plantuml
 }
 
 react --> ts : typed with
@@ -28,8 +34,11 @@ react --> vite : bundled by
 react --> router : routing
 react --> css : styled with
 
-fastapi --> python : built with
-fastapi --> pydantic : models
-fastapi --> uvicorn : served by
+vite --> workers : deployed to
+workers --> cdn : cached by
+cdn --> analytics : tracked by
+
+wrangler --> workers : deploys to
+git --> github : pushes to
 
 @enduml

@@ -6,30 +6,14 @@ Arquitectura de Despliegue
 
 .. uml:: 06_deployment.puml
 
+El sitio está desplegado en **Cloudflare Workers** con dominio personalizado.
+
+- **URL**: https://alejandroquilez.dev
+- **CDN**: Cloudflare (global edge network)
+- **SSL**: Automático via Cloudflare
+
 Desarrollo Local
 ----------------
-
-Backend
-^^^^^^^
-
-.. code-block:: bash
-
-    cd backend
-    
-    # Crear entorno virtual
-    python -m venv .venv
-    
-    # Activar entorno (Windows)
-    .venv\Scripts\activate
-    
-    # Instalar dependencias
-    pip install -r requirements.txt
-    
-    # Ejecutar servidor
-    uvicorn main:app --reload --port 8000
-
-Frontend
-^^^^^^^^
 
 .. code-block:: bash
 
@@ -41,105 +25,72 @@ Frontend
     # Ejecutar servidor de desarrollo
     npm run dev
 
-Puertos
-^^^^^^^
+El servidor de desarrollo estará en http://localhost:5173
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Servicio
-     - Puerto
-   * - Frontend (Vite)
-     - 5173 (o 5174 si ocupado)
-   * - Backend (FastAPI)
-     - 8000
-
-Producción
-----------
-
-Build del Frontend
-^^^^^^^^^^^^^^^^^^
+Build de Producción
+-------------------
 
 .. code-block:: bash
 
     cd frontend
+    
+    # Generar build optimizado
     npm run build
 
 Los archivos estáticos se generan en ``frontend/dist/``.
 
-Opciones de Despliegue
-^^^^^^^^^^^^^^^^^^^^^^
+Despliegue a Cloudflare
+-----------------------
 
-**Frontend:**
+**Requisitos:**
 
-- Vercel
-- Netlify
-- GitHub Pages
-- AWS S3 + CloudFront
+- Cuenta de Cloudflare
+- Wrangler CLI (incluido en devDependencies)
 
-**Backend:**
+**Comandos:**
 
-- Railway
-- Render
-- AWS Lambda + API Gateway
-- Google Cloud Run
-- Azure App Service
+.. code-block:: bash
 
-Docker (Opcional)
-^^^^^^^^^^^^^^^^^
+    cd frontend
+    
+    # Login en Cloudflare (primera vez)
+    npx wrangler login
+    
+    # Desplegar
+    npm run build
+    npx wrangler deploy
 
-**Dockerfile Backend:**
+**Configuración** (``wrangler.jsonc``):
 
-.. code-block:: dockerfile
+.. code-block:: json
 
-    FROM python:3.14-slim
-    WORKDIR /app
-    COPY backend/requirements.txt .
-    RUN pip install --no-cache-dir -r requirements.txt
-    COPY backend/ .
-    EXPOSE 8000
-    CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+    {
+      "name": "cv",
+      "compatibility_date": "2026-01-03",
+      "assets": {
+        "directory": "./dist"
+      }
+    }
 
-**Dockerfile Frontend:**
+Dominio Personalizado
+---------------------
 
-.. code-block:: dockerfile
+El dominio ``alejandroquilez.dev`` está registrado en Cloudflare Registrar y 
+configurado para apuntar al Worker.
 
-    FROM node:20-alpine as build
-    WORKDIR /app
-    COPY frontend/package*.json ./
-    RUN npm ci
-    COPY frontend/ .
-    RUN npm run build
+**Configuración DNS:**
 
-    FROM nginx:alpine
-    COPY --from=build /app/dist /usr/share/nginx/html
-    EXPOSE 80
-    CMD ["nginx", "-g", "daemon off;"]
+- CNAME: ``@`` → ``cv.alexquilezz.workers.dev``
+- Proxy: Activado (orange cloud)
 
-Variables de Entorno
---------------------
+Analytics
+---------
 
-**Backend:**
+Cloudflare proporciona analytics integrados sin necesidad de código adicional:
 
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
+- Visitas y visitantes únicos
+- Países de origen
+- Dispositivos y navegadores
+- Sin cookies, RGPD compliant
 
-   * - Variable
-     - Descripción
-   * - PORT
-     - Puerto del servidor (default: 8000)
-   * - CORS_ORIGINS
-     - Orígenes permitidos para CORS
-
-**Frontend:**
-
-.. list-table::
-   :widths: 30 70
-   :header-rows: 1
-
-   * - Variable
-     - Descripción
-   * - VITE_API_URL
-     - URL del backend API
+Acceso en: Cloudflare Dashboard → Workers → cv → Analytics

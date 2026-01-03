@@ -4,7 +4,8 @@ Arquitectura del Sistema
 Visión General
 --------------
 
-El proyecto sigue una arquitectura **cliente-servidor** con separación clara entre frontend y backend.
+El proyecto es una **aplicación web 100% estática** desplegada en Cloudflare Workers.
+No requiere backend - todos los datos están embebidos en el bundle de JavaScript.
 
 .. uml:: 01_architecture_overview.puml
 
@@ -21,48 +22,41 @@ El frontend es una **Single Page Application (SPA)** construida con React y Type
 - Bundling con Vite para desarrollo rápido
 - Routing con react-router-dom
 - Diseño responsive con CSS puro
-- Proxy de API configurado en Vite
+- Datos estáticos en ``src/data/portfolio.ts``
+- Analytics via Cloudflare (sin cookies, RGPD compliant)
 
-.. uml:: 02_component_diagram.puml
+Estructura de Datos
+^^^^^^^^^^^^^^^^^^^
 
-Backend (FastAPI)
-^^^^^^^^^^^^^^^^^
+Los datos del portfolio están definidos como constantes TypeScript en ``frontend/src/data/portfolio.ts``:
 
-El backend es una API REST construida con FastAPI.
-
-**Características:**
-
-- Validación automática con Pydantic
-- Documentación OpenAPI automática
-- Alto rendimiento con ASGI (Uvicorn)
-- CORS configurado para desarrollo
+- ``personalInfo`` - Información de contacto
+- ``hero`` - Sección principal con headline
+- ``skills`` - Categorías de habilidades técnicas
+- ``journey`` - Experiencia laboral
+- ``approach``, ``lakehouse``, ``medallion``, etc.
 
 Stack Tecnológico
 -----------------
 
 .. uml:: 07_tech_stack.puml
 
-Modelo de Datos
----------------
+Ventajas de la Arquitectura Estática
+------------------------------------
 
-El backend utiliza modelos Pydantic para definir la estructura de datos:
-
-.. uml:: 03_data_model.puml
-
-Descripción de Modelos
-^^^^^^^^^^^^^^^^^^^^^^
-
-.. list-table:: Modelos Principales
-   :widths: 25 75
+.. list-table::
+   :widths: 30 70
    :header-rows: 1
 
-   * - Modelo
+   * - Ventaja
      - Descripción
-   * - PersonalInfo
-     - Información de contacto (nombre, email, teléfono, redes)
-   * - Hero
-     - Sección principal con headline y CTA
-   * - PortfolioData
-     - Modelo agregado con toda la información del portfolio
-   * - SkillCategory
-     - Categoría de habilidades con lista de skills y niveles
+   * - Rendimiento
+     - Sin latencia de API, todo se sirve desde CDN
+   * - Coste
+     - Cloudflare Workers free tier (100k requests/día)
+   * - Seguridad
+     - Sin servidor que atacar, sin base de datos
+   * - Mantenimiento
+     - Cero infraestructura que gestionar
+   * - SEO
+     - Contenido disponible inmediatamente
