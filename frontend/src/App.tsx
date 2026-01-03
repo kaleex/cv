@@ -95,6 +95,11 @@ function Home() {
       {/* Hero Section */}
       <header className="hero">
         <div className="hero-content">
+          <div className="under-construction">
+            <span className="construction-icon">🚧</span>
+            <span className="construction-text">UNDER CONSTRUCTION - HERE BE DRAGONS</span>
+            <span className="construction-icon">🐉</span>
+          </div>
           <p className="name">{portfolio.personalInfo.name}</p>
           <h1>
             {t.hero.headline}
