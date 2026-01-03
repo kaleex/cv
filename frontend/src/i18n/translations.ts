@@ -3,6 +3,7 @@ export const en = {
   nav: {
     home: "Home",
     skills: "Skills",
+    experience: "Experience",
     repos: "Projects",
     badges: "Certifications",
     blog: "Blog",
@@ -272,6 +273,49 @@ export const en = {
       }
     ]
   },
+  experience: {
+    title: "Experience",
+    subtitle: "My professional journey building data platforms across industries",
+    cta: "Looking for a data engineer who delivers? Let's talk!",
+    timeline: [
+      {
+        company: "NTT Data",
+        role: "Senior Data Engineer",
+        period: "2023 - Present",
+        location: "Madrid, Spain",
+        description: [
+          "Leading data platform development for banking clients with 2+ TB daily processing",
+          "Architecting Lakehouse solutions on Databricks with Unity Catalog governance",
+          "Mentoring junior engineers and establishing best practices"
+        ],
+        technologies: ["Databricks", "Azure", "Delta Lake", "Unity Catalog", "Python", "Spark"]
+      },
+      {
+        company: "Telefónica",
+        role: "Data Engineer",
+        period: "2021 - 2023",
+        location: "Madrid, Spain",
+        description: [
+          "Built event-driven data pipelines processing millions of events daily",
+          "Reduced pipeline execution time from hours to minutes",
+          "Implemented data quality frameworks and monitoring"
+        ],
+        technologies: ["Azure Data Factory", "Databricks", "Event Hubs", "SQL Server", "Python"]
+      },
+      {
+        company: "Insurance Corp",
+        role: "Junior Data Engineer",
+        period: "2020 - 2021",
+        location: "Madrid, Spain",
+        description: [
+          "Developed ETL pipelines for insurance claims processing",
+          "Automated reporting workflows reducing manual work by 80%",
+          "Built dashboards for business intelligence"
+        ],
+        technologies: ["Python", "SQL", "Power BI", "Azure", "SSIS"]
+      }
+    ]
+  },
   footer: {
     copyright: "©"
   }
@@ -282,6 +326,7 @@ export const es = {
   nav: {
     home: "Inicio",
     skills: "Habilidades",
+    experience: "Experiencia",
     repos: "Proyectos",
     badges: "Certificaciones",
     blog: "Blog",
@@ -548,6 +593,49 @@ export const es = {
         date: "Planificada 2026",
         image: "/badges/azure-data-engineer.png",
         status: "planned"
+      }
+    ]
+  },
+  experience: {
+    title: "Experiencia",
+    subtitle: "Mi trayectoria profesional construyendo plataformas de datos en diferentes industrias",
+    cta: "¿Buscas un data engineer que entregue resultados? ¡Hablemos!",
+    timeline: [
+      {
+        company: "NTT Data",
+        role: "Senior Data Engineer",
+        period: "2023 - Presente",
+        location: "Madrid, España",
+        description: [
+          "Liderando desarrollo de plataformas de datos para clientes bancarios con 2+ TB de procesamiento diario",
+          "Arquitectura de soluciones Lakehouse en Databricks con gobernanza Unity Catalog",
+          "Mentorización de ingenieros junior y establecimiento de mejores prácticas"
+        ],
+        technologies: ["Databricks", "Azure", "Delta Lake", "Unity Catalog", "Python", "Spark"]
+      },
+      {
+        company: "Telefónica",
+        role: "Data Engineer",
+        period: "2021 - 2023",
+        location: "Madrid, España",
+        description: [
+          "Construcción de pipelines event-driven procesando millones de eventos diarios",
+          "Reducción del tiempo de ejecución de pipelines de horas a minutos",
+          "Implementación de frameworks de calidad de datos y monitorización"
+        ],
+        technologies: ["Azure Data Factory", "Databricks", "Event Hubs", "SQL Server", "Python"]
+      },
+      {
+        company: "Insurance Corp",
+        role: "Junior Data Engineer",
+        period: "2020 - 2021",
+        location: "Madrid, España",
+        description: [
+          "Desarrollo de pipelines ETL para procesamiento de reclamaciones de seguros",
+          "Automatización de workflows de reporting reduciendo trabajo manual un 80%",
+          "Construcción de dashboards para business intelligence"
+        ],
+        technologies: ["Python", "SQL", "Power BI", "Azure", "SSIS"]
       }
     ]
   },

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Skills from './pages/Skills'
+import Experience from './pages/Experience'
 import Repos from './pages/Repos'
 import Badges from './pages/Badges'
 import Blog from './pages/Blog'
@@ -303,6 +304,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/skills" element={<Skills />} />
+        {features.experience && <Route path="/experience" element={<Experience />} />}
         {features.projects && <Route path="/repos" element={<Repos />} />}
         {features.certifications && <Route path="/badges" element={<Badges />} />}
         {features.blog && <Route path="/blog" element={<Blog />} />}

@@ -58,6 +58,11 @@ function Navbar() {
           <Link to="/skills" className={location.pathname === '/skills' ? 'active' : ''} onClick={() => handleNavClick('skills')}>
             {t.nav.skills}
           </Link>
+          {features.experience && (
+            <Link to="/experience" className={location.pathname === '/experience' ? 'active' : ''} onClick={() => handleNavClick('experience')}>
+              {t.nav.experience}
+            </Link>
+          )}
           {features.projects && (
             <Link to="/repos" className={location.pathname === '/repos' ? 'active' : ''} onClick={() => handleNavClick('repos')}>
               {t.nav.repos}

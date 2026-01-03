@@ -2,7 +2,8 @@
 // Set to true to show, false to hide
 
 export const features = {
-  projects: true,    // /repos - Databricks E2E project
+  experience: true,    // /experience - Career timeline
+  projects: true,      // /repos - Databricks E2E project
   certifications: true, // /badges - Certifications page
-  blog: true,        // /blog - Tech blog
+  blog: true,          // /blog - Tech blog
 };
