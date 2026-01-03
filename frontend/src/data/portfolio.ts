@@ -204,6 +204,10 @@ export const roadmap = {
   upcoming: [
     { name: "Databricks Certified Data Engineer Associate" },
     { name: "Databricks Certified Data Engineer Professional" },
-    { name: "Databricks Certified Data Analyst Associate" }
+    { name: "Databricks Certified Data Analyst Associate" },
+    { name: "Apache Airflow & Orchestration" },
+    { name: "dbt (Data Build Tool)" },
+    { name: "Spark Structured Streaming" },
+    { name: "LLMs & AI Engineering for Data" }
   ]
 };
