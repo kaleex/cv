@@ -58,7 +58,7 @@ export const medallion = [
     name: "Gold Layer",
     subtitle: "Business-Ready",
     description: "Aggregated, enriched datasets optimized for specific use cases.",
-    characteristics: ["Pre-computed metrics", "Denormalized for performance", "Business terminology", "SLA-backed freshness"]
+    characteristics: ["Pre-computed metrics", "Denormalized for performance", "Business terminology", "Optimized freshness"]
   }
 ];
 

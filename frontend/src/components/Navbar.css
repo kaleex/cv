@@ -105,4 +105,24 @@
     padding: 0.35rem 0.85rem;
     font-size: 0.85rem;
   }
+
+  .lang-toggle {
+    font-size: 1.1rem;
+  }
+}
+
+/* Language Toggle */
+.lang-toggle {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: transform 0.2s;
+  line-height: 1;
+}
+
+.lang-toggle:hover {
+  transform: scale(1.1);
 }

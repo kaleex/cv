@@ -1,9 +1,15 @@
 import { Link, useLocation } from 'react-router-dom'
 import { Analytics } from '../utils/analytics'
+import { useLanguage } from '../i18n/LanguageContext'
 import './Navbar.css'
 
 function Navbar() {
   const location = useLocation()
+  const { language, setLanguage, t } = useLanguage()
+
+  const toggleLanguage = () => {
+    setLanguage(language === 'en' ? 'es' : 'en')
+  }
 
   return (
     <nav className="navbar">
@@ -22,14 +28,20 @@ function Navbar() {
         </Link>
         <div className="navbar-links">
           <Link to="/" className={location.pathname === '/' ? 'active' : ''} onClick={() => Analytics.navClick('home')}>
-            Home
+            {t.nav.home}
           </Link>
           <Link to="/skills" className={location.pathname === '/skills' ? 'active' : ''} onClick={() => Analytics.navClick('skills')}>
-            Skills
+            {t.nav.skills}
+          </Link>
+          <Link to="/repos" className={location.pathname === '/repos' ? 'active' : ''} onClick={() => Analytics.navClick('repos')}>
+            {t.nav.repos}
           </Link>
           <Link to="/contact" className={`navbar-cta ${location.pathname === '/contact' ? 'active' : ''}`} onClick={() => Analytics.navClick('contact')}>
-            Contact
+            {t.nav.contact}
           </Link>
+          <button className="lang-toggle" onClick={toggleLanguage} aria-label="Toggle language">
+            {language === 'en' ? '🇪🇸' : '🇬🇧'}
+          </button>
         </div>
       </div>
     </nav>

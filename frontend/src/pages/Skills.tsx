@@ -1,20 +1,22 @@
 import { skills, roadmap } from '../data/portfolio'
+import { useLanguage } from '../i18n/LanguageContext'
 import './Skills.css'
 
 function Skills() {
+  const { t } = useLanguage()
 
   const getLevelLabel = (level: number) => {
-    if (level >= 90) return 'Expert'
-    if (level >= 75) return 'Advanced'
-    if (level >= 60) return 'Intermediate'
+    if (level >= 90) return t.skills.levels.expert.split(' ')[0]
+    if (level >= 75) return t.skills.levels.advanced.split(' ')[0]
+    if (level >= 60) return t.skills.levels.intermediate.split(' ')[0]
     return 'Learning'
   }
 
   return (
     <div className="skills-page">
       <header className="skills-header">
-        <h1>Technical Skills</h1>
-        <p>A comprehensive overview of my technical expertise and competencies</p>
+        <h1>{t.skills.title}</h1>
+        <p>{t.skills.subtitle}</p>
       </header>
 
       <div className="skills-container">
@@ -45,28 +47,28 @@ function Skills() {
       </div>
 
       <div className="skills-legend">
-        <h3>Proficiency Levels</h3>
+        <h3>{t.skills.proficiency}</h3>
         <div className="legend-items">
           <div className="legend-item">
             <span className="legend-dot expert"></span>
-            <span>Expert (90%+)</span>
+            <span>{t.skills.levels.expert}</span>
           </div>
           <div className="legend-item">
             <span className="legend-dot advanced"></span>
-            <span>Advanced (75-89%)</span>
+            <span>{t.skills.levels.advanced}</span>
           </div>
           <div className="legend-item">
             <span className="legend-dot intermediate"></span>
-            <span>Intermediate (60-74%)</span>
+            <span>{t.skills.levels.intermediate}</span>
           </div>
         </div>
       </div>
 
       <div className="roadmap-section">
-        <h2>🎯 {roadmap.title}</h2>
+        <h2>🎯 {t.roadmap.title}</h2>
         <div className="roadmap-content">
           <div className="roadmap-column">
-            <h3>In Progress</h3>
+            <h3>{t.roadmap.inProgress}</h3>
             <ul className="roadmap-list in-progress">
               {roadmap.inProgress.map((item, idx) => (
                 <li key={idx}>
@@ -80,7 +82,7 @@ function Skills() {
             </ul>
           </div>
           <div className="roadmap-column">
-            <h3>Upcoming</h3>
+            <h3>{t.roadmap.upcoming}</h3>
             <ul className="roadmap-list upcoming">
               {roadmap.upcoming.map((item, idx) => (
                 <li key={idx}>

@@ -2,7 +2,9 @@ import { useEffect, useState } from 'react'
 import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Skills from './pages/Skills'
+import Repos from './pages/Repos'
 import Contact from './pages/Contact'
+import { useLanguage } from './i18n/LanguageContext'
 import { trackPageView, resetScrollTracking, Analytics } from './utils/analytics'
 import * as portfolio from './data/portfolio'
 import './App.css'
@@ -34,6 +36,8 @@ function BackToTop() {
 }
 
 function Home() {
+  const { t } = useLanguage()
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -59,16 +63,16 @@ function Home() {
       <header className="hero">
         <div className="hero-content">
           <p className="name">{portfolio.personalInfo.name}</p>
-          <h1>{portfolio.hero.headline}</h1>
-          <p className="executive-summary">{portfolio.hero.subheadline}</p>
+          <h1>{t.hero.headline}</h1>
+          <p className="executive-summary">{t.hero.subheadline}</p>
           <div className="intro">
-            {portfolio.hero.intro.slice(0, 2).map((paragraph, idx) => (
+            {t.hero.intro.slice(0, 2).map((paragraph, idx) => (
               <p key={idx}>{paragraph}</p>
             ))}
           </div>
-          <p className="tagline">{portfolio.hero.intro[2]}</p>
+          <p className="tagline">{t.hero.intro[2]}</p>
           <a href="/cv.pdf" download className="download-cv-btn">
-            📄 Download CV
+            {t.hero.downloadCV}
           </a>
         </div>
       </header>
@@ -78,19 +82,19 @@ function Home() {
         <div className="stats-container">
           <div className="stat-item">
             <span className="stat-number">4+</span>
-            <span className="stat-label">Years Experience</span>
+            <span className="stat-label">{t.stats.years}</span>
           </div>
           <div className="stat-item">
             <span className="stat-number">3</span>
-            <span className="stat-label">Industries</span>
+            <span className="stat-label">{t.stats.industries}</span>
           </div>
           <div className="stat-item">
             <span className="stat-number">2TB</span>
-            <span className="stat-label">Daily Processing</span>
+            <span className="stat-label">{t.stats.daily}</span>
           </div>
           <div className="stat-item">
             <span className="stat-number">500+</span>
-            <span className="stat-label">Daily Requests</span>
+            <span className="stat-label">{t.stats.requests}</span>
           </div>
         </div>
       </section>
@@ -98,26 +102,26 @@ function Home() {
       {/* Approach Section */}
       <section className="section approach fade-in">
         <div className="container">
-          <h3>{portfolio.approach.title}</h3>
-          <p className="section-body">{portfolio.approach.body}</p>
+          <h3>{t.approach.title}</h3>
+          <p className="section-body">{t.approach.body}</p>
           <div className="principles">
-            {portfolio.approach.principles.map((principle, idx) => (
+            {t.approach.principles.map((principle, idx) => (
               <div key={idx} className="principle">
                 <strong>{principle.name}:</strong> {principle.description}
               </div>
             ))}
           </div>
-          <p className="closing">{portfolio.approach.closing}</p>
+          <p className="closing">{t.approach.closing}</p>
         </div>
       </section>
 
       {/* Lakehouse Architecture Section */}
       <section className="section lakehouse fade-in">
         <div className="container">
-          <h3>{portfolio.lakehouse.title}</h3>
-          <p className="section-body">{portfolio.lakehouse.body}</p>
+          <h3>{t.lakehouse.title}</h3>
+          <p className="section-body">{t.lakehouse.body}</p>
           <ul className="bullet-list">
-            {portfolio.lakehouse.bullets.map((bullet, idx) => (
+            {t.lakehouse.bullets.map((bullet, idx) => (
               <li key={idx}>{bullet}</li>
             ))}
           </ul>
@@ -129,8 +133,8 @@ function Home() {
         <div className="container">
           <h3>Medallion Architecture</h3>
           <div className="medallion-layers">
-            {portfolio.medallion.map((layer, idx) => (
-              <div key={idx} className={`layer layer-${layer.name.split(' ')[0].toLowerCase()}`}>
+            {t.medallion.map((layer, idx) => (
+              <div key={idx} className={`layer layer-${idx === 0 ? 'bronze' : idx === 1 ? 'silver' : 'gold'}`}>
                 <div className="layer-header">
                   <h4>{layer.name}</h4>
                   <span className="subtitle">{layer.subtitle}</span>
@@ -150,10 +154,10 @@ function Home() {
       {/* Governance & Security Section */}
       <section className="section governance fade-in">
         <div className="container">
-          <h3>{portfolio.governance.title}</h3>
-          <p className="section-body">{portfolio.governance.body}</p>
+          <h3>{t.governance.title}</h3>
+          <p className="section-body">{t.governance.body}</p>
           <ul className="bullet-list">
-            {portfolio.governance.bullets.map((bullet, idx) => (
+            {t.governance.bullets.map((bullet, idx) => (
               <li key={idx}>{bullet}</li>
             ))}
           </ul>
@@ -163,10 +167,10 @@ function Home() {
       {/* CI/CD Section */}
       <section className="section cicd fade-in">
         <div className="container">
-          <h3>{portfolio.cicd.title}</h3>
-          <p className="section-body">{portfolio.cicd.body}</p>
+          <h3>{t.cicd.title}</h3>
+          <p className="section-body">{t.cicd.body}</p>
           <ul className="bullet-list">
-            {portfolio.cicd.bullets.map((bullet, idx) => (
+            {t.cicd.bullets.map((bullet, idx) => (
               <li key={idx}>{bullet}</li>
             ))}
           </ul>
@@ -176,9 +180,9 @@ function Home() {
       {/* Journey Section */}
       <section className="section journey fade-in">
         <div className="container">
-          <h3>{portfolio.journey.title}</h3>
+          <h3>{t.journey.title}</h3>
           <div className="timeline">
-            {portfolio.journey.items.map((item, idx) => (
+            {t.journey.items.map((item, idx) => (
               <div key={idx} className="timeline-item">
                 <div className="timeline-marker"></div>
                 <div className="timeline-content">
@@ -195,9 +199,9 @@ function Home() {
       {/* What I Bring Section */}
       <section className="section what-i-bring fade-in">
         <div className="container">
-          <h3>{portfolio.whatIBring.title}</h3>
+          <h3>{t.whatIBring.title}</h3>
           <ul className="skills-list">
-            {portfolio.whatIBring.bullets.map((bullet, idx) => (
+            {t.whatIBring.bullets.map((bullet, idx) => (
               <li key={idx}>{bullet}</li>
             ))}
           </ul>
@@ -207,13 +211,13 @@ function Home() {
       {/* Publications Section */}
       <section className="section publications fade-in">
         <div className="container">
-          <h3>{portfolio.publications.title}</h3>
+          <h3>{t.publications.title}</h3>
           <div className="publications-list">
             {portfolio.publications.items.map((pub, idx) => (
               <a key={idx} href={pub.url} target="_blank" rel="noopener noreferrer" className="publication-card">
                 <span className="pub-type">{pub.type}</span>
                 <h4>{pub.title}</h4>
-                <span className="pub-link">View on Semantic Scholar →</span>
+                <span className="pub-link">{t.publications.viewOn}</span>
               </a>
             ))}
           </div>
@@ -223,17 +227,17 @@ function Home() {
       {/* CTA Section */}
       <section className="section cta fade-in">
         <div className="container">
-          <h3>{portfolio.cta.title}</h3>
-          <p>{portfolio.cta.text}</p>
+          <h3>{t.cta.title}</h3>
+          <p>{t.cta.text}</p>
           <div className="cta-buttons">
-            <Link to="/contact" className="cta-button" onClick={() => Analytics.ctaClick('get-in-touch')}>Get in Touch</Link>
+            <Link to="/contact" className="cta-button" onClick={() => Analytics.ctaClick('get-in-touch')}>{t.nav.contact}</Link>
             <a href={portfolio.personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="cta-button secondary" onClick={() => Analytics.ctaClick('linkedin-cta')}>LinkedIn</a>
           </div>
         </div>
       </section>
 
       <footer className="footer">
-        <p>© {new Date().getFullYear()} {portfolio.personalInfo.name}</p>
+        <p>{t.footer.copyright} {new Date().getFullYear()} {portfolio.personalInfo.name}</p>
       </footer>
     </div>
   )
@@ -255,6 +259,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/skills" element={<Skills />} />
+        <Route path="/repos" element={<Repos />} />
         <Route path="/contact" element={
           <Contact 
             email={portfolio.personalInfo.email} 
