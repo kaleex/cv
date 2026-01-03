@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF8533;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="#1a1a2e" stroke="url(#badgeGrad)" stroke-width="4"/>
+  
+  <!-- Certificate/badge icon -->
+  <g transform="translate(50, 45)">
+    <!-- Shield shape -->
+    <path d="M50 0 L95 20 L95 55 C95 85 50 110 50 110 C50 110 5 85 5 55 L5 20 Z" 
+          fill="url(#badgeGrad)" opacity="0.2" stroke="url(#badgeGrad)" stroke-width="2"/>
+    
+    <!-- Star in center -->
+    <polygon points="50,25 56,40 72,42 60,53 63,69 50,61 37,69 40,53 28,42 44,40" 
+             fill="url(#badgeGrad)" opacity="0.8"/>
+    
+    <!-- Ribbon tails -->
+    <path d="M25 85 L35 110 L45 95" fill="url(#badgeGrad)" opacity="0.6"/>
+    <path d="M75 85 L65 110 L55 95" fill="url(#badgeGrad)" opacity="0.6"/>
+  </g>
+  
+  <!-- Decorative dots -->
+  <circle cx="40" cy="40" r="3" fill="#FF6B00" opacity="0.5"/>
+  <circle cx="160" cy="40" r="3" fill="#FF6B00" opacity="0.5"/>
+  <circle cx="40" cy="160" r="3" fill="#FF6B00" opacity="0.5"/>
+  <circle cx="160" cy="160" r="3" fill="#FF6B00" opacity="0.5"/>
+</svg>

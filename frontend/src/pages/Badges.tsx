@@ -3,6 +3,8 @@ import { useLanguage } from '../i18n/LanguageContext'
 import { Analytics } from '../utils/analytics'
 import './Badges.css'
 
+const DEFAULT_BADGE_IMAGE = '/badges/default-badge.svg'
+
 interface Badge {
   name: string
   issuer: string
@@ -65,7 +67,11 @@ function Badges() {
             {earnedBadges.map((badge, index) => (
               <article key={index} className="badge-card earned">
                 <div className="badge-image">
-                  <img src={badge.image} alt={badge.name} />
+                  <img 
+                    src={badge.image || DEFAULT_BADGE_IMAGE} 
+                    alt={badge.name}
+                    onError={(e) => { e.currentTarget.src = DEFAULT_BADGE_IMAGE }}
+                  />
                 </div>
                 <div className="badge-info">
                   <h3>{badge.name}</h3>
@@ -100,7 +106,11 @@ function Badges() {
             {inProgressBadges.map((badge, index) => (
               <article key={index} className="badge-card in-progress">
                 <div className="badge-image placeholder">
-                  <img src={badge.image} alt={badge.name} />
+                  <img 
+                    src={badge.image || DEFAULT_BADGE_IMAGE} 
+                    alt={badge.name}
+                    onError={(e) => { e.currentTarget.src = DEFAULT_BADGE_IMAGE }}
+                  />
                 </div>
                 <div className="badge-info">
                   <h3>{badge.name}</h3>
@@ -124,7 +134,11 @@ function Badges() {
             {plannedBadges.map((badge, index) => (
               <article key={index} className="badge-card planned">
                 <div className="badge-image placeholder">
-                  <img src={badge.image} alt={badge.name} />
+                  <img 
+                    src={badge.image || DEFAULT_BADGE_IMAGE} 
+                    alt={badge.name}
+                    onError={(e) => { e.currentTarget.src = DEFAULT_BADGE_IMAGE }}
+                  />
                 </div>
                 <div className="badge-info">
                   <h3>{badge.name}</h3>
