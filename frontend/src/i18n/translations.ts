@@ -155,17 +155,22 @@ export const en = {
     },
     projects: [
       {
-        name: "Databricks E2E Lakehouse",
-        description: "Complete end-to-end data platform implementation using Databricks. From raw ingestion to dimensional modeling with facts and dimensions, following Medallion architecture.",
-        tech: ["Databricks", "Delta Lake", "PySpark", "Unity Catalog", "DLT", "DABs", "Terraform", "MLflow", "Structured Streaming", "Auto Loader", "SQL"],
+        name: "Databricks E2E Data Platform",
+        description: "Full end-to-end data platform demonstrating advanced Data Engineering, MLOps, Observability, Streaming, Testing, Security, and Microservices. A professional portfolio project showcasing production-ready patterns.",
+        tech: ["Databricks", "Delta Lake", "PySpark", "Unity Catalog", "DLT", "DABs", "Terraform", "MLflow", "Structured Streaming", "FastAPI", "Docker", "Great Expectations", "Prometheus", "Grafana", "GitHub Actions"],
         status: "in-progress",
+        url: "https://github.com/Killex94/portfolio",
         highlights: [
           "Medallion Architecture (Bronze → Silver → Gold)",
-          "Dimensional modeling with star schema",
-          "Delta Live Tables for orchestration",
-          "Unity Catalog governance",
-          "Data quality with expectations",
-          "CI/CD with Databricks Asset Bundles"
+          "Dimensional modeling with star schema (facts & dimensions)",
+          "Real-time processing with Structured Streaming & Auto Loader",
+          "Data quality with Great Expectations at each layer",
+          "MLflow tracking, Feature Store & Model Registry",
+          "FastAPI model serving with Pydantic v2 & OpenAPI docs",
+          "Full observability: Prometheus, Grafana, Data/Concept Drift",
+          "CI/CD with GitHub Actions & Databricks Asset Bundles",
+          "Unity Catalog governance & security",
+          "Canary/Shadow deployments & cost monitoring"
         ]
       },
       {
@@ -391,17 +396,22 @@ export const es = {
     },
     projects: [
       {
-        name: "Databricks E2E Lakehouse",
-        description: "Implementación completa end-to-end de plataforma de datos usando Databricks. Desde ingesta raw hasta modelado dimensional con hechos y dimensiones, siguiendo arquitectura Medallion.",
-        tech: ["Databricks", "Delta Lake", "PySpark", "Unity Catalog", "DLT", "DABs", "Terraform", "MLflow", "Structured Streaming", "Auto Loader", "SQL"],
+        name: "Databricks E2E Data Platform",
+        description: "Plataforma de datos end-to-end completa demostrando Data Engineering avanzado, MLOps, Observabilidad, Streaming, Testing, Seguridad y Microservicios. Un proyecto portfolio profesional con patrones production-ready.",
+        tech: ["Databricks", "Delta Lake", "PySpark", "Unity Catalog", "DLT", "DABs", "Terraform", "MLflow", "Structured Streaming", "FastAPI", "Docker", "Great Expectations", "Prometheus", "Grafana", "GitHub Actions"],
         status: "in-progress",
+        url: "https://github.com/Killex94/portfolio",
         highlights: [
           "Arquitectura Medallion (Bronze → Silver → Gold)",
-          "Modelado dimensional con star schema",
-          "Delta Live Tables para orquestación",
-          "Gobernanza con Unity Catalog",
-          "Calidad de datos con expectations",
-          "CI/CD con Databricks Asset Bundles"
+          "Modelado dimensional con star schema (hechos y dimensiones)",
+          "Procesamiento real-time con Structured Streaming & Auto Loader",
+          "Calidad de datos con Great Expectations en cada capa",
+          "MLflow tracking, Feature Store & Model Registry",
+          "Model serving con FastAPI, Pydantic v2 & OpenAPI docs",
+          "Observabilidad completa: Prometheus, Grafana, Data/Concept Drift",
+          "CI/CD con GitHub Actions & Databricks Asset Bundles",
+          "Gobernanza y seguridad con Unity Catalog",
+          "Despliegues Canary/Shadow & monitoring de costes"
         ]
       },
       {
