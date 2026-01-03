@@ -24,6 +24,14 @@
   font-size: 1.1rem;
 }
 
+.brand-full {
+  display: inline;
+}
+
+.brand-short {
+  display: none;
+}
+
 .navbar-links {
   display: flex;
   gap: 2rem;
@@ -56,8 +64,45 @@
 }
 
 @media (max-width: 600px) {
+  .navbar {
+    padding: 0.75rem 1rem;
+  }
+
+  .brand-full {
+    display: none;
+  }
+
+  .brand-short {
+    display: inline;
+    font-size: 1.1rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
   .navbar-links {
     gap: 1rem;
+  }
+
+  .navbar-links a:not(.navbar-cta) {
+    font-size: 0.9rem;
+  }
+
+  .navbar-cta {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar {
+    padding: 0.6rem 0.75rem;
+  }
+
+  .navbar-links {
+    gap: 0.75rem;
   }
 
   .navbar-links a:not(.navbar-cta) {
@@ -65,7 +110,7 @@
   }
 
   .navbar-cta {
-    padding: 0.4rem 1rem;
+    padding: 0.35rem 0.85rem;
     font-size: 0.85rem;
   }
 }

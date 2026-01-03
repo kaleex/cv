@@ -8,11 +8,17 @@ interface NavbarProps {
 
 function Navbar({ name }: NavbarProps) {
   const location = useLocation()
+  
+  // Get initials or short name for mobile
+  const shortName = name.split(' ').map(n => n[0]).join('')
 
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <Link to="/" className="navbar-brand" onClick={() => Analytics.navClick('home-brand')}>{name}</Link>
+        <Link to="/" className="navbar-brand" onClick={() => Analytics.navClick('home-brand')}>
+          <span className="brand-full">{name}</span>
+          <span className="brand-short">{shortName}</span>
+        </Link>
         <div className="navbar-links">
           <Link to="/" className={location.pathname === '/' ? 'active' : ''} onClick={() => Analytics.navClick('home')}>
             Home

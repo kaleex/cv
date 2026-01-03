@@ -4,7 +4,7 @@ export const personalInfo = {
   name: "Alejandro Quilez Asensio",
   email: "alexquilezz@hotmail.com",
   phone: "+34 674 449 806",
-  linkedin: "https://www.linkedin.com/in/alejandro-quilez/",
+  linkedin: "https://www.linkedin.com/in/alejandro-quílez-asensio-2799a5121",
   github: "https://github.com/kaleex"
 };
 
@@ -12,9 +12,9 @@ export const hero = {
   headline: "Data Platforms That Actually Work",
   subheadline: "Senior Data Engineer helping companies turn chaotic data into reliable, governed assets that drive real business decisions.",
   intro: [
-    "With 6+ years of experience across Azure, Databricks, and modern data stacks, I specialize in building lakehouse architectures that scale — not just technically, but organizationally.",
-    "I've led platform modernizations for enterprise clients, implemented medallion architectures processing billions of records, and established data governance frameworks that actually get adopted.",
-    "I don't just build pipelines. I build data platforms that teams trust and businesses rely on."
+    "4+ years building data platforms on Azure & Databricks across telecom, insurance, and banking.",
+    "From TB-level processing to event-driven architectures — I combine data engineering with solid software practices.",
+    "I don't just build pipelines. I build platforms that teams trust."
   ]
 };
 
@@ -88,9 +88,21 @@ export const cicd = {
 export const journey = {
   title: "My Journey",
   items: [
-    { company: "NTT Data", period: "2022 - Present", description: "Leading data platform modernization for enterprise banking clients. Architecting lakehouse solutions on Azure + Databricks." },
-    { company: "Bluetab (IBM)", period: "2020 - 2022", description: "Built real-time data pipelines for insurance sector. Implemented medallion architecture processing 2B+ daily events." },
-    { company: "Kapsch TrafficCom", period: "2019 - 2020", description: "Developed IoT data ingestion systems for smart city infrastructure. First exposure to large-scale streaming." }
+    { 
+      company: "Knowmad Mood → WiZink", 
+      period: "Jan 2025 - Present", 
+      description: "Refactoring business-critical monolithic systems into modular, event-driven architectures. Applying solid software engineering practices: multithreading, testing, documentation, and clean code structure." 
+    },
+    { 
+      company: "Knowmad Mood → Generali", 
+      period: "Apr 2023 - Dec 2024", 
+      description: "Data engineering in a regulated insurance environment. Built PySpark pipelines, worked with legacy systems, and developed analytical models based on facts and dimensions." 
+    },
+    { 
+      company: "Capgemini → Telefónica", 
+      period: "2020 - Apr 2023", 
+      description: "Large-scale Databricks projects: Lakehouse architecture, MLflow, CI/CD, Terraform IaC, cost optimization, security, and TB-level data processing. Rapidly grew from junior to lead technical contributor." 
+    }
   ]
 };
 
@@ -103,6 +115,17 @@ export const whatIBring = {
     "Infrastructure as Code (Terraform, ARM templates)",
     "Team leadership and mentoring experience",
     "Fluent communication with both technical teams and business stakeholders"
+  ]
+};
+
+export const publications = {
+  title: "Publications",
+  items: [
+    {
+      title: "Innocampus Explora: Una aproximación a la monitorización ambiental",
+      url: "https://www.semanticscholar.org/paper/Innocampus-Explora%3A-Una-aproximaci%C3%B3n-a-la-ambiental-Garro-Moros-Gregorio/21c9513c9cfbe2caa32588e45cf9a117157a4afb",
+      type: "Academic Paper"
+    }
   ]
 };
 

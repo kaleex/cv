@@ -134,6 +134,22 @@ function Home() {
         </div>
       </section>
 
+      {/* Publications Section */}
+      <section className="section publications">
+        <div className="container">
+          <h3>{portfolio.publications.title}</h3>
+          <div className="publications-list">
+            {portfolio.publications.items.map((pub, idx) => (
+              <a key={idx} href={pub.url} target="_blank" rel="noopener noreferrer" className="publication-card">
+                <span className="pub-type">{pub.type}</span>
+                <h4>{pub.title}</h4>
+                <span className="pub-link">View on Semantic Scholar →</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="section cta">
         <div className="container">
