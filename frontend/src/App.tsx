@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Skills from './pages/Skills'
@@ -6,6 +6,32 @@ import Contact from './pages/Contact'
 import { trackPageView, resetScrollTracking, Analytics } from './utils/analytics'
 import * as portfolio from './data/portfolio'
 import './App.css'
+
+function BackToTop() {
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    const toggleVisible = () => {
+      setVisible(window.scrollY > 300)
+    }
+    window.addEventListener('scroll', toggleVisible)
+    return () => window.removeEventListener('scroll', toggleVisible)
+  }, [])
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  return (
+    <button 
+      className={`back-to-top ${visible ? 'visible' : ''}`}
+      onClick={scrollToTop}
+      aria-label="Back to top"
+    >
+      ↑
+    </button>
+  )
+}
 
 function Home() {
   useEffect(() => {
@@ -238,6 +264,7 @@ function App() {
           />
         } />
       </Routes>
+      <BackToTop />
     </>
   )
 }
