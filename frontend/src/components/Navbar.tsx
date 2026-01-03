@@ -2,12 +2,14 @@ import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Analytics } from '../utils/analytics'
 import { useLanguage } from '../i18n/LanguageContext'
+import { useTheme } from '../context/ThemeContext'
 import { features } from '../config/features'
 import './Navbar.css'
 
 function Navbar() {
   const location = useLocation()
   const { language, setLanguage, t } = useLanguage()
+  const { theme, toggleTheme } = useTheme()
   const [menuOpen, setMenuOpen] = useState(false)
 
   const toggleLanguage = () => {
@@ -49,7 +51,13 @@ function Navbar() {
           <span></span>
         </button>
 
-        <div className={`navbar-overlay ${menuOpen ? 'open' : ''}`} onClick={closeMenu}></div>
+        {menuOpen && (
+          <div 
+            className="navbar-overlay" 
+            onClick={closeMenu}
+            onTouchStart={closeMenu}
+          ></div>
+        )}
 
         <div className={`navbar-links ${menuOpen ? 'open' : ''}`}>
           <Link to="/" className={location.pathname === '/' ? 'active' : ''} onClick={() => handleNavClick('home')}>
@@ -81,9 +89,14 @@ function Navbar() {
           <Link to="/contact" className={`navbar-cta ${location.pathname === '/contact' ? 'active' : ''}`} onClick={() => handleNavClick('contact')}>
             {t.nav.contact}
           </Link>
-          <button className="lang-toggle" onClick={toggleLanguage} aria-label="Toggle language">
-            {language === 'en' ? 'EN' : 'ES'}
-          </button>
+          <div className="navbar-toggles">
+            <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
+              {theme === 'dark' ? '☀️' : '🌙'}
+            </button>
+            <button className="lang-toggle" onClick={toggleLanguage} aria-label="Toggle language">
+              {language === 'en' ? 'EN' : 'ES'}
+            </button>
+          </div>
         </div>
       </div>
     </nav>

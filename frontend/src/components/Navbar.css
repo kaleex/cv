@@ -7,6 +7,12 @@
   backdrop-filter: blur(10px);
   z-index: 1000;
   padding: 1rem 2rem;
+  transition: background-color 0.3s ease;
+}
+
+[data-theme="light"] .navbar {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-container {
@@ -41,9 +47,18 @@
   transition: color 0.2s;
 }
 
+[data-theme="light"] .navbar-links a {
+  color: #64748b;
+}
+
 .navbar-links a:hover,
 .navbar-links a.active {
   color: white;
+}
+
+[data-theme="light"] .navbar-links a:hover,
+[data-theme="light"] .navbar-links a.active {
+  color: #1a1a2e;
 }
 
 .navbar-cta {
@@ -132,6 +147,12 @@
     gap: 0;
     transition: right 0.3s ease;
     box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+  }
+
+  [data-theme="light"] .navbar-links {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
   }
 
   .navbar-links.open {
@@ -155,26 +176,66 @@
     padding: 0.75rem 1.5rem;
   }
 
-  .lang-toggle {
+  .navbar-toggles {
     margin-top: 1.5rem;
-    font-size: 1.5rem;
+    justify-content: center;
   }
 
-  /* Overlay */
+  .lang-toggle,
+  .theme-toggle {
+    width: 44px;
+    height: 44px;
+    font-size: 1rem;
+  }
+}
+
+/* Overlay - fuera del media query para que siempre aplique */
+.navbar-overlay {
+  display: none;
+}
+
+@media (max-width: 600px) {
   .navbar-overlay {
-    display: none;
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100vw;
+    height: 100vh;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
+    z-index: 1000;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
   }
+}
 
-  .navbar-overlay.open {
-    display: block;
-  }
+/* Navbar Toggles Container */
+.navbar-toggles {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-size: 1rem;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border-radius: 6px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  background: var(--accent-light);
+  border-color: var(--accent);
 }
 
 /* Language Toggle */
@@ -182,13 +243,18 @@
   background: rgba(59, 130, 246, 0.15);
   border: 1px solid rgba(59, 130, 246, 0.3);
   color: #60a5fa;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   cursor: pointer;
-  padding: 0.4rem 0.75rem;
+  width: 36px;
+  height: 36px;
+  padding: 0;
   border-radius: 6px;
   transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .lang-toggle:hover {

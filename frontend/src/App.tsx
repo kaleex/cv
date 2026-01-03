@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 import Skills from './pages/Skills'
 import Experience from './pages/Experience'
 import Repos from './pages/Repos'
@@ -317,6 +318,7 @@ function App() {
           />
         } />
       </Routes>
+      <Footer />
       <BackToTop />
     </>
   )

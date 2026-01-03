@@ -1,8 +1,9 @@
 .repos-page {
   padding: 8rem 2rem 4rem;
   min-height: 100vh;
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  background: var(--bg-primary);
   margin-top: 60px;
+  transition: background-color 0.3s ease;
 }
 
 .repos-page > * {
@@ -28,7 +29,7 @@
 }
 
 .repos-hero p {
-  color: #94a3b8;
+  color: var(--text-secondary);
   font-size: 1.1rem;
   max-width: 600px;
   margin: 0 auto;
@@ -44,8 +45,8 @@
 
 /* Card */
 .repo-card {
-  background: rgba(30, 41, 59, 0.5);
-  border: 1px solid rgba(148, 163, 184, 0.1);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: 16px;
   padding: 2rem;
   display: flex;
@@ -55,9 +56,9 @@
 }
 
 .repo-card:hover {
-  border-color: rgba(59, 130, 246, 0.3);
+  border-color: var(--border-hover);
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow);
 }
 
 .repo-header {
@@ -76,12 +77,12 @@
 
 .repo-card h2 {
   font-size: 1.4rem;
-  color: #f1f5f9;
+  color: var(--text-primary);
   margin: 0;
 }
 
 .repo-description {
-  color: #94a3b8;
+  color: var(--text-secondary);
   line-height: 1.6;
   margin: 0;
 }
@@ -134,7 +135,7 @@
 /* Highlights */
 .repo-highlights h3 {
   font-size: 0.9rem;
-  color: #cbd5e1;
+  color: var(--text-secondary);
   margin-bottom: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -150,7 +151,7 @@
 }
 
 .repo-highlights li {
-  color: #94a3b8;
+  color: var(--text-secondary);
   font-size: 0.9rem;
   padding-left: 1.5rem;
   position: relative;
@@ -168,7 +169,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: #f1f5f9;
+  color: #fff;
   background: linear-gradient(135deg, #3b82f6, #8b5cf6);
   padding: 0.75rem 1.25rem;
   border-radius: 8px;
@@ -199,13 +200,13 @@
 .repos-cta {
   text-align: center;
   padding: 3rem;
-  background: rgba(30, 41, 59, 0.3);
+  background: var(--bg-card);
   border-radius: 16px;
-  border: 1px solid rgba(148, 163, 184, 0.1);
+  border: 1px solid var(--border-color);
 }
 
 .repos-cta p {
-  color: #94a3b8;
+  color: var(--text-secondary);
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
 }
@@ -214,21 +215,21 @@
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  color: #f1f5f9;
-  background: #1e293b;
+  color: var(--text-primary);
+  background: var(--bg-secondary);
   padding: 1rem 2rem;
   border-radius: 12px;
   text-decoration: none;
   font-weight: 600;
   font-size: 1.1rem;
-  border: 2px solid rgba(148, 163, 184, 0.2);
+  border: 2px solid var(--border-color);
   transition: all 0.3s ease;
 }
 
 .github-profile-link:hover {
   border-color: #3b82f6;
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow);
 }
 
 /* Fade in animation */

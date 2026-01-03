@@ -279,45 +279,48 @@ export const en = {
     cta: "Looking for a data engineer who delivers? Let's talk!",
     timeline: [
       {
-        company: "NTT Data",
-        role: "Senior Data Engineer",
-        period: "2023 - Present",
-        location: "Madrid, Spain",
-        description: [
-          "Leading data platform development for banking clients with 2+ TB daily processing",
-          "Architecting Lakehouse solutions on Databricks with Unity Catalog governance",
-          "Mentoring junior engineers and establishing best practices"
-        ],
-        technologies: ["Databricks", "Azure", "Delta Lake", "Unity Catalog", "Python", "Spark"]
-      },
-      {
-        company: "Telefónica",
+        company: "Knowmad Mood",
         role: "Data Engineer",
-        period: "2021 - 2023",
-        location: "Madrid, Spain",
+        period: "Apr 2023 - Present",
+        location: "Valencia, Spain",
         description: [
-          "Built event-driven data pipelines processing millions of events daily",
-          "Reduced pipeline execution time from hours to minutes",
-          "Implemented data quality frameworks and monitoring"
+          "Designing and maintaining fact and dimension tables to support efficient data modeling for analytics and reporting",
+          "Leading data engineering solutions to optimize cloud-based systems and pipelines in a collaborative team environment",
+          "Implementing scalable architectures using Azure Databricks for streamlined data transformation and integration",
+          "Enhancing operational workflows and data reliability through extensive use of CI/CD pipelines and automation"
         ],
-        technologies: ["Azure Data Factory", "Databricks", "Event Hubs", "SQL Server", "Python"]
+        technologies: ["Azure Databricks", "PySpark", "Delta Lake", "Azure DevOps", "CI/CD", "MLflow"]
       },
       {
-        company: "Insurance Corp",
-        role: "Junior Data Engineer",
-        period: "2020 - 2021",
-        location: "Madrid, Spain",
+        company: "Capgemini",
+        role: "Machine Learning Engineer",
+        period: "Feb 2021 - Apr 2023",
+        location: "Valencia, Spain",
         description: [
-          "Developed ETL pipelines for insurance claims processing",
-          "Automated reporting workflows reducing manual work by 80%",
-          "Built dashboards for business intelligence"
+          "Contributed to a large-scale data science platform, providing technical expertise and mentoring team members",
+          "Implemented CI/CD pipelines and designed solutions for efficient data processing and transformation",
+          "Transitioned into a Data Engineering role, focusing on designing scalable systems to handle terabytes of data",
+          "Worked on innovative projects combining machine learning and data engineering methodologies"
         ],
-        technologies: ["Python", "SQL", "Power BI", "Azure", "SSIS"]
+        technologies: ["Python", "PySpark", "Azure", "Databricks", "Scikit-Learn", "Docker"]
+      },
+      {
+        company: "Capgemini",
+        role: "Innovation Engineer",
+        period: "Oct 2020 - Feb 2021",
+        location: "Valencia, Spain",
+        description: [
+          "Designed and implemented backend architectures to simplify new service integration on GCP",
+          "Developed API integrations for seamless data access and workflow automation"
+        ],
+        technologies: ["GCP", "Python", "APIs", "Node.js", "Backend Architecture"]
       }
     ]
   },
   footer: {
-    copyright: "©"
+    copyright: "©",
+    rights: "All rights reserved.",
+    ctaText: "Let's build something reliable"
   }
 };
 
@@ -602,44 +605,47 @@ export const es = {
     cta: "¿Buscas un data engineer que entregue resultados? ¡Hablemos!",
     timeline: [
       {
-        company: "NTT Data",
-        role: "Senior Data Engineer",
-        period: "2023 - Presente",
-        location: "Madrid, España",
-        description: [
-          "Liderando desarrollo de plataformas de datos para clientes bancarios con 2+ TB de procesamiento diario",
-          "Arquitectura de soluciones Lakehouse en Databricks con gobernanza Unity Catalog",
-          "Mentorización de ingenieros junior y establecimiento de mejores prácticas"
-        ],
-        technologies: ["Databricks", "Azure", "Delta Lake", "Unity Catalog", "Python", "Spark"]
-      },
-      {
-        company: "Telefónica",
+        company: "Knowmad Mood",
         role: "Data Engineer",
-        period: "2021 - 2023",
-        location: "Madrid, España",
+        period: "Abr 2023 - Presente",
+        location: "Valencia, España",
         description: [
-          "Construcción de pipelines event-driven procesando millones de eventos diarios",
-          "Reducción del tiempo de ejecución de pipelines de horas a minutos",
-          "Implementación de frameworks de calidad de datos y monitorización"
+          "Diseño y mantenimiento de tablas de hechos y dimensiones para modelado de datos eficiente en analytics y reporting",
+          "Liderando soluciones de data engineering para optimizar sistemas y pipelines cloud en equipo colaborativo",
+          "Implementación de arquitecturas escalables usando Azure Databricks para transformación e integración de datos",
+          "Mejora de workflows operacionales y fiabilidad de datos mediante uso extensivo de pipelines CI/CD y automatización"
         ],
-        technologies: ["Azure Data Factory", "Databricks", "Event Hubs", "SQL Server", "Python"]
+        technologies: ["Azure Databricks", "PySpark", "Delta Lake", "Azure DevOps", "CI/CD", "MLflow"]
       },
       {
-        company: "Insurance Corp",
-        role: "Junior Data Engineer",
-        period: "2020 - 2021",
-        location: "Madrid, España",
+        company: "Capgemini",
+        role: "Machine Learning Engineer",
+        period: "Feb 2021 - Abr 2023",
+        location: "Valencia, España",
         description: [
-          "Desarrollo de pipelines ETL para procesamiento de reclamaciones de seguros",
-          "Automatización de workflows de reporting reduciendo trabajo manual un 80%",
-          "Construcción de dashboards para business intelligence"
+          "Contribución a plataforma de data science a gran escala, aportando expertise técnico y mentorizando al equipo",
+          "Implementación de pipelines CI/CD y diseño de soluciones para procesamiento y transformación de datos eficiente",
+          "Transición a rol de Data Engineering, enfocándome en diseñar sistemas escalables para manejar terabytes de datos",
+          "Trabajo en proyectos innovadores combinando metodologías de machine learning y data engineering"
         ],
-        technologies: ["Python", "SQL", "Power BI", "Azure", "SSIS"]
+        technologies: ["Python", "PySpark", "Azure", "Databricks", "Scikit-Learn", "Docker"]
+      },
+      {
+        company: "Capgemini",
+        role: "Innovation Engineer",
+        period: "Oct 2020 - Feb 2021",
+        location: "Valencia, España",
+        description: [
+          "Diseño e implementación de arquitecturas backend para simplificar integración de nuevos servicios en GCP",
+          "Desarrollo de integraciones API para acceso a datos fluido y automatización de workflows"
+        ],
+        technologies: ["GCP", "Python", "APIs", "Node.js", "Arquitectura Backend"]
       }
     ]
   },
   footer: {
-    copyright: "©"
+    copyright: "©",
+    rights: "Todos los derechos reservados.",
+    ctaText: "Construyamos algo fiable"
   }
 };

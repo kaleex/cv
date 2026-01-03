@@ -1,15 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
+/* CSS Variables for theming */
 :root {
+  /* Dark theme (default) */
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #1a1a2e;
+  --bg-card: rgba(255, 255, 255, 0.03);
+  --bg-card-hover: rgba(255, 107, 0, 0.05);
+  --text-primary: #ffffff;
+  --text-secondary: #aaaaaa;
+  --text-muted: #666666;
+  --accent: #FF6B00;
+  --accent-hover: #FF8533;
+  --accent-light: rgba(255, 107, 0, 0.1);
+  --border-color: rgba(255, 107, 0, 0.2);
+  --border-hover: rgba(255, 107, 0, 0.4);
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.6;
   font-weight: 400;
-  color: #1a1a2e;
-  background-color: #ffffff;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Light theme */
+[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f7;
+  --bg-card: rgba(0, 0, 0, 0.02);
+  --bg-card-hover: rgba(255, 107, 0, 0.08);
+  --text-primary: #1a1a2e;
+  --text-secondary: #555555;
+  --text-muted: #888888;
+  --accent: #e55a00;
+  --accent-hover: #FF6B00;
+  --accent-light: rgba(255, 107, 0, 0.1);
+  --border-color: rgba(0, 0, 0, 0.1);
+  --border-hover: rgba(255, 107, 0, 0.4);
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -25,6 +58,9 @@ html {
 body {
   min-width: 320px;
   min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #root {
