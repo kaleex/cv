@@ -12,21 +12,22 @@ export const hero = {
   headline: "Data Platforms That Actually Work",
   subheadline: "Senior Data Engineer helping companies turn chaotic data into reliable, governed assets that drive real business decisions.",
   intro: [
-    "4+ years building data platforms on Azure & Databricks across telecom, insurance, and banking.",
-    "From TB-level processing to event-driven architectures — I combine data engineering with solid software practices.",
+    "4+ years building data platforms processing 2+ TB/day, serving 500+ daily business requests across telecom, insurance, and banking.",
+    "From hours-long pipelines reduced to minutes, to event-driven architectures that scale — I combine data engineering with solid software practices.",
     "I don't just build pipelines. I build platforms that teams trust."
   ]
 };
 
 export const approach = {
-  title: "My Approach",
-  body: "Every data platform I build follows three core principles:",
+  title: "How I Think",
+  body: "Every data platform I build follows these principles:",
   principles: [
-    { name: "Reliability First", description: "Data that stakeholders can't trust is worthless. I implement robust testing, monitoring, and quality gates at every layer." },
-    { name: "Governed by Design", description: "Security and compliance aren't afterthoughts. Unity Catalog, row-level security, and audit trails are baked in from day one." },
-    { name: "Built to Evolve", description: "Business needs change. I design modular architectures that adapt without requiring rewrites." }
+    { name: "Reliability First", description: "Data that stakeholders can't trust is worthless. Robust testing, monitoring, and quality gates at every layer." },
+    { name: "Governed by Design", description: "Security and compliance aren't afterthoughts. Unity Catalog, row-level security, and audit trails from day one." },
+    { name: "Data Contracts", description: "Explicit contracts over tribal knowledge. Validate early, fail fast. Schema enforcement before data moves downstream." },
+    { name: "Built to Evolve", description: "Business needs change. Modular architectures that adapt without requiring rewrites." }
   ],
-  closing: "This isn't just methodology — it's how I've delivered successful platforms for banking, insurance, and enterprise clients."
+  closing: "This isn't just methodology — it's how I've delivered successful platforms for banking, insurance, and telecom clients."
 };
 
 export const lakehouse = {
@@ -68,7 +69,6 @@ export const governance = {
     "Unity Catalog for unified access control and data lineage",
     "Row-level and column-level security based on user attributes",
     "Automated PII detection and masking",
-    "Complete audit trails for compliance (GDPR, SOX, HIPAA)",
     "Data quality dashboards with automated alerting"
   ]
 };
@@ -91,17 +91,17 @@ export const journey = {
     { 
       company: "Knowmad Mood → WiZink", 
       period: "Jan 2025 - Present", 
-      description: "Refactoring business-critical monolithic systems into modular, event-driven architectures. Applying solid software engineering practices: multithreading, testing, documentation, and clean code structure." 
+      description: "Led refactoring of business-critical systems into modular, event-driven architectures. Increased daily business capacity from 400 to 500 requests (+25%) through improved algorithm fluidity. Delivered substantial execution time improvements and full end-to-end traceability." 
     },
     { 
       company: "Knowmad Mood → Generali", 
       period: "Apr 2023 - Dec 2024", 
-      description: "Data engineering in a regulated insurance environment. Built PySpark pipelines, worked with legacy systems, and developed analytical models based on facts and dimensions." 
+      description: "Owned data platform in a regulated insurance environment. Reduced pipeline execution from hours to minutes with comprehensive validation frameworks. Designed analytical models based on facts and dimensions for business-critical reporting." 
     },
     { 
       company: "Capgemini → Telefónica", 
       period: "2020 - Apr 2023", 
-      description: "Large-scale Databricks projects: Lakehouse architecture, MLflow, CI/CD, Terraform IaC, cost optimization, security, and TB-level data processing. Rapidly grew from junior to lead technical contributor." 
+      description: "Designed ingestion architecture processing ~2TB daily across 80+ tables. Automated datalake cleanup and maintenance workflows. Deployed multiple ML models to production weekly. Grew from junior to lead technical contributor owning Lakehouse architecture, CI/CD, and Terraform IaC." 
     }
   ]
 };
@@ -131,7 +131,7 @@ export const publications = {
 
 export const cta = {
   title: "Let's Build Something Reliable",
-  text: "Looking for a data engineer who understands that architecture decisions today determine platform success tomorrow? Let's talk about your data challenges."
+  text: "Building or evolving a data platform? Looking for someone to own its design and reliability? Let's talk."
 };
 
 export const skills = [
