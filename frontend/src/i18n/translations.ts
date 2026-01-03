@@ -4,10 +4,12 @@ export const en = {
     home: "Home",
     skills: "Skills",
     repos: "Projects",
+    blog: "Blog",
     contact: "Contact"
   },
   hero: {
     headline: "Data Platforms That Actually Work",
+    typingWords: ["Reliable", "Scalable", "Governed", "Production-Ready"],
     subheadline: "Senior Data Engineer helping companies turn chaotic data into reliable, governed assets that drive real business decisions.",
     intro: [
       "4+ years building data platforms processing 2+ TB/day, serving 500+ daily business requests across telecom, insurance, and banking.",
@@ -191,6 +193,42 @@ export const en = {
     downloadCV: "Download CV",
     downloadCVSub: "PDF Format"
   },
+  blog: {
+    title: "Tech Blog",
+    subtitle: "Deep dives into data engineering, Lakehouse architecture, and lessons learned building production platforms",
+    comingSoon: "Coming Soon",
+    ctaText: "New articles coming as I build the Databricks E2E project",
+    followText: "Follow along on LinkedIn for updates",
+    posts: [
+      {
+        slug: "medallion-architecture-deep-dive",
+        title: "Medallion Architecture: Beyond Bronze, Silver, Gold",
+        excerpt: "A practical guide to implementing the medallion pattern with Delta Lake. When to use it, when not to, and the patterns that actually work in production.",
+        date: "Coming Q1 2026",
+        tags: ["Databricks", "Delta Lake", "Architecture"],
+        readTime: "~10 min",
+        comingSoon: true
+      },
+      {
+        slug: "dimensional-modeling-lakehouse",
+        title: "Dimensional Modeling in the Lakehouse Era",
+        excerpt: "Star schemas aren't dead. How to build fact and dimension tables with Delta Lake that serve both BI and ML workloads.",
+        date: "Coming Q1 2026",
+        tags: ["Data Modeling", "Star Schema", "Delta Lake"],
+        readTime: "~12 min",
+        comingSoon: true
+      },
+      {
+        slug: "dlt-production-patterns",
+        title: "Delta Live Tables: Production Patterns & Pitfalls",
+        excerpt: "Everything I learned deploying DLT pipelines to production. Expectations, error handling, and the gotchas nobody tells you about.",
+        date: "Coming Q2 2026",
+        tags: ["DLT", "Data Quality", "Databricks"],
+        readTime: "~15 min",
+        comingSoon: true
+      }
+    ]
+  },
   footer: {
     copyright: "©"
   }
@@ -202,10 +240,12 @@ export const es = {
     home: "Inicio",
     skills: "Habilidades",
     repos: "Proyectos",
+    blog: "Blog",
     contact: "Contacto"
   },
   hero: {
     headline: "Plataformas de Datos que Funcionan",
+    typingWords: ["Fiables", "Escalables", "Gobernadas", "Listas para Producción"],
     subheadline: "Senior Data Engineer ayudando a empresas a convertir datos caóticos en activos fiables y gobernados que impulsan decisiones de negocio reales.",
     intro: [
       "4+ años construyendo plataformas de datos procesando 2+ TB/día, sirviendo 500+ peticiones diarias en telecom, seguros y banca.",
@@ -388,6 +428,42 @@ export const es = {
     github: "GitHub",
     downloadCV: "Descargar CV",
     downloadCVSub: "Formato PDF"
+  },
+  blog: {
+    title: "Blog Técnico",
+    subtitle: "Profundizando en data engineering, arquitectura Lakehouse y lecciones aprendidas construyendo plataformas en producción",
+    comingSoon: "Próximamente",
+    ctaText: "Nuevos artículos mientras construyo el proyecto Databricks E2E",
+    followText: "Sígueme en LinkedIn para actualizaciones",
+    posts: [
+      {
+        slug: "medallion-architecture-deep-dive",
+        title: "Arquitectura Medallion: Más Allá de Bronze, Silver, Gold",
+        excerpt: "Guía práctica para implementar el patrón medallion con Delta Lake. Cuándo usarlo, cuándo no, y los patrones que realmente funcionan en producción.",
+        date: "Próximo Q1 2026",
+        tags: ["Databricks", "Delta Lake", "Arquitectura"],
+        readTime: "~10 min",
+        comingSoon: true
+      },
+      {
+        slug: "dimensional-modeling-lakehouse",
+        title: "Modelado Dimensional en la Era Lakehouse",
+        excerpt: "Los star schemas no han muerto. Cómo construir tablas de hechos y dimensiones con Delta Lake que sirvan tanto BI como ML.",
+        date: "Próximo Q1 2026",
+        tags: ["Data Modeling", "Star Schema", "Delta Lake"],
+        readTime: "~12 min",
+        comingSoon: true
+      },
+      {
+        slug: "dlt-production-patterns",
+        title: "Delta Live Tables: Patrones de Producción y Errores Comunes",
+        excerpt: "Todo lo que aprendí desplegando pipelines DLT en producción. Expectations, manejo de errores, y los gotchas que nadie te cuenta.",
+        date: "Próximo Q2 2026",
+        tags: ["DLT", "Data Quality", "Databricks"],
+        readTime: "~15 min",
+        comingSoon: true
+      }
+    ]
   },
   footer: {
     copyright: "©"

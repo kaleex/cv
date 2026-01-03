@@ -3,6 +3,7 @@ import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Skills from './pages/Skills'
 import Repos from './pages/Repos'
+import Blog from './pages/Blog'
 import Contact from './pages/Contact'
 import { useLanguage } from './i18n/LanguageContext'
 import { trackPageView, resetScrollTracking, Analytics } from './utils/analytics'
@@ -37,6 +38,36 @@ function BackToTop() {
 
 function Home() {
   const { t } = useLanguage()
+  const [typingText, setTypingText] = useState('')
+  const [wordIndex, setWordIndex] = useState(0)
+  const [isDeleting, setIsDeleting] = useState(false)
+
+  useEffect(() => {
+    const words = t.hero.typingWords as string[]
+    const currentWord = words[wordIndex]
+    const typingSpeed = isDeleting ? 50 : 100
+    const pauseTime = isDeleting ? 500 : 2000
+
+    const handleTyping = () => {
+      if (!isDeleting && typingText === currentWord) {
+        setTimeout(() => setIsDeleting(true), pauseTime)
+        return
+      }
+      if (isDeleting && typingText === '') {
+        setIsDeleting(false)
+        setWordIndex((prev) => (prev + 1) % words.length)
+        return
+      }
+
+      const nextText = isDeleting
+        ? currentWord.substring(0, typingText.length - 1)
+        : currentWord.substring(0, typingText.length + 1)
+      setTypingText(nextText)
+    }
+
+    const timer = setTimeout(handleTyping, typingSpeed)
+    return () => clearTimeout(timer)
+  }, [typingText, wordIndex, isDeleting, t.hero.typingWords])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -63,7 +94,13 @@ function Home() {
       <header className="hero">
         <div className="hero-content">
           <p className="name">{portfolio.personalInfo.name}</p>
-          <h1>{t.hero.headline}</h1>
+          <h1>
+            {t.hero.headline}
+            <span className="typing-container">
+              <span className="typing-text">{typingText}</span>
+              <span className="typing-cursor">|</span>
+            </span>
+          </h1>
           <p className="executive-summary">{t.hero.subheadline}</p>
           <div className="intro">
             {t.hero.intro.slice(0, 2).map((paragraph, idx) => (
@@ -260,6 +297,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/repos" element={<Repos />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={
           <Contact 
             email={portfolio.personalInfo.email} 

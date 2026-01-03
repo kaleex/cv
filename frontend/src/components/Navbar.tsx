@@ -36,6 +36,9 @@ function Navbar() {
           <Link to="/repos" className={location.pathname === '/repos' ? 'active' : ''} onClick={() => Analytics.navClick('repos')}>
             {t.nav.repos}
           </Link>
+          <Link to="/blog" className={location.pathname === '/blog' ? 'active' : ''} onClick={() => Analytics.navClick('blog')}>
+            {t.nav.blog}
+          </Link>
           <Link to="/contact" className={`navbar-cta ${location.pathname === '/contact' ? 'active' : ''}`} onClick={() => Analytics.navClick('contact')}>
             {t.nav.contact}
           </Link>
