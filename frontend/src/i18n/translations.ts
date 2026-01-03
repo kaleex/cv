@@ -187,7 +187,9 @@ export const en = {
     email: "Email",
     phone: "Phone",
     linkedin: "LinkedIn",
-    github: "GitHub"
+    github: "GitHub",
+    downloadCV: "Download CV",
+    downloadCVSub: "PDF Format"
   },
   footer: {
     copyright: "©"
@@ -383,7 +385,9 @@ export const es = {
     email: "Email",
     phone: "Teléfono",
     linkedin: "LinkedIn",
-    github: "GitHub"
+    github: "GitHub",
+    downloadCV: "Descargar CV",
+    downloadCVSub: "Formato PDF"
   },
   footer: {
     copyright: "©"

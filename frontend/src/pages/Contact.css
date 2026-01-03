@@ -73,6 +73,21 @@
   word-break: break-all;
 }
 
+.contact-card.cv-download {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  color: white;
+}
+
+.contact-card.cv-download h3,
+.contact-card.cv-download p {
+  color: white;
+}
+
+.contact-card.cv-download:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(59, 130, 246, 0.3);
+}
+
 .contact-message {
   background: white;
   border-radius: 16px;
