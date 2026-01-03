@@ -77,7 +77,7 @@ function Navbar() {
             {t.nav.contact}
           </Link>
           <button className="lang-toggle" onClick={toggleLanguage} aria-label="Toggle language">
-            {language === 'en' ? '🇪🇸' : '🇬🇧'}
+            {language === 'en' ? 'EN' : 'ES'}
           </button>
         </div>
       </div>
