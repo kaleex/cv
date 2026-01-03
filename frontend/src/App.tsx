@@ -8,6 +8,25 @@ import * as portfolio from './data/portfolio'
 import './App.css'
 
 function Home() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible')
+          }
+        })
+      },
+      { threshold: 0.1 }
+    )
+
+    document.querySelectorAll('.fade-in').forEach((el) => {
+      observer.observe(el)
+    })
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <div className="portfolio">
       {/* Hero Section */}
@@ -28,8 +47,30 @@ function Home() {
         </div>
       </header>
 
+      {/* Stats Section */}
+      <section className="stats-section">
+        <div className="stats-container">
+          <div className="stat-item">
+            <span className="stat-number">4+</span>
+            <span className="stat-label">Years Experience</span>
+          </div>
+          <div className="stat-item">
+            <span className="stat-number">3</span>
+            <span className="stat-label">Industries</span>
+          </div>
+          <div className="stat-item">
+            <span className="stat-number">2TB</span>
+            <span className="stat-label">Daily Processing</span>
+          </div>
+          <div className="stat-item">
+            <span className="stat-number">500+</span>
+            <span className="stat-label">Daily Requests</span>
+          </div>
+        </div>
+      </section>
+
       {/* Approach Section */}
-      <section className="section approach">
+      <section className="section approach fade-in">
         <div className="container">
           <h3>{portfolio.approach.title}</h3>
           <p className="section-body">{portfolio.approach.body}</p>
@@ -45,7 +86,7 @@ function Home() {
       </section>
 
       {/* Lakehouse Architecture Section */}
-      <section className="section lakehouse">
+      <section className="section lakehouse fade-in">
         <div className="container">
           <h3>{portfolio.lakehouse.title}</h3>
           <p className="section-body">{portfolio.lakehouse.body}</p>
@@ -58,7 +99,7 @@ function Home() {
       </section>
 
       {/* Medallion Architecture Section */}
-      <section className="section medallion">
+      <section className="section medallion fade-in">
         <div className="container">
           <h3>Medallion Architecture</h3>
           <div className="medallion-layers">
@@ -81,7 +122,7 @@ function Home() {
       </section>
 
       {/* Governance & Security Section */}
-      <section className="section governance">
+      <section className="section governance fade-in">
         <div className="container">
           <h3>{portfolio.governance.title}</h3>
           <p className="section-body">{portfolio.governance.body}</p>
@@ -94,7 +135,7 @@ function Home() {
       </section>
 
       {/* CI/CD Section */}
-      <section className="section cicd">
+      <section className="section cicd fade-in">
         <div className="container">
           <h3>{portfolio.cicd.title}</h3>
           <p className="section-body">{portfolio.cicd.body}</p>
@@ -107,7 +148,7 @@ function Home() {
       </section>
 
       {/* Journey Section */}
-      <section className="section journey">
+      <section className="section journey fade-in">
         <div className="container">
           <h3>{portfolio.journey.title}</h3>
           <div className="timeline">
@@ -126,7 +167,7 @@ function Home() {
       </section>
 
       {/* What I Bring Section */}
-      <section className="section what-i-bring">
+      <section className="section what-i-bring fade-in">
         <div className="container">
           <h3>{portfolio.whatIBring.title}</h3>
           <ul className="skills-list">
@@ -138,7 +179,7 @@ function Home() {
       </section>
 
       {/* Publications Section */}
-      <section className="section publications">
+      <section className="section publications fade-in">
         <div className="container">
           <h3>{portfolio.publications.title}</h3>
           <div className="publications-list">
@@ -154,7 +195,7 @@ function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="section cta">
+      <section className="section cta fade-in">
         <div className="container">
           <h3>{portfolio.cta.title}</h3>
           <p>{portfolio.cta.text}</p>
