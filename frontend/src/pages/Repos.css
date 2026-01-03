@@ -1,14 +1,21 @@
 .repos-page {
-  padding: 6rem 2rem 4rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 8rem 2rem 4rem;
   min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  margin-top: 60px;
+}
+
+.repos-page > * {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Hero */
 .repos-hero {
   text-align: center;
   margin-bottom: 4rem;
+  padding-top: 0;
 }
 
 .repos-hero h1 {

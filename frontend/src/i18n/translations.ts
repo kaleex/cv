@@ -155,7 +155,7 @@ export const en = {
       {
         name: "Databricks E2E Lakehouse",
         description: "Complete end-to-end data platform implementation using Databricks. From raw ingestion to dimensional modeling with facts and dimensions, following Medallion architecture.",
-        tech: ["Databricks", "Delta Lake", "PySpark", "Unity Catalog", "DLT", "DABs", "Terraform", "MLflow", "SQL"],
+        tech: ["Databricks", "Delta Lake", "PySpark", "Unity Catalog", "DLT", "DABs", "Terraform", "MLflow", "Structured Streaming", "Auto Loader", "SQL"],
         status: "in-progress",
         highlights: [
           "Medallion Architecture (Bronze → Silver → Gold)",
@@ -351,7 +351,7 @@ export const es = {
       {
         name: "Databricks E2E Lakehouse",
         description: "Implementación completa end-to-end de plataforma de datos usando Databricks. Desde ingesta raw hasta modelado dimensional con hechos y dimensiones, siguiendo arquitectura Medallion.",
-        tech: ["Databricks", "Delta Lake", "PySpark", "Unity Catalog", "DLT", "DABs", "Terraform", "MLflow", "SQL"],
+        tech: ["Databricks", "Delta Lake", "PySpark", "Unity Catalog", "DLT", "DABs", "Terraform", "MLflow", "Structured Streaming", "Auto Loader", "SQL"],
         status: "in-progress",
         highlights: [
           "Arquitectura Medallion (Bronze → Silver → Gold)",
