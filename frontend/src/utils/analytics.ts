@@ -21,7 +21,7 @@ const trackToServer = async (
         timestamp: new Date().toISOString()
       })
     });
-  } catch {
+  } catch (_) {
     // Silently fail - analytics should never break the app
   }
 };
@@ -90,16 +90,7 @@ export const getAnalyticsStats = async () => {
   try {
     const res = await fetch(`${API_URL}/api/analytics/stats`);
     return await res.json();
-  } catch {
+  } catch (_) {
     return null;
   }
 };
-
-// Vite env types
-interface ImportMetaEnv {
-  readonly VITE_API_URL: string;
-}
-
-interface ImportMeta {
-  readonly env: ImportMetaEnv;
-}
