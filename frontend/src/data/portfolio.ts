@@ -140,8 +140,6 @@ export const skills = [
     icon: "☁️",
     skills: [
       { name: "Azure (Data Factory, Synapse, Databricks)", level: 95 },
-      { name: "AWS (S3, Glue, Redshift, Lambda)", level: 85 },
-      { name: "GCP (BigQuery, Dataflow)", level: 75 },
       { name: "Terraform / Infrastructure as Code", level: 90 },
       { name: "Docker & Kubernetes", level: 80 }
     ]
@@ -152,9 +150,7 @@ export const skills = [
     skills: [
       { name: "Databricks / Delta Lake", level: 95 },
       { name: "Apache Spark", level: 90 },
-      { name: "Unity Catalog", level: 90 },
-      { name: "Snowflake", level: 75 },
-      { name: "dbt (Data Build Tool)", level: 85 }
+      { name: "Unity Catalog", level: 90 }
     ]
   },
   {
@@ -164,7 +160,6 @@ export const skills = [
       { name: "Python", level: 95 },
       { name: "SQL (Advanced)", level: 95 },
       { name: "PySpark", level: 90 },
-      { name: "Scala", level: 70 },
       { name: "Bash / PowerShell", level: 80 }
     ]
   },
@@ -174,7 +169,6 @@ export const skills = [
     skills: [
       { name: "ETL/ELT Pipeline Design", level: 95 },
       { name: "Data Modeling (Dimensional, Data Vault)", level: 90 },
-      { name: "Real-time Streaming (Kafka, Event Hubs)", level: 85 },
       { name: "Data Quality & Testing", level: 90 },
       { name: "Performance Optimization", level: 85 }
     ]
@@ -186,7 +180,6 @@ export const skills = [
       { name: "Azure DevOps / GitHub Actions", level: 90 },
       { name: "CI/CD for Data Pipelines", level: 90 },
       { name: "Git / Version Control", level: 95 },
-      { name: "MLflow / Model Registry", level: 75 },
       { name: "Monitoring & Observability", level: 85 }
     ]
   },
@@ -202,3 +195,15 @@ export const skills = [
     ]
   }
 ];
+
+export const roadmap = {
+  title: "Learning Roadmap",
+  inProgress: [
+    { name: "AZ-305 Azure Solutions Architect Expert", target: "January 2026" }
+  ],
+  upcoming: [
+    { name: "Databricks Certified Data Engineer Associate" },
+    { name: "Databricks Certified Data Engineer Professional" },
+    { name: "Databricks Certified Data Analyst Associate" }
+  ]
+};

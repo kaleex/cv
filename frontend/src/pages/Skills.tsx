@@ -1,4 +1,4 @@
-import { skills } from '../data/portfolio'
+import { skills, roadmap } from '../data/portfolio'
 import './Skills.css'
 
 function Skills() {
@@ -58,6 +58,37 @@ function Skills() {
           <div className="legend-item">
             <span className="legend-dot intermediate"></span>
             <span>Intermediate (60-74%)</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="roadmap-section">
+        <h2>🎯 {roadmap.title}</h2>
+        <div className="roadmap-content">
+          <div className="roadmap-column">
+            <h3>In Progress</h3>
+            <ul className="roadmap-list in-progress">
+              {roadmap.inProgress.map((item, idx) => (
+                <li key={idx}>
+                  <span className="roadmap-icon">🔄</span>
+                  <div className="roadmap-item-content">
+                    <span className="roadmap-name">{item.name}</span>
+                    <span className="roadmap-target">{item.target}</span>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="roadmap-column">
+            <h3>Upcoming</h3>
+            <ul className="roadmap-list upcoming">
+              {roadmap.upcoming.map((item, idx) => (
+                <li key={idx}>
+                  <span className="roadmap-icon">📋</span>
+                  <span className="roadmap-name">{item.name}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
