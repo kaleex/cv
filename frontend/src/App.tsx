@@ -3,6 +3,7 @@ import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Skills from './pages/Skills'
 import Repos from './pages/Repos'
+import Badges from './pages/Badges'
 import Blog from './pages/Blog'
 import Contact from './pages/Contact'
 import { useLanguage } from './i18n/LanguageContext'
@@ -297,6 +298,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/repos" element={<Repos />} />
+        <Route path="/badges" element={<Badges />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={
           <Contact 

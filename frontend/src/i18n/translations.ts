@@ -4,6 +4,7 @@ export const en = {
     home: "Home",
     skills: "Skills",
     repos: "Projects",
+    badges: "Certifications",
     blog: "Blog",
     contact: "Contact"
   },
@@ -234,6 +235,43 @@ export const en = {
       }
     ]
   },
+  badges: {
+    title: "Certifications & Badges",
+    subtitle: "Professional certifications and credentials validating expertise in data engineering and cloud platforms",
+    earnedTitle: "Earned Certifications",
+    inProgressTitle: "In Progress",
+    plannedTitle: "Planned",
+    verifyCredential: "Verify Credential",
+    ctaText: "Continuously learning and expanding expertise in data engineering and cloud technologies",
+    statusLabels: {
+      earned: "Earned",
+      inProgress: "In Progress",
+      planned: "Planned"
+    },
+    certifications: [
+      {
+        name: "Databricks Certified Data Engineer Associate",
+        issuer: "Databricks",
+        date: "Planned Q1 2026",
+        image: "/badges/databricks-de-associate.png",
+        status: "planned"
+      },
+      {
+        name: "Databricks Certified Data Engineer Professional",
+        issuer: "Databricks",
+        date: "Planned Q2 2026",
+        image: "/badges/databricks-de-professional.png",
+        status: "planned"
+      },
+      {
+        name: "Azure Data Engineer Associate (DP-203)",
+        issuer: "Microsoft",
+        date: "Planned 2026",
+        image: "/badges/azure-data-engineer.png",
+        status: "planned"
+      }
+    ]
+  },
   footer: {
     copyright: "©"
   }
@@ -245,6 +283,7 @@ export const es = {
     home: "Inicio",
     skills: "Habilidades",
     repos: "Proyectos",
+    badges: "Certificaciones",
     blog: "Blog",
     contact: "Contacto"
   },
@@ -472,6 +511,43 @@ export const es = {
         tags: ["DLT", "Data Quality", "Databricks"],
         readTime: "~15 min",
         comingSoon: true
+      }
+    ]
+  },
+  badges: {
+    title: "Certificaciones y Badges",
+    subtitle: "Certificaciones profesionales y credenciales que validan experiencia en data engineering y plataformas cloud",
+    earnedTitle: "Certificaciones Obtenidas",
+    inProgressTitle: "En Progreso",
+    plannedTitle: "Planificadas",
+    verifyCredential: "Verificar Credencial",
+    ctaText: "Aprendiendo continuamente y expandiendo experiencia en data engineering y tecnologías cloud",
+    statusLabels: {
+      earned: "Obtenida",
+      inProgress: "En Progreso",
+      planned: "Planificada"
+    },
+    certifications: [
+      {
+        name: "Databricks Certified Data Engineer Associate",
+        issuer: "Databricks",
+        date: "Planificada Q1 2026",
+        image: "/badges/databricks-de-associate.png",
+        status: "planned"
+      },
+      {
+        name: "Databricks Certified Data Engineer Professional",
+        issuer: "Databricks",
+        date: "Planificada Q2 2026",
+        image: "/badges/databricks-de-professional.png",
+        status: "planned"
+      },
+      {
+        name: "Azure Data Engineer Associate (DP-203)",
+        issuer: "Microsoft",
+        date: "Planificada 2026",
+        image: "/badges/azure-data-engineer.png",
+        status: "planned"
       }
     ]
   },

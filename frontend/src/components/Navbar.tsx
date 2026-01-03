@@ -36,6 +36,9 @@ function Navbar() {
           <Link to="/repos" className={location.pathname === '/repos' ? 'active' : ''} onClick={() => Analytics.navClick('repos')}>
             {t.nav.repos}
           </Link>
+          <Link to="/badges" className={location.pathname === '/badges' ? 'active' : ''} onClick={() => Analytics.navClick('badges')}>
+            {t.nav.badges}
+          </Link>
           <Link to="/blog" className={location.pathname === '/blog' ? 'active' : ''} onClick={() => Analytics.navClick('blog')}>
             {t.nav.blog}
           </Link>
