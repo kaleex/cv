@@ -22,6 +22,9 @@ function Home() {
             ))}
           </div>
           <p className="tagline">{portfolio.hero.intro[2]}</p>
+          <a href="/cv.pdf" download className="download-cv-btn">
+            📄 Download CV
+          </a>
         </div>
       </header>
 
