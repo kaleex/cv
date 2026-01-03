@@ -1,0 +1,35 @@
+@startuml Tech_Stack
+title Technology Stack
+
+package "Frontend" #LightBlue {
+    component "React 18" as react
+    component "TypeScript" as ts
+    component "Vite" as vite
+    component "react-router-dom" as router
+    component "CSS3" as css
+}
+
+package "Backend" #LightGreen {
+    component "Python 3.x" as python
+    component "FastAPI" as fastapi
+    component "Pydantic" as pydantic
+    component "Uvicorn" as uvicorn
+}
+
+package "Development Tools" #LightYellow {
+    component "VS Code" as vscode
+    component "npm" as npm
+    component "pip" as pip
+    component "Git" as git
+}
+
+react --> ts : typed with
+react --> vite : bundled by
+react --> router : routing
+react --> css : styled with
+
+fastapi --> python : built with
+fastapi --> pydantic : models
+fastapi --> uvicorn : served by
+
+@enduml

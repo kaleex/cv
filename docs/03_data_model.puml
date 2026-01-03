@@ -1,0 +1,100 @@
+@startuml Data_Model
+title Backend Data Models (Pydantic)
+
+class PersonalInfo {
+    +name: str
+    +title: str
+    +email: str
+    +phone: str
+    +linkedin: str
+    +github: str
+}
+
+class Hero {
+    +headline: str
+    +subheadline: str
+    +cta_text: str
+}
+
+class Approach {
+    +title: str
+    +description: str
+}
+
+class LakehouseArchitecture {
+    +title: str
+    +subtitle: str
+    +description: str
+}
+
+class MedallionLayer {
+    +name: str
+    +title: str
+    +description: str
+    +color: str
+}
+
+class GovernanceSecurity {
+    +title: str
+    +items: List~str~
+}
+
+class CICD {
+    +title: str
+    +description: str
+    +tools: List~str~
+}
+
+class Journey {
+    +title: str
+    +description: str
+}
+
+class WhatIBring {
+    +title: str
+    +items: List~str~
+}
+
+class CTA {
+    +title: str
+    +description: str
+    +button_text: str
+    +email: str
+}
+
+class Skill {
+    +name: str
+    +level: int
+}
+
+class SkillCategory {
+    +category: str
+    +skills: List~Skill~
+}
+
+class PortfolioData {
+    +personal_info: PersonalInfo
+    +hero: Hero
+    +approach: Approach
+    +lakehouse: LakehouseArchitecture
+    +medallion_layers: List~MedallionLayer~
+    +governance: GovernanceSecurity
+    +cicd: CICD
+    +journey: Journey
+    +what_i_bring: WhatIBring
+    +cta: CTA
+}
+
+PortfolioData *-- PersonalInfo
+PortfolioData *-- Hero
+PortfolioData *-- Approach
+PortfolioData *-- LakehouseArchitecture
+PortfolioData *-- "3" MedallionLayer
+PortfolioData *-- GovernanceSecurity
+PortfolioData *-- CICD
+PortfolioData *-- Journey
+PortfolioData *-- WhatIBring
+PortfolioData *-- CTA
+SkillCategory *-- "*" Skill
+
+@enduml

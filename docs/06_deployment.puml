@@ -1,0 +1,42 @@
+@startuml Deployment_Architecture
+title Deployment Architecture (Development)
+
+node "Development Machine" {
+    
+    package "Frontend Container" as fe {
+        component "Vite Dev Server" as vite
+        component "React SPA" as react
+        
+        vite --> react : serves
+    }
+    
+    package "Backend Container" as be {
+        component "Uvicorn" as uvicorn
+        component "FastAPI App" as fastapi
+        
+        uvicorn --> fastapi : ASGI
+    }
+    
+    database "In-Memory Data" as data {
+        storage "Portfolio JSON"
+        storage "Skills JSON"
+    }
+}
+
+cloud "Browser" as browser
+
+browser --> vite : ":5173"
+vite --> uvicorn : "proxy /api/* -> :8000"
+fastapi --> data : reads
+
+note right of fe
+  npm run dev
+  Port: 5173
+end note
+
+note right of be
+  uvicorn main:app
+  Port: 8000
+end note
+
+@enduml

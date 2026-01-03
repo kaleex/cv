@@ -1,0 +1,63 @@
+@startuml Architecture_Overview
+!theme plain
+title Portfolio Web Application - Architecture Overview
+
+skinparam componentStyle uml2
+skinparam backgroundColor #FEFEFE
+
+package "Frontend (React + Vite)" as frontend {
+    [Browser] as browser
+    
+    package "React Application" as reactapp {
+        [App.tsx] as app
+        [Navbar] as navbar
+        
+        package "Pages" {
+            [Home] as home
+            [Skills] as skills
+            [Contact] as contact
+        }
+        
+        package "Router" {
+            [react-router-dom] as router
+        }
+    }
+    
+    [Vite Dev Server\nPort 5173] as vite
+}
+
+package "Backend (FastAPI)" as backend {
+    [Uvicorn Server\nPort 8000] as uvicorn
+    
+    package "FastAPI Application" {
+        [main.py] as mainpy
+        
+        package "Endpoints" {
+            [/api/portfolio] as apiportfolio
+            [/api/skills] as apiskills
+            [/ (root)] as apiroot
+        }
+        
+        package "Data Models (Pydantic)" {
+            [PersonalInfo] as personalinfo
+            [Hero] as hero
+            [PortfolioData] as portfoliodata
+            [SkillCategory] as skillcategory
+        }
+    }
+}
+
+browser --> vite : HTTP Request
+vite --> app : Serves SPA
+app --> router : Route Management
+router --> home : "/"
+router --> skills : "/skills"
+router --> contact : "/contact"
+navbar --> router : Navigation Links
+
+vite --> uvicorn : Proxy /api/*
+uvicorn --> mainpy : Handle Request
+apiportfolio --> portfoliodata : Returns JSON
+apiskills --> skillcategory : Returns JSON
+
+@enduml

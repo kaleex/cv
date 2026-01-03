@@ -1,0 +1,44 @@
+@startuml Component_Diagram
+!theme plain
+title Frontend Component Hierarchy
+
+skinparam componentStyle uml2
+
+package "src/" {
+    [main.tsx] as main
+    
+    package "App" {
+        [App.tsx] as app
+        [App.css] as appcss
+    }
+    
+    package "components/" {
+        [Navbar.tsx] as navbar
+        [Navbar.css] as navbarcss
+    }
+    
+    package "pages/" {
+        [Home] as home
+        note right: Embedded in App.tsx
+        
+        [Skills.tsx] as skills
+        [Skills.css] as skillscss
+        
+        [Contact.tsx] as contact
+        [Contact.css] as contactcss
+    }
+    
+    [index.css] as indexcss
+}
+
+main --> app : renders
+app --> navbar : imports
+app --> skills : lazy route
+app --> contact : lazy route
+navbar ..> navbarcss : styles
+skills ..> skillscss : styles
+contact ..> contactcss : styles
+app ..> appcss : styles
+main ..> indexcss : global styles
+
+@enduml
