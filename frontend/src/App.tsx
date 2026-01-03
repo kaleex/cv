@@ -7,6 +7,7 @@ import Badges from './pages/Badges'
 import Blog from './pages/Blog'
 import Contact from './pages/Contact'
 import { useLanguage } from './i18n/LanguageContext'
+import { features } from './config/features'
 import { trackPageView, resetScrollTracking, Analytics } from './utils/analytics'
 import * as portfolio from './data/portfolio'
 import './App.css'
@@ -297,9 +298,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/skills" element={<Skills />} />
-        <Route path="/repos" element={<Repos />} />
-        <Route path="/badges" element={<Badges />} />
-        <Route path="/blog" element={<Blog />} />
+        {features.projects && <Route path="/repos" element={<Repos />} />}
+        {features.certifications && <Route path="/badges" element={<Badges />} />}
+        {features.blog && <Route path="/blog" element={<Blog />} />}
         <Route path="/contact" element={
           <Contact 
             email={portfolio.personalInfo.email} 

@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 import { Analytics } from '../utils/analytics'
 import { useLanguage } from '../i18n/LanguageContext'
+import { features } from '../config/features'
 import './Navbar.css'
 
 function Navbar() {
@@ -33,15 +34,21 @@ function Navbar() {
           <Link to="/skills" className={location.pathname === '/skills' ? 'active' : ''} onClick={() => Analytics.navClick('skills')}>
             {t.nav.skills}
           </Link>
-          <Link to="/repos" className={location.pathname === '/repos' ? 'active' : ''} onClick={() => Analytics.navClick('repos')}>
-            {t.nav.repos}
-          </Link>
-          <Link to="/badges" className={location.pathname === '/badges' ? 'active' : ''} onClick={() => Analytics.navClick('badges')}>
-            {t.nav.badges}
-          </Link>
-          <Link to="/blog" className={location.pathname === '/blog' ? 'active' : ''} onClick={() => Analytics.navClick('blog')}>
-            {t.nav.blog}
-          </Link>
+          {features.projects && (
+            <Link to="/repos" className={location.pathname === '/repos' ? 'active' : ''} onClick={() => Analytics.navClick('repos')}>
+              {t.nav.repos}
+            </Link>
+          )}
+          {features.certifications && (
+            <Link to="/badges" className={location.pathname === '/badges' ? 'active' : ''} onClick={() => Analytics.navClick('badges')}>
+              {t.nav.badges}
+            </Link>
+          )}
+          {features.blog && (
+            <Link to="/blog" className={location.pathname === '/blog' ? 'active' : ''} onClick={() => Analytics.navClick('blog')}>
+              {t.nav.blog}
+            </Link>
+          )}
           <Link to="/contact" className={`navbar-cta ${location.pathname === '/contact' ? 'active' : ''}`} onClick={() => Analytics.navClick('contact')}>
             {t.nav.contact}
           </Link>
