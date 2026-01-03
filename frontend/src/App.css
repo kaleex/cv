@@ -27,10 +27,11 @@
   color: white;
   padding: 6rem 2rem;
   padding-top: 8rem;
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  padding-top: 20vh;
 }
 
 .hero-content {
