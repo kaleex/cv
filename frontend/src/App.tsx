@@ -181,7 +181,7 @@ function App() {
 
   return (
     <>
-      <Navbar name={portfolio.personalInfo.name} />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/skills" element={<Skills />} />

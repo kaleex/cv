@@ -18,18 +18,14 @@
 }
 
 .navbar-brand {
-  color: white;
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 1.1rem;
 }
 
-.brand-full {
-  display: inline;
-}
-
-.brand-short {
-  display: none;
+.brand-logo {
+  width: 40px;
+  height: 40px;
 }
 
 .navbar-links {
@@ -68,18 +64,9 @@
     padding: 0.75rem 1rem;
   }
 
-  .brand-full {
-    display: none;
-  }
-
-  .brand-short {
-    display: inline;
-    font-size: 1.1rem;
-    font-weight: 700;
-    background: linear-gradient(90deg, #60a5fa, #a78bfa);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  .brand-logo {
+    width: 36px;
+    height: 36px;
   }
 
   .navbar-links {
@@ -99,6 +86,11 @@
 @media (max-width: 400px) {
   .navbar {
     padding: 0.6rem 0.75rem;
+  }
+
+  .brand-logo {
+    width: 32px;
+    height: 32px;
   }
 
   .navbar-links {

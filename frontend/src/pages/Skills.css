@@ -1,5 +1,4 @@
 .skills-page {
-  padding-top: 80px;
   min-height: 100vh;
   background: #f8fafc;
 }
@@ -8,6 +7,7 @@
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
   color: white;
   padding: 4rem 2rem;
+  padding-top: 7rem;
   text-align: center;
 }
 
@@ -161,6 +161,7 @@
 
   .skills-header {
     padding: 3rem 1rem;
+    padding-top: 6rem;
   }
 
   .skills-header h1 {
@@ -182,12 +183,9 @@
 }
 
 @media (max-width: 480px) {
-  .skills-page {
-    padding-top: 60px;
-  }
-
   .skills-header {
     padding: 2.5rem 0.75rem;
+    padding-top: 5rem;
   }
 
   .skills-header h1 {

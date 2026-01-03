@@ -1,45 +1,14 @@
-# Curriculum Web
+# alejandroquilez.dev
 
-Aplicación web fullstack para mostrar tu curriculum/portafolio personal.
+Portfolio personal - Senior Data Engineer
 
-## 🛠 Tech Stack
+## Stack
 
-- **Backend**: Python con FastAPI
-- **Frontend**: React con TypeScript
-- **Build Tool**: Vite
+- **Frontend**: React + TypeScript + Vite
+- **Hosting**: Cloudflare Workers
+- **Domain**: alejandroquilez.dev
 
-## 📁 Estructura del Proyecto
-
-```
-curriweb/
-├── backend/
-│   ├── main.py           # API FastAPI
-│   └── requirements.txt  # Dependencias Python
-├── frontend/
-│   ├── src/
-│   │   ├── App.tsx       # Componente principal
-│   │   ├── App.css       # Estilos
-│   │   ├── main.tsx      # Entry point
-│   │   └── index.css     # Estilos globales
-│   ├── index.html
-│   ├── package.json
-│   └── vite.config.ts
-└── README.md
-```
-
-## 🚀 Inicio Rápido
-
-### Backend
-
-```bash
-cd backend
-pip install -r requirements.txt
-uvicorn main:app --reload
-```
-
-El servidor API estará disponible en `http://localhost:8000`
-
-### Frontend
+## Desarrollo
 
 ```bash
 cd frontend
@@ -47,16 +16,14 @@ npm install
 npm run dev
 ```
 
-La aplicación estará disponible en `http://localhost:5173`
+## Deploy
 
-## 📝 Personalización
+```bash
+cd frontend
+npm run build
+npx wrangler deploy
+```
 
-Edita los datos de tu curriculum en `backend/main.py` en la variable `curriculum_data`.
+## Live
 
-## 🔗 API Endpoints
-
-- `GET /api/curriculum` - Obtener curriculum completo
-- `GET /api/personal-info` - Obtener información personal
-- `GET /api/experience` - Obtener experiencia laboral
-- `GET /api/education` - Obtener educación
-- `GET /api/skills` - Obtener habilidades
+https://alejandroquilez.dev

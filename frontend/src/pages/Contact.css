@@ -1,5 +1,4 @@
 .contact-page {
-  padding-top: 80px;
   min-height: 100vh;
   background: #f8fafc;
 }
@@ -8,6 +7,7 @@
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
   color: white;
   padding: 4rem 2rem;
+  padding-top: 7rem;
   text-align: center;
 }
 
@@ -104,12 +104,9 @@
 }
 
 @media (max-width: 768px) {
-  .contact-page {
-    padding-top: 70px;
-  }
-
   .contact-header {
     padding: 3rem 1rem;
+    padding-top: 6rem;
   }
 
   .contact-header h1 {
@@ -159,12 +156,9 @@
 }
 
 @media (max-width: 480px) {
-  .contact-page {
-    padding-top: 60px;
-  }
-
   .contact-header {
     padding: 2.5rem 0.75rem;
+    padding-top: 5rem;
   }
 
   .contact-header h1 {
