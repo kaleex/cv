@@ -1,32 +1,7 @@
-import { useState, useEffect } from 'react'
+import { skills } from '../data/portfolio'
 import './Skills.css'
 
-interface SkillItem {
-  name: string
-  level: number
-}
-
-interface SkillCategory {
-  category: string
-  icon: string
-  skills: SkillItem[]
-}
-
 function Skills() {
-  const [skills, setSkills] = useState<SkillCategory[]>([])
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    fetch('/api/skills')
-      .then((res) => res.json())
-      .then((data) => {
-        setSkills(data)
-        setLoading(false)
-      })
-      .catch(() => setLoading(false))
-  }, [])
-
-  if (loading) return <div className="loading">Loading...</div>
 
   const getLevelLabel = (level: number) => {
     if (level >= 90) return 'Expert'

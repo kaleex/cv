@@ -1,29 +1,18 @@
 // Privacy-First Analytics - No cookies, RGPD compliant
-// All data is anonymized and stored on your own server
+// Client-side only - uses Cloudflare Analytics (built-in, no config needed)
 // No third-party scripts, no tracking pixels, no fingerprinting
 
-const API_URL = import.meta.env.VITE_API_URL || '';
-
-// Track an event to our own backend
-const trackToServer = async (
+// Log event for debugging in development only
+const logEvent = (
   eventType: 'pageview' | 'click' | 'scroll',
   eventName: string,
-  eventData?: Record<string, unknown>
+  _eventData?: Record<string, unknown>
 ) => {
-  try {
-    await fetch(`${API_URL}/api/analytics/track`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        event_type: eventType,
-        event_name: eventName,
-        event_data: eventData,
-        timestamp: new Date().toISOString()
-      })
-    });
-  } catch (_) {
-    // Silently fail - analytics should never break the app
+  if (import.meta.env.DEV) {
+    console.log(`[Analytics] ${eventType}: ${eventName}`);
   }
+  // Cloudflare Workers provides built-in analytics automatically
+  // No additional tracking code needed - see Cloudflare dashboard for metrics
 };
 
 // Initialize analytics (scroll tracking)
@@ -34,31 +23,31 @@ export const initAnalytics = () => {
 
 // Track page views
 export const trackPageView = (path: string) => {
-  trackToServer('pageview', path);
+  logEvent('pageview', path);
 };
 
 // Predefined events for common actions
 export const Analytics = {
   // Navigation events
-  navClick: (page: string) => trackToServer('click', `nav:${page}`),
+  navClick: (page: string) => logEvent('click', `nav:${page}`),
   
   // CTA events
-  ctaClick: (ctaName: string) => trackToServer('click', `cta:${ctaName}`),
+  ctaClick: (ctaName: string) => logEvent('click', `cta:${ctaName}`),
   
   // Contact events
-  emailClick: () => trackToServer('click', 'contact:email'),
-  phoneClick: () => trackToServer('click', 'contact:phone'),
-  linkedinClick: () => trackToServer('click', 'contact:linkedin'),
-  githubClick: () => trackToServer('click', 'contact:github'),
+  emailClick: () => logEvent('click', 'contact:email'),
+  phoneClick: () => logEvent('click', 'contact:phone'),
+  linkedinClick: () => logEvent('click', 'contact:linkedin'),
+  githubClick: () => logEvent('click', 'contact:github'),
   
   // Section views
-  sectionView: (section: string) => trackToServer('click', `section:${section}`),
+  sectionView: (section: string) => logEvent('click', `section:${section}`),
   
   // Skills page
-  skillCategoryView: (category: string) => trackToServer('click', `skill:${category}`),
+  skillCategoryView: (category: string) => logEvent('click', `skill:${category}`),
   
   // Scroll depth
-  scrollDepth: (percentage: number) => trackToServer('scroll', `${percentage}`),
+  scrollDepth: (percentage: number) => logEvent('scroll', `${percentage}`),
 };
 
 // Scroll depth tracking
@@ -83,14 +72,4 @@ const handleScroll = () => {
 // Reset scroll tracking (call on page change)
 export const resetScrollTracking = () => {
   triggeredThresholds.clear();
-};
-
-// Get analytics stats (for admin dashboard)
-export const getAnalyticsStats = async () => {
-  try {
-    const res = await fetch(`${API_URL}/api/analytics/stats`);
-    return await res.json();
-  } catch (_) {
-    return null;
-  }
 };
