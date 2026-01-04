@@ -94,6 +94,10 @@
   border-radius: 2px;
 }
 
+[data-theme="light"] .menu-toggle span {
+  background: #1e293b;
+}
+
 .menu-toggle.open span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
