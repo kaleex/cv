@@ -1,21 +1,21 @@
 # alejandroquilez.dev
 
-Portfolio personal - Senior Data Engineer
+Personal Portfolio - Senior Data Engineer
 
 🌐 **Live**: [alejandroquilez.dev](https://alejandroquilez.dev)
 
 ## ✨ Features
 
-- � **Dark/Light mode** - Toggle con persistencia en localStorage
-- 🌍 **Internacionalización (i18n)** - Español / English toggle
-- 📱 **Responsive design** - Mobile-first con menú hamburguesa
-- 📊 **Experience Timeline** - Trayectoria profesional visual
-- ⚡ **Animación typing** - Efecto máquina de escribir en hero
-- 🎯 **Feature flags** - Activar/desactivar secciones fácilmente
-- 🔒 **RGPD compliant** - Sin cookies de terceros
-- 🔍 **SEO optimizado** - Open Graph, Twitter Cards, sitemap, robots.txt
-- 📊 **Analytics** - Cloudflare Analytics (privacidad)
-- 📄 **CV descargable** - PDF disponible para descargar
+- 🌓 **Dark/Light mode** - Toggle with localStorage persistence
+- 🌍 **Internationalization (i18n)** - Spanish / English toggle
+- 📱 **Responsive design** - Mobile-first with hamburger menu
+- 📊 **Experience Timeline** - Visual career path
+- ⚡ **Typing animation** - Typewriter effect in hero section
+- 🎯 **Feature flags** - Easily enable/disable sections
+- 🔒 **GDPR compliant** - No third-party cookies
+- 🔍 **SEO optimized** - Open Graph, Twitter Cards, sitemap, robots.txt
+- 📊 **Analytics** - Cloudflare Analytics (privacy-first)
+- 📄 **Downloadable CV** - PDF available for download
 
 ## 🛠️ Stack
 
@@ -24,7 +24,7 @@ Portfolio personal - Senior Data Engineer
 - **Domain**: Cloudflare Registrar
 - **CI/CD**: Git push → Cloudflare auto-deploy
 
-## 📁 Estructura
+## 📁 Structure
 
 ```
 frontend/
@@ -33,7 +33,7 @@ frontend/
 │   ├── config/         # Feature flags
 │   ├── context/        # ThemeContext (dark/light)
 │   ├── data/           # Portfolio data
-│   ├── i18n/           # Traducciones EN/ES
+│   ├── i18n/           # Translations EN/ES
 │   ├── pages/          # Skills, Experience, Contact, Repos, Blog, Badges
 │   └── utils/          # Analytics
 ├── public/
@@ -45,7 +45,7 @@ frontend/
 └── wrangler.jsonc      # Cloudflare config
 ```
 
-## 🚀 Desarrollo
+## 🚀 Development
 
 ```bash
 cd frontend
@@ -55,7 +55,7 @@ npm run dev
 
 ## 📦 Deploy
 
-Push a `main` → Cloudflare Workers auto-deploy
+Push to `main` → Cloudflare Workers auto-deploy
 
 Manual:
 ```bash
@@ -66,46 +66,46 @@ npx wrangler deploy
 
 ## ⚙️ Feature Flags
 
-Edita `src/config/features.ts` para activar/desactivar secciones:
+Edit `src/config/features.ts` to enable/disable sections:
 
 ```typescript
 export const features = {
-  projects: true,        // /repos - Página de proyectos
-  certifications: true,  // /badges - Certificaciones
-  blog: true,            // /blog - Blog técnico
-  experience: true,      // /experience - Timeline profesional
+  projects: true,        // /repos - Projects page
+  certifications: true,  // /badges - Certifications
+  blog: true,            // /blog - Tech blog
+  experience: true,      // /experience - Career timeline
 };
 ```
 
-## 🌓 Tema Dark/Light
+## 🌓 Dark/Light Theme
 
-El tema se gestiona en `src/context/ThemeContext.tsx` y persiste en localStorage. El toggle está en el Navbar.
+Theme is managed in `src/context/ThemeContext.tsx` and persists in localStorage. Toggle is in the Navbar.
 
 ## 🌐 i18n
 
-Las traducciones están en `src/i18n/translations.ts`. El idioma se guarda en localStorage.
+Translations are in `src/i18n/translations.ts`. Language is saved in localStorage.
 
-## 📄 Actualizar CV
+## 📄 Update CV
 
-1. Reemplaza `public/cv.pdf`
-2. Push a main
+1. Replace `public/cv.pdf`
+2. Push to main
 
-## 🏆 Añadir Certificación
+## 🏆 Add Certification
 
-1. Añade imagen del badge en `public/badges/`
-2. Edita `src/i18n/translations.ts` → `badges.certifications`
-3. Cambia `status: "earned"` y añade `credentialUrl`
-4. Activa feature flag: `certifications: true`
+1. Add badge image to `public/badges/`
+2. Edit `src/i18n/translations.ts` → `badges.certifications`
+3. Set `status: "earned"` and add `credentialUrl`
+4. Enable feature flag: `certifications: true`
 
-## 📝 Añadir Blog Post
+## 📝 Add Blog Post
 
-1. Edita `src/i18n/translations.ts` → `blog.posts`
-2. Cambia `comingSoon: false`
-3. Activa feature flag: `blog: true`
+1. Edit `src/i18n/translations.ts` → `blog.posts`
+2. Set `comingSoon: false`
+3. Enable feature flag: `blog: true`
 
-## 📊 Actualizar Experience Timeline
+## 📊 Update Experience Timeline
 
-Edita `src/i18n/translations.ts` → `experience.jobs` (EN y ES)
+Edit `src/i18n/translations.ts` → `experience.jobs` (EN and ES)
 
 ---
 
