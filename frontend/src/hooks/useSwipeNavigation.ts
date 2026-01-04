@@ -26,15 +26,15 @@ export const useSwipeNavigation = () => {
   const currentIndex = pages.indexOf(location.pathname)
   
   const goToNextPage = () => {
-    if (currentIndex < pages.length - 1) {
-      navigate(pages[currentIndex + 1])
-    }
+    // Circular: si está en la última, vuelve a la primera
+    const nextIndex = currentIndex >= pages.length - 1 ? 0 : currentIndex + 1
+    navigate(pages[nextIndex])
   }
   
   const goToPrevPage = () => {
-    if (currentIndex > 0) {
-      navigate(pages[currentIndex - 1])
-    }
+    // Circular: si está en la primera, va a la última
+    const prevIndex = currentIndex <= 0 ? pages.length - 1 : currentIndex - 1
+    navigate(pages[prevIndex])
   }
   
   const handlers = useSwipeable({
@@ -53,7 +53,7 @@ export const useSwipeNavigation = () => {
     handlers: isMobile ? handlers : {},
     currentIndex,
     totalPages: pages.length,
-    canGoNext: currentIndex < pages.length - 1,
-    canGoPrev: currentIndex > 0,
+    canGoNext: true,  // Siempre puede navegar (circular)
+    canGoPrev: true,  // Siempre puede navegar (circular)
   }
 }
