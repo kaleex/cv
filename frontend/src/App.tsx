@@ -281,10 +281,6 @@ function Home() {
           </div>
         </div>
       </section>
-
-      <footer className="footer">
-        <p>{t.footer.copyright} {new Date().getFullYear()} {portfolio.personalInfo.name}</p>
-      </footer>
     </div>
   )
 }

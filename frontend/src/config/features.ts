@@ -5,5 +5,5 @@ export const features = {
   experience: true,    // /experience - Career timeline
   projects: true,      // /repos - Databricks E2E project
   certifications: true, // /badges - Certifications page
-  blog: true,          // /blog - Tech blog
+  blog: false,          // /blog - Tech blog
 };

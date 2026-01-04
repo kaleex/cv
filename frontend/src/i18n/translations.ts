@@ -84,7 +84,6 @@ export const en = {
       "Infrastructure as Code with Terraform (Databricks, Azure resources)",
       "Automated testing: unit tests, integration tests, data quality tests",
       "GitOps workflows with Azure DevOps / GitHub Actions",
-      "Blue-green deployments for zero-downtime releases",
       "Comprehensive monitoring with Azure Monitor and custom dashboards"
     ]
   },
@@ -171,8 +170,7 @@ export const en = {
           "FastAPI model serving with Pydantic v2 & OpenAPI docs",
           "Full observability: Prometheus, Grafana, Data/Concept Drift",
           "CI/CD with GitHub Actions & Databricks Asset Bundles",
-          "Unity Catalog governance & security",
-          "Canary/Shadow deployments & cost monitoring"
+          "Unity Catalog governance & security"
         ]
       },
       {
@@ -410,7 +408,6 @@ export const es = {
       "Infrastructure as Code con Terraform (Databricks, recursos Azure)",
       "Testing automatizado: unit tests, integration tests, tests de calidad de datos",
       "Workflows GitOps con Azure DevOps / GitHub Actions",
-      "Despliegues blue-green para releases sin downtime",
       "Monitorización completa con Azure Monitor y dashboards custom"
     ]
   },
@@ -497,8 +494,7 @@ export const es = {
           "Model serving con FastAPI, Pydantic v2 & OpenAPI docs",
           "Observabilidad completa: Prometheus, Grafana, Data/Concept Drift",
           "CI/CD con GitHub Actions & Databricks Asset Bundles",
-          "Gobernanza y seguridad con Unity Catalog",
-          "Despliegues Canary/Shadow & monitoring de costes"
+          "Gobernanza y seguridad con Unity Catalog"
         ]
       },
       {

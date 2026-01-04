@@ -80,7 +80,6 @@ export const cicd = {
     "Infrastructure as Code with Terraform (Databricks, Azure resources)",
     "Automated testing: unit tests, integration tests, data quality tests",
     "GitOps workflows with Azure DevOps / GitHub Actions",
-    "Blue-green deployments for zero-downtime releases",
     "Comprehensive monitoring with Azure Monitor and custom dashboards"
   ]
 };
@@ -141,7 +140,7 @@ export const skills = [
     skills: [
       { name: "Azure (Data Factory, Synapse, Databricks)", level: 95 },
       { name: "Terraform / Infrastructure as Code", level: 90 },
-      { name: "Docker & Kubernetes", level: 80 }
+      { name: "Docker", level: 80 }
     ]
   },
   {
