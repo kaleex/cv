@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import { SwipeWrapper } from './components/SwipeWrapper'
 import Skills from './pages/Skills'
 import Experience from './pages/Experience'
 import Repos from './pages/Repos'
@@ -298,22 +299,24 @@ function App() {
   return (
     <>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/skills" element={<Skills />} />
-        {features.experience && <Route path="/experience" element={<Experience />} />}
-        {features.projects && <Route path="/repos" element={<Repos />} />}
-        {features.certifications && <Route path="/badges" element={<Badges />} />}
-        {features.blog && <Route path="/blog" element={<Blog />} />}
-        <Route path="/contact" element={
-          <Contact 
-            email={portfolio.personalInfo.email} 
-            phone={portfolio.personalInfo.phone} 
-            linkedin={portfolio.personalInfo.linkedin} 
-            github={portfolio.personalInfo.github} 
-          />
-        } />
-      </Routes>
+      <SwipeWrapper>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/skills" element={<Skills />} />
+          {features.experience && <Route path="/experience" element={<Experience />} />}
+          {features.projects && <Route path="/repos" element={<Repos />} />}
+          {features.certifications && <Route path="/badges" element={<Badges />} />}
+          {features.blog && <Route path="/blog" element={<Blog />} />}
+          <Route path="/contact" element={
+            <Contact 
+              email={portfolio.personalInfo.email} 
+              phone={portfolio.personalInfo.phone} 
+              linkedin={portfolio.personalInfo.linkedin} 
+              github={portfolio.personalInfo.github} 
+            />
+          } />
+        </Routes>
+      </SwipeWrapper>
       <Footer />
       <BackToTop />
     </>

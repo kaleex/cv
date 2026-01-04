@@ -1,0 +1,70 @@
+.swipe-wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
+/* Dots indicator */
+.swipe-indicators {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 100;
+  padding: 8px 12px;
+  background: var(--bg-secondary);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+.swipe-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  transition: all 0.3s ease;
+}
+
+.swipe-dot.active {
+  background: var(--accent);
+  transform: scale(1.2);
+}
+
+/* Edge hints */
+.swipe-hint {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: var(--text-muted);
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 50;
+  animation: pulse 2s infinite;
+}
+
+.swipe-hint-left {
+  left: 8px;
+}
+
+.swipe-hint-right {
+  right: 8px;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Only show on mobile */
+@media (min-width: 601px) {
+  .swipe-indicators,
+  .swipe-hint {
+    display: none;
+  }
+}
