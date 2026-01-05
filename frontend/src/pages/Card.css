@@ -1,0 +1,315 @@
+.card-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-primary);
+  padding: 2rem;
+  padding-top: 100px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.card-instruction {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+
+/* Business Card Container */
+.business-card {
+  width: 380px;
+  height: 220px;
+  cursor: pointer;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.business-card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: 
+    8px 8px 30px rgba(139, 92, 246, 0.4),
+    4px 4px 15px rgba(59, 130, 246, 0.3),
+    0 0 0 1px rgba(139, 92, 246, 0.2);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  overflow: hidden;
+}
+
+[data-theme="light"] .card-face {
+  box-shadow: 
+    8px 8px 25px rgba(139, 92, 246, 0.25),
+    4px 4px 12px rgba(59, 130, 246, 0.2);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+/* Front Side */
+.card-front {
+  background: var(--bg-secondary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.card-logo .bracket {
+  color: #60a5fa;
+}
+
+.card-logo .initials {
+  color: var(--text-primary);
+  letter-spacing: 2px;
+}
+
+.card-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.card-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.card-title {
+  font-size: 0.95rem;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+  margin: 0;
+}
+
+.card-tagline {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin: 0;
+}
+
+.card-decoration {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.decoration-line {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, transparent);
+  border-radius: 1px;
+}
+
+.decoration-dots {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.decoration-dots span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #60a5fa;
+}
+
+.decoration-dots span:nth-child(2) {
+  background: #8b5cf6;
+}
+
+.decoration-dots span:nth-child(3) {
+  background: #a78bfa;
+}
+
+/* Back Side */
+.card-back {
+  background: var(--bg-secondary);
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+}
+
+.card-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.7rem;
+  padding: 0.3rem 0.5rem;
+  transition: all 0.2s ease;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-item:hover:not(.location) {
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2));
+  border-color: rgba(96, 165, 250, 0.5);
+  color: #60a5fa;
+  transform: translateX(5px);
+}
+
+[data-theme="light"] .contact-item {
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .contact-item:hover:not(.location) {
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+  border-color: rgba(59, 130, 246, 0.4);
+  color: #3b82f6;
+}
+
+.contact-icon {
+  font-size: 0.8rem;
+  width: 18px;
+  text-align: center;
+}
+
+.contact-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.contact-item.location {
+  color: var(--text-muted);
+  cursor: default;
+}
+
+.card-qr-hint {
+  text-align: center;
+}
+
+.flip-hint {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Action Buttons */
+.card-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  min-width: 160px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.card-action-btn:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+}
+
+.card-action-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .card-page {
+    padding: 1.5rem;
+    padding-top: 80px;
+  }
+
+  .business-card {
+    width: 320px;
+    height: 190px;
+  }
+
+  .card-face {
+    padding: 1.25rem;
+  }
+
+  .card-name {
+    font-size: 1.25rem;
+  }
+
+  .card-title {
+    font-size: 0.85rem;
+  }
+
+  .card-tagline {
+    font-size: 0.75rem;
+  }
+
+  .contact-item {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.5rem;
+  }
+
+  .card-actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .card-action-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Hover effect on card */
+.business-card:hover .card-face {
+  border-color: var(--border-hover);
+}

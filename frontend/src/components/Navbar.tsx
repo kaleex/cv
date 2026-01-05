@@ -72,18 +72,11 @@ function Navbar() {
     <nav className={`navbar ${!navbarVisible ? 'navbar-hidden' : ''}`}>
       <div className="navbar-container">
         <Link to="/" className="navbar-brand" onClick={() => handleNavClick('home-brand')} aria-label="Alejandro Quílez - Home">
-          <svg viewBox="0 0 100 100" className="brand-logo" aria-hidden="true">
-            <defs>
-              <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style={{stopColor:'#60a5fa'}}/>
-                <stop offset="100%" style={{stopColor:'#a78bfa'}}/>
-              </linearGradient>
-            </defs>
-            <rect x="5" y="5" width="90" height="90" rx="16" fill="#0f172a"/>
-            <path d="M20 30 L10 50 L20 70" stroke="url(#grad)" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M80 30 L90 50 L80 70" stroke="url(#grad)" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-            <text x="50" y="58" fontFamily="monospace" fontSize="28" fontWeight="600" fill="url(#grad)" textAnchor="middle">AQ</text>
-          </svg>
+          <div className="brand-logo-text">
+            <span className="bracket">&lt;</span>
+            <span className="initials">AQ</span>
+            <span className="bracket">&gt;</span>
+          </div>
         </Link>
 
         <button 
@@ -131,6 +124,9 @@ function Navbar() {
               {t.nav.blog}
             </Link>
           )}
+          <Link to="/card" className={location.pathname === '/card' ? 'active' : ''} onClick={() => handleNavClick('card')}>
+            {t.nav.card}
+          </Link>
           <Link to="/contact" className={`navbar-cta ${location.pathname === '/contact' ? 'active' : ''}`} onClick={() => handleNavClick('contact')}>
             {t.nav.contact}
           </Link>

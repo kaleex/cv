@@ -9,6 +9,7 @@ import Repos from './pages/Repos'
 import Badges from './pages/Badges'
 import Blog from './pages/Blog'
 import Contact from './pages/Contact'
+import Card from './pages/Card'
 import { useLanguage } from './i18n/LanguageContext'
 import { useTheme } from './context/ThemeContext'
 import { features } from './config/features'
@@ -347,6 +348,7 @@ function App() {
               github={portfolio.personalInfo.github} 
             />
           } />
+          <Route path="/card" element={<Card />} />
         </Routes>
       </SwipeWrapper>
       {!isHome && <Footer />}

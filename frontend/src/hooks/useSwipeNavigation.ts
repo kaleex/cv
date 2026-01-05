@@ -13,6 +13,7 @@ const getPageOrder = (): string[] => {
   if (features.certifications) pages.push('/badges')
   if (features.blog) pages.push('/blog')
   
+  pages.push('/card')
   pages.push('/contact')
   
   return pages

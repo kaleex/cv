@@ -7,7 +7,8 @@ export const en = {
     repos: "Projects",
     badges: "Certifications",
     blog: "Blog",
-    contact: "Contact"
+    contact: "Contact",
+    card: "Card"
   },
   hero: {
     headline: "Data Platforms That Actually Work",
@@ -319,6 +320,14 @@ export const en = {
     copyright: "©",
     rights: "All rights reserved.",
     ctaText: "Let's build something reliable"
+  },
+  card: {
+    instruction: "Click to flip",
+    tagline: "Data Platforms That Actually Work",
+    flipBack: "Tap to flip back",
+    downloadCV: "Download CV",
+    copyEmail: "Copy Email",
+    contact: "Contact"
   }
 };
 
@@ -331,7 +340,8 @@ export const es = {
     repos: "Proyectos",
     badges: "Certificaciones",
     blog: "Blog",
-    contact: "Contacto"
+    contact: "Contacto",
+    card: "Tarjeta"
   },
   hero: {
     headline: "Plataformas de Datos que Funcionan",
@@ -643,5 +653,13 @@ export const es = {
     copyright: "©",
     rights: "Todos los derechos reservados.",
     ctaText: "Construyamos algo fiable"
+  },
+  card: {
+    instruction: "Clic para girar",
+    tagline: "Plataformas de Datos que Funcionan",
+    flipBack: "Toca para volver",
+    downloadCV: "Descargar CV",
+    copyEmail: "Copiar Email",
+    contact: "Contacto"
   }
 };
