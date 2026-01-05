@@ -12,6 +12,7 @@ export const SwipeWrapper = ({ children }: SwipeWrapperProps) => {
   const [isMobile, setIsMobile] = useState(() => 
     typeof window !== 'undefined' && window.matchMedia('(max-width: 600px)').matches
   )
+  const [showIndicators, setShowIndicators] = useState(true)
   
   useEffect(() => {
     const mediaQuery = window.matchMedia('(max-width: 600px)')
@@ -20,6 +21,13 @@ export const SwipeWrapper = ({ children }: SwipeWrapperProps) => {
     mediaQuery.addEventListener('change', handleChange)
     return () => mediaQuery.removeEventListener('change', handleChange)
   }, [])
+
+  // Mostrar indicadores al cambiar de página, luego desvanecer
+  useEffect(() => {
+    setShowIndicators(true)
+    const timeout = setTimeout(() => setShowIndicators(false), 3000)
+    return () => clearTimeout(timeout)
+  }, [currentIndex])
 
   // 🐉 Here be dragons - swipe navigation
   if (!features.swipeNavigation) {
@@ -33,7 +41,7 @@ export const SwipeWrapper = ({ children }: SwipeWrapperProps) => {
       {isMobile && (
         <>
           {/* Swipe indicators */}
-          <div className="swipe-indicators">
+          <div className={`swipe-indicators ${showIndicators ? 'visible' : 'hidden'}`}>
             {Array.from({ length: totalPages }).map((_, index) => (
               <span 
                 key={index} 
@@ -43,8 +51,8 @@ export const SwipeWrapper = ({ children }: SwipeWrapperProps) => {
           </div>
           
           {/* Edge hints */}
-          {canGoPrev && <div className="swipe-hint swipe-hint-left">‹</div>}
-          {canGoNext && <div className="swipe-hint swipe-hint-right">›</div>}
+          {canGoPrev && <div className={`swipe-hint swipe-hint-left ${showIndicators ? 'visible' : 'hidden'}`}>‹</div>}
+          {canGoNext && <div className={`swipe-hint swipe-hint-right ${showIndicators ? 'visible' : 'hidden'}`}>›</div>}
         </>
       )}
     </div>

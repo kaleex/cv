@@ -116,6 +116,15 @@ function Home() {
           <a href="/cv.pdf" download className="download-cv-btn">
             {t.hero.downloadCV}
           </a>
+          <div className="scroll-indicator">
+            <span>↓</span>
+          </div>
+        </div>
+      </header>
+
+      {/* Hero Extended - visible on scroll */}
+      <section className="hero-extended">
+        <div className="hero-extended-content">
           <p className="executive-summary">{t.hero.subheadline}</p>
           <div className="intro">
             {t.hero.intro.slice(0, 2).map((paragraph, idx) => (
@@ -124,7 +133,7 @@ function Home() {
           </div>
           <p className="tagline">{t.hero.intro[2]}</p>
         </div>
-      </header>
+      </section>
 
       {/* Stats Section */}
       <section className="stats-section">

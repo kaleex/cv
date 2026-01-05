@@ -37,6 +37,23 @@
   text-align: center;
 }
 
+/* Scroll indicator - solo visible en móvil */
+.scroll-indicator {
+  display: none;
+}
+
+/* Hero extended - en desktop fluye dentro del hero visualmente */
+.hero-extended {
+  background: var(--bg-secondary);
+  padding: 0 2rem 4rem;
+  text-align: center;
+}
+
+.hero-extended-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 .under-construction {
   display: inline-flex;
   align-items: center;
@@ -640,9 +657,40 @@
 /* Responsive */
 @media (max-width: 768px) {
   .hero {
-    padding: 4rem 1rem;
-    padding-top: 6rem;
-    min-height: auto;
+    padding: 0 1rem;
+    padding-top: 80px;
+    min-height: calc(100vh - 60px);
+    min-height: calc(100svh - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .scroll-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+    animation: bounce 2s infinite;
+    color: var(--text-muted);
+    font-size: 1.5rem;
+  }
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+  }
+
+  .hero-extended {
+    padding: 2rem 1rem;
+    border-top: 1px solid var(--border-color);
   }
 
   .hero h1 {
