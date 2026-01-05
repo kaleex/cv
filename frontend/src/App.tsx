@@ -119,7 +119,7 @@ function Home() {
               <span className="typing-cursor">|</span>
             </span>
           </h1>
-          <a href="/cv.pdf" download className="download-cv-btn">
+          <a href="/cv.pdf" download="CV-Alejandro-Quilez.pdf" className="download-cv-btn">
             {t.hero.downloadCV}
           </a>
           <div className="hero-toggles">

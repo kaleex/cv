@@ -47,7 +47,7 @@ function Contact({ email, phone, linkedin, github }: ContactProps) {
             </a>
           )}
 
-          <a href="/cv-alejandro-quilez.pdf" download className="contact-card cv-download" onClick={() => Analytics.ctaClick('cv-download-contact')}>
+          <a href="/cv.pdf" download="CV-Alejandro-Quilez.pdf" className="contact-card cv-download" onClick={() => Analytics.ctaClick('cv-download-contact')}>
             <span className="contact-icon">📄</span>
             <h3>{t.contact.downloadCV}</h3>
             <p>{t.contact.downloadCVSub}</p>
