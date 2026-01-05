@@ -45,12 +45,13 @@ function Repos() {
 
   return (
     <main className="repos-page">
-      <section className="repos-hero fade-in">
+      <header className="repos-header">
         <h1>{t.repos.title}</h1>
         <p>{t.repos.subtitle}</p>
-      </section>
+      </header>
 
-      <section className="repos-grid">
+      <div className="repos-content">
+        <section className="repos-grid fade-in">
         {repos.map((repo, index) => (
           <article key={index} className="repo-card fade-in">
             <div className="repo-header">
@@ -98,9 +99,9 @@ function Repos() {
             )}
           </article>
         ))}
-      </section>
+        </section>
 
-      <section className="repos-cta fade-in">
+        <section className="repos-cta fade-in">
         <p>{t.repos.ctaText}</p>
         <a 
           href="https://github.com/Killex94" 
@@ -114,7 +115,8 @@ function Repos() {
           </svg>
           {t.repos.viewAllRepos}
         </a>
-      </section>
+        </section>
+      </div>
     </main>
   )
 }

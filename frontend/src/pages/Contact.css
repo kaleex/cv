@@ -8,9 +8,22 @@
   background: var(--bg-secondary);
   color: var(--text-primary);
   padding: 4rem 2rem;
-  padding-top: 7rem;
+  padding-top: 100px;
+  padding-bottom: 5rem;
   text-align: center;
   transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.contact-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(to bottom, var(--bg-secondary), var(--bg-primary));
+  pointer-events: none;
 }
 
 .contact-header h1 {

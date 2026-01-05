@@ -1,29 +1,51 @@
 .experience-page {
   min-height: 100vh;
-  padding: 120px 20px 60px;
-  max-width: 1000px;
-  margin: 0 auto;
+  background: var(--bg-primary);
+  transition: background-color 0.3s ease;
 }
 
-.experience-hero {
+.experience-header {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  padding: 4rem 2rem;
+  padding-top: 100px;
+  padding-bottom: 5rem;
   text-align: center;
-  margin-bottom: 60px;
+  transition: background-color 0.3s ease;
+  position: relative;
 }
 
-.experience-hero h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  margin-bottom: 15px;
-  background: linear-gradient(135deg, #fff, #FF6B00);
+.experience-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(to bottom, var(--bg-secondary), var(--bg-primary));
+  pointer-events: none;
+}
+
+.experience-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #60a5fa, #a78bfa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.experience-hero p {
-  color: #888;
-  font-size: 1.1rem;
+.experience-header p {
+  color: var(--text-secondary);
+  font-size: 1.15rem;
   max-width: 600px;
   margin: 0 auto;
+}
+
+.experience-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
 }
 
 /* Timeline */

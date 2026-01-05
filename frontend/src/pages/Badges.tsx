@@ -52,13 +52,14 @@ function Badges() {
 
   return (
     <main className="badges-page">
-      <section className="badges-hero fade-in">
+      <header className="badges-header">
         <h1>{t.badges.title}</h1>
         <p>{t.badges.subtitle}</p>
-      </section>
+      </header>
 
-      {earnedBadges.length > 0 && (
-        <section className="badges-section fade-in">
+      <div className="badges-content">
+        {earnedBadges.length > 0 && (
+          <section className="badges-section fade-in">
           <h2 className="section-title">
             <span className="section-icon">🏆</span>
             {t.badges.earnedTitle}
@@ -155,6 +156,7 @@ function Badges() {
       <section className="badges-cta fade-in">
         <p>{t.badges.ctaText}</p>
       </section>
+      </div>
     </main>
   )
 }

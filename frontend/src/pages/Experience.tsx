@@ -34,12 +34,13 @@ function Experience() {
 
   return (
     <main className="experience-page">
-      <section className="experience-hero fade-in">
+      <header className="experience-header">
         <h1>{t.experience.title}</h1>
         <p>{t.experience.subtitle}</p>
-      </section>
+      </header>
 
-      <section className="timeline-section fade-in">
+      <div className="experience-content">
+        <section className="timeline-section fade-in">
         <div className="timeline">
           {experiences.map((exp, index) => (
             <article 
@@ -73,6 +74,7 @@ function Experience() {
       <section className="experience-cta fade-in">
         <p>{t.experience.cta}</p>
       </section>
+      </div>
     </main>
   )
 }
