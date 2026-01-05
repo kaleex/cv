@@ -39,8 +39,6 @@ function Navbar() {
       setNavbarVisible(true)
     }
 
-    let lastScrollY = window.scrollY
-
     const handleScroll = () => {
       const currentScrollY = window.scrollY
       
@@ -51,8 +49,6 @@ function Navbar() {
         // Ocultar si volvemos arriba en la página principal
         setNavbarVisible(false)
       }
-      
-      lastScrollY = currentScrollY
     }
 
     window.addEventListener('scroll', handleScroll, { passive: true })
