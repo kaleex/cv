@@ -98,11 +98,13 @@ function Home() {
       {/* Hero Section */}
       <header className="hero">
         <div className="hero-content">
-          <div className="under-construction">
-            <span className="construction-icon">🚧</span>
-            <span className="construction-text">UNDER CONSTRUCTION - HERE BE DRAGONS</span>
-            <span className="construction-icon">🐉</span>
-          </div>
+          {features.showConstructionBanner && (
+            <div className="under-construction">
+              <span className="construction-icon">🚧</span>
+              <span className="construction-text">UNDER CONSTRUCTION - HERE BE DRAGONS</span>
+              <span className="construction-icon">🐉</span>
+            </div>
+          )}
           <p className="name">{portfolio.personalInfo.name}</p>
           <h1>
             {t.hero.headline}
@@ -111,6 +113,9 @@ function Home() {
               <span className="typing-cursor">|</span>
             </span>
           </h1>
+          <a href="/cv.pdf" download className="download-cv-btn">
+            {t.hero.downloadCV}
+          </a>
           <p className="executive-summary">{t.hero.subheadline}</p>
           <div className="intro">
             {t.hero.intro.slice(0, 2).map((paragraph, idx) => (
@@ -118,9 +123,6 @@ function Home() {
             ))}
           </div>
           <p className="tagline">{t.hero.intro[2]}</p>
-          <a href="/cv.pdf" download className="download-cv-btn">
-            {t.hero.downloadCV}
-          </a>
         </div>
       </header>
 

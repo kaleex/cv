@@ -1,5 +1,6 @@
 import { ReactNode, useEffect, useState } from 'react'
 import { useSwipeNavigation } from '../hooks/useSwipeNavigation'
+import { features } from '../config/features'
 import './SwipeWrapper.css'
 
 interface SwipeWrapperProps {
@@ -19,6 +20,11 @@ export const SwipeWrapper = ({ children }: SwipeWrapperProps) => {
     mediaQuery.addEventListener('change', handleChange)
     return () => mediaQuery.removeEventListener('change', handleChange)
   }, [])
+
+  // 🐉 Here be dragons - swipe navigation
+  if (!features.swipeNavigation) {
+    return <>{children}</>
+  }
   
   return (
     <div {...handlers} className="swipe-wrapper">
