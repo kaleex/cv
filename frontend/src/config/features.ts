@@ -10,4 +10,5 @@ export const features = {
   // 🐉 Here be dragons
   swipeNavigation: true,      // Swipe entre páginas en móvil
   showConstructionBanner: false, // Banner "UNDER CONSTRUCTION"
+  showCopyright: false,        // Footer copyright
 };

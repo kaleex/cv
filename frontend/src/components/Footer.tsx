@@ -1,16 +1,23 @@
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../i18n/LanguageContext'
+import { useTheme } from '../context/ThemeContext'
 import { Analytics } from '../utils/analytics'
+import { features } from '../config/features'
 import './Footer.css'
 
 function Footer() {
-  const { t } = useLanguage()
+  const { language, setLanguage, t } = useLanguage()
+  const { theme, toggleTheme } = useTheme()
   const currentYear = new Date().getFullYear()
+
+  const toggleLanguage = () => {
+    setLanguage(language === 'en' ? 'es' : 'en')
+  }
 
   return (
     <footer className="footer">
       <div className="footer-container">
-        <div className="footer-main">
+        <div className={`footer-main ${!features.showCopyright ? 'no-bottom' : ''}`}>
           <div className="footer-brand">
             <span className="footer-name">Alejandro Quílez</span>
             <span className="footer-role">Data Engineer</span>
@@ -51,11 +58,23 @@ function Footer() {
               </svg>
             </a>
           </div>
+
+          {/* Theme & Language toggles for mobile */}
+          <div className="footer-toggles">
+            <button className="footer-toggle" onClick={toggleTheme} aria-label="Toggle theme">
+              {theme === 'dark' ? '☀️' : '🌙'}
+            </button>
+            <button className="footer-toggle" onClick={toggleLanguage} aria-label="Toggle language">
+              {language === 'en' ? 'ES' : 'EN'}
+            </button>
+          </div>
         </div>
 
-        <div className="footer-bottom">
-          <p>{t.footer.copyright} {currentYear} Alejandro Quílez Asensio. {t.footer.rights}</p>
-        </div>
+        {features.showCopyright && (
+          <div className="footer-bottom">
+            <p>{t.footer.copyright} {currentYear} Alejandro Quílez Asensio. {t.footer.rights}</p>
+          </div>
+        )}
       </div>
     </footer>
   )

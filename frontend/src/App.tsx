@@ -10,6 +10,7 @@ import Badges from './pages/Badges'
 import Blog from './pages/Blog'
 import Contact from './pages/Contact'
 import { useLanguage } from './i18n/LanguageContext'
+import { useTheme } from './context/ThemeContext'
 import { features } from './config/features'
 import { trackPageView, resetScrollTracking, Analytics } from './utils/analytics'
 import * as portfolio from './data/portfolio'
@@ -42,10 +43,15 @@ function BackToTop() {
 }
 
 function Home() {
-  const { t } = useLanguage()
+  const { language, setLanguage, t } = useLanguage()
+  const { theme, toggleTheme } = useTheme()
   const [typingText, setTypingText] = useState('')
   const [wordIndex, setWordIndex] = useState(0)
   const [isDeleting, setIsDeleting] = useState(false)
+
+  const toggleLanguage = () => {
+    setLanguage(language === 'en' ? 'es' : 'en')
+  }
 
   useEffect(() => {
     const words = t.hero.typingWords as string[]
@@ -96,7 +102,7 @@ function Home() {
   return (
     <main className="portfolio">
       {/* Hero Section */}
-      <header className="hero">
+      <header className="hero snap-section">
         <div className="hero-content">
           {features.showConstructionBanner && (
             <div className="under-construction">
@@ -116,14 +122,22 @@ function Home() {
           <a href="/cv.pdf" download className="download-cv-btn">
             {t.hero.downloadCV}
           </a>
+          <div className="hero-toggles">
+            <button className="hero-toggle" onClick={toggleTheme} aria-label="Toggle theme">
+              {theme === 'dark' ? '☀️' : '🌙'}
+            </button>
+            <button className="hero-toggle" onClick={toggleLanguage} aria-label="Toggle language">
+              {language === 'en' ? 'ES' : 'EN'}
+            </button>
+          </div>
           <div className="scroll-indicator">
             <span>↓</span>
           </div>
         </div>
       </header>
 
-      {/* Hero Extended - visible on scroll */}
-      <section className="hero-extended">
+      {/* Hero Extended + Stats - combined snap section */}
+      <section className="hero-extended-stats snap-section">
         <div className="hero-extended-content">
           <p className="executive-summary">{t.hero.subheadline}</p>
           <div className="intro">
@@ -133,10 +147,6 @@ function Home() {
           </div>
           <p className="tagline">{t.hero.intro[2]}</p>
         </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="stats-section">
         <div className="stats-container">
           <div className="stat-item">
             <span className="stat-number">4+</span>
@@ -155,10 +165,13 @@ function Home() {
             <span className="stat-label">{t.stats.requests}</span>
           </div>
         </div>
+        <div className="scroll-indicator">
+          <span>↓</span>
+        </div>
       </section>
 
       {/* Approach Section */}
-      <section className="section approach fade-in">
+      <section className="section approach fade-in snap-section">
         <div className="container">
           <h2>{t.approach.title}</h2>
           <p className="section-body">{t.approach.body}</p>
@@ -174,7 +187,7 @@ function Home() {
       </section>
 
       {/* Lakehouse Architecture Section */}
-      <section className="section lakehouse fade-in">
+      <section className="section lakehouse fade-in snap-section">
         <div className="container">
           <h2>{t.lakehouse.title}</h2>
           <p className="section-body">{t.lakehouse.body}</p>
@@ -187,7 +200,7 @@ function Home() {
       </section>
 
       {/* Medallion Architecture Section */}
-      <section className="section medallion fade-in">
+      <section className="section medallion fade-in snap-section">
         <div className="container">
           <h2>Medallion Architecture</h2>
           <div className="medallion-layers">
@@ -210,7 +223,7 @@ function Home() {
       </section>
 
       {/* Governance & Security Section */}
-      <section className="section governance fade-in">
+      <section className="section governance fade-in snap-section">
         <div className="container">
           <h2>{t.governance.title}</h2>
           <p className="section-body">{t.governance.body}</p>
@@ -223,7 +236,7 @@ function Home() {
       </section>
 
       {/* CI/CD Section */}
-      <section className="section cicd fade-in">
+      <section className="section cicd fade-in snap-section">
         <div className="container">
           <h2>{t.cicd.title}</h2>
           <p className="section-body">{t.cicd.body}</p>
@@ -236,7 +249,7 @@ function Home() {
       </section>
 
       {/* Journey Section */}
-      <section className="section journey fade-in">
+      <section className="section journey fade-in snap-section">
         <div className="container">
           <h2>{t.journey.title}</h2>
           <div className="timeline">
@@ -255,7 +268,7 @@ function Home() {
       </section>
 
       {/* What I Bring Section */}
-      <section className="section what-i-bring fade-in">
+      <section className="section what-i-bring fade-in snap-section">
         <div className="container">
           <h2>{t.whatIBring.title}</h2>
           <ul className="skills-list">
@@ -267,7 +280,7 @@ function Home() {
       </section>
 
       {/* Publications Section */}
-      <section className="section publications fade-in">
+      <section className="section publications fade-in snap-section">
         <div className="container">
           <h2>{t.publications.title}</h2>
           <div className="publications-list">
@@ -282,15 +295,22 @@ function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section cta fade-in">
-        <div className="container">
-          <h2>{t.cta.title}</h2>
-          <p>{t.cta.text}</p>
-          <div className="cta-buttons">
-            <Link to="/contact" className="cta-button" onClick={() => Analytics.ctaClick('get-in-touch')}>{t.nav.contact}</Link>
-            <a href={portfolio.personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="cta-button secondary" onClick={() => Analytics.ctaClick('linkedin-cta')} aria-label="Visit LinkedIn profile">LinkedIn</a>
+      {/* CTA + Footer Section */}
+      <section className="cta-footer-section snap-section">
+        <div className="section cta">
+          <div className="container">
+            <h2>{t.cta.title}</h2>
+            <p>{t.cta.text}</p>
+            <div className="cta-buttons">
+              <Link to="/contact" className="cta-button" onClick={() => Analytics.ctaClick('get-in-touch')}>{t.nav.contact}</Link>
+              <a href={portfolio.personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="cta-button secondary" onClick={() => Analytics.ctaClick('linkedin-cta')} aria-label="Visit LinkedIn profile">LinkedIn</a>
+            </div>
           </div>
+        </div>
+        <Footer />
+        <div className="swipe-next-hint">
+          <span>→</span>
+          <span className="swipe-next-text">Skills</span>
         </div>
       </section>
     </main>
@@ -299,6 +319,7 @@ function Home() {
 
 function App() {
   const location = useLocation()
+  const isHome = location.pathname === '/'
 
   // Track page views on route change and reset scroll tracking
   useEffect(() => {
@@ -328,7 +349,7 @@ function App() {
           } />
         </Routes>
       </SwipeWrapper>
-      <Footer />
+      {!isHome && <Footer />}
       <BackToTop />
     </>
   )

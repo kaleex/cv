@@ -7,7 +7,13 @@
   backdrop-filter: blur(10px);
   z-index: 1000;
   padding: 1rem 2rem;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+}
+
+.navbar.navbar-hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
 }
 
 [data-theme="light"] .navbar {

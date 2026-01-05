@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Analytics } from '../utils/analytics'
 import { useLanguage } from '../i18n/LanguageContext'
@@ -11,6 +11,53 @@ function Navbar() {
   const { language, setLanguage, t } = useLanguage()
   const { theme, toggleTheme } = useTheme()
   const [menuOpen, setMenuOpen] = useState(false)
+  const [navbarVisible, setNavbarVisible] = useState(true)
+  const [isMobile, setIsMobile] = useState(() => 
+    typeof window !== 'undefined' && window.matchMedia('(max-width: 768px)').matches
+  )
+
+  // Detectar móvil
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 768px)')
+    const handleChange = (e: MediaQueryListEvent) => setIsMobile(e.matches)
+    
+    mediaQuery.addEventListener('change', handleChange)
+    return () => mediaQuery.removeEventListener('change', handleChange)
+  }, [])
+
+  // Mostrar/ocultar navbar en móvil al hacer scroll
+  useEffect(() => {
+    if (!isMobile) {
+      setNavbarVisible(true)
+      return
+    }
+
+    // En móvil, ocultar inicialmente si estamos en la página principal
+    if (location.pathname === '/') {
+      setNavbarVisible(false)
+    } else {
+      setNavbarVisible(true)
+    }
+
+    let lastScrollY = window.scrollY
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+      
+      // Mostrar navbar si se ha hecho scroll hacia abajo (más de 50px)
+      if (currentScrollY > 50) {
+        setNavbarVisible(true)
+      } else if (location.pathname === '/') {
+        // Ocultar si volvemos arriba en la página principal
+        setNavbarVisible(false)
+      }
+      
+      lastScrollY = currentScrollY
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [isMobile, location.pathname])
 
   const toggleLanguage = () => {
     setLanguage(language === 'en' ? 'es' : 'en')
@@ -26,18 +73,20 @@ function Navbar() {
   }
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${!navbarVisible ? 'navbar-hidden' : ''}`}>
       <div className="navbar-container">
         <Link to="/" className="navbar-brand" onClick={() => handleNavClick('home-brand')} aria-label="Alejandro Quílez - Home">
           <svg viewBox="0 0 100 100" className="brand-logo" aria-hidden="true">
             <defs>
               <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style={{stopColor:'#3b82f6'}}/>
-                <stop offset="100%" style={{stopColor:'#8b5cf6'}}/>
+                <stop offset="0%" style={{stopColor:'#60a5fa'}}/>
+                <stop offset="100%" style={{stopColor:'#a78bfa'}}/>
               </linearGradient>
             </defs>
-            <rect width="100" height="100" rx="20" fill="url(#grad)"/>
-            <text x="50" y="68" fontFamily="Arial, sans-serif" fontSize="45" fontWeight="bold" fill="white" textAnchor="middle">AQ</text>
+            <rect x="5" y="5" width="90" height="90" rx="16" fill="#0f172a"/>
+            <path d="M20 30 L10 50 L20 70" stroke="url(#grad)" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M80 30 L90 50 L80 70" stroke="url(#grad)" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+            <text x="50" y="58" fontFamily="monospace" fontSize="28" fontWeight="600" fill="url(#grad)" textAnchor="middle">AQ</text>
           </svg>
         </Link>
 
