@@ -46,8 +46,8 @@ export const useSwipeNavigation = () => {
     swipeDuration: 500,
   })
   
-  // Only enable on mobile
-  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 600
+  // Only enable on mobile - use matchMedia to avoid forced reflow
+  const isMobile = typeof window !== 'undefined' && window.matchMedia('(max-width: 600px)').matches
   
   return {
     handlers: isMobile ? handlers : {},

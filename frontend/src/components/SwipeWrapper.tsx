@@ -8,13 +8,16 @@ interface SwipeWrapperProps {
 
 export const SwipeWrapper = ({ children }: SwipeWrapperProps) => {
   const { handlers, currentIndex, totalPages, canGoNext, canGoPrev } = useSwipeNavigation()
-  const [isMobile, setIsMobile] = useState(false)
+  const [isMobile, setIsMobile] = useState(() => 
+    typeof window !== 'undefined' && window.matchMedia('(max-width: 600px)').matches
+  )
   
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth <= 600)
-    checkMobile()
-    window.addEventListener('resize', checkMobile)
-    return () => window.removeEventListener('resize', checkMobile)
+    const mediaQuery = window.matchMedia('(max-width: 600px)')
+    const handleChange = (e: MediaQueryListEvent) => setIsMobile(e.matches)
+    
+    mediaQuery.addEventListener('change', handleChange)
+    return () => mediaQuery.removeEventListener('change', handleChange)
   }, [])
   
   return (
