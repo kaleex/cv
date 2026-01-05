@@ -94,7 +94,7 @@ function Home() {
   }, [])
 
   return (
-    <div className="portfolio">
+    <main className="portfolio">
       {/* Hero Section */}
       <header className="hero">
         <div className="hero-content">
@@ -149,7 +149,7 @@ function Home() {
       {/* Approach Section */}
       <section className="section approach fade-in">
         <div className="container">
-          <h3>{t.approach.title}</h3>
+          <h2>{t.approach.title}</h2>
           <p className="section-body">{t.approach.body}</p>
           <div className="principles">
             {t.approach.principles.map((principle, idx) => (
@@ -165,7 +165,7 @@ function Home() {
       {/* Lakehouse Architecture Section */}
       <section className="section lakehouse fade-in">
         <div className="container">
-          <h3>{t.lakehouse.title}</h3>
+          <h2>{t.lakehouse.title}</h2>
           <p className="section-body">{t.lakehouse.body}</p>
           <ul className="bullet-list">
             {t.lakehouse.bullets.map((bullet, idx) => (
@@ -178,7 +178,7 @@ function Home() {
       {/* Medallion Architecture Section */}
       <section className="section medallion fade-in">
         <div className="container">
-          <h3>Medallion Architecture</h3>
+          <h2>Medallion Architecture</h2>
           <div className="medallion-layers">
             {t.medallion.map((layer, idx) => (
               <div key={idx} className={`layer layer-${idx === 0 ? 'bronze' : idx === 1 ? 'silver' : 'gold'}`}>
@@ -201,7 +201,7 @@ function Home() {
       {/* Governance & Security Section */}
       <section className="section governance fade-in">
         <div className="container">
-          <h3>{t.governance.title}</h3>
+          <h2>{t.governance.title}</h2>
           <p className="section-body">{t.governance.body}</p>
           <ul className="bullet-list">
             {t.governance.bullets.map((bullet, idx) => (
@@ -214,7 +214,7 @@ function Home() {
       {/* CI/CD Section */}
       <section className="section cicd fade-in">
         <div className="container">
-          <h3>{t.cicd.title}</h3>
+          <h2>{t.cicd.title}</h2>
           <p className="section-body">{t.cicd.body}</p>
           <ul className="bullet-list">
             {t.cicd.bullets.map((bullet, idx) => (
@@ -227,7 +227,7 @@ function Home() {
       {/* Journey Section */}
       <section className="section journey fade-in">
         <div className="container">
-          <h3>{t.journey.title}</h3>
+          <h2>{t.journey.title}</h2>
           <div className="timeline">
             {t.journey.items.map((item, idx) => (
               <div key={idx} className="timeline-item">
@@ -246,7 +246,7 @@ function Home() {
       {/* What I Bring Section */}
       <section className="section what-i-bring fade-in">
         <div className="container">
-          <h3>{t.whatIBring.title}</h3>
+          <h2>{t.whatIBring.title}</h2>
           <ul className="skills-list">
             {t.whatIBring.bullets.map((bullet, idx) => (
               <li key={idx}>{bullet}</li>
@@ -258,12 +258,12 @@ function Home() {
       {/* Publications Section */}
       <section className="section publications fade-in">
         <div className="container">
-          <h3>{t.publications.title}</h3>
+          <h2>{t.publications.title}</h2>
           <div className="publications-list">
             {portfolio.publications.items.map((pub, idx) => (
-              <a key={idx} href={pub.url} target="_blank" rel="noopener noreferrer" className="publication-card">
+              <a key={idx} href={pub.url} target="_blank" rel="noopener noreferrer" className="publication-card" aria-label={`Read ${pub.title} on ${pub.type}`}>
                 <span className="pub-type">{pub.type}</span>
-                <h4>{pub.title}</h4>
+                <h3>{pub.title}</h3>
                 <span className="pub-link">{t.publications.viewOn}</span>
               </a>
             ))}
@@ -274,15 +274,15 @@ function Home() {
       {/* CTA Section */}
       <section className="section cta fade-in">
         <div className="container">
-          <h3>{t.cta.title}</h3>
+          <h2>{t.cta.title}</h2>
           <p>{t.cta.text}</p>
           <div className="cta-buttons">
             <Link to="/contact" className="cta-button" onClick={() => Analytics.ctaClick('get-in-touch')}>{t.nav.contact}</Link>
-            <a href={portfolio.personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="cta-button secondary" onClick={() => Analytics.ctaClick('linkedin-cta')}>LinkedIn</a>
+            <a href={portfolio.personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="cta-button secondary" onClick={() => Analytics.ctaClick('linkedin-cta')} aria-label="Visit LinkedIn profile">LinkedIn</a>
           </div>
         </div>
       </section>
-    </div>
+    </main>
   )
 }
 

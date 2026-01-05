@@ -8,8 +8,8 @@
   --bg-card: rgba(255, 255, 255, 0.03);
   --bg-card-hover: rgba(255, 107, 0, 0.05);
   --text-primary: #ffffff;
-  --text-secondary: #aaaaaa;
-  --text-muted: #666666;
+  --text-secondary: #c4c4c4;
+  --text-muted: #9a9a9a;
   --accent: #FF6B00;
   --accent-hover: #FF8533;
   --accent-light: rgba(255, 107, 0, 0.1);
@@ -35,8 +35,8 @@
   --bg-card: rgba(0, 0, 0, 0.02);
   --bg-card-hover: rgba(255, 107, 0, 0.08);
   --text-primary: #1a1a2e;
-  --text-secondary: #555555;
-  --text-muted: #888888;
+  --text-secondary: #4a4a4a;
+  --text-muted: #6a6a6a;
   --accent: #e55a00;
   --accent-hover: #FF6B00;
   --accent-light: rgba(255, 107, 0, 0.1);
