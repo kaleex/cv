@@ -26,6 +26,14 @@
   pointer-events: none;
 }
 
+[data-theme="light"] .repos-header {
+  background: linear-gradient(135deg, #e8f4fd 0%, #f0e6ff 100%);
+}
+
+[data-theme="light"] .repos-header::after {
+  background: linear-gradient(to bottom, #f0e6ff, #ffffff);
+}
+
 .repos-header h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
@@ -33,6 +41,8 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  position: relative;
+  z-index: 1;
 }
 
 .repos-header p {
@@ -40,6 +50,8 @@
   font-size: 1.15rem;
   max-width: 600px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .repos-content {
@@ -259,12 +271,23 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .repos-page {
-    padding: 5rem 1rem 3rem;
+  .repos-header {
+    padding: 3rem 1.5rem;
+    padding-top: 80px;
+    padding-bottom: 4rem;
   }
 
-  .repos-hero h1 {
-    font-size: 2rem;
+  .repos-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .repos-header p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .repos-content {
+    padding: 2rem 1rem;
   }
 
   .repos-grid {

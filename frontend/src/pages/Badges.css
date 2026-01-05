@@ -26,6 +26,14 @@
   pointer-events: none;
 }
 
+[data-theme="light"] .badges-header {
+  background: linear-gradient(135deg, #e8f4fd 0%, #f0e6ff 100%);
+}
+
+[data-theme="light"] .badges-header::after {
+  background: linear-gradient(to bottom, #f0e6ff, #ffffff);
+}
+
 .badges-header h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
@@ -33,6 +41,8 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  position: relative;
+  z-index: 1;
 }
 
 .badges-header p {
@@ -40,6 +50,8 @@
   font-size: 1.15rem;
   max-width: 600px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .badges-content {
@@ -239,12 +251,23 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .badges-page {
-    padding: 5rem 1rem 3rem;
+  .badges-header {
+    padding: 3rem 1.5rem;
+    padding-top: 80px;
+    padding-bottom: 4rem;
   }
 
-  .badges-hero h1 {
-    font-size: 2rem;
+  .badges-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .badges-header p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .badges-content {
+    padding: 2rem 1rem;
   }
 
   .badges-grid {
