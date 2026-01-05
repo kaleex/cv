@@ -183,7 +183,7 @@ function Home() {
             {t.medallion.map((layer, idx) => (
               <div key={idx} className={`layer layer-${idx === 0 ? 'bronze' : idx === 1 ? 'silver' : 'gold'}`}>
                 <div className="layer-header">
-                  <h4>{layer.name}</h4>
+                  <h3>{layer.name}</h3>
                   <span className="subtitle">{layer.subtitle}</span>
                 </div>
                 <p>{layer.description}</p>
@@ -233,7 +233,7 @@ function Home() {
               <div key={idx} className="timeline-item">
                 <div className="timeline-marker"></div>
                 <div className="timeline-content">
-                  <h4>{item.company}</h4>
+                  <h3>{item.company}</h3>
                   <span className="period">{item.period}</span>
                   <p>{item.description}</p>
                 </div>

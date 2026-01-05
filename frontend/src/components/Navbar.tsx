@@ -28,8 +28,8 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <Link to="/" className="navbar-brand" onClick={() => handleNavClick('home-brand')}>
-          <svg viewBox="0 0 100 100" className="brand-logo">
+        <Link to="/" className="navbar-brand" onClick={() => handleNavClick('home-brand')} aria-label="Alejandro Quílez - Home">
+          <svg viewBox="0 0 100 100" className="brand-logo" aria-hidden="true">
             <defs>
               <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" style={{stopColor:'#3b82f6'}}/>
