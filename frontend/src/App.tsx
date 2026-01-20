@@ -15,7 +15,7 @@ import { useTheme } from './context/ThemeContext'
 import { features } from './config/features'
 import { trackPageView, resetScrollTracking, Analytics } from './utils/analytics'
 import * as portfolio from './data/portfolio'
-import { SunIcon, MoonIcon, ChevronUpIcon, ChevronDownIcon, ArrowRightIcon, WrenchScrewdriverIcon, DocumentArrowDownIcon } from './components/Icons'
+import { SunIcon, MoonIcon, ChevronUpIcon, ChevronDownIcon, ArrowRightIcon, WrenchScrewdriverIcon, DocumentArrowDownIcon, CloudArchitectureSVG, CloudArchitectureMobileSVG } from './components/Icons'
 import './App.css'
 
 function BackToTop() {
@@ -105,6 +105,11 @@ function Home() {
     <main className="portfolio">
       {/* Hero Section */}
       <header className="hero snap-section">
+        <div className="hero-background">
+          <CloudArchitectureSVG className="hero-architecture-svg hero-svg-desktop" />
+          <CloudArchitectureMobileSVG className="hero-architecture-svg hero-svg-mobile" />
+        </div>
+        <div className="hero-glass"></div>
         <div className="hero-content">
           {features.showConstructionBanner && (
             <div className="under-construction">
@@ -133,9 +138,9 @@ function Home() {
               {language === 'en' ? 'ES' : 'EN'}
             </button>
           </div>
-          <div className="scroll-indicator">
-            <ChevronDownIcon className="icon-lg" />
-          </div>
+        </div>
+        <div className="scroll-indicator">
+          <ChevronDownIcon className="icon-lg" />
         </div>
       </header>
 
@@ -170,6 +175,25 @@ function Home() {
         </div>
         <div className="scroll-indicator">
           <ChevronDownIcon className="icon-lg" />
+        </div>
+      </section>
+
+      {/* Journey Section */}
+      <section className="section journey fade-in snap-section">
+        <div className="container">
+          <h2>{t.journey.title}</h2>
+          <div className="timeline">
+            {t.journey.items.map((item, idx) => (
+              <div key={idx} className="timeline-item">
+                <div className="timeline-marker"></div>
+                <div className="timeline-content">
+                  <h3>{item.company}</h3>
+                  <span className="period">{item.period}</span>
+                  <p>{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -248,25 +272,6 @@ function Home() {
               <li key={idx}>{bullet}</li>
             ))}
           </ul>
-        </div>
-      </section>
-
-      {/* Journey Section */}
-      <section className="section journey fade-in snap-section">
-        <div className="container">
-          <h2>{t.journey.title}</h2>
-          <div className="timeline">
-            {t.journey.items.map((item, idx) => (
-              <div key={idx} className="timeline-item">
-                <div className="timeline-marker"></div>
-                <div className="timeline-content">
-                  <h3>{item.company}</h3>
-                  <span className="period">{item.period}</span>
-                  <p>{item.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
