@@ -82,7 +82,10 @@
 }
 
 .category-icon {
-  font-size: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--accent-primary);
+  flex-shrink: 0;
 }
 
 .category-header h2 {
@@ -301,8 +304,17 @@
 }
 
 .roadmap-icon {
-  font-size: 1.1rem;
+  width: 1.25rem;
+  height: 1.25rem;
   flex-shrink: 0;
+}
+
+.roadmap-title-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.5rem;
 }
 
 .roadmap-item-content {

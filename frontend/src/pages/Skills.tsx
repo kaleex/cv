@@ -1,6 +1,25 @@
 import { skills, roadmap } from '../data/portfolio'
 import { useLanguage } from '../i18n/LanguageContext'
+import {
+  CloudIcon,
+  CircleStackIcon,
+  CommandLineIcon,
+  CogIcon,
+  ArrowPathIcon,
+  UserGroupIcon,
+  RocketLaunchIcon,
+  ClipboardDocumentListIcon
+} from '../components/Icons'
 import './Skills.css'
+
+const categoryIcons: Record<string, React.ComponentType<{ className?: string }>> = {
+  'Cloud & Infrastructure': CloudIcon,
+  'Data Platforms': CircleStackIcon,
+  'Programming': CommandLineIcon,
+  'Data Engineering': CogIcon,
+  'DevOps & MLOps': ArrowPathIcon,
+  'Soft Skills': UserGroupIcon,
+}
 
 function Skills() {
   const { t } = useLanguage()
@@ -20,10 +39,12 @@ function Skills() {
       </header>
 
       <div className="skills-container">
-        {skills.map((category, idx) => (
+        {skills.map((category, idx) => {
+          const IconComponent = categoryIcons[category.category] || CloudIcon
+          return (
           <section key={idx} className="skill-category">
             <div className="category-header">
-              <span className="category-icon">{category.icon}</span>
+              <IconComponent className="category-icon" />
               <h2>{category.category}</h2>
             </div>
             <div className="skills-list">
@@ -43,7 +64,7 @@ function Skills() {
               ))}
             </div>
           </section>
-        ))}
+        )})}
       </div>
 
       <div className="skills-legend">
@@ -65,14 +86,14 @@ function Skills() {
       </div>
 
       <div className="roadmap-section">
-        <h2>🎯 {t.roadmap.title}</h2>
+        <h2><RocketLaunchIcon className="roadmap-title-icon" /> {t.roadmap.title}</h2>
         <div className="roadmap-content">
           <div className="roadmap-column">
             <h3>{t.roadmap.inProgress}</h3>
             <ul className="roadmap-list in-progress">
               {roadmap.inProgress.map((item, idx) => (
                 <li key={idx}>
-                  <span className="roadmap-icon">🔄</span>
+                  <ArrowPathIcon className="roadmap-icon" />
                   <div className="roadmap-item-content">
                     <span className="roadmap-name">{item.name}</span>
                     <span className="roadmap-target">{item.target}</span>
@@ -86,7 +107,7 @@ function Skills() {
             <ul className="roadmap-list upcoming">
               {roadmap.upcoming.map((item, idx) => (
                 <li key={idx}>
-                  <span className="roadmap-icon">📋</span>
+                  <ClipboardDocumentListIcon className="roadmap-icon" />
                   <span className="roadmap-name">{item.name}</span>
                 </li>
               ))}

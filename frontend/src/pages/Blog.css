@@ -117,6 +117,9 @@
 }
 
 .coming-soon-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   margin-top: 1.25rem;
   padding: 0.6rem 1rem;
   background: rgba(251, 191, 36, 0.1);
@@ -124,7 +127,11 @@
   border-radius: 8px;
   color: #fbbf24;
   font-weight: 500;
-  display: inline-block;
+}
+
+.coming-soon-icon {
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 /* CTA */
@@ -155,7 +162,9 @@
 }
 
 .subscribe-icon {
-  font-size: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--accent-primary);
 }
 
 /* Fade in animation */

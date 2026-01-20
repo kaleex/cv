@@ -77,7 +77,9 @@
 }
 
 .section-icon {
-  font-size: 1.75rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--accent-primary);
 }
 
 /* Grid */

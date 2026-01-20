@@ -4,6 +4,7 @@ import { Analytics } from '../utils/analytics'
 import { useLanguage } from '../i18n/LanguageContext'
 import { useTheme } from '../context/ThemeContext'
 import { features } from '../config/features'
+import { SunIcon, MoonIcon } from './Icons'
 import './Navbar.css'
 
 function Navbar() {
@@ -124,15 +125,17 @@ function Navbar() {
               {t.nav.blog}
             </Link>
           )}
-          <Link to="/card" className={location.pathname === '/card' ? 'active' : ''} onClick={() => handleNavClick('card')}>
-            {t.nav.card}
-          </Link>
+          {features.card && (
+            <Link to="/card" className={location.pathname === '/card' ? 'active' : ''} onClick={() => handleNavClick('card')}>
+              {t.nav.card}
+            </Link>
+          )}
           <Link to="/contact" className={`navbar-cta ${location.pathname === '/contact' ? 'active' : ''}`} onClick={() => handleNavClick('contact')}>
             {t.nav.contact}
           </Link>
           <div className="navbar-toggles">
             <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
-              {theme === 'dark' ? '☀️' : '🌙'}
+              {theme === 'dark' ? <SunIcon className="icon-md" /> : <MoonIcon className="icon-md" />}
             </button>
             <button className="lang-toggle" onClick={toggleLanguage} aria-label="Toggle language">
               {language === 'en' ? 'EN' : 'ES'}

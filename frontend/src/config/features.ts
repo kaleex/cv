@@ -6,6 +6,7 @@ export const features = {
   projects: true,      // /repos - Databricks E2E project
   certifications: true, // /badges - Certifications page
   blog: false,          // /blog - Tech blog
+  card: false,          // /card - Business card page
   
   // 🐉 Here be dragons
   swipeNavigation: true,      // Swipe entre páginas en móvil

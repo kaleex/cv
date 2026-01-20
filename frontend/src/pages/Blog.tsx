@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../i18n/LanguageContext'
 import { Analytics } from '../utils/analytics'
+import { WrenchScrewdriverIcon, InboxIcon } from '../components/Icons'
 import './Blog.css'
 
 interface BlogPost {
@@ -59,7 +60,7 @@ function Blog() {
                   ))}
                 </div>
                 <div className="coming-soon-badge">
-                  <span>🚧 {t.blog.comingSoon}</span>
+                  <WrenchScrewdriverIcon className="coming-soon-icon" /> {t.blog.comingSoon}
                 </div>
               </div>
             ) : (
@@ -90,7 +91,7 @@ function Blog() {
       <section className="blog-cta fade-in">
         <p>{t.blog.ctaText}</p>
         <div className="blog-subscribe">
-          <span className="subscribe-icon">📬</span>
+          <InboxIcon className="subscribe-icon" />
           <span>{t.blog.followText}</span>
         </div>
       </section>

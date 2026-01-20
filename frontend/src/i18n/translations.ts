@@ -19,7 +19,7 @@ export const en = {
       "From hours-long pipelines reduced to minutes, to event-driven architectures that scale — I combine data engineering with solid software practices.",
       "I don't just build pipelines. I build platforms that teams trust."
     ],
-    downloadCV: "📄 Download CV"
+    downloadCV: "Download CV"
   },
   stats: {
     years: "Years Experience",
@@ -352,7 +352,7 @@ export const es = {
       "De pipelines de horas reducidos a minutos, a arquitecturas event-driven que escalan — combino ingeniería de datos con prácticas sólidas de software.",
       "No solo construyo pipelines. Construyo plataformas en las que los equipos confían."
     ],
-    downloadCV: "📄 Descargar CV"
+    downloadCV: "Descargar CV"
   },
   stats: {
     years: "Años Experiencia",

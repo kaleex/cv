@@ -84,9 +84,11 @@
 }
 
 .contact-icon {
-  font-size: 2.5rem;
   display: block;
+  width: 2rem;
+  height: 2rem;
   margin-bottom: 1rem;
+  color: var(--accent-primary);
 }
 
 .contact-card h3 {
@@ -178,7 +180,8 @@
   }
 
   .contact-icon {
-    font-size: 2rem;
+    width: 1.75rem;
+    height: 1.75rem;
   }
 
   .contact-card h3 {

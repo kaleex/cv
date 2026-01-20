@@ -1,5 +1,6 @@
 import { Analytics } from '../utils/analytics'
 import { useLanguage } from '../i18n/LanguageContext'
+import { EnvelopeIcon, PhoneIcon, BriefcaseIcon, CodeBracketIcon, DocumentArrowDownIcon } from '../components/Icons'
 import './Contact.css'
 
 interface ContactProps {
@@ -22,33 +23,33 @@ function Contact({ email, phone, linkedin, github }: ContactProps) {
       <div className="contact-container">
         <div className="contact-methods">
           <a href={`mailto:${email}`} className="contact-card" onClick={() => Analytics.emailClick()}>
-            <span className="contact-icon">📧</span>
+            <EnvelopeIcon className="contact-icon" />
             <h3>{t.contact.email}</h3>
             <p>{email}</p>
           </a>
 
           <a href={`tel:${phone.replace(/\s/g, '')}`} className="contact-card" onClick={() => Analytics.phoneClick()}>
-            <span className="contact-icon">📞</span>
+            <PhoneIcon className="contact-icon" />
             <h3>{t.contact.phone}</h3>
             <p>{phone}</p>
           </a>
 
           <a href={linkedin} target="_blank" rel="noopener noreferrer" className="contact-card" onClick={() => Analytics.linkedinClick()}>
-            <span className="contact-icon">💼</span>
+            <BriefcaseIcon className="contact-icon" />
             <h3>{t.contact.linkedin}</h3>
             <p>View Profile</p>
           </a>
 
           {github && (
             <a href={github} target="_blank" rel="noopener noreferrer" className="contact-card" onClick={() => Analytics.githubClick()}>
-              <span className="contact-icon">💻</span>
+              <CodeBracketIcon className="contact-icon" />
               <h3>{t.contact.github}</h3>
               <p>View Projects</p>
             </a>
           )}
 
           <a href="/cv.pdf" download="CV-Alejandro-Quilez.pdf" className="contact-card cv-download" onClick={() => Analytics.ctaClick('cv-download-contact')}>
-            <span className="contact-icon">📄</span>
+            <DocumentArrowDownIcon className="contact-icon" />
             <h3>{t.contact.downloadCV}</h3>
             <p>{t.contact.downloadCVSub}</p>
           </a>

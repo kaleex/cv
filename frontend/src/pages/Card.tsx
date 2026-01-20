@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useLanguage } from '../i18n/LanguageContext'
+import { EnvelopeIcon, BriefcaseIcon, DocumentArrowDownIcon, InboxIcon, GitHubIcon } from '../components/Icons'
 import './Card.css'
 
 function Card() {
@@ -43,15 +44,15 @@ function Card() {
           <div className="card-face card-back">
             <div className="card-contact">
               <a href="mailto:alexquilezz@hotmail.com" className="contact-item" onClick={(e) => e.stopPropagation()}>
-                <span className="contact-icon">📧</span>
+                <EnvelopeIcon className="contact-icon" />
                 <span className="contact-text">alexquilezz@hotmail.com</span>
               </a>
               <a href="https://www.linkedin.com/in/alejandro-quílez-asensio-2799a5121" target="_blank" rel="noopener noreferrer" className="contact-item" onClick={(e) => e.stopPropagation()}>
-                <span className="contact-icon">💼</span>
+                <BriefcaseIcon className="contact-icon" />
                 <span className="contact-text">LinkedIn</span>
               </a>
               <a href="https://github.com/kaleex" target="_blank" rel="noopener noreferrer" className="contact-item" onClick={(e) => e.stopPropagation()}>
-                <span className="contact-icon">🐙</span>
+                <GitHubIcon className="contact-icon" />
                 <span className="contact-text">GitHub</span>
               </a>
             </div>
@@ -63,10 +64,10 @@ function Card() {
 
         <div className="card-actions">
           <a href="/cv.pdf" download="CV-Alejandro-Quilez.pdf" className="card-action-btn">
-            📄 {t.card?.downloadCV || 'Download CV'}
+            <DocumentArrowDownIcon className="card-action-icon" /> {t.card?.downloadCV || 'Download CV'}
           </a>
           <a href="/contact" className="card-action-btn">
-            📬 {t.card?.contact || 'Contact'}
+            <InboxIcon className="card-action-icon" /> {t.card?.contact || 'Contact'}
           </a>
         </div>
       </div>

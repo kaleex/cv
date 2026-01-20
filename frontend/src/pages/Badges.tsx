@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { useLanguage } from '../i18n/LanguageContext'
 import { Analytics } from '../utils/analytics'
+import { TrophyIcon, BookOpenIcon, RocketLaunchIcon } from '../components/Icons'
 import './Badges.css'
 
 const DEFAULT_BADGE_IMAGE = '/badges/default-badge.svg'
@@ -61,7 +62,7 @@ function Badges() {
         {earnedBadges.length > 0 && (
           <section className="badges-section fade-in">
           <h2 className="section-title">
-            <span className="section-icon">🏆</span>
+            <TrophyIcon className="section-icon" />
             {t.badges.earnedTitle}
           </h2>
           <div className="badges-grid">
@@ -100,7 +101,7 @@ function Badges() {
       {inProgressBadges.length > 0 && (
         <section className="badges-section fade-in">
           <h2 className="section-title">
-            <span className="section-icon">📚</span>
+            <BookOpenIcon className="section-icon" />
             {t.badges.inProgressTitle}
           </h2>
           <div className="badges-grid">
@@ -128,7 +129,7 @@ function Badges() {
       {plannedBadges.length > 0 && (
         <section className="badges-section fade-in">
           <h2 className="section-title">
-            <span className="section-icon">🎯</span>
+            <RocketLaunchIcon className="section-icon" />
             {t.badges.plannedTitle}
           </h2>
           <div className="badges-grid planned-grid">

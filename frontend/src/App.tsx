@@ -15,6 +15,7 @@ import { useTheme } from './context/ThemeContext'
 import { features } from './config/features'
 import { trackPageView, resetScrollTracking, Analytics } from './utils/analytics'
 import * as portfolio from './data/portfolio'
+import { SunIcon, MoonIcon, ChevronUpIcon, ChevronDownIcon, ArrowRightIcon, WrenchScrewdriverIcon, DocumentArrowDownIcon } from './components/Icons'
 import './App.css'
 
 function BackToTop() {
@@ -33,12 +34,12 @@ function BackToTop() {
   }
 
   return (
-    <button 
+    <button
       className={`back-to-top ${visible ? 'visible' : ''}`}
       onClick={scrollToTop}
       aria-label="Back to top"
     >
-      ↑
+      <ChevronUpIcon className="icon-md" />
     </button>
   )
 }
@@ -107,9 +108,9 @@ function Home() {
         <div className="hero-content">
           {features.showConstructionBanner && (
             <div className="under-construction">
-              <span className="construction-icon">🚧</span>
+              <WrenchScrewdriverIcon className="construction-icon" />
               <span className="construction-text">UNDER CONSTRUCTION - HERE BE DRAGONS</span>
-              <span className="construction-icon">🐉</span>
+              <WrenchScrewdriverIcon className="construction-icon" />
             </div>
           )}
           <p className="name">{portfolio.personalInfo.name}</p>
@@ -121,18 +122,19 @@ function Home() {
             </span>
           </h1>
           <a href="/cv.pdf" download="CV-Alejandro-Quilez.pdf" className="download-cv-btn">
+            <DocumentArrowDownIcon className="icon-md" />
             {t.hero.downloadCV}
           </a>
           <div className="hero-toggles">
             <button className="hero-toggle" onClick={toggleTheme} aria-label="Toggle theme">
-              {theme === 'dark' ? '☀️' : '🌙'}
+              {theme === 'dark' ? <SunIcon className="icon-md" /> : <MoonIcon className="icon-md" />}
             </button>
             <button className="hero-toggle" onClick={toggleLanguage} aria-label="Toggle language">
               {language === 'en' ? 'ES' : 'EN'}
             </button>
           </div>
           <div className="scroll-indicator">
-            <span>↓</span>
+            <ChevronDownIcon className="icon-lg" />
           </div>
         </div>
       </header>
@@ -167,7 +169,7 @@ function Home() {
           </div>
         </div>
         <div className="scroll-indicator">
-          <span>↓</span>
+          <ChevronDownIcon className="icon-lg" />
         </div>
       </section>
 
@@ -310,7 +312,7 @@ function Home() {
         </div>
         <Footer />
         <div className="swipe-next-hint">
-          <span>→</span>
+          <ArrowRightIcon className="icon-md" />
           <span className="swipe-next-text">Skills</span>
         </div>
       </section>

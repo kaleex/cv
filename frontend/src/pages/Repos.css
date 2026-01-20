@@ -211,6 +211,9 @@
 }
 
 .repo-coming-soon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   margin-top: auto;
   padding: 0.75rem 1.25rem;
   background: rgba(251, 191, 36, 0.1);
@@ -219,6 +222,21 @@
   color: #fbbf24;
   font-weight: 500;
   width: fit-content;
+}
+
+.repo-github-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.coming-soon-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.github-profile-icon {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 /* CTA Section */

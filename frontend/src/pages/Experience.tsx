@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { useLanguage } from '../i18n/LanguageContext'
+import { MapPinIcon } from '../components/Icons'
 import './Experience.css'
 
 interface ExperienceItem {
@@ -53,7 +54,7 @@ function Experience() {
                   <span className="period">{exp.period}</span>
                 </div>
                 <h4 className="role">{exp.role}</h4>
-                <p className="location">📍 {exp.location}</p>
+                <p className="location"><MapPinIcon className="location-icon" /> {exp.location}</p>
                 <ul className="description">
                   {exp.description.map((item, i) => (
                     <li key={i}>{item}</li>
