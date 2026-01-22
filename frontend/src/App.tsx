@@ -350,7 +350,6 @@ function App() {
           <Route path="/contact" element={
             <Contact 
               email={portfolio.personalInfo.email} 
-              phone={portfolio.personalInfo.phone} 
               linkedin={portfolio.personalInfo.linkedin} 
               github={portfolio.personalInfo.github} 
             />
