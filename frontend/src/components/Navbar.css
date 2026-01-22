@@ -50,7 +50,7 @@
 }
 
 .brand-logo-text .bracket {
-  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  background: var(--gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -58,7 +58,7 @@
 }
 
 .brand-logo-text .initials {
-  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  background: var(--gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -73,14 +73,14 @@
 }
 
 .navbar-links a {
-  color: #94a3b8;
+  color: var(--text-muted);
   text-decoration: none;
   font-size: 0.95rem;
   transition: color 0.2s;
 }
 
 [data-theme="light"] .navbar-links a {
-  color: #64748b;
+  color: var(--text-muted);
 }
 
 .navbar-links a:hover,
@@ -94,7 +94,7 @@
 }
 
 .navbar-cta {
-  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  background: var(--gradient);
   color: white !important;
   padding: 0.5rem 1.25rem;
   border-radius: 25px;
@@ -276,9 +276,9 @@
 
 /* Language Toggle */
 .lang-toggle {
-  background: rgba(59, 130, 246, 0.15);
-  border: 1px solid rgba(59, 130, 246, 0.3);
-  color: #60a5fa;
+  background: var(--accent-light);
+  border: 1px solid var(--border-color);
+  color: var(--accent-hover);
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -294,7 +294,7 @@
 }
 
 .lang-toggle:hover {
-  background: rgba(59, 130, 246, 0.25);
-  border-color: rgba(59, 130, 246, 0.5);
-  color: #93c5fd;
+  background: var(--bg-card-hover);
+  border-color: var(--border-hover);
+  color: var(--accent-hover);
 }

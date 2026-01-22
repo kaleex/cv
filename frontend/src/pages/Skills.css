@@ -37,7 +37,7 @@
 .skills-header h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  background: linear-gradient(90deg, #60a5fa, #a78bfa);
+  background: var(--gradient-light);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -133,7 +133,7 @@
 
 .skill-bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  background: var(--gradient);
   border-radius: 4px;
   transition: width 0.5s ease;
 }
@@ -174,11 +174,11 @@
 }
 
 .legend-dot.expert {
-  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  background: var(--gradient);
 }
 
 .legend-dot.advanced {
-  background: #60a5fa;
+  background: var(--accent-hover);
 }
 
 .legend-dot.intermediate {
@@ -331,7 +331,7 @@
 
 .roadmap-target {
   font-size: 0.85rem;
-  color: #60a5fa;
+  color: var(--accent-hover);
   font-weight: 500;
 }
 

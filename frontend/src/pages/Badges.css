@@ -37,7 +37,7 @@
 .badges-header h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  background: linear-gradient(90deg, #60a5fa, #a78bfa);
+  background: var(--gradient-light);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -163,7 +163,7 @@
 }
 
 .badge-issuer {
-  color: #60a5fa;
+  color: var(--accent-hover);
   font-size: 0.9rem;
   margin: 0;
   font-weight: 500;
@@ -208,7 +208,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  color: #60a5fa;
+  color: var(--accent-hover);
   font-size: 0.85rem;
   text-decoration: none;
   margin-top: 0.5rem;
@@ -216,7 +216,7 @@
 }
 
 .verify-link:hover {
-  color: #93c5fd;
+  color: var(--accent-hover);
   text-decoration: underline;
 }
 

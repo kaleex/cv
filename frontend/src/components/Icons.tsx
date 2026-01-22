@@ -92,108 +92,41 @@ export const skillCategoryIcons: Record<string, React.ComponentType<{ className?
   'Soft Skills': UserGroupIcon,
 }
 
-// Cloud Architecture SVG Background - Data Pipeline Style
+// Abstract geometric SVG Background - Minimalist style for desktop
 export function CloudArchitectureSVG({ className = "" }: { className?: string }) {
   return (
     <svg
       className={className}
-      viewBox="0 0 800 600"
+      viewBox="0 0 1200 600"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="xMidYMid slice"
     >
-      {/* Connection lines */}
-      <g className="connections" stroke="currentColor" strokeWidth="2" opacity="0.6">
-        {/* Main data flow paths */}
-        <path d="M100 150 L200 200 L350 180 L500 220 L650 180 L750 200" strokeDasharray="8 4" />
-        <path d="M100 300 L250 280 L400 320 L550 280 L700 320" strokeDasharray="8 4" />
-        <path d="M150 450 L300 420 L450 460 L600 420 L720 450" strokeDasharray="8 4" />
+      {/* Large soft circles - positioned to frame content */}
+      <circle cx="150" cy="100" r="180" fill="currentColor" opacity="0.08" />
+      <circle cx="1100" cy="500" r="220" fill="currentColor" opacity="0.06" />
+      <circle cx="1000" cy="80" r="120" fill="currentColor" opacity="0.05" />
 
-        {/* Cross connections */}
-        <path d="M200 200 L250 280" strokeDasharray="4 4" />
-        <path d="M350 180 L400 320" strokeDasharray="4 4" />
-        <path d="M500 220 L550 280" strokeDasharray="4 4" />
-        <path d="M250 280 L300 420" strokeDasharray="4 4" />
-        <path d="M400 320 L450 460" strokeDasharray="4 4" />
-        <path d="M550 280 L600 420" strokeDasharray="4 4" />
+      {/* Subtle ring elements */}
+      <circle cx="200" cy="450" r="80" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.15" />
+      <circle cx="200" cy="450" r="60" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.1" />
+
+      <circle cx="1050" cy="200" r="100" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.12" />
+      <circle cx="1050" cy="200" r="70" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.08" />
+
+      {/* Floating dots - sparse and elegant */}
+      <g opacity="0.3">
+        <circle cx="100" cy="200" r="3" fill="currentColor" />
+        <circle cx="300" cy="80" r="2" fill="currentColor" />
+        <circle cx="180" cy="350" r="2.5" fill="currentColor" />
+        <circle cx="1100" cy="120" r="3" fill="currentColor" />
+        <circle cx="950" cy="400" r="2" fill="currentColor" />
+        <circle cx="1000" cy="550" r="2.5" fill="currentColor" />
       </g>
 
-      {/* Data source nodes - left */}
-      <g className="nodes-source">
-        <circle cx="100" cy="150" r="25" fill="currentColor" opacity="0.3" />
-        <circle cx="100" cy="150" r="18" stroke="currentColor" strokeWidth="2.5" fill="none" opacity="0.7" />
-        <circle cx="100" cy="300" r="25" fill="currentColor" opacity="0.3" />
-        <circle cx="100" cy="300" r="18" stroke="currentColor" strokeWidth="2.5" fill="none" opacity="0.7" />
-        <circle cx="150" cy="450" r="25" fill="currentColor" opacity="0.3" />
-        <circle cx="150" cy="450" r="18" stroke="currentColor" strokeWidth="2.5" fill="none" opacity="0.7" />
-      </g>
-
-      {/* Processing nodes - Bronze layer */}
-      <g className="nodes-bronze">
-        <rect x="175" y="175" width="50" height="50" rx="8" fill="currentColor" opacity="0.25" />
-        <rect x="180" y="180" width="40" height="40" rx="6" stroke="currentColor" strokeWidth="2" fill="none" opacity="0.7" />
-        <rect x="225" y="255" width="50" height="50" rx="8" fill="currentColor" opacity="0.25" />
-        <rect x="230" y="260" width="40" height="40" rx="6" stroke="currentColor" strokeWidth="2" fill="none" opacity="0.7" />
-        <rect x="275" y="395" width="50" height="50" rx="8" fill="currentColor" opacity="0.25" />
-        <rect x="280" y="400" width="40" height="40" rx="6" stroke="currentColor" strokeWidth="2" fill="none" opacity="0.7" />
-      </g>
-
-      {/* Processing nodes - Silver layer */}
-      <g className="nodes-silver">
-        <polygon points="350,155 380,180 380,205 350,230 320,205 320,180" fill="currentColor" opacity="0.25" />
-        <polygon points="350,162 373,182 373,202 350,222 327,202 327,182" stroke="currentColor" strokeWidth="2" fill="none" opacity="0.7" />
-        <polygon points="400,295 430,320 430,345 400,370 370,345 370,320" fill="currentColor" opacity="0.25" />
-        <polygon points="400,302 423,322 423,342 400,362 377,342 377,322" stroke="currentColor" strokeWidth="2" fill="none" opacity="0.7" />
-        <polygon points="450,435 480,460 480,485 450,510 420,485 420,460" fill="currentColor" opacity="0.25" />
-        <polygon points="450,442 473,462 473,482 450,502 427,482 427,462" stroke="currentColor" strokeWidth="2" fill="none" opacity="0.7" />
-      </g>
-
-      {/* Processing nodes - Gold layer */}
-      <g className="nodes-gold">
-        <circle cx="500" cy="220" r="30" fill="currentColor" opacity="0.3" />
-        <circle cx="500" cy="220" r="22" stroke="currentColor" strokeWidth="2.5" fill="none" opacity="0.7" />
-        <circle cx="500" cy="220" r="12" fill="currentColor" opacity="0.4" />
-
-        <circle cx="550" cy="280" r="30" fill="currentColor" opacity="0.3" />
-        <circle cx="550" cy="280" r="22" stroke="currentColor" strokeWidth="2.5" fill="none" opacity="0.7" />
-        <circle cx="550" cy="280" r="12" fill="currentColor" opacity="0.4" />
-
-        <circle cx="600" cy="420" r="30" fill="currentColor" opacity="0.3" />
-        <circle cx="600" cy="420" r="22" stroke="currentColor" strokeWidth="2.5" fill="none" opacity="0.7" />
-        <circle cx="600" cy="420" r="12" fill="currentColor" opacity="0.4" />
-      </g>
-
-      {/* Output/Dashboard nodes - right */}
-      <g className="nodes-output">
-        <rect x="700" y="165" width="60" height="70" rx="10" fill="currentColor" opacity="0.2" />
-        <rect x="708" y="173" width="44" height="54" rx="6" stroke="currentColor" strokeWidth="2" fill="none" opacity="0.7" />
-        <line x1="715" y1="185" x2="745" y2="185" stroke="currentColor" strokeWidth="1.5" opacity="0.5" />
-        <line x1="715" y1="195" x2="740" y2="195" stroke="currentColor" strokeWidth="1.5" opacity="0.5" />
-        <line x1="715" y1="205" x2="745" y2="205" stroke="currentColor" strokeWidth="1.5" opacity="0.5" />
-
-        <rect x="670" y="285" width="60" height="70" rx="10" fill="currentColor" opacity="0.2" />
-        <rect x="678" y="293" width="44" height="54" rx="6" stroke="currentColor" strokeWidth="2" fill="none" opacity="0.7" />
-        <line x1="685" y1="305" x2="715" y2="305" stroke="currentColor" strokeWidth="1.5" opacity="0.5" />
-        <line x1="685" y1="315" x2="710" y2="315" stroke="currentColor" strokeWidth="1.5" opacity="0.5" />
-        <line x1="685" y1="325" x2="715" y2="325" stroke="currentColor" strokeWidth="1.5" opacity="0.5" />
-
-        <rect x="690" y="415" width="60" height="70" rx="10" fill="currentColor" opacity="0.2" />
-        <rect x="698" y="423" width="44" height="54" rx="6" stroke="currentColor" strokeWidth="2" fill="none" opacity="0.7" />
-        <line x1="705" y1="435" x2="735" y2="435" stroke="currentColor" strokeWidth="1.5" opacity="0.5" />
-        <line x1="705" y1="445" x2="730" y2="445" stroke="currentColor" strokeWidth="1.5" opacity="0.5" />
-        <line x1="705" y1="455" x2="735" y2="455" stroke="currentColor" strokeWidth="1.5" opacity="0.5" />
-      </g>
-
-      {/* Floating decorative elements */}
-      <g className="decorations" opacity="0.4">
-        <circle cx="50" cy="80" r="4" fill="currentColor" />
-        <circle cx="750" cy="100" r="3" fill="currentColor" />
-        <circle cx="80" cy="500" r="5" fill="currentColor" />
-        <circle cx="720" cy="520" r="4" fill="currentColor" />
-        <circle cx="400" cy="50" r="3" fill="currentColor" />
-        <circle cx="600" cy="550" r="4" fill="currentColor" />
-        <circle cx="200" cy="530" r="3" fill="currentColor" />
-      </g>
+      {/* Subtle gradient lines */}
+      <line x1="0" y1="580" x2="400" y2="580" stroke="currentColor" strokeWidth="1" opacity="0.1" />
+      <line x1="800" y1="20" x2="1200" y2="20" stroke="currentColor" strokeWidth="1" opacity="0.08" />
     </svg>
   )
 }

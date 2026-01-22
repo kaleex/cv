@@ -1,4 +1,5 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { features } from '../config/features';
 
 type Theme = 'dark' | 'light';
 
@@ -22,6 +23,15 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     localStorage.setItem('theme', theme);
     document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
+
+  // Apply color palette from features config
+  useEffect(() => {
+    if (features.colorPalette && features.colorPalette !== 'blue') {
+      document.documentElement.setAttribute('data-palette', features.colorPalette);
+    } else {
+      document.documentElement.removeAttribute('data-palette');
+    }
+  }, []);
 
   const toggleTheme = () => {
     setTheme(prev => prev === 'dark' ? 'light' : 'dark');

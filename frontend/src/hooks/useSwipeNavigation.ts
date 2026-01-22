@@ -12,8 +12,8 @@ const getPageOrder = (): string[] => {
   if (features.projects) pages.push('/repos')
   if (features.certifications) pages.push('/badges')
   if (features.blog) pages.push('/blog')
-  
-  pages.push('/card')
+  if (features.card) pages.push('/card')
+
   pages.push('/contact')
   
   return pages

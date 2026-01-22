@@ -1,6 +1,6 @@
 import { Analytics } from '../utils/analytics'
 import { useLanguage } from '../i18n/LanguageContext'
-import { EnvelopeIcon, PhoneIcon, BriefcaseIcon, CodeBracketIcon, DocumentArrowDownIcon } from '../components/Icons'
+import { EnvelopeIcon, BriefcaseIcon, CodeBracketIcon, DocumentArrowDownIcon } from '../components/Icons'
 import './Contact.css'
 
 interface ContactProps {
@@ -26,12 +26,6 @@ function Contact({ email, phone, linkedin, github }: ContactProps) {
             <EnvelopeIcon className="contact-icon" />
             <h3>{t.contact.email}</h3>
             <p>{email}</p>
-          </a>
-
-          <a href={`tel:${phone.replace(/\s/g, '')}`} className="contact-card" onClick={() => Analytics.phoneClick()}>
-            <PhoneIcon className="contact-icon" />
-            <h3>{t.contact.phone}</h3>
-            <p>{phone}</p>
           </a>
 
           <a href={linkedin} target="_blank" rel="noopener noreferrer" className="contact-card" onClick={() => Analytics.linkedinClick()}>

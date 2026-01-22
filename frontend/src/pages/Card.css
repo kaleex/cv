@@ -78,7 +78,7 @@
 }
 
 .card-logo .bracket {
-  color: #60a5fa;
+  color: var(--accent-hover);
 }
 
 .card-logo .initials {
@@ -103,7 +103,7 @@
 
 .card-title {
   font-size: 0.95rem;
-  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  background: var(--gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -127,7 +127,7 @@
 .decoration-line {
   flex: 1;
   height: 2px;
-  background: linear-gradient(90deg, #3b82f6, #8b5cf6, transparent);
+  background: linear-gradient(90deg, var(--accent), var(--accent-secondary), transparent);
   border-radius: 1px;
 }
 
@@ -140,15 +140,15 @@
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: #60a5fa;
+  background: var(--accent-hover);
 }
 
 .decoration-dots span:nth-child(2) {
-  background: #8b5cf6;
+  background: var(--accent-secondary);
 }
 
 .decoration-dots span:nth-child(3) {
-  background: #a78bfa;
+  background: var(--accent-secondary);
 }
 
 /* Back Side */
@@ -184,7 +184,7 @@
 .contact-item:hover:not(.location) {
   background: linear-gradient(90deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2));
   border-color: rgba(96, 165, 250, 0.5);
-  color: #60a5fa;
+  color: var(--accent-hover);
   transform: translateX(5px);
 }
 
@@ -196,7 +196,7 @@
 [data-theme="light"] .contact-item:hover:not(.location) {
   background: linear-gradient(90deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
   border-color: rgba(59, 130, 246, 0.4);
-  color: #3b82f6;
+  color: var(--accent);
 }
 
 .contact-icon {
@@ -242,7 +242,7 @@
   gap: 0.5rem;
   padding: 0.875rem 1.75rem;
   min-width: 160px;
-  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  background: var(--gradient);
   color: white;
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 50px;

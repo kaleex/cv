@@ -37,7 +37,7 @@
 .repos-header h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  background: linear-gradient(90deg, #60a5fa, #a78bfa);
+  background: var(--gradient-light);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -149,8 +149,8 @@
 }
 
 .tech-tag {
-  background: rgba(59, 130, 246, 0.15);
-  color: #60a5fa;
+  background: var(--accent-light);
+  color: var(--accent-hover);
   padding: 0.4rem 0.8rem;
   border-radius: 6px;
   font-size: 0.8rem;
@@ -186,7 +186,7 @@
   content: "→";
   position: absolute;
   left: 0;
-  color: #3b82f6;
+  color: var(--accent);
 }
 
 /* Links */
@@ -195,7 +195,7 @@
   align-items: center;
   gap: 0.5rem;
   color: #fff;
-  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  background: var(--gradient);
   padding: 0.75rem 1.25rem;
   border-radius: 8px;
   text-decoration: none;
@@ -270,7 +270,7 @@
 }
 
 .github-profile-link:hover {
-  border-color: #3b82f6;
+  border-color: var(--accent);
   transform: translateY(-2px);
   box-shadow: var(--shadow);
 }
