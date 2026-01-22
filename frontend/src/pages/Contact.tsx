@@ -5,12 +5,11 @@ import './Contact.css'
 
 interface ContactProps {
   email: string
-  phone: string
   linkedin: string
   github: string
 }
 
-function Contact({ email, phone, linkedin, github }: ContactProps) {
+function Contact({ email, linkedin, github }: ContactProps) {
   const { t } = useLanguage()
 
   return (
