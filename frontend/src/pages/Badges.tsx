@@ -1,5 +1,5 @@
-import { useEffect } from 'react'
 import { useLanguage } from '../i18n/LanguageContext'
+import { useFadeIn } from '../hooks/useFadeIn'
 import { Analytics } from '../utils/analytics'
 import { TrophyIcon, BookOpenIcon, RocketLaunchIcon } from '../components/Icons'
 import './Badges.css'
@@ -18,22 +18,7 @@ interface Badge {
 
 function Badges() {
   const { t } = useLanguage()
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible')
-          }
-        })
-      },
-      { threshold: 0.1 }
-    )
-
-    document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el))
-    return () => observer.disconnect()
-  }, [])
+  useFadeIn()
 
   const badges: Badge[] = t.badges.certifications as Badge[]
 

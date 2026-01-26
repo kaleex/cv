@@ -27,11 +27,11 @@
 }
 
 [data-theme="light"] .skills-header {
-  background: linear-gradient(135deg, #e8f4fd 0%, #f0e6ff 100%);
+  background: var(--page-header-bg);
 }
 
 [data-theme="light"] .skills-header::after {
-  background: linear-gradient(to bottom, #f0e6ff, #ffffff);
+  background: linear-gradient(to bottom, var(--page-header-fade), var(--bg-primary));
 }
 
 .skills-header h1 {
@@ -84,7 +84,7 @@
 .category-icon {
   width: 1.5rem;
   height: 1.5rem;
-  color: var(--accent-primary);
+  color: var(--accent);
   flex-shrink: 0;
 }
 
@@ -182,7 +182,7 @@
 }
 
 .legend-dot.intermediate {
-  background: #94a3b8;
+  background: var(--status-neutral);
 }
 
 @media (max-width: 768px) {
@@ -336,11 +336,11 @@
 }
 
 .roadmap-list.in-progress .roadmap-icon {
-  color: #f59e0b;
+  color: var(--status-warning);
 }
 
 .roadmap-list.upcoming .roadmap-icon {
-  color: #94a3b8;
+  color: var(--status-neutral);
 }
 
 @media (max-width: 768px) {

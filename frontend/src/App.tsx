@@ -182,15 +182,12 @@ function Home() {
       <section className="section journey fade-in snap-section">
         <div className="container">
           <h2>{t.journey.title}</h2>
-          <div className="timeline">
+          <div className="journey-grid">
             {t.journey.items.map((item, idx) => (
-              <div key={idx} className="timeline-item">
-                <div className="timeline-marker"></div>
-                <div className="timeline-content">
-                  <h3>{item.company}</h3>
-                  <span className="period">{item.period}</span>
-                  <p>{item.description}</p>
-                </div>
+              <div key={idx} className="journey-card">
+                <span className="journey-period">{item.period}</span>
+                <h3 className="journey-company">{item.company}</h3>
+                <p className="journey-description">{item.description}</p>
               </div>
             ))}
           </div>

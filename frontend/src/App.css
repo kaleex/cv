@@ -8,7 +8,7 @@
 /* Mobile scroll-snap container */
 @media (max-width: 768px) {
   .portfolio {
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
     overflow-y: scroll;
     height: 100vh;
     height: 100svh;
@@ -138,7 +138,7 @@
 
 .hero-extended-stats .intro p {
   font-size: 0.95rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   margin-bottom: 0.75rem;
   line-height: 1.6;
 }
@@ -234,10 +234,10 @@
 
 @keyframes glow-pulse {
   0%, 100% {
-    filter: drop-shadow(0 0 4px var(--accent));
+    filter: drop-shadow(0 0 2px var(--accent));
   }
   50% {
-    filter: drop-shadow(0 0 10px var(--accent)) drop-shadow(0 0 20px rgba(139, 92, 246, 0.2));
+    filter: drop-shadow(0 0 6px var(--accent)) drop-shadow(0 0 12px rgba(139, 92, 246, 0.15));
   }
 }
 
@@ -306,7 +306,7 @@
 .hero h2 {
   font-size: clamp(1.1rem, 2.5vw, 1.4rem);
   font-weight: 400;
-  color: #94a3b8;
+  color: var(--text-muted);
   margin-bottom: 2.5rem;
   max-width: 700px;
   margin-left: auto;
@@ -366,15 +366,15 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: gradient-shift 3s ease-in-out infinite, glow-pulse-light 2s ease-in-out infinite;
+  animation: gradient-shift 6s ease-in-out infinite, glow-pulse-light 4s ease-in-out infinite;
 }
 
 @keyframes glow-pulse-light {
   0%, 100% {
-    filter: drop-shadow(0 0 3px var(--accent));
+    filter: drop-shadow(0 0 1px var(--accent));
   }
   50% {
-    filter: drop-shadow(0 0 8px var(--accent)) drop-shadow(0 0 15px rgba(139, 92, 246, 0.15));
+    filter: drop-shadow(0 0 4px var(--accent)) drop-shadow(0 0 8px rgba(139, 92, 246, 0.1));
   }
 }
 
@@ -468,7 +468,7 @@
 
 .stat-label {
   font-size: 0.9rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -541,7 +541,7 @@
 }
 
 .principle strong {
-  color: #1e40af;
+  color: var(--accent);
 }
 
 .closing {
@@ -592,7 +592,6 @@
   border-radius: 12px;
   padding: 1.5rem;
   box-shadow: var(--shadow);
-  border-top: 4px solid;
   border: 1px solid var(--border-color);
   border-top: 4px solid;
 }
@@ -652,70 +651,72 @@
   color: var(--accent);
 }
 
-/* Journey Timeline */
-.timeline {
-  position: relative;
-  padding-left: 2rem;
+/* Journey Grid */
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
   margin-top: 2rem;
 }
 
-.timeline::before {
+.journey-card {
+  background: var(--bg-card);
+  padding: 1.75rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.journey-card::before {
   content: '';
   position: absolute;
-  left: 0;
   top: 0;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(180deg, var(--accent), var(--accent-secondary));
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.timeline-item {
-  position: relative;
-  padding-bottom: 2.5rem;
+.journey-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  border-color: var(--accent);
 }
 
-.timeline-item:last-child {
-  padding-bottom: 0;
+.journey-card:hover::before {
+  opacity: 1;
 }
 
-.timeline-marker {
-  position: absolute;
-  left: -2rem;
-  top: 0.25rem;
-  width: 12px;
-  height: 12px;
-  background: var(--accent);
-  border-radius: 50%;
-  transform: translateX(-5px);
-  box-shadow: 0 0 0 4px white, 0 0 0 6px var(--accent);
+.journey-period {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--bg-secondary);
+  border: 1px solid var(--accent);
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
 }
 
-.timeline-content {
-  background: var(--bg-card);
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: var(--shadow);
-  border: 1px solid var(--border-color);
+.journey-company {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 0.75rem 0;
+  line-height: 1.3;
 }
 
-.timeline-content h3 {
-  font-size: 1.15rem;
-  color: var(--accent-hover);
-  margin: 0 0 0.25rem 0;
-}
-
-.timeline-content .period {
-  display: block;
+.journey-description {
   font-size: 0.9rem;
-  color: var(--text-muted);
-  margin-bottom: 0.75rem;
-  font-weight: 500;
-}
-
-.timeline-content p {
   color: var(--text-secondary);
   margin: 0;
-  font-size: 1rem;
+  line-height: 1.6;
 }
 
 /* What I Bring */
@@ -742,7 +743,7 @@
   content: '✓';
   position: absolute;
   left: 1.25rem;
-  color: #22c55e;
+  color: var(--status-success);
   font-weight: bold;
 }
 
@@ -775,7 +776,7 @@
   display: inline-block;
   font-size: 0.8rem;
   color: var(--accent-secondary);
-  background: #f5f3ff;
+  background: var(--bg-secondary);
   padding: 0.25rem 0.75rem;
   border-radius: 20px;
   margin-bottom: 0.75rem;
@@ -1095,16 +1096,13 @@
     font-size: 0.95rem;
   }
 
-  .timeline {
-    padding-left: 1.5rem;
+  .journey-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
-  .timeline-marker {
-    left: -1.5rem;
-  }
-
-  .timeline-content {
-    padding: 1rem;
+  .journey-card {
+    padding: 1.25rem;
   }
 
   .skills-list li {

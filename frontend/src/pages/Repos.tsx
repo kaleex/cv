@@ -1,5 +1,5 @@
-import { useEffect } from 'react'
 import { useLanguage } from '../i18n/LanguageContext'
+import { useFadeIn } from '../hooks/useFadeIn'
 import { Analytics } from '../utils/analytics'
 import { GitHubIcon, WrenchScrewdriverIcon } from '../components/Icons'
 import './Repos.css'
@@ -15,22 +15,7 @@ interface Repo {
 
 function Repos() {
   const { t } = useLanguage()
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible')
-          }
-        })
-      },
-      { threshold: 0.1 }
-    )
-
-    document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el))
-    return () => observer.disconnect()
-  }, [])
+  useFadeIn()
 
   const repos: Repo[] = t.repos.projects as Repo[]
 
@@ -103,7 +88,7 @@ function Repos() {
         <section className="repos-cta fade-in">
         <p>{t.repos.ctaText}</p>
         <a
-          href="https://github.com/Killex94"
+          href="https://github.com/kaleex"
           target="_blank"
           rel="noopener noreferrer"
           className="github-profile-link"

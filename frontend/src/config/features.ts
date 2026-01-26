@@ -17,5 +17,5 @@ export const features = {
   showCopyright: false,        // Footer copyright
 
   // Color palette: 'blue' (default) | 'orange' | 'green' | 'purple'
-  colorPalette: 'green' as ColorPalette,
+  colorPalette: 'purple' as ColorPalette,
 };

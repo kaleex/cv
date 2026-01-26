@@ -161,7 +161,7 @@ export const en = {
         description: "Full end-to-end data platform demonstrating advanced Data Engineering, MLOps, Observability, Streaming, Testing, Security, and Microservices. A professional portfolio project showcasing production-ready patterns.",
         tech: ["Databricks", "Delta Lake", "PySpark", "Unity Catalog", "DLT", "DABs", "Terraform", "MLflow", "Structured Streaming", "FastAPI", "Docker", "Great Expectations", "Prometheus", "Grafana", "GitHub Actions"],
         status: "in-progress",
-        url: "https://github.com/Killex94/portfolio",
+        url: "https://github.com/kaleex/portfolio",
         highlights: [
           "Medallion Architecture (Bronze → Silver → Gold)",
           "Dimensional modeling with star schema (facts & dimensions)",
@@ -179,7 +179,7 @@ export const en = {
         description: "This very website! Built with React, TypeScript and Vite. Deployed on Cloudflare Workers with custom domain.",
         tech: ["React", "TypeScript", "Vite", "Cloudflare Workers"],
         status: "completed",
-        url: "https://github.com/Killex94/portfolio",
+        url: "https://github.com/kaleex/portfolio",
         highlights: [
           "Responsive design",
           "i18n (EN/ES)",
@@ -210,7 +210,7 @@ export const en = {
         slug: "medallion-architecture-deep-dive",
         title: "Medallion Architecture: Beyond Bronze, Silver, Gold",
         excerpt: "A practical guide to implementing the medallion pattern with Delta Lake. When to use it, when not to, and the patterns that actually work in production.",
-        date: "Coming Q1 2026",
+        date: "Coming Soon",
         tags: ["Databricks", "Delta Lake", "Architecture"],
         readTime: "~10 min",
         comingSoon: true
@@ -219,7 +219,7 @@ export const en = {
         slug: "dimensional-modeling-lakehouse",
         title: "Dimensional Modeling in the Lakehouse Era",
         excerpt: "Star schemas aren't dead. How to build fact and dimension tables with Delta Lake that serve both BI and ML workloads.",
-        date: "Coming Q1 2026",
+        date: "Coming Soon",
         tags: ["Data Modeling", "Star Schema", "Delta Lake"],
         readTime: "~12 min",
         comingSoon: true
@@ -228,7 +228,7 @@ export const en = {
         slug: "dlt-production-patterns",
         title: "Delta Live Tables: Production Patterns & Pitfalls",
         excerpt: "Everything I learned deploying DLT pipelines to production. Expectations, error handling, and the gotchas nobody tells you about.",
-        date: "Coming Q2 2026",
+        date: "Coming Soon",
         tags: ["DLT", "Data Quality", "Databricks"],
         readTime: "~15 min",
         comingSoon: true
@@ -252,14 +252,14 @@ export const en = {
       {
         name: "Databricks Certified Data Engineer Associate",
         issuer: "Databricks",
-        date: "Planned Q1 2026",
+        date: "Planned",
         image: "/badges/databricks-de-associate.png",
         status: "planned"
       },
       {
         name: "Databricks Certified Data Engineer Professional",
         issuer: "Databricks",
-        date: "Planned Q2 2026",
+        date: "Planned",
         image: "/badges/databricks-de-professional.png",
         status: "planned"
       },
@@ -278,9 +278,22 @@ export const en = {
     cta: "Looking for a data engineer who delivers? Let's talk!",
     timeline: [
       {
-        company: "Knowmad Mood",
-        role: "Data Engineer",
-        period: "Apr 2023 - Present",
+        company: "Knowmad Mood — WiZink",
+        role: "Senior Data Engineer / Software Engineer",
+        period: "Jan 2025 - Present",
+        location: "Valencia, Spain",
+        description: [
+          "Led the refactor of a core decisioning engine into a clean, testable Python codebase with async and event-driven architecture",
+          "Processing 500+ concurrent lending applications in seconds under production workloads",
+          "Designing and implementing scalable microservices for real-time financial decision-making pipelines",
+          "Applying software engineering best practices including comprehensive testing, code reviews, and CI/CD automation"
+        ],
+        technologies: ["Python", "Async/Await", "Event-Driven Architecture", "Microservices", "CI/CD", "Azure"]
+      },
+      {
+        company: "Knowmad Mood — Generali",
+        role: "Senior Data Engineer",
+        period: "Apr 2023 - Dec 2024",
         location: "Valencia, Spain",
         description: [
           "Designing and maintaining fact and dimension tables to support efficient data modeling for analytics and reporting",
@@ -494,7 +507,7 @@ export const es = {
         description: "Plataforma de datos end-to-end completa demostrando Data Engineering avanzado, MLOps, Observabilidad, Streaming, Testing, Seguridad y Microservicios. Un proyecto portfolio profesional con patrones production-ready.",
         tech: ["Databricks", "Delta Lake", "PySpark", "Unity Catalog", "DLT", "DABs", "Terraform", "MLflow", "Structured Streaming", "FastAPI", "Docker", "Great Expectations", "Prometheus", "Grafana", "GitHub Actions"],
         status: "in-progress",
-        url: "https://github.com/Killex94/portfolio",
+        url: "https://github.com/kaleex/portfolio",
         highlights: [
           "Arquitectura Medallion (Bronze → Silver → Gold)",
           "Modelado dimensional con star schema (hechos y dimensiones)",
@@ -512,7 +525,7 @@ export const es = {
         description: "¡Esta misma web! Construida con React, TypeScript y Vite. Desplegada en Cloudflare Workers con dominio propio.",
         tech: ["React", "TypeScript", "Vite", "Cloudflare Workers"],
         status: "completed",
-        url: "https://github.com/Killex94/portfolio",
+        url: "https://github.com/kaleex/portfolio",
         highlights: [
           "Diseño responsive",
           "i18n (EN/ES)",
@@ -543,7 +556,7 @@ export const es = {
         slug: "medallion-architecture-deep-dive",
         title: "Arquitectura Medallion: Más Allá de Bronze, Silver, Gold",
         excerpt: "Guía práctica para implementar el patrón medallion con Delta Lake. Cuándo usarlo, cuándo no, y los patrones que realmente funcionan en producción.",
-        date: "Próximo Q1 2026",
+        date: "Próximamente",
         tags: ["Databricks", "Delta Lake", "Arquitectura"],
         readTime: "~10 min",
         comingSoon: true
@@ -552,7 +565,7 @@ export const es = {
         slug: "dimensional-modeling-lakehouse",
         title: "Modelado Dimensional en la Era Lakehouse",
         excerpt: "Los star schemas no han muerto. Cómo construir tablas de hechos y dimensiones con Delta Lake que sirvan tanto BI como ML.",
-        date: "Próximo Q1 2026",
+        date: "Próximamente",
         tags: ["Data Modeling", "Star Schema", "Delta Lake"],
         readTime: "~12 min",
         comingSoon: true
@@ -561,7 +574,7 @@ export const es = {
         slug: "dlt-production-patterns",
         title: "Delta Live Tables: Patrones de Producción y Errores Comunes",
         excerpt: "Todo lo que aprendí desplegando pipelines DLT en producción. Expectations, manejo de errores, y los gotchas que nadie te cuenta.",
-        date: "Próximo Q2 2026",
+        date: "Próximamente",
         tags: ["DLT", "Data Quality", "Databricks"],
         readTime: "~15 min",
         comingSoon: true
@@ -585,14 +598,14 @@ export const es = {
       {
         name: "Databricks Certified Data Engineer Associate",
         issuer: "Databricks",
-        date: "Planificada Q1 2026",
+        date: "Planificada",
         image: "/badges/databricks-de-associate.png",
         status: "planned"
       },
       {
         name: "Databricks Certified Data Engineer Professional",
         issuer: "Databricks",
-        date: "Planificada Q2 2026",
+        date: "Planificada",
         image: "/badges/databricks-de-professional.png",
         status: "planned"
       },
@@ -611,9 +624,22 @@ export const es = {
     cta: "¿Buscas un data engineer que entregue resultados? ¡Hablemos!",
     timeline: [
       {
-        company: "Knowmad Mood",
-        role: "Data Engineer",
-        period: "Abr 2023 - Presente",
+        company: "Knowmad Mood — WiZink",
+        role: "Senior Data Engineer / Software Engineer",
+        period: "Ene 2025 - Presente",
+        location: "Valencia, España",
+        description: [
+          "Liderazgo en la refactorización de un motor de decisiones core hacia un código Python limpio y testeable con arquitectura async y event-driven",
+          "Procesamiento de más de 500 solicitudes de préstamo concurrentes en segundos bajo cargas de producción",
+          "Diseño e implementación de microservicios escalables para pipelines de toma de decisiones financieras en tiempo real",
+          "Aplicación de mejores prácticas de ingeniería de software incluyendo testing exhaustivo, code reviews y automatización CI/CD"
+        ],
+        technologies: ["Python", "Async/Await", "Event-Driven Architecture", "Microservices", "CI/CD", "Azure"]
+      },
+      {
+        company: "Knowmad Mood — Generali",
+        role: "Senior Data Engineer",
+        period: "Abr 2023 - Dic 2024",
         location: "Valencia, España",
         description: [
           "Diseño y mantenimiento de tablas de hechos y dimensiones para modelado de datos eficiente en analytics y reporting",

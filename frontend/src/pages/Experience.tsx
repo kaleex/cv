@@ -1,5 +1,5 @@
-import { useEffect } from 'react'
 import { useLanguage } from '../i18n/LanguageContext'
+import { useFadeIn } from '../hooks/useFadeIn'
 import { MapPinIcon } from '../components/Icons'
 import './Experience.css'
 
@@ -14,22 +14,7 @@ interface ExperienceItem {
 
 function Experience() {
   const { t } = useLanguage()
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible')
-          }
-        })
-      },
-      { threshold: 0.1 }
-    )
-
-    document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el))
-    return () => observer.disconnect()
-  }, [])
+  useFadeIn()
 
   const experiences: ExperienceItem[] = t.experience.timeline as ExperienceItem[]
 

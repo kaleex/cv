@@ -27,11 +27,11 @@
 }
 
 [data-theme="light"] .badges-header {
-  background: linear-gradient(135deg, #e8f4fd 0%, #f0e6ff 100%);
+  background: var(--page-header-bg);
 }
 
 [data-theme="light"] .badges-header::after {
-  background: linear-gradient(to bottom, #f0e6ff, #ffffff);
+  background: linear-gradient(to bottom, var(--page-header-fade), var(--bg-primary));
 }
 
 .badges-header h1 {
@@ -79,7 +79,7 @@
 .section-icon {
   width: 1.5rem;
   height: 1.5rem;
-  color: var(--accent-primary);
+  color: var(--accent);
 }
 
 /* Grid */
@@ -190,17 +190,17 @@
 
 .status-earned {
   background: rgba(34, 197, 94, 0.2);
-  color: #22c55e;
+  color: var(--status-success);
 }
 
 .status-progress {
   background: rgba(251, 191, 36, 0.2);
-  color: #fbbf24;
+  color: var(--status-warning);
 }
 
 .status-planned {
   background: rgba(148, 163, 184, 0.2);
-  color: #94a3b8;
+  color: var(--status-neutral);
 }
 
 /* Verify Link */

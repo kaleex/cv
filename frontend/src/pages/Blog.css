@@ -125,7 +125,7 @@
   background: rgba(251, 191, 36, 0.1);
   border: 1px solid rgba(251, 191, 36, 0.2);
   border-radius: 8px;
-  color: #fbbf24;
+  color: var(--status-warning);
   font-weight: 500;
 }
 
@@ -164,7 +164,7 @@
 .subscribe-icon {
   width: 1.5rem;
   height: 1.5rem;
-  color: var(--accent-primary);
+  color: var(--accent);
 }
 
 /* Fade in animation */

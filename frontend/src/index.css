@@ -23,6 +23,11 @@
   --gradient: linear-gradient(90deg, #3B82F6, #8B5CF6);
   --gradient-light: linear-gradient(90deg, #60A5FA, #A78BFA);
 
+  /* Status colors */
+  --status-success: #22c55e;
+  --status-warning: #f59e0b;
+  --status-neutral: #94a3b8;
+
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.6;
   font-weight: 400;
@@ -32,6 +37,12 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Accessibility - Focus indicators */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 /* Light theme */
@@ -55,6 +66,8 @@
   --hero-svg: #3b82f6;
   --gradient: linear-gradient(90deg, #2563EB, #7C3AED);
   --gradient-light: linear-gradient(90deg, #3B82F6, #8B5CF6);
+  --page-header-bg: linear-gradient(135deg, #e8f4fd 0%, #f0e6ff 100%);
+  --page-header-fade: #f0e6ff;
 }
 
 /* ============================================
@@ -84,6 +97,8 @@
   --hero-svg: #ea580c;
   --gradient: linear-gradient(90deg, #e55a00, #DC2626);
   --gradient-light: linear-gradient(90deg, #FF6B00, #EF4444);
+  --page-header-bg: linear-gradient(135deg, #fef3e8 0%, #fee2e2 100%);
+  --page-header-fade: #fee2e2;
 }
 
 /* ============================================
@@ -113,6 +128,8 @@
   --hero-svg: #10b981;
   --gradient: linear-gradient(90deg, #059669, #0891B2);
   --gradient-light: linear-gradient(90deg, #10B981, #06B6D4);
+  --page-header-bg: linear-gradient(135deg, #ecfdf5 0%, #e0f7fa 100%);
+  --page-header-fade: #e0f7fa;
 }
 
 /* ============================================
@@ -142,6 +159,8 @@
   --hero-svg: #8b5cf6;
   --gradient: linear-gradient(90deg, #7C3AED, #DB2777);
   --gradient-light: linear-gradient(90deg, #8B5CF6, #EC4899);
+  --page-header-bg: linear-gradient(135deg, #f3e8ff 0%, #fce7f3 100%);
+  --page-header-fade: #fce7f3;
 }
 
 * {

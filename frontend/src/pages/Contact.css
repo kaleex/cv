@@ -27,11 +27,11 @@
 }
 
 [data-theme="light"] .contact-header {
-  background: linear-gradient(135deg, #e8f4fd 0%, #f0e6ff 100%);
+  background: var(--page-header-bg);
 }
 
 [data-theme="light"] .contact-header::after {
-  background: linear-gradient(to bottom, #f0e6ff, #ffffff);
+  background: linear-gradient(to bottom, var(--page-header-fade), var(--bg-primary));
 }
 
 .contact-header h1 {
@@ -88,7 +88,7 @@
   width: 2rem;
   height: 2rem;
   margin-bottom: 1rem;
-  color: var(--accent-primary);
+  color: var(--accent);
 }
 
 .contact-card h3 {

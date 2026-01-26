@@ -27,11 +27,11 @@
 }
 
 [data-theme="light"] .experience-header {
-  background: linear-gradient(135deg, #e8f4fd 0%, #f0e6ff 100%);
+  background: var(--page-header-bg);
 }
 
 [data-theme="light"] .experience-header::after {
-  background: linear-gradient(to bottom, #f0e6ff, #ffffff);
+  background: linear-gradient(to bottom, var(--page-header-fade), var(--bg-primary));
 }
 
 .experience-header h1 {
@@ -118,7 +118,7 @@
   width: 16px;
   height: 16px;
   background: var(--accent);
-  border: 3px solid #1a1a2e;
+  border: 3px solid var(--bg-primary);
   border-radius: 50%;
   z-index: 1;
 }
@@ -146,7 +146,7 @@
 
 .company {
   font-size: 1.3rem;
-  color: #fff;
+  color: var(--text-primary);
   margin: 0;
 }
 
@@ -171,7 +171,7 @@
   align-items: center;
   gap: 0.25rem;
   font-size: 0.9rem;
-  color: #666;
+  color: var(--text-muted);
   margin: 0 0 15px 0;
 }
 
@@ -188,7 +188,7 @@
 }
 
 .description li {
-  color: #aaa;
+  color: var(--text-secondary);
   font-size: 0.95rem;
   margin-bottom: 8px;
   line-height: 1.5;
@@ -249,7 +249,7 @@
 }
 
 .experience-cta p {
-  color: #888;
+  color: var(--text-muted);
   font-size: 1.1rem;
   margin: 0;
 }
