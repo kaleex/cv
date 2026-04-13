@@ -29,7 +29,7 @@ function Card() {
             </div>
             <div className="card-info">
               <h1 className="card-name">Alejandro Quilez</h1>
-              <p className="card-title">Senior Data Engineer</p>
+              <p className="card-title">Data Platform Architect</p>
               <p className="card-tagline">{t.card?.tagline || 'Data Platforms That Actually Work'}</p>
             </div>
             <div className="card-decoration">

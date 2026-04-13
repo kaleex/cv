@@ -89,7 +89,7 @@ export const skillCategoryIcons: Record<string, React.ComponentType<{ className?
   'Programming': CommandLineIcon,
   'Data Engineering': CogIcon,
   'DevOps & MLOps': ArrowPathIcon,
-  'Soft Skills': UserGroupIcon,
+  'Architecture & Leadership': UserGroupIcon,
 }
 
 // Abstract geometric SVG Background - Minimalist style for desktop

@@ -335,6 +335,10 @@
   font-weight: 500;
 }
 
+.roadmap-list.completed .roadmap-icon {
+  color: var(--accent);
+}
+
 .roadmap-list.in-progress .roadmap-icon {
   color: var(--status-warning);
 }

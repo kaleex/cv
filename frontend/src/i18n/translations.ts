@@ -13,11 +13,11 @@ export const en = {
   hero: {
     headline: "Data Platforms That Actually Work",
     typingWords: ["Reliable", "Scalable", "Governed", "Production-Ready"],
-    subheadline: "Senior Data Engineer helping companies turn chaotic data into reliable, governed assets that drive real business decisions.",
+    subheadline: "Data Platform Architect with a hands-on background — designing and building reliable, governed data platforms for telecom, insurance, and banking.",
     intro: [
       "4+ years building data platforms processing 2+ TB/day, serving 500+ daily business requests across telecom, insurance, and banking.",
       "From hours-long pipelines reduced to minutes, to event-driven architectures that scale — I combine data engineering with solid software practices.",
-      "I don't just build pipelines. I build platforms that teams trust."
+      "I think in systems, not just pipelines. Every technical decision is made with the full platform in mind."
     ],
     downloadCV: "Download CV"
   },
@@ -91,20 +91,23 @@ export const en = {
   journey: {
     title: "My Journey",
     items: [
-      { 
-        company: "Knowmad Mood → WiZink", 
-        period: "Jan 2025 - Present", 
-        description: "Led refactoring of business-critical systems into modular, event-driven architectures. Increased daily business capacity from 400 to 500 requests (+25%) through improved algorithm fluidity. Delivered substantial execution time improvements and full end-to-end traceability." 
+      {
+        company: "Knowmad Mood",
+        sector: "Banking",
+        period: "Jan 2025 - Present",
+        description: "Led refactoring of business-critical systems into modular, event-driven architectures. Increased daily business capacity from 400 to 500 requests (+25%) through improved algorithm fluidity. Delivered substantial execution time improvements and full end-to-end traceability."
       },
-      { 
-        company: "Knowmad Mood → Generali", 
-        period: "Apr 2023 - Dec 2024", 
-        description: "Owned data platform in a regulated insurance environment. Reduced pipeline execution from hours to minutes with comprehensive validation frameworks. Designed analytical models based on facts and dimensions for business-critical reporting." 
+      {
+        company: "Knowmad Mood",
+        sector: "Insurance",
+        period: "Apr 2023 - Dec 2024",
+        description: "Owned data platform in a regulated insurance environment. Reduced pipeline execution from hours to minutes with comprehensive validation frameworks. Designed analytical models based on facts and dimensions for business-critical reporting."
       },
-      { 
-        company: "Capgemini → Telefónica", 
-        period: "2020 - Apr 2023", 
-        description: "Designed ingestion architecture processing ~2TB daily across 80+ tables. Automated datalake cleanup and maintenance workflows. Deployed multiple ML models to production weekly. Grew from junior to lead technical contributor owning Lakehouse architecture, CI/CD, and Terraform IaC." 
+      {
+        company: "Capgemini",
+        sector: "Telecom",
+        period: "2020 - Apr 2023",
+        description: "Designed ingestion architecture processing ~2TB daily across 80+ tables. Automated datalake cleanup and maintenance workflows. Deployed multiple ML models to production weekly. Grew from junior to lead technical contributor owning Lakehouse architecture, CI/CD, and Terraform IaC."
       }
     ]
   },
@@ -124,8 +127,8 @@ export const en = {
     viewOn: "View on Semantic Scholar →"
   },
   cta: {
-    title: "Let's Build Something Reliable",
-    text: "Building or evolving a data platform? Looking for someone to own its design and reliability? Let's talk."
+    title: "Let's Build Something That Lasts",
+    text: "Designing or evolving a data platform? Looking for someone who can own both the architecture and its delivery? Let's talk."
   },
   skills: {
     title: "Technical Skills",
@@ -139,6 +142,7 @@ export const en = {
   },
   roadmap: {
     title: "Learning Roadmap",
+    completed: "Completed",
     inProgress: "In Progress",
     upcoming: "Upcoming"
   },
@@ -274,11 +278,11 @@ export const en = {
   },
   experience: {
     title: "Experience",
-    subtitle: "My professional journey building data platforms across industries",
-    cta: "Looking for a data engineer who delivers? Let's talk!",
+    subtitle: "My professional journey designing and building data platforms across industries",
+    cta: "Looking for a data platform architect who delivers? Let's talk!",
     timeline: [
       {
-        company: "Knowmad Mood — WiZink",
+        company: "Knowmad Mood",
         role: "Senior Data Engineer / Software Engineer",
         period: "Jan 2025 - Present",
         location: "Valencia, Spain",
@@ -291,7 +295,7 @@ export const en = {
         technologies: ["Python", "Async/Await", "Event-Driven Architecture", "Microservices", "CI/CD", "Azure"]
       },
       {
-        company: "Knowmad Mood — Generali",
+        company: "Knowmad Mood",
         role: "Senior Data Engineer",
         period: "Apr 2023 - Dec 2024",
         location: "Valencia, Spain",
@@ -359,11 +363,11 @@ export const es = {
   hero: {
     headline: "Plataformas de Datos que Funcionan",
     typingWords: ["Fiables", "Escalables", "Gobernadas", "Listas para Producción"],
-    subheadline: "Senior Data Engineer ayudando a empresas a convertir datos caóticos en activos fiables y gobernados que impulsan decisiones de negocio reales.",
+    subheadline: "Arquitecto de Plataformas de Datos con base técnica — diseñando y construyendo plataformas de datos fiables y gobernadas para telecom, seguros y banca.",
     intro: [
       "4+ años construyendo plataformas de datos procesando 2+ TB/día, sirviendo 500+ peticiones diarias en telecom, seguros y banca.",
       "De pipelines de horas reducidos a minutos, a arquitecturas event-driven que escalan — combino ingeniería de datos con prácticas sólidas de software.",
-      "No solo construyo pipelines. Construyo plataformas en las que los equipos confían."
+      "Pienso en sistemas, no solo en pipelines. Cada decisión técnica se toma teniendo en cuenta la plataforma completa."
     ],
     downloadCV: "Descargar CV"
   },
@@ -437,20 +441,23 @@ export const es = {
   journey: {
     title: "Mi Trayectoria",
     items: [
-      { 
-        company: "Knowmad Mood → WiZink", 
-        period: "Ene 2025 - Presente", 
-        description: "Lideré la refactorización de sistemas críticos de negocio hacia arquitecturas modulares y event-driven. Incrementé la capacidad de negocio diaria de 400 a 500 peticiones (+25%) mejorando la fluidez del algoritmo. Mejoras sustanciales en tiempo de ejecución y trazabilidad end-to-end." 
+      {
+        company: "Knowmad Mood",
+        sector: "Banca",
+        period: "Ene 2025 - Presente",
+        description: "Lideré la refactorización de sistemas críticos de negocio hacia arquitecturas modulares y event-driven. Incrementé la capacidad de negocio diaria de 400 a 500 peticiones (+25%) mejorando la fluidez del algoritmo. Mejoras sustanciales en tiempo de ejecución y trazabilidad end-to-end."
       },
-      { 
-        company: "Knowmad Mood → Generali", 
-        period: "Abr 2023 - Dic 2024", 
-        description: "Propietario de la plataforma de datos en un entorno de seguros regulado. Reduje la ejecución de pipelines de horas a minutos con frameworks de validación completos. Diseñé modelos analíticos basados en hechos y dimensiones para reporting crítico de negocio." 
+      {
+        company: "Knowmad Mood",
+        sector: "Seguros",
+        period: "Abr 2023 - Dic 2024",
+        description: "Propietario de la plataforma de datos en un entorno de seguros regulado. Reduje la ejecución de pipelines de horas a minutos con frameworks de validación completos. Diseñé modelos analíticos basados en hechos y dimensiones para reporting crítico de negocio."
       },
-      { 
-        company: "Capgemini → Telefónica", 
-        period: "2020 - Abr 2023", 
-        description: "Diseñé arquitectura de ingesta procesando ~2TB diarios en 80+ tablas. Automaticé workflows de limpieza y mantenimiento del datalake. Desplegué múltiples modelos ML a producción semanalmente. Crecí de junior a lead contributor técnico owneando arquitectura Lakehouse, CI/CD y Terraform IaC." 
+      {
+        company: "Capgemini",
+        sector: "Telecom",
+        period: "2020 - Abr 2023",
+        description: "Diseñé arquitectura de ingesta procesando ~2TB diarios en 80+ tablas. Automaticé workflows de limpieza y mantenimiento del datalake. Desplegué múltiples modelos ML a producción semanalmente. Crecí de junior a lead contributor técnico owneando arquitectura Lakehouse, CI/CD y Terraform IaC."
       }
     ]
   },
@@ -470,8 +477,8 @@ export const es = {
     viewOn: "Ver en Semantic Scholar →"
   },
   cta: {
-    title: "Construyamos Algo Fiable",
-    text: "¿Construyendo o evolucionando una plataforma de datos? ¿Buscas a alguien que sea propietario de su diseño y fiabilidad? Hablemos."
+    title: "Construyamos Algo que Perdure",
+    text: "¿Diseñando o evolucionando una plataforma de datos? ¿Buscas a alguien que pueda responsabilizarse tanto de la arquitectura como de su entrega? Hablemos."
   },
   skills: {
     title: "Habilidades Técnicas",
@@ -485,6 +492,7 @@ export const es = {
   },
   roadmap: {
     title: "Roadmap de Aprendizaje",
+    completed: "Completado",
     inProgress: "En Progreso",
     upcoming: "Próximos"
   },
@@ -620,11 +628,11 @@ export const es = {
   },
   experience: {
     title: "Experiencia",
-    subtitle: "Mi trayectoria profesional construyendo plataformas de datos en diferentes industrias",
-    cta: "¿Buscas un data engineer que entregue resultados? ¡Hablemos!",
+    subtitle: "Mi trayectoria profesional diseñando y construyendo plataformas de datos en diferentes industrias",
+    cta: "¿Buscas un arquitecto de plataformas de datos que entregue resultados? ¡Hablemos!",
     timeline: [
       {
-        company: "Knowmad Mood — WiZink",
+        company: "Knowmad Mood",
         role: "Senior Data Engineer / Software Engineer",
         period: "Ene 2025 - Presente",
         location: "Valencia, España",
@@ -637,7 +645,7 @@ export const es = {
         technologies: ["Python", "Async/Await", "Event-Driven Architecture", "Microservices", "CI/CD", "Azure"]
       },
       {
-        company: "Knowmad Mood — Generali",
+        company: "Knowmad Mood",
         role: "Senior Data Engineer",
         period: "Abr 2023 - Dic 2024",
         location: "Valencia, España",

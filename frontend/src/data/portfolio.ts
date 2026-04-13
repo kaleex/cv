@@ -10,11 +10,11 @@ export const personalInfo = {
 
 export const hero = {
   headline: "Data Platforms That Actually Work",
-  subheadline: "Senior Data Engineer helping companies turn chaotic data into reliable, governed assets that drive real business decisions.",
+  subheadline: "Data Platform Architect with a hands-on background — designing and building reliable, governed data platforms for telecom, insurance, and banking.",
   intro: [
     "4+ years building data platforms processing 2+ TB/day, serving 500+ daily business requests across telecom, insurance, and banking.",
     "From hours-long pipelines reduced to minutes, to event-driven architectures that scale — I combine data engineering with solid software practices.",
-    "I don't just build pipelines. I build platforms that teams trust."
+    "I think in systems, not just pipelines. Every technical decision is made with the full platform in mind."
   ]
 };
 
@@ -87,20 +87,23 @@ export const cicd = {
 export const journey = {
   title: "My Journey",
   items: [
-    { 
-      company: "Knowmad Mood → WiZink", 
-      period: "Jan 2025 - Present", 
-      description: "Led refactoring of business-critical systems into modular, event-driven architectures. Increased daily business capacity from 400 to 500 requests (+25%) through improved algorithm fluidity. Delivered substantial execution time improvements and full end-to-end traceability." 
+    {
+      company: "Knowmad Mood",
+      sector: "Banking",
+      period: "Jan 2025 - Present",
+      description: "Led refactoring of business-critical systems into modular, event-driven architectures. Increased daily business capacity from 400 to 500 requests (+25%) through improved algorithm fluidity. Delivered substantial execution time improvements and full end-to-end traceability."
     },
-    { 
-      company: "Knowmad Mood → Generali", 
-      period: "Apr 2023 - Dec 2024", 
-      description: "Owned data platform in a regulated insurance environment. Reduced pipeline execution from hours to minutes with comprehensive validation frameworks. Designed analytical models based on facts and dimensions for business-critical reporting." 
+    {
+      company: "Knowmad Mood",
+      sector: "Insurance",
+      period: "Apr 2023 - Dec 2024",
+      description: "Owned data platform in a regulated insurance environment. Reduced pipeline execution from hours to minutes with comprehensive validation frameworks. Designed analytical models based on facts and dimensions for business-critical reporting."
     },
-    { 
-      company: "Capgemini → Telefónica", 
-      period: "2020 - Apr 2023", 
-      description: "Designed ingestion architecture processing ~2TB daily across 80+ tables. Automated datalake cleanup and maintenance workflows. Deployed multiple ML models to production weekly. Grew from junior to lead technical contributor owning Lakehouse architecture, CI/CD, and Terraform IaC." 
+    {
+      company: "Capgemini",
+      sector: "Telecom",
+      period: "2020 - Apr 2023",
+      description: "Designed ingestion architecture processing ~2TB daily across 80+ tables. Automated datalake cleanup and maintenance workflows. Deployed multiple ML models to production weekly. Grew from junior to lead technical contributor owning Lakehouse architecture, CI/CD, and Terraform IaC."
     }
   ]
 };
@@ -129,8 +132,8 @@ export const publications = {
 };
 
 export const cta = {
-  title: "Let's Build Something Reliable",
-  text: "Building or evolving a data platform? Looking for someone to own its design and reliability? Let's talk."
+  title: "Let's Build Something That Lasts",
+  text: "Designing or evolving a data platform? Looking for someone who can own both the architecture and its delivery? Let's talk."
 };
 
 export const skills = [
@@ -148,8 +151,12 @@ export const skills = [
     icon: "🗄️",
     skills: [
       { name: "Databricks / Delta Lake", level: 95 },
-      { name: "Apache Spark", level: 90 },
-      { name: "Unity Catalog", level: 90 }
+      { name: "Apache Spark / PySpark", level: 90 },
+      { name: "Unity Catalog", level: 90 },
+      { name: "Delta Live Tables (DLT)", level: 85 },
+      { name: "MLflow", level: 85 },
+      { name: "Databricks Asset Bundles (DABs)", level: 80 },
+      { name: "Structured Streaming", level: 80 }
     ]
   },
   {
@@ -183,11 +190,11 @@ export const skills = [
     ]
   },
   {
-    category: "Soft Skills",
+    category: "Architecture & Leadership",
     icon: "🤝",
     skills: [
-      { name: "Technical Leadership", level: 85 },
       { name: "Architecture Design", level: 90 },
+      { name: "Technical Leadership", level: 85 },
       { name: "Team Collaboration", level: 90 },
       { name: "Stakeholder Management", level: 85 },
       { name: "Documentation", level: 85 }
@@ -197,8 +204,13 @@ export const skills = [
 
 export const roadmap = {
   title: "Learning Roadmap",
+  completed: [
+    { name: "AZ-305 Azure Solutions Architect Expert" },
+    { name: "Architecture Patterns (Monolithic, Microservices, CQRS)" },
+    { name: "Claude Code: Skills, Plugins & MCP Development" }
+  ],
   inProgress: [
-    { name: "AZ-305 Azure Solutions Architect Expert", target: "January 2026" }
+    { name: "AZ-104 Azure Administrator Associate", target: "2026" }
   ],
   upcoming: [
     { name: "Databricks Certified Data Engineer Associate" },
@@ -206,7 +218,6 @@ export const roadmap = {
     { name: "Databricks Certified Data Analyst Associate" },
     { name: "Apache Airflow & Orchestration" },
     { name: "dbt (Data Build Tool)" },
-    { name: "Spark Structured Streaming" },
     { name: "LLMs & AI Engineering for Data" }
   ]
 };

@@ -8,7 +8,8 @@ import {
   ArrowPathIcon,
   UserGroupIcon,
   RocketLaunchIcon,
-  ClipboardDocumentListIcon
+  ClipboardDocumentListIcon,
+  TrophyIcon
 } from '../components/Icons'
 import './Skills.css'
 
@@ -88,6 +89,17 @@ function Skills() {
       <div className="roadmap-section">
         <h2><RocketLaunchIcon className="roadmap-title-icon" /> {t.roadmap.title}</h2>
         <div className="roadmap-content">
+          <div className="roadmap-column">
+            <h3>{t.roadmap.completed}</h3>
+            <ul className="roadmap-list completed">
+              {roadmap.completed.map((item, idx) => (
+                <li key={idx}>
+                  <TrophyIcon className="roadmap-icon" />
+                  <span className="roadmap-name">{item.name}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
           <div className="roadmap-column">
             <h3>{t.roadmap.inProgress}</h3>
             <ul className="roadmap-list in-progress">
