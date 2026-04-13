@@ -186,7 +186,10 @@ function Home() {
             {t.journey.items.map((item, idx) => (
               <div key={idx} className="journey-card">
                 <span className="journey-period">{item.period}</span>
-                <h3 className="journey-company">{item.company}</h3>
+                <div className="journey-card-header">
+                  <h3 className="journey-company">{item.company}</h3>
+                  {item.sector && <span className="journey-sector">{item.sector}</span>}
+                </div>
                 <p className="journey-description">{item.description}</p>
               </div>
             ))}
