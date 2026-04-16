@@ -12,114 +12,121 @@ interface ExperienceItem {
   technologies: string[]
 }
 
-/* SVG illustrations for each experience — one per role */
+/* SVG illustrations for each experience — cyberpunk style */
 function ExperienceIllustration({ index }: { index: number }) {
   const stroke = 'var(--accent)'
   const stroke2 = 'var(--accent-secondary)'
 
+  const HudCorners = () => (
+    <>
+      <path d="M10,10 L10,28 L28,28" stroke={stroke} strokeWidth="1.5" opacity="0.8"/>
+      <path d="M150,10 L150,28 L132,28" stroke={stroke} strokeWidth="1.5" opacity="0.8"/>
+      <path d="M10,150 L10,132 L28,132" stroke={stroke} strokeWidth="1.5" opacity="0.8"/>
+      <path d="M150,150 L150,132 L132,132" stroke={stroke} strokeWidth="1.5" opacity="0.8"/>
+    </>
+  )
+
   switch (index) {
-    /* WiZink — Decision Engine / Fintech flow */
+    /* WiZink — Decision Engine / Circuit HUD */
     case 0:
       return (
         <svg viewBox="0 0 160 160" fill="none" className="exp-svg">
-          {/* Decision diamond */}
-          <rect x="68" y="8" width="24" height="24" rx="2"
-            transform="rotate(45 80 20)" stroke={stroke} strokeWidth="1.5" />
-          {/* Process nodes */}
-          <rect x="15" y="70" width="40" height="24" rx="6"
-            stroke={stroke} strokeWidth="1.5" opacity="0.7" />
-          <rect x="105" y="70" width="40" height="24" rx="6"
-            stroke={stroke} strokeWidth="1.5" opacity="0.7" />
-          {/* Result */}
-          <rect x="50" y="125" width="60" height="24" rx="6"
-            stroke={stroke2} strokeWidth="1.5" opacity="0.6" />
-          {/* Connections */}
-          <path d="M70 34 L40 70" stroke={stroke} strokeWidth="1" opacity="0.35" />
-          <path d="M90 34 L120 70" stroke={stroke} strokeWidth="1" opacity="0.35" />
-          <path d="M40 94 L65 125" stroke={stroke} strokeWidth="1" opacity="0.3" />
-          <path d="M120 94 L95 125" stroke={stroke} strokeWidth="1" opacity="0.3" />
-          {/* Accent dots */}
-          <circle cx="80" cy="20" r="3" fill={stroke} opacity="0.6" />
-          <circle cx="35" cy="82" r="2.5" fill={stroke} opacity="0.5" />
-          <circle cx="125" cy="82" r="2.5" fill={stroke} opacity="0.5" />
-          <circle cx="80" cy="137" r="2.5" fill={stroke2} opacity="0.5" />
+          <HudCorners />
+          {/* Central decision diamond */}
+          <polygon points="80,38 112,70 80,102 48,70" stroke={stroke} strokeWidth="1.5" />
+          <polygon points="80,52 96,70 80,88 64,70" stroke={stroke} strokeWidth="0.5" fill={stroke} fillOpacity="0.07"/>
+          {/* Circuit traces — angular paths */}
+          <path d="M80,102 L80,120 L48,120 L28,140" stroke={stroke} strokeWidth="1" strokeDasharray="3 2" opacity="0.7" className="cp-flow"/>
+          <path d="M80,102 L80,120 L112,120 L132,140" stroke={stroke2} strokeWidth="1" strokeDasharray="3 2" opacity="0.7" className="cp-flow"/>
+          <path d="M48,70 L28,70 L16,58" stroke={stroke} strokeWidth="1" strokeDasharray="3 2" opacity="0.55"/>
+          <path d="M112,70 L132,70 L144,58" stroke={stroke2} strokeWidth="1" strokeDasharray="3 2" opacity="0.55"/>
+          {/* Node diamonds at trace ends */}
+          <rect x="24" y="136" width="8" height="8" fill={stroke} opacity="0.65" transform="rotate(45 28 140)"/>
+          <rect x="128" y="136" width="8" height="8" fill={stroke2} opacity="0.65" transform="rotate(45 132 140)"/>
+          {/* Core pulse */}
+          <circle cx="80" cy="70" r="5" fill={stroke} opacity="0.9" className="cp-pulse"/>
+          <circle cx="80" cy="70" r="10" stroke={stroke} strokeWidth="0.5" opacity="0.3" className="cp-pulse"/>
+          {/* Scan line */}
+          <line x1="16" y1="70" x2="144" y2="70" stroke={stroke} strokeWidth="0.4" opacity="0.12"/>
         </svg>
       )
 
-    /* Generali — Data Platform / Warehouse layers */
+    /* Knowmad Mood — Data Engineering / Stacked Hex Layers */
     case 1:
       return (
         <svg viewBox="0 0 160 160" fill="none" className="exp-svg">
-          {/* Database cylinders */}
-          <ellipse cx="80" cy="30" rx="42" ry="12" stroke={stroke} strokeWidth="1.5" />
-          <ellipse cx="80" cy="60" rx="42" ry="12" stroke={stroke} strokeWidth="1.5" opacity="0.7" />
-          <ellipse cx="80" cy="90" rx="42" ry="12" stroke={stroke} strokeWidth="1.5" opacity="0.5" />
-          {/* Vertical connections */}
-          <line x1="38" y1="30" x2="38" y2="90" stroke={stroke} strokeWidth="1.2" opacity="0.25" />
-          <line x1="122" y1="30" x2="122" y2="90" stroke={stroke} strokeWidth="1.2" opacity="0.25" />
-          {/* Data output dots */}
-          <circle cx="60" cy="120" r="4" fill={stroke} opacity="0.35" />
-          <circle cx="80" cy="126" r="3.5" fill={stroke2} opacity="0.35" />
-          <circle cx="100" cy="120" r="4" fill={stroke} opacity="0.35" />
-          {/* Flow lines */}
-          <path d="M65 102 L62 116" stroke={stroke} strokeWidth="1" opacity="0.25" />
-          <path d="M80 102 L80 122" stroke={stroke} strokeWidth="1" opacity="0.25" />
-          <path d="M95 102 L98 116" stroke={stroke} strokeWidth="1" opacity="0.25" />
-          {/* Small sparkle */}
-          <circle cx="80" cy="30" r="2" fill={stroke} opacity="0.5" />
+          <HudCorners />
+          {/* Top hex layer */}
+          <polygon points="80,18 108,33 108,63 80,78 52,63 52,33" stroke={stroke} strokeWidth="1.5"/>
+          {/* Mid hex layer (slightly offset down) */}
+          <polygon points="80,50 108,65 108,95 80,110 52,95 52,65" stroke={stroke} strokeWidth="1.2" opacity="0.65"/>
+          {/* Bottom hex layer */}
+          <polygon points="80,82 108,97 108,127 80,142 52,127 52,97" stroke={stroke2} strokeWidth="1.5" opacity="0.8"/>
+          {/* Vertical circuit connectors */}
+          <line x1="52" y1="48" x2="52" y2="80" stroke={stroke} strokeWidth="0.8" strokeDasharray="2 3" opacity="0.4"/>
+          <line x1="108" y1="48" x2="108" y2="80" stroke={stroke} strokeWidth="0.8" strokeDasharray="2 3" opacity="0.4"/>
+          <line x1="52" y1="80" x2="52" y2="112" stroke={stroke2} strokeWidth="0.8" strokeDasharray="2 3" opacity="0.35"/>
+          <line x1="108" y1="80" x2="108" y2="112" stroke={stroke2} strokeWidth="0.8" strokeDasharray="2 3" opacity="0.35"/>
+          {/* Layer core dots */}
+          <circle cx="80" cy="48" r="3.5" fill={stroke} opacity="0.9"/>
+          <circle cx="80" cy="80" r="3.5" fill={stroke} opacity="0.65" className="cp-pulse"/>
+          <circle cx="80" cy="112" r="3.5" fill={stroke2} opacity="0.85" className="cp-pulse"/>
+          {/* Output trace */}
+          <path d="M80,142 L80,152" stroke={stroke2} strokeWidth="1" strokeDasharray="2 2" opacity="0.5" className="cp-flow"/>
         </svg>
       )
 
-    /* Capgemini — ML / Neural Network */
+    /* Capgemini — ML / Hexagonal Neural Grid */
     case 2:
       return (
         <svg viewBox="0 0 160 160" fill="none" className="exp-svg">
-          {/* Input layer */}
-          <circle cx="25" cy="40" r="7" stroke={stroke} strokeWidth="1.5" opacity="0.6" />
-          <circle cx="25" cy="80" r="7" stroke={stroke} strokeWidth="1.5" opacity="0.6" />
-          <circle cx="25" cy="120" r="7" stroke={stroke} strokeWidth="1.5" opacity="0.6" />
-          {/* Hidden layer */}
-          <circle cx="80" cy="50" r="8" stroke={stroke} strokeWidth="1.5" opacity="0.5" />
-          <circle cx="80" cy="90" r="8" stroke={stroke} strokeWidth="1.5" opacity="0.5" />
-          <circle cx="80" cy="130" r="8" stroke={stroke2} strokeWidth="1.5" opacity="0.5" />
-          {/* Output */}
-          <circle cx="135" cy="80" r="10" stroke={stroke} strokeWidth="1.5" />
-          <circle cx="135" cy="80" r="4" fill={stroke} opacity="0.45" />
-          {/* Connections input→hidden */}
-          <line x1="32" y1="42" x2="72" y2="50" stroke={stroke} strokeWidth="0.8" opacity="0.25" />
-          <line x1="32" y1="42" x2="72" y2="88" stroke={stroke} strokeWidth="0.8" opacity="0.15" />
-          <line x1="32" y1="80" x2="72" y2="52" stroke={stroke} strokeWidth="0.8" opacity="0.15" />
-          <line x1="32" y1="80" x2="72" y2="90" stroke={stroke} strokeWidth="0.8" opacity="0.25" />
-          <line x1="32" y1="120" x2="72" y2="90" stroke={stroke} strokeWidth="0.8" opacity="0.15" />
-          <line x1="32" y1="120" x2="72" y2="128" stroke={stroke} strokeWidth="0.8" opacity="0.25" />
-          {/* Connections hidden→output */}
-          <line x1="88" y1="52" x2="125" y2="78" stroke={stroke} strokeWidth="0.8" opacity="0.25" />
-          <line x1="88" y1="90" x2="125" y2="80" stroke={stroke} strokeWidth="0.8" opacity="0.25" />
-          <line x1="88" y1="128" x2="125" y2="82" stroke={stroke} strokeWidth="0.8" opacity="0.15" />
+          <HudCorners />
+          {/* Input hex nodes */}
+          <polygon points="30,38 42,31 54,38 54,52 42,59 30,52" stroke={stroke} strokeWidth="1.2" opacity="0.75"/>
+          <polygon points="30,78 42,71 54,78 54,92 42,99 30,92" stroke={stroke} strokeWidth="1.2" opacity="0.75"/>
+          <polygon points="30,118 42,111 54,118 54,132 42,139 30,132" stroke={stroke} strokeWidth="1.2" opacity="0.6"/>
+          {/* Hidden layer hex nodes */}
+          <polygon points="66,55 78,48 90,55 90,69 78,76 66,69" stroke={stroke} strokeWidth="1.2" opacity="0.6"/>
+          <polygon points="66,98 78,91 90,98 90,112 78,119 66,112" stroke={stroke2} strokeWidth="1.2" opacity="0.6"/>
+          {/* Output hex */}
+          <polygon points="106,68 122,59 138,68 138,86 122,95 106,86" stroke={stroke} strokeWidth="1.5"/>
+          <circle cx="122" cy="77" r="6" fill={stroke} opacity="0.45" className="cp-pulse"/>
+          {/* Connections: input → hidden */}
+          <line x1="54" y1="45" x2="66" y2="62" stroke={stroke} strokeWidth="0.7" opacity="0.3"/>
+          <line x1="54" y1="85" x2="66" y2="62" stroke={stroke} strokeWidth="0.7" opacity="0.2"/>
+          <line x1="54" y1="85" x2="66" y2="105" stroke={stroke} strokeWidth="0.7" opacity="0.3"/>
+          <line x1="54" y1="125" x2="66" y2="105" stroke={stroke} strokeWidth="0.7" opacity="0.2"/>
+          {/* Connections: hidden → output (dashed flow) */}
+          <line x1="90" y1="62" x2="106" y2="72" stroke={stroke} strokeWidth="1" strokeDasharray="3 2" opacity="0.5" className="cp-flow"/>
+          <line x1="90" y1="105" x2="106" y2="82" stroke={stroke2} strokeWidth="1" strokeDasharray="3 2" opacity="0.5" className="cp-flow"/>
         </svg>
       )
 
-    /* Capgemini Innovation — Hub & spoke / API */
+    /* Capgemini Innovation — Radial API Hub */
     case 3:
       return (
         <svg viewBox="0 0 160 160" fill="none" className="exp-svg">
-          {/* Central hub */}
-          <circle cx="80" cy="80" r="18" stroke={stroke} strokeWidth="1.5" />
-          <circle cx="80" cy="80" r="6" fill={stroke} opacity="0.3" />
-          {/* Outer nodes */}
-          <circle cx="80" cy="20" r="7" stroke={stroke} strokeWidth="1.5" opacity="0.6" />
-          <circle cx="132" cy="50" r="7" stroke={stroke2} strokeWidth="1.5" opacity="0.6" />
-          <circle cx="132" cy="110" r="7" stroke={stroke} strokeWidth="1.5" opacity="0.6" />
-          <circle cx="80" cy="140" r="7" stroke={stroke2} strokeWidth="1.5" opacity="0.6" />
-          <circle cx="28" cy="110" r="7" stroke={stroke} strokeWidth="1.5" opacity="0.6" />
-          <circle cx="28" cy="50" r="7" stroke={stroke2} strokeWidth="1.5" opacity="0.6" />
-          {/* Spokes */}
-          <line x1="80" y1="27" x2="80" y2="62" stroke={stroke} strokeWidth="1" opacity="0.3" />
-          <line x1="126" y1="54" x2="96" y2="70" stroke={stroke} strokeWidth="1" opacity="0.3" />
-          <line x1="126" y1="106" x2="96" y2="90" stroke={stroke} strokeWidth="1" opacity="0.3" />
-          <line x1="80" y1="98" x2="80" y2="133" stroke={stroke} strokeWidth="1" opacity="0.3" />
-          <line x1="34" y1="106" x2="64" y2="90" stroke={stroke} strokeWidth="1" opacity="0.3" />
-          <line x1="34" y1="54" x2="64" y2="70" stroke={stroke} strokeWidth="1" opacity="0.3" />
+          <HudCorners />
+          {/* Outer dashed orbit */}
+          <circle cx="80" cy="80" r="56" stroke={stroke} strokeWidth="0.5" strokeDasharray="4 8" opacity="0.25"/>
+          {/* Central hex hub */}
+          <polygon points="80,56 98,66 98,86 80,96 62,86 62,66" stroke={stroke} strokeWidth="1.5"/>
+          <polygon points="80,64 92,71 92,85 80,92 68,85 68,71" fill={stroke} fillOpacity="0.08" stroke={stroke} strokeWidth="0.5"/>
+          <circle cx="80" cy="76" r="5" fill={stroke} opacity="0.75" className="cp-pulse"/>
+          {/* Circuit spokes — angular */}
+          <path d="M80,56 L80,26" stroke={stroke} strokeWidth="1" strokeDasharray="3 2" opacity="0.6"/>
+          <path d="M98,66 L120,42" stroke={stroke2} strokeWidth="1" strokeDasharray="3 2" opacity="0.6"/>
+          <path d="M98,86 L120,110" stroke={stroke} strokeWidth="1" strokeDasharray="3 2" opacity="0.6"/>
+          <path d="M80,96 L80,126" stroke={stroke2} strokeWidth="1" strokeDasharray="3 2" opacity="0.6"/>
+          <path d="M62,86 L40,110" stroke={stroke} strokeWidth="1" strokeDasharray="3 2" opacity="0.6"/>
+          <path d="M62,66 L40,42" stroke={stroke2} strokeWidth="1" strokeDasharray="3 2" opacity="0.6"/>
+          {/* Outer node shapes — alternating diamond / circle */}
+          <rect x="76" y="22" width="8" height="8" fill={stroke} opacity="0.6" transform="rotate(45 80 26)"/>
+          <circle cx="122" cy="40" r="4" stroke={stroke2} strokeWidth="1.2" opacity="0.7"/>
+          <rect x="116" y="106" width="8" height="8" fill={stroke} opacity="0.55" transform="rotate(45 120 110)"/>
+          <circle cx="80" cy="128" r="4" stroke={stroke2} strokeWidth="1.2" opacity="0.7" className="cp-pulse"/>
+          <rect x="36" y="106" width="8" height="8" fill={stroke} opacity="0.55" transform="rotate(45 40 110)"/>
+          <circle cx="38" cy="40" r="4" stroke={stroke2} strokeWidth="1.2" opacity="0.7"/>
         </svg>
       )
 

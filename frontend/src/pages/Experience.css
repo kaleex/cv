@@ -65,12 +65,14 @@
 
 .timeline-item {
   position: relative;
-  width: 50%;
-  padding: 20px 40px;
+  width: 100%;
+  padding: 20px 0;
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
 }
-.timeline-item.left  { left: 0;   text-align: right; }
-.timeline-item.right { left: 50%; text-align: left; }
+.timeline-item.left  { left: 0; text-align: right; flex-direction: row; }
+.timeline-item.right { left: 0; text-align: left;  flex-direction: row-reverse; }
 
 .timeline-content {
   background: var(--bg-card);
@@ -79,7 +81,10 @@
   padding: 1.5rem;
   transition: border-color 0.2s, box-shadow 0.2s;
   position: relative;
+  flex: 0 0 calc(50% - 30px);
 }
+.timeline-item.left  .timeline-content { margin-right: 30px; }
+.timeline-item.right .timeline-content { margin-left:  30px; }
 .timeline-content::before {
   content: '';
   position: absolute;
@@ -103,8 +108,8 @@
   border-radius: 0;
   z-index: 1;
 }
-.timeline-item.left .timeline-dot  { right: -5px; }
-.timeline-item.right .timeline-dot { left: -5px; }
+.timeline-item.left  .timeline-dot { right: auto; left: 50%; transform: translateX(-50%); }
+.timeline-item.right .timeline-dot { left: 50%;         transform: translateX(-50%); }
 
 .timeline-header {
   display: flex;
@@ -184,7 +189,39 @@
 }
 .tech-tag:hover { border-color: var(--accent); box-shadow: 0 0 6px var(--accent-glow); }
 
-.timeline-illustration { display: none; }
+.timeline-illustration {
+  display: flex;
+  flex: 0 0 calc(50% - 30px);
+  align-items: center;
+  justify-content: center;
+}
+.timeline-item.left  .timeline-illustration { margin-left:  30px; }
+.timeline-item.right .timeline-illustration { margin-right: 30px; }
+
+.exp-svg {
+  width: 150px;
+  height: 150px;
+  opacity: 0.75;
+  filter: drop-shadow(0 0 8px var(--accent-glow));
+  transition: opacity 0.2s, filter 0.2s;
+}
+.timeline-content:hover ~ .timeline-illustration .exp-svg,
+.timeline-illustration:hover .exp-svg {
+  opacity: 1;
+  filter: drop-shadow(0 0 14px var(--accent-glow));
+}
+
+/* Cyberpunk animations */
+@keyframes cpPulse {
+  0%, 100% { opacity: 0.3; }
+  50%       { opacity: 1;   }
+}
+@keyframes cpFlow {
+  from { stroke-dashoffset: 20; }
+  to   { stroke-dashoffset: 0;  }
+}
+.cp-pulse { animation: cpPulse 2s ease-in-out infinite; }
+.cp-flow  { animation: cpFlow  1.5s linear infinite; }
 
 .experience-cta {
   text-align: center;
@@ -206,12 +243,16 @@
   .experience-header h1 { font-size: 1.5rem; letter-spacing: 3px; }
   .experience-content { padding: 2rem 1rem; }
   .timeline::before { left: 18px; }
-  .timeline-item { width: 100%; padding-left: 44px; padding-right: 10px; }
+  .timeline-item { display: block; width: 100%; padding-left: 44px; padding-right: 10px; }
   .timeline-item.left, .timeline-item.right { left: 0; text-align: left; }
-  .timeline-item.left .timeline-dot, .timeline-item.right .timeline-dot { left: 10px; right: auto; }
+  .timeline-item.left  .timeline-content { margin-right: 0; }
+  .timeline-item.right .timeline-content { margin-left: 0; }
+  .timeline-item.left .timeline-dot,
+  .timeline-item.right .timeline-dot { left: 10px; right: auto; transform: none; }
   .timeline-header { flex-direction: column !important; }
   .timeline-item.left .description li::after { display: none; }
   .timeline-item.left .description li { padding-right: 0; padding-left: 14px; }
   .timeline-item.left .description li::before { content: '>'; position: absolute; left: 0; color: var(--accent); }
   .timeline-item.left .technologies { justify-content: flex-start; }
+  .timeline-illustration { display: none; }
 }
