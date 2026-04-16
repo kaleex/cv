@@ -26,21 +26,13 @@
   pointer-events: none;
 }
 
-[data-theme="light"] .contact-header {
-  background: var(--page-header-bg);
-}
-
-[data-theme="light"] .contact-header::after {
-  background: linear-gradient(to bottom, var(--page-header-fade), var(--bg-primary));
-}
-
 .contact-header h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  background: var(--gradient-light);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--accent);
+  text-shadow: 0 0 10px var(--accent-glow);
+  text-transform: uppercase;
+  letter-spacing: 5px;
   position: relative;
   z-index: 1;
 }
@@ -67,20 +59,21 @@
 
 .contact-card {
   background: var(--bg-card);
-  border-radius: 16px;
+  border-radius: 0;
   padding: 2rem;
   text-align: center;
   text-decoration: none;
   color: inherit;
   box-shadow: var(--shadow);
   border: 1px solid var(--border-color);
+  border-left: 3px solid var(--accent);
   transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
 
 .contact-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow);
-  border-color: var(--border-hover);
+  box-shadow: 0 0 12px var(--accent-glow);
+  border-color: var(--accent);
 }
 
 .contact-icon {
@@ -105,27 +98,31 @@
 }
 
 .contact-card.cv-download {
-  background: var(--gradient);
-  color: white;
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-left: 3px solid var(--accent);
 }
 
 .contact-card.cv-download h3,
 .contact-card.cv-download p {
-  color: white;
+  color: var(--accent);
 }
 
 .contact-card.cv-download:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 0 14px var(--accent-glow);
+  background: rgba(200, 160, 0, 0.1);
 }
 
 .contact-message {
   background: var(--bg-card);
-  border-radius: 16px;
+  border-radius: 0;
   padding: 2.5rem;
   text-align: center;
   box-shadow: var(--shadow);
   border: 1px solid var(--border-color);
+  border-left: 3px solid var(--accent-secondary);
 }
 
 .contact-message h2 {

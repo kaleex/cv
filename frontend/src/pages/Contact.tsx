@@ -30,14 +30,14 @@ function Contact({ email, linkedin, github }: ContactProps) {
           <a href={linkedin} target="_blank" rel="noopener noreferrer" className="contact-card" onClick={() => Analytics.linkedinClick()}>
             <BriefcaseIcon className="contact-icon" />
             <h3>{t.contact.linkedin}</h3>
-            <p>View Profile</p>
+            <p>{t.contact.linkedinSub}</p>
           </a>
 
           {github && (
             <a href={github} target="_blank" rel="noopener noreferrer" className="contact-card" onClick={() => Analytics.githubClick()}>
               <CodeBracketIcon className="contact-icon" />
               <h3>{t.contact.github}</h3>
-              <p>View Projects</p>
+              <p>{t.contact.githubSub}</p>
             </a>
           )}
 

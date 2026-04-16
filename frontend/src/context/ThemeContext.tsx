@@ -1,7 +1,6 @@
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { features } from '../config/features';
+import { createContext, useContext, useEffect, ReactNode } from 'react';
 
-type Theme = 'dark' | 'light';
+type Theme = 'dark';
 
 interface ThemeContextType {
   theme: Theme;
@@ -12,33 +11,17 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setTheme] = useState<Theme>(() => {
-    const saved = localStorage.getItem('theme');
-    if (saved === 'light' || saved === 'dark') return saved;
-    // Default to dark (matches current design)
-    return 'dark';
-  });
-
   useEffect(() => {
-    localStorage.setItem('theme', theme);
-    document.documentElement.setAttribute('data-theme', theme);
-  }, [theme]);
-
-  // Apply color palette from features config
-  useEffect(() => {
-    if (features.colorPalette && features.colorPalette !== 'blue') {
-      document.documentElement.setAttribute('data-palette', features.colorPalette);
-    } else {
-      document.documentElement.removeAttribute('data-palette');
-    }
+    document.documentElement.setAttribute('data-theme', 'dark');
+    document.documentElement.removeAttribute('data-palette');
   }, []);
 
-  const toggleTheme = () => {
-    setTheme(prev => prev === 'dark' ? 'light' : 'dark');
-  };
-
   return (
-    <ThemeContext.Provider value={{ theme, setTheme, toggleTheme }}>
+    <ThemeContext.Provider value={{
+      theme: 'dark',
+      setTheme: () => {},
+      toggleTheme: () => {},
+    }}>
       {children}
     </ThemeContext.Provider>
   );

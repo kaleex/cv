@@ -26,21 +26,13 @@
   pointer-events: none;
 }
 
-[data-theme="light"] .skills-header {
-  background: var(--page-header-bg);
-}
-
-[data-theme="light"] .skills-header::after {
-  background: linear-gradient(to bottom, var(--page-header-fade), var(--bg-primary));
-}
-
 .skills-header h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  background: var(--gradient-light);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--accent);
+  text-shadow: 0 0 10px var(--accent-glow);
+  text-transform: uppercase;
+  letter-spacing: 5px;
   position: relative;
   z-index: 1;
 }
@@ -65,11 +57,17 @@
 
 .skill-category {
   background: var(--bg-card);
-  border-radius: 16px;
+  border-radius: 0;
   padding: 2rem;
   box-shadow: var(--shadow);
   border: 1px solid var(--border-color);
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  border-left: 3px solid var(--accent);
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-category:hover {
+  box-shadow: 0 0 12px var(--accent-glow);
+  border-color: var(--accent);
 }
 
 .category-header {
@@ -118,23 +116,26 @@
 
 .skill-label {
   font-size: 0.8rem;
-  color: var(--text-secondary);
-  background: var(--accent-light);
+  color: var(--accent);
+  background: rgba(200, 160, 0, 0.06);
   padding: 0.2rem 0.6rem;
-  border-radius: 12px;
+  border-radius: 0;
+  border: 1px solid rgba(200, 160, 0, 0.3);
+  font-family: var(--font-mono);
 }
 
 .skill-bar-container {
   height: 8px;
   background: var(--border-color);
-  border-radius: 4px;
+  border-radius: 0;
   overflow: hidden;
 }
 
 .skill-bar-fill {
   height: 100%;
-  background: var(--gradient);
-  border-radius: 4px;
+  background: var(--accent);
+  box-shadow: 0 0 6px var(--accent-glow);
+  border-radius: 0;
   transition: width 0.5s ease;
 }
 
@@ -170,19 +171,19 @@
 .legend-dot {
   width: 12px;
   height: 12px;
-  border-radius: 50%;
+  border-radius: 0;
 }
 
 .legend-dot.expert {
-  background: var(--gradient);
+  background: var(--accent);
 }
 
 .legend-dot.advanced {
-  background: var(--accent-hover);
+  background: var(--accent-secondary);
 }
 
 .legend-dot.intermediate {
-  background: var(--status-neutral);
+  background: var(--text-muted);
 }
 
 @media (max-width: 768px) {
@@ -232,7 +233,7 @@
 
   .skill-category {
     padding: 1.25rem;
-    border-radius: 12px;
+    border-radius: 0;
   }
 
   .category-header h2 {
@@ -270,11 +271,16 @@
 
 .roadmap-column {
   background: var(--bg-card);
-  border-radius: 16px;
+  border-radius: 0;
   padding: 1.5rem;
   box-shadow: var(--shadow);
   border: 1px solid var(--border-color);
-  transition: background-color 0.3s ease;
+  border-left: 3px solid var(--accent-secondary);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.roadmap-column:hover {
+  box-shadow: 0 0 12px var(--cyan-glow);
 }
 
 .roadmap-column h3 {
@@ -331,7 +337,7 @@
 
 .roadmap-target {
   font-size: 0.85rem;
-  color: var(--accent-hover);
+  color: var(--accent-secondary);
   font-weight: 500;
 }
 
@@ -351,7 +357,7 @@
   .roadmap-content {
     grid-template-columns: 1fr;
   }
-  
+
   .roadmap-section {
     padding: 0 1rem;
   }
@@ -361,11 +367,11 @@
   .roadmap-section {
     padding: 0 0.75rem;
   }
-  
+
   .roadmap-column {
     padding: 1.25rem;
   }
-  
+
   .roadmap-name {
     font-size: 0.9rem;
   }

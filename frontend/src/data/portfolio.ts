@@ -109,14 +109,14 @@ export const journey = {
 };
 
 export const whatIBring = {
-  title: "What I Bring",
+  title: "What You Get",
   bullets: [
-    "Deep expertise in Azure data stack (Data Factory, Synapse, Databricks, ADLS)",
-    "Production experience with Delta Lake, Unity Catalog, and medallion architectures",
-    "Strong foundation in data modeling (dimensional, Data Vault)",
-    "Infrastructure as Code (Terraform, ARM templates)",
-    "Team leadership and mentoring experience",
-    "Fluent communication with both technical teams and business stakeholders"
+    "AZ-305 certified — Azure platform design at enterprise scale (WAF + CAF)",
+    "Software design depth: Hexagonal, DDD, SOLID, event-driven applied to data platforms",
+    "Production data platforms: Databricks, Delta Lake, Unity Catalog, DLT",
+    "Infrastructure as Code (Terraform) — reproducible, no manual config drift",
+    "Team leadership and mentoring — grown from junior to lead architect",
+    "Fluent with both technical teams and business stakeholders"
   ]
 };
 
@@ -219,5 +219,98 @@ export const roadmap = {
     { name: "Apache Airflow & Orchestration" },
     { name: "dbt (Data Build Tool)" },
     { name: "LLMs & AI Engineering for Data" }
+  ]
+};
+
+export const heroCertBadge = "AZ-305 · AZURE SOLUTIONS ARCHITECT EXPERT";
+
+type Accent = "gold" | "cyan";
+
+interface DesignPattern {
+  name: string;
+  accent: Accent;
+  description: string;
+}
+
+interface PlatformBlock {
+  title: string;
+  accent: Accent;
+  bullets: string[];
+}
+
+export const softwareDesign: { title: string; patterns: DesignPattern[] } = {
+  title: "Software Design",
+  patterns: [
+    {
+      name: "Hexagonal Architecture",
+      accent: "gold",
+      description: "Ports as ingestion/serving interfaces. Swappable adapters per source (REST, Event Hub, JDBC) without touching business logic."
+    },
+    {
+      name: "Domain-Driven Design",
+      accent: "cyan",
+      description: "Bounded contexts mapped to data domains. Ubiquitous language between business teams and data models."
+    },
+    {
+      name: "Event-Driven + Fire & Forget",
+      accent: "gold",
+      description: "Decoupled pipelines via events. Structured Streaming with backpressure and exactly-once semantics."
+    },
+    {
+      name: "SOLID in Python",
+      accent: "cyan",
+      description: "Single responsibility on PySpark transformations. Dependency injection for pipeline testability."
+    },
+    {
+      name: "Functional + Async",
+      accent: "gold",
+      description: "Pure transformations without side-effects. Async orchestration for controlled parallelism."
+    }
+  ]
+};
+
+export const platformStack: { title: string; blocks: PlatformBlock[] } = {
+  title: "Platform Stack",
+  blocks: [
+    {
+      title: "Lakehouse",
+      accent: "gold",
+      bullets: [
+        "Delta Lake — ACID transactions, time travel, schema evolution",
+        "Unity Catalog — centralized governance across all assets",
+        "Medallion (Bronze → Silver → Gold) — progressive data refinement",
+        "Databricks SQL — performant analytics without data movement"
+      ]
+    },
+    {
+      title: "Medallion",
+      accent: "cyan",
+      bullets: [
+        "Bronze: raw ingestion, append-only, full auditability",
+        "Silver: validated, deduplicated, standardized",
+        "Gold: aggregated, business-ready, optimized freshness",
+        "SCD Type 2 for slowly changing dimensions"
+      ]
+    },
+    {
+      title: "Governance",
+      accent: "gold",
+      bullets: [
+        "Unity Catalog — unified access control and data lineage",
+        "Row-level and column-level security by user attributes",
+        "Automated PII detection and masking",
+        "Data quality dashboards with automated alerting"
+      ]
+    },
+    {
+      title: "CI/CD & IaC",
+      accent: "cyan",
+      bullets: [
+        "Terraform for Databricks and Azure resources",
+        "Unit, integration, and data quality tests",
+        "GitOps with Azure DevOps / GitHub Actions",
+        "Databricks Asset Bundles (DABs) for deployment"
+      ]
+    }
   ]
 };

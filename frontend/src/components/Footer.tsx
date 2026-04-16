@@ -1,19 +1,13 @@
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../i18n/LanguageContext'
-import { useTheme } from '../context/ThemeContext'
 import { Analytics } from '../utils/analytics'
 import { features } from '../config/features'
-import { SunIcon, MoonIcon, ArrowRightIcon, LinkedInIcon, GitHubIcon } from './Icons'
+import { ArrowRightIcon, LinkedInIcon, GitHubIcon } from './Icons'
 import './Footer.css'
 
 function Footer() {
-  const { language, setLanguage, t } = useLanguage()
-  const { theme, toggleTheme } = useTheme()
+  const { t } = useLanguage()
   const currentYear = new Date().getFullYear()
-
-  const toggleLanguage = () => {
-    setLanguage(language === 'en' ? 'es' : 'en')
-  }
 
   return (
     <footer className="footer">
@@ -21,7 +15,7 @@ function Footer() {
         <div className={`footer-main ${!features.showCopyright ? 'no-bottom' : ''}`}>
           <div className="footer-brand">
             <span className="footer-name">Alejandro Quílez</span>
-            <span className="footer-role">Data Engineer</span>
+            <span className="footer-role">{t.footer.role}</span>
           </div>
           
           <div className="footer-cta">
@@ -54,16 +48,6 @@ function Footer() {
             >
               <GitHubIcon className="social-icon" />
             </a>
-          </div>
-
-          {/* Theme & Language toggles for mobile */}
-          <div className="footer-toggles">
-            <button className="footer-toggle" onClick={toggleTheme} aria-label="Toggle theme">
-              {theme === 'dark' ? <SunIcon className="icon-md" /> : <MoonIcon className="icon-md" />}
-            </button>
-            <button className="footer-toggle" onClick={toggleLanguage} aria-label="Toggle language">
-              {language === 'en' ? 'ES' : 'EN'}
-            </button>
           </div>
         </div>
 
