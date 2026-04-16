@@ -6,8 +6,8 @@ export type ColorPalette = 'blue' | 'orange' | 'green' | 'purple';
 
 export const features = {
   experience: true,    // /experience - Career timeline
-  projects: true,      // /repos - Databricks E2E project
-  certifications: true, // /badges - Certifications page
+  projects: false,      // /repos - Databricks E2E project
+  certifications: false, // /badges - Certifications page
   blog: false,          // /blog - Tech blog
   card: false,          // /card - Business card page
 

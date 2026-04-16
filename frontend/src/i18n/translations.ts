@@ -12,13 +12,14 @@ export const en = {
   },
   hero: {
     headline: "Data Platforms That Actually Work",
-    typingWords: ["Reliable", "Scalable", "Governed", "Production-Ready"],
-    subheadline: "Data Platform Architect with a hands-on background — designing and building reliable, governed data platforms for telecom, insurance, and banking.",
+    typingWords: ["Reliable", "Scalable", "Event-Driven", "Hexagonal", "Well-Architected", "Production-Ready"],
+    subheadline: "Architecture, delivery, and governance for Azure data platforms in banking, insurance, and telecom.",
     intro: [
-      "4+ years building data platforms processing 2+ TB/day, serving 500+ daily business requests across telecom, insurance, and banking.",
-      "From hours-long pipelines reduced to minutes, to event-driven architectures that scale — I combine data engineering with solid software practices.",
-      "I think in systems, not just pipelines. Every technical decision is made with the full platform in mind."
+      "I help teams design and evolve data platforms that need to be reliable, governed, and production-ready from day one.",
+      "That means landing zones, security, Databricks delivery, Terraform automation, domain-oriented data products, and software design patterns that keep the platform maintainable.",
+      "Best fit: regulated or high-volume environments where architecture has to survive contact with reality."
     ],
+    proofPoints: ["AZ-305 Certified", "WAF + CAF", "Data Mesh", "Databricks + Spark", "Terraform + IaC", "Claude · Codex · MCP", "Banking · Insurance · Telecom"],
     downloadCV: "Download CV"
   },
   stats: {
@@ -28,15 +29,16 @@ export const en = {
     requests: "Daily Requests"
   },
   approach: {
-    title: "How I Think",
-    body: "Every data platform I build follows these principles:",
+    title: "How I Work",
+    body: "How I usually approach platform engagements:",
     principles: [
-      { name: "Reliability First", description: "Data that stakeholders can't trust is worthless. Robust testing, monitoring, and quality gates at every layer." },
-      { name: "Governed by Design", description: "Security and compliance aren't afterthoughts. Unity Catalog, row-level security, and audit trails from day one." },
-      { name: "Data Contracts", description: "Explicit contracts over tribal knowledge. Validate early, fail fast. Schema enforcement before data moves downstream." },
-      { name: "Built to Evolve", description: "Business needs change. Modular architectures that adapt without requiring rewrites." }
+      { name: "Discovery & Alignment", description: "Clarify target state, constraints, stakeholders, and operating model before tools start driving the conversation." },
+      { name: "Architecture & Guardrails", description: "Landing zones, security, governance, and data contracts are defined early so delivery does not create expensive rework." },
+      { name: "Delivery in Production", description: "Incremental rollout, testing, observability, and infrastructure as code keep the platform useful beyond the architecture deck." },
+      { name: "AI-Assisted Execution", description: "I use Claude, Codex, and MCP-connected workflows when they improve discovery, documentation, prototyping, and implementation speed without weakening engineering judgment." },
+      { name: "Enablement & Handover", description: "Documentation, standards, mentoring, and clear ownership make the platform operable by the team that will live with it." }
     ],
-    closing: "This isn't just methodology — it's how I've delivered successful platforms for banking, insurance, and telecom clients."
+    closing: "The goal is not just a good architecture deck. The goal is a platform teams can operate with confidence."
   },
   lakehouse: {
     title: "Lakehouse Architecture",
@@ -112,14 +114,139 @@ export const en = {
     ]
   },
   whatIBring: {
-    title: "What I Bring",
-    bullets: [
-      "Deep expertise in Azure data stack (Data Factory, Synapse, Databricks, ADLS)",
-      "Production experience with Delta Lake, Unity Catalog, and medallion architectures",
-      "Strong foundation in data modeling (dimensional, Data Vault)",
-      "Infrastructure as Code (Terraform, ARM templates)",
-      "Team leadership and mentoring experience",
-      "Fluent communication with both technical teams and business stakeholders"
+    title: "What You Get",
+    items: [
+      {
+        title: "Enterprise Azure Design",
+        proof: "AZ-305, WAF, CAF, landing zones, governance by design."
+      },
+      {
+        title: "Production Databricks Delivery",
+        proof: "Databricks, Spark, Delta Lake, Unity Catalog, DLT in real platform contexts."
+      },
+      {
+        title: "Software Design Depth",
+        proof: "Hexagonal, DDD, SOLID, and event-driven patterns applied to data workloads."
+      },
+      {
+        title: "Data Mesh Thinking",
+        proof: "Domain-oriented data products, clear ownership boundaries, and federated governance on a shared platform."
+      },
+      {
+        title: "Infrastructure as Code",
+        proof: "Terraform, CI/CD, and repeatable environments without manual config drift."
+      },
+      {
+        title: "AI-Assisted Delivery",
+        proof: "Claude, Codex, and MCP-connected workflows used for faster discovery, documentation, prototyping, and implementation support."
+      },
+      {
+        title: "Stakeholder-Ready Execution",
+        proof: "Comfortable with engineering teams, business stakeholders, and technical leadership."
+      }
+    ]
+  },
+  pillars: [
+    {
+      title: "Software Design",
+      keywords: [
+        "Hexagonal Architecture",
+        "Domain-Driven Design",
+        "SOLID",
+        "Event-Driven",
+        "Async · Functional",
+        "Fire & Forget"
+      ]
+    },
+    {
+      title: "Cloud Architecture",
+      keywords: [
+        "AZ-305 Certified",
+        "Azure Well-Architected",
+        "CAF Landing Zones",
+        "Hub-Spoke Topology",
+        "IaC · Terraform",
+        "Zero-Trust Security"
+      ]
+    },
+    {
+      title: "Data Engineering",
+      keywords: [
+        "Databricks · Spark",
+        "Delta Lake · DLT",
+        "Unity Catalog",
+        "Medallion Architecture",
+        "Data Mesh · Data Products",
+        "Structured Streaming"
+      ]
+    }
+  ],
+  softwareDesign: {
+    title: "Software Design",
+    patterns: [
+      {
+        name: "Hexagonal Architecture",
+        description: "Ports as ingestion/serving interfaces. Swappable adapters per source (REST, Event Hub, JDBC) without touching business logic."
+      },
+      {
+        name: "Domain-Driven Design",
+        description: "Bounded contexts mapped to data domains. Ubiquitous language, ownership boundaries, and data products aligned with business domains."
+      },
+      {
+        name: "Event-Driven + Fire & Forget",
+        description: "Decoupled pipelines via events. Structured Streaming with backpressure and exactly-once semantics."
+      },
+      {
+        name: "SOLID in Python",
+        description: "Single responsibility on PySpark transformations. Dependency injection for pipeline testability."
+      },
+      {
+        name: "Functional + Async",
+        description: "Pure transformations without side-effects. Async orchestration for controlled parallelism."
+      }
+    ]
+  },
+  platformStack: {
+    title: "Platform Stack",
+    blocks: [
+      {
+        title: "Lakehouse",
+        bullets: [
+          "Delta Lake — ACID transactions, time travel, schema evolution",
+          "Unity Catalog — centralized governance across all assets",
+          "Medallion (Bronze → Silver → Gold) — progressive data refinement",
+          "Databricks SQL — performant analytics without data movement"
+        ]
+      },
+      {
+        title: "Medallion",
+        bullets: [
+          "Bronze: raw ingestion, append-only, full auditability",
+          "Silver: validated, deduplicated, standardized",
+          "Gold: aggregated, business-ready, optimized freshness",
+          "SCD Type 2 for slowly changing dimensions"
+        ]
+      },
+      {
+        title: "Governance",
+        bullets: [
+          "Unity Catalog — unified access control and data lineage",
+          "Federated governance for domain-aligned data products",
+          "Row-level and column-level security by user attributes",
+          "Automated PII detection and masking",
+          "Data quality dashboards with automated alerting"
+        ]
+      },
+      {
+        title: "CI/CD & IaC",
+        bullets: [
+          "Terraform for Databricks and Azure resources",
+          "Unit, integration, and data quality tests",
+          "GitOps with Azure DevOps / GitHub Actions",
+          "Claude, Codex, and MCP-connected tooling for architecture notes, technical documentation, and implementation support",
+          "Databricks Asset Bundles (DABs) for deployment"
+        ]
+      }
     ]
   },
   publications: {
@@ -127,8 +254,8 @@ export const en = {
     viewOn: "View on Semantic Scholar →"
   },
   cta: {
-    title: "Let's Build Something That Lasts",
-    text: "Designing or evolving a data platform? Looking for someone who can own both the architecture and its delivery? Let's talk."
+    title: "Need Architecture and Delivery?",
+    text: "If you're designing, modernizing, or scaling a data platform and need someone who can own both the architecture and its delivery, let's talk."
   },
   skills: {
     title: "Technical Skills",
@@ -195,11 +322,13 @@ export const en = {
   },
   contact: {
     title: "Get in Touch",
-    subtitle: "Feel free to reach out through any of the following channels",
+    subtitle: "Best for platform architecture, Azure or Databricks delivery, and technical leadership conversations.",
     email: "Email",
     phone: "Phone",
     linkedin: "LinkedIn",
+    linkedinSub: "Profile & updates",
     github: "GitHub",
+    githubSub: "Projects & code",
     downloadCV: "Download CV",
     downloadCVSub: "PDF Format"
   },
@@ -336,7 +465,8 @@ export const en = {
   footer: {
     copyright: "©",
     rights: "All rights reserved.",
-    ctaText: "Let's build something reliable"
+    ctaText: "Architecture, delivery, and platform advisory",
+    role: "Data Platform Architect"
   },
   card: {
     instruction: "Click to flip",
@@ -362,13 +492,14 @@ export const es = {
   },
   hero: {
     headline: "Plataformas de Datos que Funcionan",
-    typingWords: ["Fiables", "Escalables", "Gobernadas", "Listas para Producción"],
-    subheadline: "Arquitecto de Plataformas de Datos con base técnica — diseñando y construyendo plataformas de datos fiables y gobernadas para telecom, seguros y banca.",
+    typingWords: ["Fiables", "Escalables", "Event-Driven", "Hexagonal", "Well-Architected", "Listas para Producción"],
+    subheadline: "Arquitectura, delivery y gobernanza para plataformas de datos Azure en banca, seguros y telecom.",
     intro: [
-      "4+ años construyendo plataformas de datos procesando 2+ TB/día, sirviendo 500+ peticiones diarias en telecom, seguros y banca.",
-      "De pipelines de horas reducidos a minutos, a arquitecturas event-driven que escalan — combino ingeniería de datos con prácticas sólidas de software.",
-      "Pienso en sistemas, no solo en pipelines. Cada decisión técnica se toma teniendo en cuenta la plataforma completa."
+      "Ayudo a equipos a diseñar y evolucionar plataformas de datos que necesitan ser fiables, gobernadas y listas para producción desde el día uno.",
+      "Eso implica landing zones, seguridad, delivery con Databricks, automatización con Terraform, data products orientados a dominio y patrones de software que mantienen la plataforma sostenible.",
+      "Mi mejor encaje: entornos regulados o de alto volumen donde la arquitectura tiene que sobrevivir al mundo real."
     ],
+    proofPoints: ["AZ-305 Certificado", "WAF + CAF", "Data Mesh", "Databricks + Spark", "Terraform + IaC", "Claude · Codex · MCP", "Banca · Seguros · Telecom"],
     downloadCV: "Descargar CV"
   },
   stats: {
@@ -378,15 +509,16 @@ export const es = {
     requests: "Peticiones Diarias"
   },
   approach: {
-    title: "Cómo Pienso",
-    body: "Cada plataforma de datos que construyo sigue estos principios:",
+    title: "Cómo Trabajo",
+    body: "Cómo suelo abordar proyectos de plataforma:",
     principles: [
-      { name: "Fiabilidad Primero", description: "Los datos en los que los stakeholders no pueden confiar no valen nada. Testing robusto, monitorización y quality gates en cada capa." },
-      { name: "Gobernanza por Diseño", description: "La seguridad y el cumplimiento no son un afterthought. Unity Catalog, seguridad a nivel de fila y audit trails desde el día uno." },
-      { name: "Contratos de Datos", description: "Contratos explícitos sobre conocimiento tribal. Validar pronto, fallar rápido. Enforcement de esquemas antes de que los datos se muevan downstream." },
-      { name: "Construido para Evolucionar", description: "Las necesidades del negocio cambian. Arquitecturas modulares que se adaptan sin requerir reescrituras." }
+      { name: "Discovery y Alineamiento", description: "Aclaro estado objetivo, restricciones, stakeholders y modelo operativo antes de que las herramientas empiecen a dictar la conversación." },
+      { name: "Arquitectura y Guardrails", description: "Landing zones, seguridad, gobernanza y contratos de datos se definen pronto para que el delivery no genere retrabajo caro." },
+      { name: "Delivery en Producción", description: "Despliegue incremental, testing, observabilidad e infraestructura como código mantienen la plataforma útil más allá del deck de arquitectura." },
+      { name: "Ejecución Asistida por IA", description: "Uso Claude, Codex y workflows conectados por MCP cuando mejoran discovery, documentación, prototipado y velocidad de implementación sin debilitar el criterio de ingeniería." },
+      { name: "Enablement y Handover", description: "Documentación, estándares, mentoría y ownership claro hacen que el equipo pueda operar la plataforma con confianza." }
     ],
-    closing: "Esto no es solo metodología — es cómo he entregado plataformas exitosas para clientes de banca, seguros y telecom."
+    closing: "El objetivo no es solo un buen deck de arquitectura. El objetivo es una plataforma que el equipo pueda operar con confianza."
   },
   lakehouse: {
     title: "Arquitectura Lakehouse",
@@ -462,14 +594,139 @@ export const es = {
     ]
   },
   whatIBring: {
-    title: "Lo que Aporto",
-    bullets: [
-      "Expertise profundo en el stack de datos Azure (Data Factory, Synapse, Databricks, ADLS)",
-      "Experiencia en producción con Delta Lake, Unity Catalog y arquitecturas medallion",
-      "Base sólida en modelado de datos (dimensional, Data Vault)",
-      "Infrastructure as Code (Terraform, ARM templates)",
-      "Experiencia en liderazgo técnico y mentoring",
-      "Comunicación fluida tanto con equipos técnicos como stakeholders de negocio"
+    title: "Lo Que Obtienes",
+    items: [
+      {
+        title: "Diseño Azure Enterprise",
+        proof: "AZ-305, WAF, CAF, landing zones y gobernanza por diseño."
+      },
+      {
+        title: "Delivery Databricks en Producción",
+        proof: "Databricks, Spark, Delta Lake, Unity Catalog y DLT en plataformas reales."
+      },
+      {
+        title: "Profundidad en Software Design",
+        proof: "Hexagonal, DDD, SOLID y patrones event-driven aplicados a cargas de datos."
+      },
+      {
+        title: "Mentalidad Data Mesh",
+        proof: "Data products orientados a dominio, ownership claro y gobernanza federada sobre una plataforma compartida."
+      },
+      {
+        title: "Infraestructura como Código",
+        proof: "Terraform, CI/CD y entornos repetibles sin deriva de configuración manual."
+      },
+      {
+        title: "Delivery Asistido por IA",
+        proof: "Claude, Codex y workflows conectados por MCP para acelerar discovery, documentación, prototipado y soporte a la implementación."
+      },
+      {
+        title: "Ejecución con Stakeholders",
+        proof: "Cómodo con equipos de ingeniería, stakeholders de negocio y liderazgo técnico."
+      }
+    ]
+  },
+  pillars: [
+    {
+      title: "Diseño de Software",
+      keywords: [
+        "Arquitectura Hexagonal",
+        "Domain-Driven Design",
+        "SOLID · Clean Code",
+        "Event-Driven · Async",
+        "Fire & Forget",
+        "Patrones Funcionales"
+      ]
+    },
+    {
+      title: "Arquitectura Cloud",
+      keywords: [
+        "AZ-305 Certificado",
+        "Azure Well-Architected",
+        "CAF Landing Zones",
+        "Topología Hub-Spoke",
+        "Zero-Trust Security",
+        "IaC · Terraform"
+      ]
+    },
+    {
+      title: "Ingeniería de Datos",
+      keywords: [
+        "Databricks · Spark",
+        "Delta Lake · DLT",
+        "Unity Catalog",
+        "Arquitectura Medallion",
+        "Data Mesh · Data Products",
+        "Structured Streaming"
+      ]
+    }
+  ],
+  softwareDesign: {
+    title: "Diseño de Software",
+    patterns: [
+      {
+        name: "Arquitectura Hexagonal",
+        description: "Ports como interfaces de ingesta/serving. Adapters intercambiables por fuente (REST, Event Hub, JDBC) sin tocar lógica de negocio."
+      },
+      {
+        name: "Domain-Driven Design",
+        description: "Bounded contexts mapeados a dominios de datos. Lenguaje ubicuo, ownership claro y data products alineados con dominios de negocio."
+      },
+      {
+        name: "Event-Driven + Fire & Forget",
+        description: "Pipelines desacoplados mediante eventos. Structured Streaming con backpressure y exactly-once semantics."
+      },
+      {
+        name: "SOLID en Python",
+        description: "Single responsibility en transformaciones PySpark. Dependency injection para testabilidad de pipelines."
+      },
+      {
+        name: "Funcional + Async",
+        description: "Transformaciones puras sin side-effects. Orquestación async para paralelismo controlado."
+      }
+    ]
+  },
+  platformStack: {
+    title: "Stack de Plataforma",
+    blocks: [
+      {
+        title: "Lakehouse",
+        bullets: [
+          "Delta Lake — transacciones ACID, time travel, evolución de esquemas",
+          "Unity Catalog — gobernanza centralizada de todos los activos",
+          "Medallion (Bronze → Silver → Gold) — refinamiento progresivo",
+          "Databricks SQL — analytics performante sin mover datos"
+        ]
+      },
+      {
+        title: "Medallion",
+        bullets: [
+          "Bronze: ingesta raw, append-only, auditabilidad completa",
+          "Silver: validado, deduplicado, estandarizado",
+          "Gold: agregado, listo para negocio, frescura optimizada",
+          "SCD Tipo 2 para dimensiones slowly changing"
+        ]
+      },
+      {
+        title: "Gobernanza",
+        bullets: [
+          "Unity Catalog — control de acceso unificado y linaje de datos",
+          "Gobernanza federada para data products alineados por dominio",
+          "Seguridad a nivel de fila y columna por atributos de usuario",
+          "Detección y enmascaramiento automático de PII",
+          "Dashboards de calidad con alertas automatizadas"
+        ]
+      },
+      {
+        title: "CI/CD & IaC",
+        bullets: [
+          "Terraform para Databricks y recursos Azure",
+          "Tests unitarios, de integración y de calidad de datos",
+          "GitOps con Azure DevOps / GitHub Actions",
+          "Claude, Codex y tooling conectado por MCP para notas de arquitectura, documentación técnica y soporte a la implementación",
+          "Databricks Asset Bundles (DABs) para deployment"
+        ]
+      }
     ]
   },
   publications: {
@@ -477,8 +734,8 @@ export const es = {
     viewOn: "Ver en Semantic Scholar →"
   },
   cta: {
-    title: "Construyamos Algo que Perdure",
-    text: "¿Diseñando o evolucionando una plataforma de datos? ¿Buscas a alguien que pueda responsabilizarse tanto de la arquitectura como de su entrega? Hablemos."
+    title: "¿Necesitas Arquitectura y Delivery?",
+    text: "Si estás diseñando, modernizando o escalando una plataforma de datos y necesitas a alguien que pueda responsabilizarse tanto de la arquitectura como de su entrega, hablemos."
   },
   skills: {
     title: "Habilidades Técnicas",
@@ -545,11 +802,13 @@ export const es = {
   },
   contact: {
     title: "Contacto",
-    subtitle: "No dudes en contactarme a través de cualquiera de los siguientes canales",
+    subtitle: "Ideal para conversaciones sobre arquitectura de plataforma, delivery con Azure o Databricks y liderazgo técnico.",
     email: "Email",
     phone: "Teléfono",
     linkedin: "LinkedIn",
+    linkedinSub: "Perfil y actividad",
     github: "GitHub",
+    githubSub: "Proyectos y código",
     downloadCV: "Descargar CV",
     downloadCVSub: "Formato PDF"
   },
@@ -686,7 +945,8 @@ export const es = {
   footer: {
     copyright: "©",
     rights: "Todos los derechos reservados.",
-    ctaText: "Construyamos algo fiable"
+    ctaText: "Arquitectura, delivery y advisory de plataforma",
+    role: "Arquitecto de Plataformas de Datos"
   },
   card: {
     instruction: "Clic para girar",

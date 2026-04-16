@@ -43,21 +43,14 @@
   height: 100%;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  border-radius: 16px;
+  border-radius: 0;
   padding: 1.75rem;
-  box-shadow: 
-    8px 8px 30px rgba(139, 92, 246, 0.4),
-    4px 4px 15px rgba(59, 130, 246, 0.3),
-    0 0 0 1px rgba(139, 92, 246, 0.2);
-  border: 1px solid rgba(139, 92, 246, 0.3);
+  box-shadow:
+    8px 8px 30px var(--accent-glow),
+    4px 4px 15px var(--cyan-glow),
+    0 0 0 1px var(--border-color);
+  border: 1px solid var(--border-color);
   overflow: hidden;
-}
-
-[data-theme="light"] .card-face {
-  box-shadow: 
-    8px 8px 25px rgba(139, 92, 246, 0.25),
-    4px 4px 12px rgba(59, 130, 246, 0.2);
-  border: 1px solid rgba(139, 92, 246, 0.2);
 }
 
 /* Front Side */
@@ -78,7 +71,7 @@
 }
 
 .card-logo .bracket {
-  color: var(--accent-hover);
+  color: var(--accent-secondary);
 }
 
 .card-logo .initials {
@@ -103,10 +96,7 @@
 
 .card-title {
   font-size: 0.95rem;
-  background: var(--gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--accent);
   font-weight: 600;
   margin: 0;
 }
@@ -128,7 +118,7 @@
   flex: 1;
   height: 2px;
   background: linear-gradient(90deg, var(--accent), var(--accent-secondary), transparent);
-  border-radius: 1px;
+  border-radius: 0;
 }
 
 .decoration-dots {
@@ -139,8 +129,8 @@
 .decoration-dots span {
   width: 5px;
   height: 5px;
-  border-radius: 50%;
-  background: var(--accent-hover);
+  border-radius: 0;
+  background: var(--accent);
 }
 
 .decoration-dots span:nth-child(2) {
@@ -176,27 +166,16 @@
   font-size: 0.7rem;
   padding: 0.3rem 0.5rem;
   transition: all 0.2s ease;
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0;
+  background: rgba(200, 160, 0, 0.04);
+  border: 1px solid var(--border-color);
 }
 
 .contact-item:hover:not(.location) {
-  background: linear-gradient(90deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2));
-  border-color: rgba(96, 165, 250, 0.5);
-  color: var(--accent-hover);
-  transform: translateX(5px);
-}
-
-[data-theme="light"] .contact-item {
-  background: rgba(0, 0, 0, 0.03);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-[data-theme="light"] .contact-item:hover:not(.location) {
-  background: linear-gradient(90deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
-  border-color: rgba(59, 130, 246, 0.4);
+  background: rgba(200, 160, 0, 0.1);
+  border-color: var(--accent);
   color: var(--accent);
+  transform: translateX(5px);
 }
 
 .contact-icon {
@@ -242,22 +221,23 @@
   gap: 0.5rem;
   padding: 0.875rem 1.75rem;
   min-width: 160px;
-  background: var(--gradient);
-  color: white;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50px;
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 0;
   font-size: 0.9rem;
   font-weight: 500;
   cursor: pointer;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  box-shadow: none;
+  font-family: var(--font-mono);
 }
 
 .card-action-btn:hover {
   transform: translateY(-2px);
-  border-color: rgba(255, 255, 255, 0.4);
-  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+  background: rgba(200, 160, 0, 0.1);
+  box-shadow: 0 0 14px var(--accent-glow);
 }
 
 .card-action-btn:active {
