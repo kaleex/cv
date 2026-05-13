@@ -1,5 +1,3 @@
-/* Font loaded via HTML for better LCP */
-
 :root {
   /* Cyberpunk Tuscany Gold × Cyan */
   --bg-primary: #060608;
@@ -30,11 +28,11 @@
   --status-warning: #d7af18;
   --status-neutral: #a78e4d;
 
-  /* Typography: full monospace */
-  font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
-  --font-heading: 'JetBrains Mono', 'Courier New', monospace;
-  --font-body: 'JetBrains Mono', 'Courier New', monospace;
-  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+  /* Typography: local-only monospace stack */
+  font-family: "JetBrains Mono", "Fira Code", "SFMono-Regular", "Cascadia Code", "IBM Plex Mono", "Menlo", "Consolas", "Liberation Mono", "Courier New", monospace;
+  --font-heading: "JetBrains Mono", "Fira Code", "SFMono-Regular", "Cascadia Code", "IBM Plex Mono", "Menlo", "Consolas", "Liberation Mono", "Courier New", monospace;
+  --font-body: "JetBrains Mono", "Fira Code", "SFMono-Regular", "Cascadia Code", "IBM Plex Mono", "Menlo", "Consolas", "Liberation Mono", "Courier New", monospace;
+  --font-mono: "JetBrains Mono", "Fira Code", "SFMono-Regular", "Cascadia Code", "IBM Plex Mono", "Menlo", "Consolas", "Liberation Mono", "Courier New", monospace;
   line-height: 1.6;
   font-weight: 400;
   color: var(--text-primary);
