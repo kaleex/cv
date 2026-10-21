@@ -54,9 +54,13 @@
 }
 
 .featured-project-responsibilities h3 {
-  color: var(--text-primary);
+  color: var(--accent);
   font-size: 1.125rem;
   margin-bottom: 0.6rem;
+}
+
+.featured-project-responsibilities article:nth-child(even) h3 {
+  color: var(--accent-secondary);
 }
 
 .featured-project-responsibilities p {
