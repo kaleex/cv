@@ -2,12 +2,13 @@
 
 The source code for [alejandroquilez.dev](https://alejandroquilez.dev), my professional portfolio as a Data Platform Architect focused on Azure, Databricks, and production data platforms.
 
-The website brings together my experience across banking, insurance, and telecom, my approach to platform architecture, and ways to get in touch.
+The website brings together my experience across the public sector, banking, insurance, and telecom, my approach to platform architecture, and ways to get in touch.
 
 [Visit the website](https://alejandroquilez.dev) · [Download my CV](https://alejandroquilez.dev/cv.pdf) · [LinkedIn](https://www.linkedin.com/in/alejandro-quílez-asensio-2799a5121)
 
 ## About the website
 
+- **Recent architecture work:** a geospatial platform for a public agency handling data at petabyte scale, with Azure Batch HPC and infrastructure designed for ENS High requirements.
 - **Professional experience:** career timeline, responsibilities, and delivery outcomes.
 - **Platform architecture:** reference architecture covering ingestion, storage, governance, security, and operations.
 - **Technical expertise:** data engineering, cloud infrastructure, software design, and learning roadmap.

@@ -13,14 +13,42 @@ export const en = {
   hero: {
     headline: "Data Platforms That Actually Work",
     typingWords: ["Reliable", "Scalable", "Event-Driven", "Hexagonal", "Well-Architected", "Production-Ready"],
-    subheadline: "Architecture, delivery, and governance for Azure data platforms in banking, insurance, and telecom.",
+    subheadline: "Data Platform Architect designing and building Azure platforms, from banking and telecom to petabyte-scale geospatial data in the public sector.",
     intro: [
-      "I help teams design and evolve data platforms that need to be reliable, governed, and production-ready from day one.",
-      "That means landing zones, security, Databricks delivery, Terraform automation, domain-oriented data products, and software design patterns that keep the platform maintainable.",
-      "Best fit: regulated or high-volume environments where architecture has to survive contact with reality."
+      "I design, build, and manage data platform architecture. I currently work on a geospatial platform on Azure for a public agency handling data at petabyte scale.",
+      "My scope spans networking, Microsoft Entra ID, MLOps, business databases, medallion data layers, and distributed HPC workloads on Azure Batch.",
+      "I connect architecture with implementation through ADRs, architecture documentation, and an internal control plane library that links the work of multiple teams."
     ],
-    proofPoints: ["AZ-305 Certified", "WAF + CAF", "Data Mesh", "Databricks + Spark", "Terraform + IaC", "Claude · Codex · MCP", "Banking · Insurance · Telecom"],
+    proofPoints: ["Petabyte-scale geospatial data", "Azure Batch · HPC", "ENS High requirements", "Microsoft Entra ID", "Medallion Architecture", "MLOps", "AZ-305 Certified"],
     downloadCV: "Download CV"
+  },
+  featuredProject: {
+    eyebrow: "Data Architect · May 2026 – Present",
+    title: "A geospatial platform at petabyte scale",
+    summary: "Design, implementation, and management of the architecture of an Azure geospatial platform for a public agency, connecting infrastructure, data processing, and the work of multiple teams.",
+    facts: [
+      { label: "Data volume", value: "Petabyte scale" },
+      { label: "Distributed compute", value: "HPC on Azure Batch" },
+      { label: "Security requirements", value: "ENS High" }
+    ],
+    responsibilities: [
+      {
+        title: "Infrastructure and identity",
+        description: "Azure networking and Microsoft Entra ID as part of infrastructure designed to meet ENS High requirements."
+      },
+      {
+        title: "Data architecture and compute",
+        description: "Medallion architecture for geospatial data, with distributed HPC workloads on Azure Batch."
+      },
+      {
+        title: "MLOps and business databases",
+        description: "Design and implementation of MLOps components and business databases within the platform architecture."
+      },
+      {
+        title: "A shared control plane",
+        description: "An internal library connecting the work of multiple teams, supported by architecture decision records (ADRs) and architecture documentation."
+      }
+    ]
   },
   stats: {
     years: "Years Experience",
@@ -94,9 +122,15 @@ export const en = {
     title: "My Journey",
     items: [
       {
+        company: "Space sector company",
+        sector: "Public sector · Geospatial",
+        period: "May 2026 - Present",
+        description: "Designing, building, and managing the architecture of an Azure geospatial platform for a public agency handling data at petabyte scale. Scope includes networking, Microsoft Entra ID, MLOps, business databases, medallion architecture, distributed HPC on Azure Batch, and an internal control plane library connecting multiple teams."
+      },
+      {
         company: "Knowmad Mood",
         sector: "Banking",
-        period: "Jan 2025 - Present",
+        period: "Jan 2025 - May 2026",
         description: "Led refactoring of business-critical systems into modular, event-driven architectures. Increased daily business capacity from 400 to 500 requests (+25%) through improved algorithm fluidity. Delivered substantial execution time improvements and full end-to-end traceability."
       },
       {
@@ -411,9 +445,23 @@ export const en = {
     cta: "Looking for a data platform architect who delivers? Let's talk!",
     timeline: [
       {
+        company: "Space sector company",
+        role: "Data Architect",
+        period: "May 2026 - Present",
+        description: [
+          "Designing, building, and managing the architecture of an Azure geospatial platform for a public agency handling data at petabyte scale",
+          "Designing networking and Microsoft Entra ID components within infrastructure built to meet ENS High requirements",
+          "Implementing medallion architecture and distributed HPC workloads on Azure Batch",
+          "Designing and implementing MLOps components and business databases",
+          "Developing an internal control plane library that connects the work of multiple teams",
+          "Writing architecture decision records (ADRs) and architecture documentation"
+        ],
+        technologies: ["Azure", "Azure Batch", "HPC", "Microsoft Entra ID", "MLOps", "Medallion Architecture", "Geospatial Data"]
+      },
+      {
         company: "Knowmad Mood",
         role: "Senior Data Engineer / Software Engineer",
-        period: "Jan 2025 - Present",
+        period: "Jan 2025 - May 2026",
         location: "Valencia, Spain",
         description: [
           "Led the refactor of a core decisioning engine into a clean, testable Python codebase with async and event-driven architecture",
@@ -493,14 +541,42 @@ export const es = {
   hero: {
     headline: "Plataformas de Datos que Funcionan",
     typingWords: ["Fiables", "Escalables", "Event-Driven", "Hexagonal", "Well-Architected", "Listas para Producción"],
-    subheadline: "Arquitectura, delivery y gobernanza para plataformas de datos Azure en banca, seguros y telecom.",
+    subheadline: "Arquitecto de datos: diseño y construcción de plataformas Azure, desde banca y telecomunicaciones hasta datos geoespaciales a escala de petabytes en el sector público.",
     intro: [
-      "Ayudo a equipos a diseñar y evolucionar plataformas de datos que necesitan ser fiables, gobernadas y listas para producción desde el día uno.",
-      "Eso implica landing zones, seguridad, delivery con Databricks, automatización con Terraform, data products orientados a dominio y patrones de software que mantienen la plataforma sostenible.",
-      "Mi mejor encaje: entornos regulados o de alto volumen donde la arquitectura tiene que sobrevivir al mundo real."
+      "Diseño, construyo y gestiono la arquitectura de plataformas de datos. Actualmente trabajo en una plataforma geoespacial en Azure para una agencia pública que maneja datos del orden de los petabytes.",
+      "Mi responsabilidad abarca redes, Microsoft Entra ID, MLOps, bases de datos de negocio, capas medallion y cargas HPC distribuidas sobre Azure Batch.",
+      "Conecto arquitectura e implementación mediante ADRs, documentación de arquitectura y una librería interna que actúa como plano de control entre equipos."
     ],
-    proofPoints: ["AZ-305 Certificado", "WAF + CAF", "Data Mesh", "Databricks + Spark", "Terraform + IaC", "Claude · Codex · MCP", "Banca · Seguros · Telecom"],
+    proofPoints: ["Datos geoespaciales · Petabytes", "Azure Batch · HPC", "Requisitos ENS Alto", "Microsoft Entra ID", "Arquitectura Medallion", "MLOps", "AZ-305 Certificado"],
     downloadCV: "Descargar CV"
+  },
+  featuredProject: {
+    eyebrow: "Arquitecto de datos · Mayo 2026 – Actualidad",
+    title: "Una plataforma geoespacial a escala de petabytes",
+    summary: "Diseño, construcción y gestión de la arquitectura de una plataforma geoespacial en Azure para una agencia pública, conectando infraestructura, procesamiento de datos y el trabajo de varios equipos.",
+    facts: [
+      { label: "Volumen de datos", value: "Escala de petabytes" },
+      { label: "Cómputo distribuido", value: "HPC sobre Azure Batch" },
+      { label: "Requisitos de seguridad", value: "ENS Alto" }
+    ],
+    responsibilities: [
+      {
+        title: "Infraestructura e identidad",
+        description: "Redes en Azure y Microsoft Entra ID como parte de una infraestructura diseñada para cubrir los requisitos de ENS Alto."
+      },
+      {
+        title: "Arquitectura de datos y cómputo",
+        description: "Arquitectura medallion para datos geoespaciales y cargas HPC distribuidas sobre Azure Batch."
+      },
+      {
+        title: "MLOps y bases de datos de negocio",
+        description: "Diseño e implementación de componentes MLOps y bases de datos de negocio dentro de la arquitectura de la plataforma."
+      },
+      {
+        title: "Un plano de control compartido",
+        description: "Una librería interna que interconecta el trabajo de los equipos, acompañada de registros de decisiones de arquitectura (ADRs) y documentación de arquitectura."
+      }
+    ]
   },
   stats: {
     years: "Años Experiencia",
@@ -574,9 +650,15 @@ export const es = {
     title: "Mi Trayectoria",
     items: [
       {
+        company: "Empresa del sector espacial",
+        sector: "Sector público · Geoespacial",
+        period: "May 2026 - Presente",
+        description: "Diseño, construcción y gestión de la arquitectura de una plataforma geoespacial en Azure para una agencia pública con datos a escala de petabytes. Responsabilidad sobre redes, Microsoft Entra ID, MLOps, bases de datos de negocio, arquitectura medallion, HPC distribuido en Azure Batch y una librería interna como plano de control entre equipos."
+      },
+      {
         company: "Knowmad Mood",
         sector: "Banca",
-        period: "Ene 2025 - Presente",
+        period: "Ene 2025 - May 2026",
         description: "Lideré la refactorización de sistemas críticos de negocio hacia arquitecturas modulares y event-driven. Incrementé la capacidad de negocio diaria de 400 a 500 peticiones (+25%) mejorando la fluidez del algoritmo. Mejoras sustanciales en tiempo de ejecución y trazabilidad end-to-end."
       },
       {
@@ -891,9 +973,23 @@ export const es = {
     cta: "¿Buscas un arquitecto de plataformas de datos que entregue resultados? ¡Hablemos!",
     timeline: [
       {
+        company: "Empresa del sector espacial",
+        role: "Arquitecto de datos",
+        period: "May 2026 - Presente",
+        description: [
+          "Diseño, construcción y gestión de la arquitectura de una plataforma geoespacial en Azure para una agencia pública con datos del orden de los petabytes",
+          "Diseño de redes y componentes de Microsoft Entra ID en una infraestructura orientada a cubrir los requisitos de ENS Alto",
+          "Implementación de arquitectura medallion y cargas HPC distribuidas sobre Azure Batch",
+          "Diseño e implementación de componentes MLOps y bases de datos de negocio",
+          "Desarrollo de una librería interna que actúa como plano de control e interconecta el trabajo de los equipos",
+          "Elaboración de registros de decisiones de arquitectura (ADRs) y documentación de arquitectura"
+        ],
+        technologies: ["Azure", "Azure Batch", "HPC", "Microsoft Entra ID", "MLOps", "Arquitectura Medallion", "Datos geoespaciales"]
+      },
+      {
         company: "Knowmad Mood",
         role: "Senior Data Engineer / Software Engineer",
-        period: "Ene 2025 - Presente",
+        period: "Ene 2025 - May 2026",
         location: "Valencia, España",
         description: [
           "Liderazgo en la refactorización de un motor de decisiones core hacia un código Python limpio y testeable con arquitectura async y event-driven",

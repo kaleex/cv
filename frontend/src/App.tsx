@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import FeaturedProject from './components/FeaturedProject'
 import { SwipeWrapper } from './components/SwipeWrapper'
 import Skills from './pages/Skills'
 import Experience from './pages/Experience'
@@ -191,7 +192,7 @@ function Home() {
             <span className="stat-label">{t.stats.years}</span>
           </div>
           <div className="stat-item">
-            <span className="stat-number">3</span>
+            <span className="stat-number">4</span>
             <span className="stat-label">{t.stats.industries}</span>
           </div>
           <div className="stat-item">
@@ -219,6 +220,8 @@ function Home() {
           <ChevronDownIcon className="icon-lg" />
         </div>
       </section>
+
+      <FeaturedProject />
 
       {/* Architecture Diagram Section */}
       <section className="section arch-diagram-section fade-in snap-section">

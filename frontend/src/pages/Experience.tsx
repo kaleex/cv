@@ -1,13 +1,14 @@
 import { useLanguage } from '../i18n/LanguageContext'
 import { useFadeIn } from '../hooks/useFadeIn'
 import { MapPinIcon } from '../components/Icons'
+import FeaturedProject from '../components/FeaturedProject'
 import './Experience.css'
 
 interface ExperienceItem {
   company: string
   role: string
   period: string
-  location: string
+  location?: string
   description: string[]
   technologies: string[]
 }
@@ -148,6 +149,8 @@ function Experience() {
         <p>{t.experience.subtitle}</p>
       </header>
 
+      <FeaturedProject />
+
       <div className="experience-content">
         <section className="timeline-section fade-in">
         <div className="timeline">
@@ -162,7 +165,7 @@ function Experience() {
                   <span className="period">{exp.period}</span>
                 </div>
                 <h4 className="role">{exp.role}</h4>
-                <p className="location"><MapPinIcon className="location-icon" /> {exp.location}</p>
+                {exp.location && <p className="location"><MapPinIcon className="location-icon" /> {exp.location}</p>}
                 <ul className="description">
                   {exp.description.map((item, i) => (
                     <li key={i}>{item}</li>
@@ -176,7 +179,7 @@ function Experience() {
               </div>
               <div className="timeline-dot"></div>
               <div className="timeline-illustration" aria-hidden="true">
-                <ExperienceIllustration index={index} />
+                <ExperienceIllustration index={index === 0 ? 1 : index - 1} />
               </div>
             </article>
           ))}

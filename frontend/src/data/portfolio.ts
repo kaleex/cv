@@ -10,9 +10,9 @@ export const personalInfo = {
 
 export const hero = {
   headline: "Data Platforms That Actually Work",
-  subheadline: "Data Platform Architect with a hands-on background — designing and building reliable, governed data platforms for telecom, insurance, and banking.",
+  subheadline: "Data Platform Architect designing and building Azure platforms for petabyte-scale geospatial data, public agencies, banking, insurance, and telecom.",
   intro: [
-    "4+ years building data platforms processing 2+ TB/day, serving 500+ daily business requests across telecom, insurance, and banking.",
+    "Designing, building, and managing an Azure geospatial platform for a public agency handling data at petabyte scale.",
     "From hours-long pipelines reduced to minutes, to event-driven architectures that scale — I combine data engineering with solid software practices.",
     "I think in systems, not just pipelines. Every technical decision is made with the full platform in mind."
   ]
@@ -88,9 +88,15 @@ export const journey = {
   title: "My Journey",
   items: [
     {
+      company: "Space sector company",
+      sector: "Public sector · Geospatial",
+      period: "May 2026 - Present",
+      description: "Designing, building, and managing the architecture of an Azure geospatial platform for a public agency handling data at petabyte scale. Scope includes networking, Microsoft Entra ID, MLOps, business databases, medallion architecture, distributed HPC on Azure Batch, and an internal control plane library connecting multiple teams."
+    },
+    {
       company: "Knowmad Mood",
       sector: "Banking",
-      period: "Jan 2025 - Present",
+      period: "Jan 2025 - May 2026",
       description: "Led refactoring of business-critical systems into modular, event-driven architectures. Increased daily business capacity from 400 to 500 requests (+25%) through improved algorithm fluidity. Delivered substantial execution time improvements and full end-to-end traceability."
     },
     {
