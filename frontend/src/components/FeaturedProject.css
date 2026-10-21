@@ -6,7 +6,7 @@
 
 .featured-project-eyebrow {
   color: var(--accent-secondary);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   margin-bottom: 0.75rem;
 }
 
@@ -19,6 +19,8 @@
 
 .featured-project-summary {
   color: var(--text-secondary);
+  max-width: 65ch;
+  font-size: 1.0625rem;
   line-height: 1.75;
 }
 
@@ -36,7 +38,7 @@
 
 .featured-project-facts dt {
   color: var(--text-secondary);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   margin-bottom: 0.4rem;
 }
 
@@ -48,18 +50,18 @@
 .featured-project-responsibilities {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .featured-project-responsibilities h3 {
   color: var(--text-primary);
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+  margin-bottom: 0.6rem;
 }
 
 .featured-project-responsibilities p {
   color: var(--text-secondary);
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.75;
 }
 
