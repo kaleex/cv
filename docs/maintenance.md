@@ -25,9 +25,15 @@ Before enabling a section, review its content in both languages and replace plac
 
 ## Update the CV
 
-1. Replace `public/cv.pdf` with the current document.
-2. Run the production build and deploy.
-3. Check the download links on the homepage and contact page.
+1. Update the editable English CV source at [`docs/cv.html`](cv.html), relative to the repository root. Keep the current role and dates aligned with `src/i18n/translations.ts`.
+2. Export it to `frontend/public/cv.pdf`. With Chromium installed for Playwright, run this from the repository root:
+
+   ```bash
+   npx playwright pdf --paper-format A4 "file://$PWD/docs/cv.html" frontend/public/cv.pdf
+   ```
+
+3. Check that the PDF has two pages, selectable text, and working contact links.
+4. Run the production build, deploy, and check the homepage and contact download links.
 
 The production Worker returns HTTP 410 for `/cv_old.pdf`. When retiring a previously cached document, purge its existing Cloudflare cache entry and verify the response after deployment. Previously published copies may remain in Git history or third-party caches.
 

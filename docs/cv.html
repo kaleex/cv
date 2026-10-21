@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Alejandro Quílez Asensio — Data Platform Architect</title>
+  <style>
+    @page { size: A4; margin: 15mm 17mm; }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #202b35; font: 10.5pt/1.45 Arial, Helvetica, sans-serif; }
+    h1 { margin: 0 0 3mm; font-size: 25pt; letter-spacing: -0.5pt; color: #123e46; }
+    .role { font-size: 14pt; margin: 0 0 3mm; font-weight: 600; }
+    .contact { font-size: 9pt; line-height: 1.6; margin-bottom: 5mm; }
+    a { color: #125562; text-decoration: none; }
+    h2 { font-size: 11pt; text-transform: uppercase; letter-spacing: 1pt; border-bottom: 1px solid #bacbd0; padding-bottom: 2mm; margin: 6mm 0 3mm; color: #123e46; }
+    h3 { margin: 0; font-size: 11pt; }
+    .meta { color: #46535c; font-size: 9.5pt; margin: 1mm 0 2mm; }
+    p { margin: 0 0 3mm; }
+    ul { margin: 2mm 0 4mm; padding-left: 4.5mm; }
+    li { margin-bottom: 1.5mm; }
+    .stack { font-size: 9pt; color: #46535c; margin-top: 2mm; }
+    .page + .page { break-before: page; }
+    article { break-inside: avoid; margin-bottom: 5mm; }
+    .skills p { margin-bottom: 2mm; }
+    .page-label { margin: 0 0 5mm; font-size: 9pt; color: #46535c; }
+    @media screen { body { max-width: 180mm; margin: 15mm auto; padding: 0 5mm; } .page { margin-bottom: 15mm; } }
+  </style>
+</head>
+<body>
+  <section class="page">
+    <header>
+      <h1>Alejandro Quílez Asensio</h1>
+      <p class="role">Data Platform Architect · Azure · Geospatial Platforms</p>
+      <div class="contact">
+        Valencia, Spain · <a href="mailto:alexquilezz@hotmail.com">alexquilezz@hotmail.com</a> · +34 674 449 806<br>
+        <a href="https://alejandroquilez.dev">alejandroquilez.dev</a> · <a href="https://github.com/kaleex">github.com/kaleex</a> · <a href="https://www.linkedin.com/in/alejandro-quílez-asensio-2799a5121">LinkedIn profile</a>
+      </div>
+    </header>
+    <h2>Profile</h2>
+    <p>Data architect with an engineering background spanning Azure infrastructure, data platforms, and software design. Currently designing, building, and managing the architecture of a geospatial platform for a public agency handling data at petabyte scale. Earlier work includes banking decision systems, regulated insurance data pipelines, and telecom ingestion platforms.</p>
+    <h2>Current experience</h2>
+    <article>
+      <h3>Data Architect — Space sector company</h3>
+      <p class="meta">May 2026 – Present · Public-sector geospatial platform</p>
+      <ul>
+        <li>Design, build, and manage the architecture of an Azure platform for a public agency handling data at petabyte scale.</li>
+        <li>Design networking and Microsoft Entra ID components within infrastructure built around ENS High requirements.</li>
+        <li>Implement medallion data architecture and distributed HPC workloads on Azure Batch.</li>
+        <li>Design and implement MLOps components and business databases as part of the platform.</li>
+        <li>Develop an internal library that acts as a shared control plane, connecting the work of multiple teams.</li>
+        <li>Write architecture decision records (ADRs) and architecture documentation to support implementation and ongoing platform evolution.</li>
+      </ul>
+      <p class="stack">Azure · Azure Batch · HPC · Microsoft Entra ID · MLOps · Medallion architecture</p>
+    </article>
+    <h2>Previous experience</h2>
+    <article>
+      <h3>Senior Data Engineer / Software Engineer — Knowmad Mood</h3>
+      <p class="meta">January 2025 – May 2026 · Banking</p>
+      <ul>
+        <li>Refactored a core decisioning system into modular, testable Python services using async and event-driven architecture.</li>
+        <li>Increased daily business capacity from 400 to 500 requests (+25%), improving execution and end-to-end traceability.</li>
+        <li>Worked on system architecture, testing strategy, observability, and CI/CD for production delivery.</li>
+      </ul>
+      <p class="stack">Python · Async · Event-driven architecture · Azure · CI/CD</p>
+    </article>
+  </section>
+  <section class="page">
+    <p class="page-label">Alejandro Quílez Asensio · Data Platform Architect · alejandroquilez.dev</p>
+    <h2>Previous experience, continued</h2>
+    <article>
+      <h3>Senior Data Engineer — Knowmad Mood</h3>
+      <p class="meta">April 2023 – December 2024 · Insurance</p>
+      <ul>
+        <li>Built and improved Azure Databricks and PySpark pipelines in a regulated insurance environment, reducing execution from hours to minutes.</li>
+        <li>Designed fact and dimension models for analytical reporting and introduced data validation and quality checks.</li>
+        <li>Implemented CI/CD for data workflows and collaborated with business and analytics teams.</li>
+      </ul>
+    </article>
+    <article>
+      <h3>Machine Learning Engineer / Data Engineer — Capgemini</h3>
+      <p class="meta">February 2021 – April 2023 · Telecom</p>
+      <ul>
+        <li>Designed ingestion architecture processing approximately 2 TB per day across more than 80 tables.</li>
+        <li>Automated data lake maintenance and worked on machine learning deployments and CI/CD processes.</li>
+        <li>Acted as a technical reference and mentored junior engineers on data and machine learning platforms.</li>
+      </ul>
+    </article>
+    <article>
+      <h3>Innovation Engineer — Capgemini</h3>
+      <p class="meta">October 2020 – February 2021</p>
+      <ul>
+        <li>Designed backend architectures for service prototyping on Google Cloud Platform.</li>
+        <li>Developed APIs and integrations to automate data access and internal workflows.</li>
+      </ul>
+    </article>
+    <h2>Technical expertise</h2>
+    <div class="skills">
+      <p><strong>Architecture:</strong> platform design, ADRs, architecture documentation, shared control planes, software design patterns.</p>
+      <p><strong>Azure foundations:</strong> networking, Microsoft Entra ID, infrastructure as code with Terraform, security requirements.</p>
+      <p><strong>Data and compute:</strong> geospatial platforms, Azure Batch, HPC, Databricks, Spark / PySpark, Delta Lake, medallion architecture, SQL.</p>
+      <p><strong>Engineering and delivery:</strong> Python, async services, event-driven architecture, MLOps, MLflow, CI/CD, Azure DevOps, Docker.</p>
+    </div>
+    <h2>Education and professional development</h2>
+    <p><strong>BSc in Telematics Engineering — University of Valencia</strong><br>January 2016 – January 2021 · Valencia, Spain</p>
+    <p><strong>AZ-305:</strong> Designing Microsoft Azure Infrastructure Solutions</p>
+  </section>
+</body>
+</html>

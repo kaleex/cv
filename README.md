@@ -79,7 +79,7 @@ frontend/
 | Profile and contact details | [`frontend/src/data/portfolio.ts`](frontend/src/data/portfolio.ts) |
 | Homepage copy, experience, capabilities, and learning roadmap in both languages | [`frontend/src/i18n/translations.ts`](frontend/src/i18n/translations.ts) |
 | Enabled sections | [`frontend/src/config/features.ts`](frontend/src/config/features.ts) |
-| Downloadable CV | [`frontend/public/cv.pdf`](frontend/public/cv.pdf) |
+| CV source and downloadable PDF | [`docs/cv.html`](docs/cv.html) → [`frontend/public/cv.pdf`](frontend/public/cv.pdf) |
 | Page metadata and sharing links | [`frontend/index.html`](frontend/index.html) |
 
 See the [maintenance guide](docs/maintenance.md) for content updates, remote development, and deployment details.
