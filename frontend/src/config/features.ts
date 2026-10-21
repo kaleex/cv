@@ -12,7 +12,7 @@ export const features = {
   card: false,          // /card - Business card page
 
   // 🐉 Here be dragons
-  swipeNavigation: true,      // Swipe entre páginas en móvil
+  swipeNavigation: false,      // Swipe entre páginas en móvil
   showConstructionBanner: false, // Banner "UNDER CONSTRUCTION"
   showCopyright: false,        // Footer copyright
 

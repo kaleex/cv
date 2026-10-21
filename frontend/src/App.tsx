@@ -413,10 +413,6 @@ function Home() {
           </div>
         </div>
         <Footer />
-        <div className="swipe-next-hint">
-          <ArrowRightIcon className="icon-md" />
-          <span className="swipe-next-text">{t.nav.skills}</span>
-        </div>
       </section>
     </main>
   )

@@ -9,7 +9,7 @@
   color: var(--text-primary);
   padding: 4rem 2rem;
   padding-top: 100px;
-  padding-bottom: 5rem;
+  padding-bottom: 3.5rem;
   text-align: center;
   transition: background-color 0.3s ease;
   position: relative;
@@ -30,7 +30,7 @@
   font-size: 2.5rem;
   margin-bottom: 1rem;
   color: var(--accent);
-  text-shadow: 0 0 10px var(--accent-glow);
+  text-shadow: none;
   text-transform: uppercase;
   letter-spacing: 5px;
   position: relative;
@@ -47,11 +47,11 @@
 }
 
 .skills-container {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 3rem 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 2rem;
 }
 
@@ -109,8 +109,8 @@
   }
 
   .skills-header p {
-    font-size: 0.95rem;
-    line-height: 1.5;
+    font-size: 1rem;
+    line-height: 1.75;
   }
 
   .skill-category {
@@ -310,7 +310,7 @@
 
 .skill-evidence {
   color: var(--text-secondary);
-  font-size: 1rem;
+  font-size: 1.0625rem;
   line-height: 1.75;
   margin-bottom: 1.5rem;
 }
@@ -327,7 +327,7 @@
   color: var(--text-primary);
   border: 1px solid var(--border-color);
   padding: 0.3rem 0.55rem;
-  font-size: 0.8rem;
+  font-size: 0.875rem;
 }
 
 .roadmap-section summary {
