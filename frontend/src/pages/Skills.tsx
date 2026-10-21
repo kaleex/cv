@@ -1,4 +1,4 @@
-import { skills, roadmap } from '../data/portfolio'
+import { Link } from 'react-router-dom'
 import { useLanguage } from '../i18n/LanguageContext'
 import {
   CloudIcon,
@@ -7,127 +7,87 @@ import {
   CogIcon,
   ArrowPathIcon,
   UserGroupIcon,
-  RocketLaunchIcon,
-  ClipboardDocumentListIcon,
-  TrophyIcon
+  ArrowRightIcon,
 } from '../components/Icons'
 import './Skills.css'
 
 const categoryIcons: Record<string, React.ComponentType<{ className?: string }>> = {
-  'Cloud & Infrastructure': CloudIcon,
-  'Data Platforms': CircleStackIcon,
-  'Programming': CommandLineIcon,
-  'Data Engineering': CogIcon,
-  'DevOps & MLOps': ArrowPathIcon,
-  'Soft Skills': UserGroupIcon,
+  architecture: UserGroupIcon,
+  cloud: CloudIcon,
+  compute: CogIcon,
+  data: CircleStackIcon,
+  delivery: ArrowPathIcon,
+  software: CommandLineIcon,
 }
 
 function Skills() {
   const { t } = useLanguage()
 
-  const getLevelLabel = (level: number) => {
-    if (level >= 90) return t.skills.levels.expert.split(' ')[0]
-    if (level >= 75) return t.skills.levels.advanced.split(' ')[0]
-    if (level >= 60) return t.skills.levels.intermediate.split(' ')[0]
-    return 'Learning'
-  }
-
   return (
-    <div className="skills-page">
+    <main className="skills-page">
       <header className="skills-header">
         <h1>{t.skills.title}</h1>
         <p>{t.skills.subtitle}</p>
+        <Link to="/experience" className="skills-experience-link">
+          {t.skills.experienceAction} <ArrowRightIcon className="icon-sm" />
+        </Link>
       </header>
 
       <div className="skills-container">
-        {skills.map((category, idx) => {
-          const IconComponent = categoryIcons[category.category] || CloudIcon
+        {t.skills.categories.map((category) => {
+          const IconComponent = categoryIcons[category.id] || CloudIcon
           return (
-          <section key={idx} className="skill-category">
-            <div className="category-header">
-              <IconComponent className="category-icon" />
-              <h2>{category.category}</h2>
-            </div>
-            <div className="skills-list">
-              {category.skills.map((skill, skillIdx) => (
-                <div key={skillIdx} className="skill-card">
-                  <div className="skill-info">
-                    <span className="skill-name">{skill.name}</span>
-                    <span className="skill-label">{getLevelLabel(skill.level)}</span>
-                  </div>
-                  <div className="skill-bar-container">
-                    <div 
-                      className="skill-bar-fill" 
-                      style={{ width: `${skill.level}%` }}
-                    ></div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-        )})}
+            <section key={category.id} className="skill-category">
+              <div className="category-header">
+                <IconComponent className="category-icon" />
+                <h2>{category.title}</h2>
+              </div>
+              <p className="skill-evidence">{category.description}</p>
+              <ul className="skill-tools">
+                {category.tools.map((tool) => <li key={tool}>{tool}</li>)}
+              </ul>
+            </section>
+          )
+        })}
       </div>
 
-      <div className="skills-legend">
-        <h3>{t.skills.proficiency}</h3>
-        <div className="legend-items">
-          <div className="legend-item">
-            <span className="legend-dot expert"></span>
-            <span>{t.skills.levels.expert}</span>
-          </div>
-          <div className="legend-item">
-            <span className="legend-dot advanced"></span>
-            <span>{t.skills.levels.advanced}</span>
-          </div>
-          <div className="legend-item">
-            <span className="legend-dot intermediate"></span>
-            <span>{t.skills.levels.intermediate}</span>
-          </div>
-        </div>
-      </div>
-
-      <div className="roadmap-section">
-        <h2><RocketLaunchIcon className="roadmap-title-icon" /> {t.roadmap.title}</h2>
+      <details className="roadmap-section">
+        <summary>{t.roadmap.title}</summary>
         <div className="roadmap-content">
-          <div className="roadmap-column">
-            <h3>{t.roadmap.completed}</h3>
+          <section className="roadmap-column">
+            <h2>{t.roadmap.completed}</h2>
             <ul className="roadmap-list completed">
-              {roadmap.completed.map((item, idx) => (
-                <li key={idx}>
-                  <TrophyIcon className="roadmap-icon" />
-                  <span className="roadmap-name">{item.name}</span>
-                </li>
-              ))}
+              {t.roadmap.completedItems.map((name) => <li key={name}>{name}</li>)}
             </ul>
-          </div>
-          <div className="roadmap-column">
-            <h3>{t.roadmap.inProgress}</h3>
+          </section>
+          <section className="roadmap-column">
+            <h2>{t.roadmap.inProgress}</h2>
             <ul className="roadmap-list in-progress">
-              {roadmap.inProgress.map((item, idx) => (
-                <li key={idx}>
-                  <ArrowPathIcon className="roadmap-icon" />
+              {t.roadmap.inProgressItems.map((item) => (
+                <li key={item.name}>
                   <div className="roadmap-item-content">
-                    <span className="roadmap-name">{item.name}</span>
+                    <span>{item.name}</span>
                     <span className="roadmap-target">{item.target}</span>
                   </div>
                 </li>
               ))}
             </ul>
-          </div>
-          <div className="roadmap-column">
-            <h3>{t.roadmap.upcoming}</h3>
+          </section>
+          <section className="roadmap-column">
+            <h2>{t.roadmap.upcoming}</h2>
             <ul className="roadmap-list upcoming">
-              {roadmap.upcoming.map((item, idx) => (
-                <li key={idx}>
-                  <ClipboardDocumentListIcon className="roadmap-icon" />
-                  <span className="roadmap-name">{item.name}</span>
-                </li>
-              ))}
+              {t.roadmap.upcomingItems.map((name) => <li key={name}>{name}</li>)}
             </ul>
-          </div>
+          </section>
         </div>
+      </details>
+
+      <div className="skills-contact">
+        <Link to="/contact" className="skills-contact-link">
+          {t.skills.contactAction} <ArrowRightIcon className="icon-sm" />
+        </Link>
       </div>
-    </div>
+    </main>
   )
 }
 

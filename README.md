@@ -15,7 +15,7 @@ The website brings together my experience across the public sector, banking, ins
 - **Contact:** direct links to email, LinkedIn, GitHub, and a downloadable CV.
 - **Reading preferences:** English and Spanish, with a dark interface and responsive layouts. The language preference is stored locally in the browser.
 
-Experience, skills, and contact are currently enabled. Projects, certifications, and blog pages are available in the source but disabled through feature flags. Some technical content is shared between languages.
+Experience, skills, and contact are currently enabled. Projects, certifications, and blog pages are available in the source but disabled through feature flags. Capability descriptions and the learning roadmap are maintained in both languages.
 
 ## Technology
 
@@ -59,9 +59,9 @@ frontend/
 ├── public/                 # CV, logos, badges, and crawler assets
 ├── src/
 │   ├── components/         # Navigation, footer, icons, and swipe wrapper
-│   ├── config/             # Feature flags and palette selection
+│   ├── config/             # Feature flags
 │   ├── context/            # Theme preferences
-│   ├── data/               # Profile, skills, and learning roadmap
+│   ├── data/               # Profile and contact details
 │   ├── hooks/              # Animation and navigation hooks
 │   ├── i18n/               # English and Spanish content
 │   ├── pages/              # Portfolio pages
@@ -76,9 +76,9 @@ frontend/
 
 | Change | File |
 | --- | --- |
-| Profile and contact details, skills, learning roadmap | [`frontend/src/data/portfolio.ts`](frontend/src/data/portfolio.ts) |
-| Homepage copy and experience in both languages | [`frontend/src/i18n/translations.ts`](frontend/src/i18n/translations.ts) |
-| Enabled sections and palette | [`frontend/src/config/features.ts`](frontend/src/config/features.ts) |
+| Profile and contact details | [`frontend/src/data/portfolio.ts`](frontend/src/data/portfolio.ts) |
+| Homepage copy, experience, capabilities, and learning roadmap in both languages | [`frontend/src/i18n/translations.ts`](frontend/src/i18n/translations.ts) |
+| Enabled sections | [`frontend/src/config/features.ts`](frontend/src/config/features.ts) |
 | Downloadable CV | [`frontend/public/cv.pdf`](frontend/public/cv.pdf) |
 | Page metadata and sharing links | [`frontend/index.html`](frontend/index.html) |
 

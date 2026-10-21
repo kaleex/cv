@@ -342,20 +342,105 @@ export const en = {
     text: "If you're designing, modernizing, or scaling a data platform and need someone who can own both the architecture and its delivery, let's talk."
   },
   skills: {
-    title: "Technical Skills",
-    subtitle: "A comprehensive overview of my technical expertise and competencies",
-    levels: {
-      expert: "Expert (90%+)",
-      advanced: "Advanced (75-89%)",
-      intermediate: "Intermediate (60-74%)"
-    },
-    proficiency: "Proficiency Levels"
+    "title": "Technical expertise in practice",
+    "subtitle": "The platform responsibilities I take on, and the work behind each capability.",
+    "experienceAction": "See the projects behind this experience",
+    "contactAction": "Discuss architecture and engineering",
+    "categories": [
+      {
+        "id": "architecture",
+        "title": "Architecture and technical direction",
+        "description": "Designing and managing a geospatial platform architecture, recording decisions in ADRs, and connecting the work of multiple teams.",
+        "tools": [
+          "Architecture decisions",
+          "Architecture documentation",
+          "Team coordination"
+        ]
+      },
+      {
+        "id": "cloud",
+        "title": "Azure infrastructure and identity",
+        "description": "Designing networking and Microsoft Entra ID components within an Azure platform built around ENS High requirements.",
+        "tools": [
+          "Azure networking",
+          "Microsoft Entra ID",
+          "Security requirements",
+          "Terraform"
+        ]
+      },
+      {
+        "id": "compute",
+        "title": "Geospatial data and distributed compute",
+        "description": "Working on a public agency platform handling data at petabyte scale, with distributed HPC workloads on Azure Batch.",
+        "tools": [
+          "Geospatial data",
+          "Azure Batch",
+          "HPC",
+          "Petabyte-scale platforms"
+        ]
+      },
+      {
+        "id": "data",
+        "title": "Data platforms and modelling",
+        "description": "Medallion architecture and business databases, backed by previous experience building analytical models and improving insurance data pipelines.",
+        "tools": [
+          "Medallion architecture",
+          "Databricks",
+          "PySpark",
+          "Delta Lake",
+          "SQL"
+        ]
+      },
+      {
+        "id": "delivery",
+        "title": "MLOps and platform delivery",
+        "description": "Implementing MLOps components in the current platform, building on earlier machine learning deployments, CI/CD, and data lake automation.",
+        "tools": [
+          "MLOps",
+          "MLflow",
+          "CI/CD",
+          "Azure DevOps",
+          "Docker"
+        ]
+      },
+      {
+        "id": "software",
+        "title": "Software engineering and shared tooling",
+        "description": "Developing an internal library as a control plane between teams. Earlier work includes modular Python services and an event-driven banking decision engine.",
+        "tools": [
+          "Shared control plane",
+          "Python",
+          "Async",
+          "Event-driven architecture",
+          "Software design"
+        ]
+      }
+    ]
   },
   roadmap: {
-    title: "Learning Roadmap",
-    completed: "Completed",
-    inProgress: "In Progress",
-    upcoming: "Upcoming"
+    "title": "Continuing development",
+    "completed": "Completed learning",
+    "inProgress": "In progress",
+    "upcoming": "Areas to explore",
+    "completedItems": [
+      "AZ-305: Microsoft Azure architecture",
+      "Software architecture patterns",
+      "Claude Code: Skills, Plugins & MCP Development"
+    ],
+    "inProgressItems": [
+      {
+        "name": "AZ-104 Azure Administrator Associate",
+        "target": "2026"
+      }
+    ],
+    "upcomingItems": [
+      "Databricks Data Engineer Associate",
+      "Databricks Data Engineer Professional",
+      "Databricks Data Analyst Associate",
+      "Apache Airflow and orchestration",
+      "dbt",
+      "LLMs and AI engineering for data"
+    ]
   },
   repos: {
     title: "Personal Projects",
@@ -920,20 +1005,105 @@ export const es = {
     text: "Si estás diseñando, modernizando o escalando una plataforma de datos y necesitas a alguien que pueda responsabilizarse tanto de la arquitectura como de su entrega, hablemos."
   },
   skills: {
-    title: "Habilidades Técnicas",
-    subtitle: "Una visión completa de mi experiencia técnica y competencias",
-    levels: {
-      expert: "Experto (90%+)",
-      advanced: "Avanzado (75-89%)",
-      intermediate: "Intermedio (60-74%)"
-    },
-    proficiency: "Niveles de Competencia"
+    "title": "Experiencia técnica aplicada",
+    "subtitle": "Las responsabilidades que asumo en una plataforma y el trabajo que respalda cada capacidad.",
+    "experienceAction": "Ver los proyectos que respaldan esta experiencia",
+    "contactAction": "Hablemos de arquitectura e ingeniería",
+    "categories": [
+      {
+        "id": "architecture",
+        "title": "Arquitectura y dirección técnica",
+        "description": "Diseño y gestión de la arquitectura de una plataforma geoespacial, documentación de decisiones en ADRs y conexión del trabajo de varios equipos.",
+        "tools": [
+          "Decisiones de arquitectura",
+          "Documentación de arquitectura",
+          "Coordinación entre equipos"
+        ]
+      },
+      {
+        "id": "cloud",
+        "title": "Infraestructura e identidad en Azure",
+        "description": "Diseño de redes y componentes de Microsoft Entra ID en una plataforma Azure orientada a cubrir los requisitos de ENS Alto.",
+        "tools": [
+          "Redes en Azure",
+          "Microsoft Entra ID",
+          "Requisitos de seguridad",
+          "Terraform"
+        ]
+      },
+      {
+        "id": "compute",
+        "title": "Datos geoespaciales y cómputo distribuido",
+        "description": "Trabajo en una plataforma para una agencia pública con datos a escala de petabytes y cargas HPC distribuidas sobre Azure Batch.",
+        "tools": [
+          "Datos geoespaciales",
+          "Azure Batch",
+          "HPC",
+          "Plataformas a escala de petabytes"
+        ]
+      },
+      {
+        "id": "data",
+        "title": "Plataformas y modelado de datos",
+        "description": "Arquitectura medallion y bases de datos de negocio, con experiencia previa en modelos analíticos y mejoras de pipelines en seguros.",
+        "tools": [
+          "Arquitectura medallion",
+          "Databricks",
+          "PySpark",
+          "Delta Lake",
+          "SQL"
+        ]
+      },
+      {
+        "id": "delivery",
+        "title": "MLOps e implementación de plataformas",
+        "description": "Implementación de componentes MLOps en la plataforma actual, apoyada en experiencia previa con despliegues de modelos, CI/CD y automatización del data lake.",
+        "tools": [
+          "MLOps",
+          "MLflow",
+          "CI/CD",
+          "Azure DevOps",
+          "Docker"
+        ]
+      },
+      {
+        "id": "software",
+        "title": "Ingeniería de software y herramientas compartidas",
+        "description": "Desarrollo de una librería interna como plano de control entre equipos. Experiencia anterior con servicios Python modulares y un motor de decisión bancario orientado a eventos.",
+        "tools": [
+          "Plano de control compartido",
+          "Python",
+          "Async",
+          "Arquitectura orientada a eventos",
+          "Diseño de software"
+        ]
+      }
+    ]
   },
   roadmap: {
-    title: "Roadmap de Aprendizaje",
-    completed: "Completado",
-    inProgress: "En Progreso",
-    upcoming: "Próximos"
+    "title": "Formación continua",
+    "completed": "Aprendizaje completado",
+    "inProgress": "En curso",
+    "upcoming": "Áreas por explorar",
+    "completedItems": [
+      "AZ-305: arquitectura de Microsoft Azure",
+      "Patrones de arquitectura de software",
+      "Claude Code: Skills, Plugins y desarrollo MCP"
+    ],
+    "inProgressItems": [
+      {
+        "name": "AZ-104 Azure Administrator Associate",
+        "target": "2026"
+      }
+    ],
+    "upcomingItems": [
+      "Databricks Data Engineer Associate",
+      "Databricks Data Engineer Professional",
+      "Databricks Data Analyst Associate",
+      "Apache Airflow y orquestación",
+      "dbt",
+      "LLMs e ingeniería de IA para datos"
+    ]
   },
   repos: {
     title: "Proyectos Personales",

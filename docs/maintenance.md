@@ -4,9 +4,9 @@ The active application is in `frontend/`. All paths below are relative to that d
 
 ## Content and language
 
-Edit `src/i18n/translations.ts` for homepage copy, experience, and page labels. Update both `en` and `es` entries together.
+Edit `src/i18n/translations.ts` for homepage copy, experience, capability descriptions, the learning roadmap, and page labels. Update both `en` and `es` entries together. The current geospatial role starts in May 2026 and remains ongoing.
 
-Edit `src/data/portfolio.ts` for contact details, skills, the learning roadmap, and shared content. Some of this data is displayed in both languages without translation. The homepage certification badge is also defined there.
+Edit `src/data/portfolio.ts` for profile and contact details. The homepage certification badge is also defined there. Capability cards and the learning roadmap are rendered from translations rather than numerical skill scores.
 
 The homepage experience counter uses a start date in `src/App.tsx`. Keep it consistent with the career timeline and the descriptions in `index.html`.
 
@@ -62,7 +62,7 @@ See the root [README](../README.md#deployment) for build and manual deployment c
 After deployment, check:
 
 - Direct navigation and refresh on `/skills`, `/experience`, and `/contact`.
-- English and Spanish content, theme switching, and navigation on mobile.
+- English and Spanish content, expandable architecture and learning sections, and navigation on mobile.
 - The `/cv.pdf` download and HTTP 410 response for `/cv_old.pdf`.
 - The HTTPS redirect and response headers implemented in `worker/index.js`.
 
