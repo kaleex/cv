@@ -20,7 +20,7 @@ import { ChevronUpIcon, ChevronDownIcon, ArrowRightIcon, WrenchScrewdriverIcon, 
 import './App.css'
 
 function getExperienceYearsLabel() {
-  const startDate = new Date(2021, 9, 1) // October 1, 2021
+  const startDate = new Date(2020, 9, 1) // Career timeline starts in October 2020
   const today = new Date()
   let years = today.getFullYear() - startDate.getFullYear()
   const hasReachedAnniversary =
@@ -150,6 +150,7 @@ function Home() {
           <p className="name" data-text={portfolio.personalInfo.name}>{portfolio.personalInfo.name}</p>
           <div className="hero-cert-badge">{portfolio.heroCertBadge}</div>
           <h1>{t.hero.headline}</h1>
+          <p className="hero-positioning">{t.hero.subheadline}</p>
           <div className="hero-proof-strip">
             {t.hero.proofPoints.map((point, idx) => (
               <span key={idx} className="hero-proof-chip">{point}</span>
@@ -157,7 +158,7 @@ function Home() {
           </div>
           <div className="hero-actions">
             <Link to="/contact" className="hero-btn" onClick={() => Analytics.ctaClick('hero-contact')}>
-              {t.nav.contact}
+              {t.hero.contactAction}
             </Link>
             <a
               href="/cv.pdf"
@@ -169,65 +170,80 @@ function Home() {
               {t.hero.downloadCV}
             </a>
           </div>
+          <Link to="/experience" className="hero-experience-link">{t.hero.experienceAction} <ArrowRightIcon className="icon-sm" /></Link>
         </div>
         <div className="scroll-indicator">
           <ChevronDownIcon className="icon-lg" />
         </div>
       </header>
 
-      {/* Hero Extended + Stats - combined snap section */}
-      <section className="hero-extended-stats snap-section">
-        <div className="hero-extended-content">
-          <p className="executive-summary">{t.hero.subheadline}</p>
-          <div className="intro">
-            {t.hero.intro.slice(0, 2).map((paragraph, idx) => (
-              <p key={idx}>{paragraph}</p>
-            ))}
-          </div>
-          <p className="tagline">{t.hero.intro[2]}</p>
-        </div>
-        <div className="stats-container">
-          <div className="stat-item">
-            <span className="stat-number">{experienceYearsLabel}</span>
-            <span className="stat-label">{t.stats.years}</span>
-          </div>
-          <div className="stat-item">
-            <span className="stat-number">4</span>
-            <span className="stat-label">{t.stats.industries}</span>
-          </div>
-          <div className="stat-item">
-            <span className="stat-number">2TB</span>
-            <span className="stat-label">{t.stats.daily}</span>
-          </div>
-          <div className="stat-item">
-            <span className="stat-number">500+</span>
-            <span className="stat-label">{t.stats.requests}</span>
-          </div>
-        </div>
-        <div className="three-pillars">
-          {t.pillars.map((pillar, idx) => (
-            <div key={idx} className={`pillar-card ${idx % 2 === 0 ? 'pillar-gold' : 'pillar-cyan'}`}>
-              <h3 className="pillar-title">{pillar.title}</h3>
-              <ul className="pillar-keywords">
-                {pillar.keywords.map((kw, ki) => (
-                  <li key={ki}>{kw}</li>
-                ))}
-              </ul>
+      <section className="portfolio-overview" aria-label={t.hero.experienceAction}>
+        <div className="container">
+          <div className="stats-container">
+            <div className="stat-item">
+              <span className="stat-number">{experienceYearsLabel}</span>
+              <span className="stat-label">{t.stats.years}</span>
             </div>
-          ))}
-        </div>
-        <div className="scroll-indicator">
-          <ChevronDownIcon className="icon-lg" />
+            <div className="stat-item">
+              <span className="stat-number">PB</span>
+              <span className="stat-label">{t.stats.scale}</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-number">HPC</span>
+              <span className="stat-label">{t.stats.compute}</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-number">4</span>
+              <span className="stat-label">{t.stats.industries}</span>
+            </div>
+          </div>
         </div>
       </section>
 
       <FeaturedProject />
 
+      <section className="section delivery-evidence" aria-labelledby="delivery-evidence-title">
+        <div className="container">
+          <h2 id="delivery-evidence-title">{t.deliveryEvidence.title}</h2>
+          <p className="section-body">{t.deliveryEvidence.intro}</p>
+          <div className="delivery-evidence-grid">
+            {t.deliveryEvidence.items.map((item) => (
+              <article key={item.sector} className="delivery-evidence-card">
+                <p className="evidence-sector">{item.sector}</p>
+                <h3>{item.metric}</h3>
+                <p className="evidence-label">{item.label}</p>
+                <p>{item.description}</p>
+                <p className="evidence-technologies">{item.technologies}</p>
+              </article>
+            ))}
+          </div>
+          <Link to="/experience" className="evidence-link">{t.deliveryEvidence.link} <ArrowRightIcon className="icon-sm" /></Link>
+        </div>
+      </section>
+
+      {/* Approach Section */}
+      <section className="section approach fade-in snap-section">
+        <div className="container">
+          <h2>{t.approach.title}</h2>
+          <p className="section-body">{t.approach.body}</p>
+          <div className="principles">
+            {t.approach.principles.map((principle, idx) => (
+              <div key={idx} className="principle">
+                <strong>{principle.name}:</strong> {principle.description}
+              </div>
+            ))}
+          </div>
+          <p className="closing">{t.approach.closing}</p>
+        </div>
+      </section>
+
       {/* Architecture Diagram Section */}
       <section className="section arch-diagram-section fade-in snap-section">
         <div className="container">
-          <h2>Platform Architecture</h2>
-          <p className="section-body">Azure data platform reference architecture — CAF Enterprise Scale Landing Zones, domain-oriented data products, and Well-Architected Framework pillars mapped to each zone.</p>
+          <h2>{t.architectureDetail.title}</h2>
+          <details className="architecture-details">
+            <summary>{t.architectureDetail.summary}</summary>
+          <p className="section-body">{t.architectureDetail.description}</p>
           <div className="arch-diagram-desktop">
             <div className="arch-diagram-wrapper">
               <svg viewBox="0 0 860 400" xmlns="http://www.w3.org/2000/svg" className="arch-diagram-svg" role="img" aria-label="Azure Data Platform Architecture Diagram">
@@ -380,90 +396,7 @@ function Home() {
               </article>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Journey Section */}
-      <section className="section journey fade-in snap-section">
-        <div className="container">
-          <h2>{t.journey.title}</h2>
-          <div className="journey-grid">
-            {t.journey.items.map((item, idx) => (
-              <div key={idx} className="journey-card">
-                <span className="journey-period">{item.period}</span>
-                <div className="journey-card-header">
-                  <h3 className="journey-company">{item.company}</h3>
-                  {item.sector && <span className="journey-sector">{item.sector}</span>}
-                </div>
-                <p className="journey-description">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Software Design Section */}
-      <section className="section software-design fade-in snap-section">
-        <div className="container">
-          <h2>{t.softwareDesign.title}</h2>
-          <div className="pattern-grid">
-            {t.softwareDesign.patterns.map((pattern, idx) => (
-              <div key={idx} className={`pattern-card ${idx % 2 === 0 ? 'pattern-gold' : 'pattern-cyan'}`}>
-                <h3 className="pattern-name"><span className="pattern-prefix">&gt;</span> {pattern.name}</h3>
-                <p className="pattern-desc">{pattern.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Approach Section */}
-      <section className="section approach fade-in snap-section">
-        <div className="container">
-          <h2>{t.approach.title}</h2>
-          <p className="section-body">{t.approach.body}</p>
-          <div className="principles">
-            {t.approach.principles.map((principle, idx) => (
-              <div key={idx} className="principle">
-                <strong>{principle.name}:</strong> {principle.description}
-              </div>
-            ))}
-          </div>
-          <p className="closing">{t.approach.closing}</p>
-        </div>
-      </section>
-
-      {/* Platform Stack Section */}
-      <section className="section platform-stack fade-in snap-section">
-        <div className="container">
-          <h2>{t.platformStack.title}</h2>
-          <div className="stack-grid">
-            {t.platformStack.blocks.map((block, idx) => (
-              <div key={idx} className={`stack-block ${idx % 2 === 0 ? 'stack-gold' : 'stack-cyan'}`}>
-                <h3 className="stack-title">{block.title}</h3>
-                <ul className="stack-bullets">
-                  {block.bullets.map((bullet, bi) => (
-                    <li key={bi}>{bullet}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* What I Bring Section */}
-      <section className="section what-i-bring fade-in snap-section">
-        <div className="container">
-          <h2>{t.whatIBring.title}</h2>
-          <div className="value-grid">
-            {t.whatIBring.items.map((item, idx) => (
-              <article key={idx} className={`value-card ${idx % 2 === 0 ? 'value-gold' : 'value-cyan'}`}>
-                <h3 className="value-title">{item.title}</h3>
-                <p className="value-proof">{item.proof}</p>
-              </article>
-            ))}
-          </div>
+          </details>
         </div>
       </section>
 
@@ -482,7 +415,7 @@ function Home() {
         <Footer />
         <div className="swipe-next-hint">
           <ArrowRightIcon className="icon-md" />
-          <span className="swipe-next-text">Skills</span>
+          <span className="swipe-next-text">{t.nav.skills}</span>
         </div>
       </section>
     </main>

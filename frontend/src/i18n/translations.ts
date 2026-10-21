@@ -11,16 +11,26 @@ export const en = {
     card: "Card"
   },
   hero: {
-    headline: "Data Platforms That Actually Work",
-    typingWords: ["Reliable", "Scalable", "Event-Driven", "Hexagonal", "Well-Architected", "Production-Ready"],
-    subheadline: "Data Platform Architect designing and building Azure platforms, from banking and telecom to petabyte-scale geospatial data in the public sector.",
-    intro: [
-      "I design, build, and manage data platform architecture. I currently work on a geospatial platform on Azure for a public agency handling data at petabyte scale.",
-      "My scope spans networking, Microsoft Entra ID, MLOps, business databases, medallion data layers, and distributed HPC workloads on Azure Batch.",
-      "I connect architecture with implementation through ADRs, architecture documentation, and an internal control plane library that links the work of multiple teams."
+    "headline": "Data architecture on Azure. From design to operation.",
+    "typingWords": [
+      "Architecture",
+      "Delivery",
+      "Operations"
     ],
-    proofPoints: ["Petabyte-scale geospatial data", "Azure Batch · HPC", "ENS High requirements", "Microsoft Entra ID", "Medallion Architecture", "MLOps", "AZ-305 Certified"],
-    downloadCV: "Download CV"
+    "subheadline": "Currently a Data Architect in the space sector, designing a geospatial platform for a public agency handling data at petabyte scale.",
+    "intro": [
+      "Currently a Data Architect in the space sector, building a geospatial platform for a public agency handling data at petabyte scale.",
+      "Azure networking and identity, medallion data layers, HPC on Azure Batch, MLOps, and a shared control plane.",
+      "Architecture decisions backed by working software and documentation that teams can use."
+    ],
+    "proofPoints": [
+      "Petabyte-scale geospatial data",
+      "Azure Batch · HPC",
+      "ENS High requirements"
+    ],
+    "contactAction": "Discuss a data platform",
+    "experienceAction": "Explore my experience",
+    "downloadCV": "Download CV"
   },
   featuredProject: {
     eyebrow: "Data Architect · May 2026 – Present",
@@ -51,22 +61,62 @@ export const en = {
     ]
   },
   stats: {
-    years: "Years Experience",
-    industries: "Industries",
-    daily: "Daily Processing",
-    requests: "Daily Requests"
+    "years": "Years in engineering",
+    "industries": "Sectors",
+    "scale": "Geospatial data scale",
+    "compute": "Distributed compute"
+  },
+  deliveryEvidence: {
+    "title": "Architecture with delivery behind it",
+    "intro": "Selected work across banking, insurance, and telecom before my current geospatial role.",
+    "items": [
+      {
+        "sector": "Banking",
+        "metric": "+25%",
+        "label": "Daily business capacity",
+        "description": "Refactored a core decisioning system into modular, event-driven Python services, increasing capacity from 400 to 500 daily requests.",
+        "technologies": "Python · Async · Event-driven architecture"
+      },
+      {
+        "sector": "Insurance",
+        "metric": "Hours → minutes",
+        "label": "Pipeline execution",
+        "description": "Improved data pipelines in a regulated environment, with validation frameworks and analytical models for business reporting.",
+        "technologies": "Azure Databricks · PySpark · Delta Lake"
+      },
+      {
+        "sector": "Telecom",
+        "metric": "~2 TB/day",
+        "label": "Ingestion across 80+ tables",
+        "description": "Designed ingestion architecture and automated data lake maintenance, with CI/CD and machine learning deployments.",
+        "technologies": "Azure · Spark · Terraform · MLOps"
+      }
+    ],
+    "link": "View roles and responsibilities"
+  },
+  architectureDetail: {
+    "title": "A closer look at platform architecture",
+    "summary": "Explore an Azure reference architecture",
+    "description": "A general reference for connectivity, identity, data, and operations. This is an illustration of my approach, separate from the public agency project."
   },
   approach: {
-    title: "How I Work",
-    body: "How I usually approach platform engagements:",
-    principles: [
-      { name: "Discovery & Alignment", description: "Clarify target state, constraints, stakeholders, and operating model before tools start driving the conversation." },
-      { name: "Architecture & Guardrails", description: "Landing zones, security, governance, and data contracts are defined early so delivery does not create expensive rework." },
-      { name: "Delivery in Production", description: "Incremental rollout, testing, observability, and infrastructure as code keep the platform useful beyond the architecture deck." },
-      { name: "AI-Assisted Execution", description: "I use Claude, Codex, and MCP-connected workflows when they improve discovery, documentation, prototyping, and implementation speed without weakening engineering judgment." },
-      { name: "Enablement & Handover", description: "Documentation, standards, mentoring, and clear ownership make the platform operable by the team that will live with it." }
+    "title": "How I take architecture into delivery",
+    "body": "Clear decisions, practical implementation, and a platform the team can operate.",
+    "principles": [
+      {
+        "name": "Define the architecture",
+        "description": "Align requirements, security constraints, and team responsibilities. Record the decisions and tradeoffs in ADRs."
+      },
+      {
+        "name": "Build the platform",
+        "description": "Connect infrastructure, data layers, compute, and MLOps. Develop shared components that let teams work together."
+      },
+      {
+        "name": "Make it operable",
+        "description": "Document how the platform works, clarify ownership, and keep architecture connected to implementation as the system evolves."
+      }
     ],
-    closing: "The goal is not just a good architecture deck. The goal is a platform teams can operate with confidence."
+    "closing": "My current role spans design, implementation, and the ongoing management of the platform architecture."
   },
   lakehouse: {
     title: "Lakehouse Architecture",
@@ -539,16 +589,26 @@ export const es = {
     card: "Tarjeta"
   },
   hero: {
-    headline: "Plataformas de Datos que Funcionan",
-    typingWords: ["Fiables", "Escalables", "Event-Driven", "Hexagonal", "Well-Architected", "Listas para Producción"],
-    subheadline: "Arquitecto de datos: diseño y construcción de plataformas Azure, desde banca y telecomunicaciones hasta datos geoespaciales a escala de petabytes en el sector público.",
-    intro: [
-      "Diseño, construyo y gestiono la arquitectura de plataformas de datos. Actualmente trabajo en una plataforma geoespacial en Azure para una agencia pública que maneja datos del orden de los petabytes.",
-      "Mi responsabilidad abarca redes, Microsoft Entra ID, MLOps, bases de datos de negocio, capas medallion y cargas HPC distribuidas sobre Azure Batch.",
-      "Conecto arquitectura e implementación mediante ADRs, documentación de arquitectura y una librería interna que actúa como plano de control entre equipos."
+    "headline": "Arquitectura de datos en Azure. Del diseño a la operación.",
+    "typingWords": [
+      "Arquitectura",
+      "Implementación",
+      "Operación"
     ],
-    proofPoints: ["Datos geoespaciales · Petabytes", "Azure Batch · HPC", "Requisitos ENS Alto", "Microsoft Entra ID", "Arquitectura Medallion", "MLOps", "AZ-305 Certificado"],
-    downloadCV: "Descargar CV"
+    "subheadline": "Actualmente arquitecto de datos en el sector espacial, diseñando una plataforma geoespacial para una agencia pública con datos a escala de petabytes.",
+    "intro": [
+      "Actualmente soy arquitecto de datos en el sector espacial, construyendo una plataforma geoespacial para una agencia pública con datos a escala de petabytes.",
+      "Redes e identidad en Azure, capas medallion, HPC en Azure Batch, MLOps y un plano de control compartido.",
+      "Decisiones de arquitectura respaldadas por software y documentación que los equipos pueden utilizar."
+    ],
+    "proofPoints": [
+      "Datos geoespaciales · Petabytes",
+      "Azure Batch · HPC",
+      "Requisitos ENS Alto"
+    ],
+    "contactAction": "Hablemos de plataformas de datos",
+    "experienceAction": "Conoce mi experiencia",
+    "downloadCV": "Descargar CV"
   },
   featuredProject: {
     eyebrow: "Arquitecto de datos · Mayo 2026 – Actualidad",
@@ -579,22 +639,62 @@ export const es = {
     ]
   },
   stats: {
-    years: "Años Experiencia",
-    industries: "Industrias",
-    daily: "Procesamiento Diario",
-    requests: "Peticiones Diarias"
+    "years": "Años en ingeniería",
+    "industries": "Sectores",
+    "scale": "Escala de datos geoespaciales",
+    "compute": "Cómputo distribuido"
+  },
+  deliveryEvidence: {
+    "title": "Arquitectura con experiencia de implementación",
+    "intro": "Una selección de trabajos en banca, seguros y telecomunicaciones anteriores a mi etapa geoespacial actual.",
+    "items": [
+      {
+        "sector": "Banca",
+        "metric": "+25 %",
+        "label": "Capacidad de negocio diaria",
+        "description": "Refactoricé un motor de decisión en servicios Python modulares y orientados a eventos, aumentando la capacidad de 400 a 500 peticiones diarias.",
+        "technologies": "Python · Async · Arquitectura orientada a eventos"
+      },
+      {
+        "sector": "Seguros",
+        "metric": "Horas → minutos",
+        "label": "Ejecución de pipelines",
+        "description": "Mejoré pipelines de datos en un entorno regulado, con validaciones y modelos analíticos para los informes de negocio.",
+        "technologies": "Azure Databricks · PySpark · Delta Lake"
+      },
+      {
+        "sector": "Telecomunicaciones",
+        "metric": "~2 TB/día",
+        "label": "Ingesta en más de 80 tablas",
+        "description": "Diseñé la arquitectura de ingesta y automaticé el mantenimiento del data lake, con CI/CD y despliegues de modelos de machine learning.",
+        "technologies": "Azure · Spark · Terraform · MLOps"
+      }
+    ],
+    "link": "Ver puestos y responsabilidades"
+  },
+  architectureDetail: {
+    "title": "La arquitectura, con más detalle",
+    "summary": "Explorar una arquitectura de referencia en Azure",
+    "description": "Una referencia general de conectividad, identidad, datos y operación. Ilustra mi enfoque y es independiente del proyecto de la agencia pública."
   },
   approach: {
-    title: "Cómo Trabajo",
-    body: "Cómo suelo abordar proyectos de plataforma:",
-    principles: [
-      { name: "Discovery y Alineamiento", description: "Aclaro estado objetivo, restricciones, stakeholders y modelo operativo antes de que las herramientas empiecen a dictar la conversación." },
-      { name: "Arquitectura y Guardrails", description: "Landing zones, seguridad, gobernanza y contratos de datos se definen pronto para que el delivery no genere retrabajo caro." },
-      { name: "Delivery en Producción", description: "Despliegue incremental, testing, observabilidad e infraestructura como código mantienen la plataforma útil más allá del deck de arquitectura." },
-      { name: "Ejecución Asistida por IA", description: "Uso Claude, Codex y workflows conectados por MCP cuando mejoran discovery, documentación, prototipado y velocidad de implementación sin debilitar el criterio de ingeniería." },
-      { name: "Enablement y Handover", description: "Documentación, estándares, mentoría y ownership claro hacen que el equipo pueda operar la plataforma con confianza." }
+    "title": "Cómo llevo la arquitectura a la práctica",
+    "body": "Decisiones claras, implementación y una plataforma que el equipo pueda operar.",
+    "principles": [
+      {
+        "name": "Definir la arquitectura",
+        "description": "Alinear requisitos, restricciones de seguridad y responsabilidades de los equipos. Documentar las decisiones y sus compromisos en ADRs."
+      },
+      {
+        "name": "Construir la plataforma",
+        "description": "Conectar infraestructura, capas de datos, cómputo y MLOps. Desarrollar componentes compartidos que permitan trabajar a los equipos de forma coordinada."
+      },
+      {
+        "name": "Hacerla operable",
+        "description": "Documentar el funcionamiento, aclarar responsabilidades y mantener la arquitectura conectada con la implementación a medida que evoluciona el sistema."
+      }
     ],
-    closing: "El objetivo no es solo un buen deck de arquitectura. El objetivo es una plataforma que el equipo pueda operar con confianza."
+    "closing": "Mi puesto actual abarca el diseño, la implementación y la gestión continua de la arquitectura de la plataforma."
   },
   lakehouse: {
     title: "Arquitectura Lakehouse",

@@ -13,7 +13,7 @@ The website brings together my experience across the public sector, banking, ins
 - **Platform architecture:** reference architecture covering ingestion, storage, governance, security, and operations.
 - **Technical expertise:** data engineering, cloud infrastructure, software design, and learning roadmap.
 - **Contact:** direct links to email, LinkedIn, GitHub, and a downloadable CV.
-- **Reading preferences:** English and Spanish, light and dark themes, and responsive layouts. Language and theme preferences are stored locally in the browser.
+- **Reading preferences:** English and Spanish, with a dark interface and responsive layouts. The language preference is stored locally in the browser.
 
 Experience, skills, and contact are currently enabled. Projects, certifications, and blog pages are available in the source but disabled through feature flags. Some technical content is shared between languages.
 

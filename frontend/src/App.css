@@ -1709,3 +1709,157 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Portfolio presentation: role, evidence, and clear next steps. */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero {
+  padding: 5rem 2rem 4rem;
+  min-height: auto;
+}
+
+.hero .name {
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  letter-spacing: 2px;
+  margin-bottom: 0.75rem;
+}
+
+.hero h1 {
+  font-size: clamp(1.9rem, 4.5vw, 3.2rem);
+  line-height: 1.2;
+  text-transform: none;
+  letter-spacing: -0.5px;
+  text-wrap: balance;
+}
+
+.hero-positioning {
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  color: var(--text-secondary);
+  line-height: 1.75;
+  text-wrap: pretty;
+}
+
+.hero-experience-link,
+.evidence-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  color: var(--accent-secondary);
+  text-underline-offset: 0.25rem;
+}
+
+.portfolio-overview {
+  padding: 2.5rem 0 3rem;
+  background: var(--bg-secondary);
+}
+
+.delivery-evidence h2,
+.approach h2,
+.arch-diagram-section h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 1.35;
+}
+
+.delivery-evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+
+.delivery-evidence-card {
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-top: 3px solid var(--accent);
+  background: var(--bg-card);
+}
+
+.delivery-evidence-card .evidence-sector {
+  color: var(--accent-secondary);
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.delivery-evidence-card h3 {
+  color: var(--accent);
+  font-size: 1.6rem;
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
+}
+
+.delivery-evidence-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.delivery-evidence-card .evidence-label {
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.delivery-evidence-card .evidence-technologies {
+  font-size: 0.8rem;
+  margin-top: 1.25rem;
+}
+
+.architecture-details {
+  border: 1px solid var(--border-color);
+  padding: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.architecture-details summary {
+  color: var(--accent-secondary);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.architecture-details[open] summary {
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 6rem 1.25rem 3rem;
+    margin-top: 0;
+    min-height: auto;
+  }
+
+  .delivery-evidence-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-overview .stats-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .hero-proof-chip {
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-content > *,
+  .hero .name {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero-scan-bar {
+    display: none;
+  }
+}
