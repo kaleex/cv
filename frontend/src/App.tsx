@@ -148,7 +148,6 @@ function Home() {
             </div>
           )}
           <p className="name" data-text={portfolio.personalInfo.name}>{portfolio.personalInfo.name}</p>
-          <div className="hero-cert-badge">{portfolio.heroCertBadge}</div>
           <h1>{t.hero.headline}</h1>
           <p className="hero-positioning">{t.hero.subheadline}</p>
           <div className="hero-proof-strip">

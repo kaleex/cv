@@ -6,7 +6,7 @@ The active application is in `frontend/`. All paths below are relative to that d
 
 Edit `src/i18n/translations.ts` for homepage copy, experience, capability descriptions, the learning roadmap, and page labels. Update both `en` and `es` entries together. The current geospatial role starts in May 2026 and remains ongoing.
 
-Edit `src/data/portfolio.ts` for profile and contact details. The homepage certification badge is also defined there. Capability cards and the learning roadmap are rendered from translations rather than numerical skill scores.
+Edit `src/data/portfolio.ts` for profile and contact details. Capability cards and the learning roadmap are rendered from translations rather than numerical skill scores.
 
 The homepage experience counter uses a start date in `src/App.tsx`. Keep it consistent with the career timeline and the descriptions in `index.html`.
 

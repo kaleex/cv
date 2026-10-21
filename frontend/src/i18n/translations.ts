@@ -202,7 +202,7 @@ export const en = {
     items: [
       {
         title: "Enterprise Azure Design",
-        proof: "AZ-305, WAF, CAF, landing zones, governance by design."
+        proof: "WAF, CAF, landing zones, governance by design."
       },
       {
         title: "Production Databricks Delivery",
@@ -245,7 +245,6 @@ export const en = {
     {
       title: "Cloud Architecture",
       keywords: [
-        "AZ-305 Certified",
         "Azure Well-Architected",
         "CAF Landing Zones",
         "Hub-Spoke Topology",
@@ -423,7 +422,6 @@ export const en = {
     "inProgress": "In progress",
     "upcoming": "Areas to explore",
     "completedItems": [
-      "AZ-305: Microsoft Azure architecture",
       "Software architecture patterns",
       "Claude Code: Skills, Plugins & MCP Development"
     ],
@@ -865,7 +863,7 @@ export const es = {
     items: [
       {
         title: "Diseño Azure Enterprise",
-        proof: "AZ-305, WAF, CAF, landing zones y gobernanza por diseño."
+        proof: "WAF, CAF, landing zones y gobernanza por diseño."
       },
       {
         title: "Delivery Databricks en Producción",
@@ -908,7 +906,6 @@ export const es = {
     {
       title: "Arquitectura Cloud",
       keywords: [
-        "AZ-305 Certificado",
         "Azure Well-Architected",
         "CAF Landing Zones",
         "Topología Hub-Spoke",
@@ -1086,7 +1083,6 @@ export const es = {
     "inProgress": "En curso",
     "upcoming": "Áreas por explorar",
     "completedItems": [
-      "AZ-305: arquitectura de Microsoft Azure",
       "Patrones de arquitectura de software",
       "Claude Code: Skills, Plugins y desarrollo MCP"
     ],

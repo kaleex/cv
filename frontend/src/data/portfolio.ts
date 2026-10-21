@@ -117,7 +117,7 @@ export const journey = {
 export const whatIBring = {
   title: "What You Get",
   bullets: [
-    "AZ-305 certified — Azure platform design at enterprise scale (WAF + CAF)",
+    "Azure platform design at enterprise scale (WAF + CAF)",
     "Software design depth: Hexagonal, DDD, SOLID, event-driven applied to data platforms",
     "Production data platforms: Databricks, Delta Lake, Unity Catalog, DLT",
     "Infrastructure as Code (Terraform) — reproducible, no manual config drift",
@@ -141,8 +141,6 @@ export const cta = {
   title: "Let's Build Something That Lasts",
   text: "Designing or evolving a data platform? Looking for someone who can own both the architecture and its delivery? Let's talk."
 };
-
-export const heroCertBadge = "AZ-305 · AZURE SOLUTIONS ARCHITECT EXPERT";
 
 type Accent = "gold" | "cyan";
 
