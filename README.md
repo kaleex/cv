@@ -53,6 +53,15 @@ npm install
 npm run dev
 ```
 
+The development server listens on `127.0.0.1:5173` and does not proxy local APIs.
+Use an SSH tunnel when developing remotely on Atenea:
+
+```bash
+ssh -L 5173:127.0.0.1:5173 kaleex@atenea
+```
+
+`frontend_old/` is an archived frontend, not the production deployment directory.
+
 ## 📦 Deploy
 
 Push to `main` → Cloudflare Workers auto-deploy
@@ -89,6 +98,11 @@ Translations are in `src/i18n/translations.ts`. Language is saved in localStorag
 
 1. Replace `public/cv.pdf`
 2. Push to main
+
+Only the current CV belongs in `frontend/public/`. The retired `/cv_old.pdf`
+returns HTTP 410 through the production Worker. After deploying this change,
+purge any existing Cloudflare cache entry for that URL and verify the response.
+Previously published copies may remain in Git history or third-party caches.
 
 ## 🏆 Add Certification
 

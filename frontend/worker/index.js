@@ -30,7 +30,15 @@ export default {
       return Response.redirect(url.toString(), 301);
     }
 
-    const assetResponse = await env.ASSETS.fetch(request);
+    const assetResponse = url.pathname === "/cv_old.pdf"
+      ? new Response(null, {
+          status: 410,
+          headers: {
+            "Cache-Control": "no-store",
+            "X-Robots-Tag": "noindex",
+          },
+        })
+      : await env.ASSETS.fetch(request);
     const headers = new Headers(assetResponse.headers);
 
     for (const [name, value] of Object.entries(SECURITY_HEADERS)) {
