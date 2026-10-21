@@ -10,9 +10,9 @@ export const personalInfo = {
 
 export const hero = {
   headline: "Data Platforms That Actually Work",
-  subheadline: "Data Platform Architect designing and building Azure platforms for petabyte-scale geospatial data, public agencies, banking, insurance, and telecom.",
+  subheadline: "Data Platform Architect with a hands-on background — designing and building reliable, governed data platforms for telecom, insurance, and banking.",
   intro: [
-    "Designing, building, and managing an Azure geospatial platform for a public agency handling data at petabyte scale.",
+    "4+ years building data platforms processing 2+ TB/day, serving 500+ daily business requests across telecom, insurance, and banking.",
     "From hours-long pipelines reduced to minutes, to event-driven architectures that scale — I combine data engineering with solid software practices.",
     "I think in systems, not just pipelines. Every technical decision is made with the full platform in mind."
   ]
@@ -88,15 +88,9 @@ export const journey = {
   title: "My Journey",
   items: [
     {
-      company: "Space sector company",
-      sector: "Public sector · Geospatial",
-      period: "May 2026 - Present",
-      description: "Designing, building, and managing the architecture of an Azure geospatial platform for a public agency handling data at petabyte scale. Scope includes networking, Microsoft Entra ID, MLOps, business databases, medallion architecture, distributed HPC on Azure Batch, and an internal control plane library connecting multiple teams."
-    },
-    {
       company: "Knowmad Mood",
       sector: "Banking",
-      period: "Jan 2025 - May 2026",
+      period: "Jan 2025 - Present",
       description: "Led refactoring of business-critical systems into modular, event-driven architectures. Increased daily business capacity from 400 to 500 requests (+25%) through improved algorithm fluidity. Delivered substantial execution time improvements and full end-to-end traceability."
     },
     {
@@ -117,7 +111,7 @@ export const journey = {
 export const whatIBring = {
   title: "What You Get",
   bullets: [
-    "Azure platform design at enterprise scale (WAF + CAF)",
+    "AZ-305 certified — Azure platform design at enterprise scale (WAF + CAF)",
     "Software design depth: Hexagonal, DDD, SOLID, event-driven applied to data platforms",
     "Production data platforms: Databricks, Delta Lake, Unity Catalog, DLT",
     "Infrastructure as Code (Terraform) — reproducible, no manual config drift",
@@ -141,6 +135,94 @@ export const cta = {
   title: "Let's Build Something That Lasts",
   text: "Designing or evolving a data platform? Looking for someone who can own both the architecture and its delivery? Let's talk."
 };
+
+export const skills = [
+  {
+    category: "Cloud & Infrastructure",
+    icon: "☁️",
+    skills: [
+      { name: "Azure (Data Factory, Synapse, Databricks)", level: 95 },
+      { name: "Terraform / Infrastructure as Code", level: 90 },
+      { name: "Docker", level: 80 }
+    ]
+  },
+  {
+    category: "Data Platforms",
+    icon: "🗄️",
+    skills: [
+      { name: "Databricks / Delta Lake", level: 95 },
+      { name: "Apache Spark / PySpark", level: 90 },
+      { name: "Unity Catalog", level: 90 },
+      { name: "Delta Live Tables (DLT)", level: 85 },
+      { name: "MLflow", level: 85 },
+      { name: "Databricks Asset Bundles (DABs)", level: 80 },
+      { name: "Structured Streaming", level: 80 }
+    ]
+  },
+  {
+    category: "Programming",
+    icon: "💻",
+    skills: [
+      { name: "Python", level: 95 },
+      { name: "SQL (Advanced)", level: 95 },
+      { name: "PySpark", level: 90 },
+      { name: "Bash / PowerShell", level: 80 }
+    ]
+  },
+  {
+    category: "Data Engineering",
+    icon: "⚙️",
+    skills: [
+      { name: "ETL/ELT Pipeline Design", level: 95 },
+      { name: "Data Modeling (Dimensional, Data Vault)", level: 90 },
+      { name: "Data Quality & Testing", level: 90 },
+      { name: "Performance Optimization", level: 85 }
+    ]
+  },
+  {
+    category: "DevOps & MLOps",
+    icon: "🔄",
+    skills: [
+      { name: "Azure DevOps / GitHub Actions", level: 90 },
+      { name: "CI/CD for Data Pipelines", level: 90 },
+      { name: "Git / Version Control", level: 95 },
+      { name: "Monitoring & Observability", level: 85 }
+    ]
+  },
+  {
+    category: "Architecture & Leadership",
+    icon: "🤝",
+    skills: [
+      { name: "Architecture Design", level: 90 },
+      { name: "Technical Leadership", level: 85 },
+      { name: "Team Collaboration", level: 90 },
+      { name: "Stakeholder Management", level: 85 },
+      { name: "Documentation", level: 85 }
+    ]
+  }
+];
+
+export const roadmap = {
+  title: "Learning Roadmap",
+  completed: [
+    { name: "AZ-305 Azure Solutions Architect Expert" },
+    { name: "Architecture Patterns (Monolithic, Microservices, CQRS)" },
+    { name: "Claude Code: Skills, Plugins & MCP Development" }
+  ],
+  inProgress: [
+    { name: "AZ-104 Azure Administrator Associate", target: "2026" }
+  ],
+  upcoming: [
+    { name: "Databricks Certified Data Engineer Associate" },
+    { name: "Databricks Certified Data Engineer Professional" },
+    { name: "Databricks Certified Data Analyst Associate" },
+    { name: "Apache Airflow & Orchestration" },
+    { name: "dbt (Data Build Tool)" },
+    { name: "LLMs & AI Engineering for Data" }
+  ]
+};
+
+export const heroCertBadge = "AZ-305 · AZURE SOLUTIONS ARCHITECT EXPERT";
 
 type Accent = "gold" | "cyan";
 

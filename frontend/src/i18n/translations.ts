@@ -11,112 +11,34 @@ export const en = {
     card: "Card"
   },
   hero: {
-    "headline": "Data architecture on Azure. From design to operation.",
-    "typingWords": [
-      "Architecture",
-      "Delivery",
-      "Operations"
+    headline: "Data Platforms That Actually Work",
+    typingWords: ["Reliable", "Scalable", "Event-Driven", "Hexagonal", "Well-Architected", "Production-Ready"],
+    subheadline: "Architecture, delivery, and governance for Azure data platforms in banking, insurance, and telecom.",
+    intro: [
+      "I help teams design and evolve data platforms that need to be reliable, governed, and production-ready from day one.",
+      "That means landing zones, security, Databricks delivery, Terraform automation, domain-oriented data products, and software design patterns that keep the platform maintainable.",
+      "Best fit: regulated or high-volume environments where architecture has to survive contact with reality."
     ],
-    "subheadline": "Currently a Data Architect in the space sector, designing a geospatial platform for a public agency handling data at petabyte scale.",
-    "intro": [
-      "Currently a Data Architect in the space sector, building a geospatial platform for a public agency handling data at petabyte scale.",
-      "Azure networking and identity, medallion data layers, HPC on Azure Batch, MLOps, and a shared control plane.",
-      "Architecture decisions backed by working software and documentation that teams can use."
-    ],
-    "proofPoints": [
-      "Petabyte-scale geospatial data",
-      "Azure Batch · HPC",
-      "ENS High requirements"
-    ],
-    "contactAction": "Discuss a data platform",
-    "experienceAction": "Explore my experience",
-    "downloadCV": "Download CV"
-  },
-  featuredProject: {
-    eyebrow: "Data Architect · May 2026 – Present",
-    title: "A geospatial platform at petabyte scale",
-    summary: "Design, implementation, and management of the architecture of an Azure geospatial platform for a public agency, connecting infrastructure, data processing, and the work of multiple teams.",
-    facts: [
-      { label: "Data volume", value: "Petabyte scale" },
-      { label: "Distributed compute", value: "HPC on Azure Batch" },
-      { label: "Security requirements", value: "ENS High" }
-    ],
-    responsibilities: [
-      {
-        title: "Infrastructure and identity",
-        description: "Azure networking and Microsoft Entra ID as part of infrastructure designed to meet ENS High requirements."
-      },
-      {
-        title: "Data architecture and compute",
-        description: "Medallion architecture for geospatial data, with distributed HPC workloads on Azure Batch."
-      },
-      {
-        title: "MLOps and business databases",
-        description: "Design and implementation of MLOps components and business databases within the platform architecture."
-      },
-      {
-        title: "A shared control plane",
-        description: "An internal library connecting the work of multiple teams, supported by architecture decision records (ADRs) and architecture documentation."
-      }
-    ]
+    proofPoints: ["AZ-305 Certified", "WAF + CAF", "Data Mesh", "Databricks + Spark", "Terraform + IaC", "Claude · Codex · MCP", "Banking · Insurance · Telecom"],
+    downloadCV: "Download CV"
   },
   stats: {
-    "years": "Years in engineering",
-    "industries": "Sectors",
-    "scale": "Geospatial data scale",
-    "compute": "Distributed compute"
-  },
-  deliveryEvidence: {
-    "title": "Architecture with delivery behind it",
-    "intro": "Selected work across banking, insurance, and telecom before my current geospatial role.",
-    "items": [
-      {
-        "sector": "Banking",
-        "metric": "+25%",
-        "label": "Daily business capacity",
-        "description": "Refactored a core decisioning system into modular, event-driven Python services, increasing capacity from 400 to 500 daily requests.",
-        "technologies": "Python · Async · Event-driven architecture"
-      },
-      {
-        "sector": "Insurance",
-        "metric": "Hours → minutes",
-        "label": "Pipeline execution",
-        "description": "Improved data pipelines in a regulated environment, with validation frameworks and analytical models for business reporting.",
-        "technologies": "Azure Databricks · PySpark · Delta Lake"
-      },
-      {
-        "sector": "Telecom",
-        "metric": "~2 TB/day",
-        "label": "Ingestion across 80+ tables",
-        "description": "Designed ingestion architecture and automated data lake maintenance, with CI/CD and machine learning deployments.",
-        "technologies": "Azure · Spark · Terraform · MLOps"
-      }
-    ],
-    "link": "View roles and responsibilities"
-  },
-  architectureDetail: {
-    "title": "A closer look at platform architecture",
-    "summary": "Explore an Azure reference architecture",
-    "description": "A general reference for connectivity, identity, data, and operations. This is an illustration of my approach, separate from the public agency project."
+    years: "Years Experience",
+    industries: "Industries",
+    daily: "Daily Processing",
+    requests: "Daily Requests"
   },
   approach: {
-    "title": "How I take architecture into delivery",
-    "body": "Clear decisions, practical implementation, and a platform the team can operate.",
-    "principles": [
-      {
-        "name": "Define the architecture",
-        "description": "Align requirements, security constraints, and team responsibilities. Record the decisions and tradeoffs in ADRs."
-      },
-      {
-        "name": "Build the platform",
-        "description": "Connect infrastructure, data layers, compute, and MLOps. Develop shared components that let teams work together."
-      },
-      {
-        "name": "Make it operable",
-        "description": "Document how the platform works, clarify ownership, and keep architecture connected to implementation as the system evolves."
-      }
+    title: "How I Work",
+    body: "How I usually approach platform engagements:",
+    principles: [
+      { name: "Discovery & Alignment", description: "Clarify target state, constraints, stakeholders, and operating model before tools start driving the conversation." },
+      { name: "Architecture & Guardrails", description: "Landing zones, security, governance, and data contracts are defined early so delivery does not create expensive rework." },
+      { name: "Delivery in Production", description: "Incremental rollout, testing, observability, and infrastructure as code keep the platform useful beyond the architecture deck." },
+      { name: "AI-Assisted Execution", description: "I use Claude, Codex, and MCP-connected workflows when they improve discovery, documentation, prototyping, and implementation speed without weakening engineering judgment." },
+      { name: "Enablement & Handover", description: "Documentation, standards, mentoring, and clear ownership make the platform operable by the team that will live with it." }
     ],
-    "closing": "My current role spans design, implementation, and the ongoing management of the platform architecture."
+    closing: "The goal is not just a good architecture deck. The goal is a platform teams can operate with confidence."
   },
   lakehouse: {
     title: "Lakehouse Architecture",
@@ -172,15 +94,9 @@ export const en = {
     title: "My Journey",
     items: [
       {
-        company: "Space sector company",
-        sector: "Public sector · Geospatial",
-        period: "May 2026 - Present",
-        description: "Designing, building, and managing the architecture of an Azure geospatial platform for a public agency handling data at petabyte scale. Scope includes networking, Microsoft Entra ID, MLOps, business databases, medallion architecture, distributed HPC on Azure Batch, and an internal control plane library connecting multiple teams."
-      },
-      {
         company: "Knowmad Mood",
         sector: "Banking",
-        period: "Jan 2025 - May 2026",
+        period: "Jan 2025 - Present",
         description: "Led refactoring of business-critical systems into modular, event-driven architectures. Increased daily business capacity from 400 to 500 requests (+25%) through improved algorithm fluidity. Delivered substantial execution time improvements and full end-to-end traceability."
       },
       {
@@ -202,7 +118,7 @@ export const en = {
     items: [
       {
         title: "Enterprise Azure Design",
-        proof: "WAF, CAF, landing zones, governance by design."
+        proof: "AZ-305, WAF, CAF, landing zones, governance by design."
       },
       {
         title: "Production Databricks Delivery",
@@ -245,6 +161,7 @@ export const en = {
     {
       title: "Cloud Architecture",
       keywords: [
+        "AZ-305 Certified",
         "Azure Well-Architected",
         "CAF Landing Zones",
         "Hub-Spoke Topology",
@@ -341,104 +258,20 @@ export const en = {
     text: "If you're designing, modernizing, or scaling a data platform and need someone who can own both the architecture and its delivery, let's talk."
   },
   skills: {
-    "title": "Technical expertise in practice",
-    "subtitle": "The platform responsibilities I take on, and the work behind each capability.",
-    "experienceAction": "See the projects behind this experience",
-    "contactAction": "Discuss architecture and engineering",
-    "categories": [
-      {
-        "id": "architecture",
-        "title": "Architecture and technical direction",
-        "description": "Designing and managing a geospatial platform architecture, recording decisions in ADRs, and connecting the work of multiple teams.",
-        "tools": [
-          "Architecture decisions",
-          "Architecture documentation",
-          "Team coordination"
-        ]
-      },
-      {
-        "id": "cloud",
-        "title": "Azure infrastructure and identity",
-        "description": "Designing networking and Microsoft Entra ID components within an Azure platform built around ENS High requirements.",
-        "tools": [
-          "Azure networking",
-          "Microsoft Entra ID",
-          "Security requirements",
-          "Terraform"
-        ]
-      },
-      {
-        "id": "compute",
-        "title": "Geospatial data and distributed compute",
-        "description": "Working on a public agency platform handling data at petabyte scale, with distributed HPC workloads on Azure Batch.",
-        "tools": [
-          "Geospatial data",
-          "Azure Batch",
-          "HPC",
-          "Petabyte-scale platforms"
-        ]
-      },
-      {
-        "id": "data",
-        "title": "Data platforms and modelling",
-        "description": "Medallion architecture and business databases, backed by previous experience building analytical models and improving insurance data pipelines.",
-        "tools": [
-          "Medallion architecture",
-          "Databricks",
-          "PySpark",
-          "Delta Lake",
-          "SQL"
-        ]
-      },
-      {
-        "id": "delivery",
-        "title": "MLOps and platform delivery",
-        "description": "Implementing MLOps components in the current platform, building on earlier machine learning deployments, CI/CD, and data lake automation.",
-        "tools": [
-          "MLOps",
-          "MLflow",
-          "CI/CD",
-          "Azure DevOps",
-          "Docker"
-        ]
-      },
-      {
-        "id": "software",
-        "title": "Software engineering and shared tooling",
-        "description": "Developing an internal library as a control plane between teams. Earlier work includes modular Python services and an event-driven banking decision engine.",
-        "tools": [
-          "Shared control plane",
-          "Python",
-          "Async",
-          "Event-driven architecture",
-          "Software design"
-        ]
-      }
-    ]
+    title: "Technical Skills",
+    subtitle: "A comprehensive overview of my technical expertise and competencies",
+    levels: {
+      expert: "Expert (90%+)",
+      advanced: "Advanced (75-89%)",
+      intermediate: "Intermediate (60-74%)"
+    },
+    proficiency: "Proficiency Levels"
   },
   roadmap: {
-    "title": "Continuing development",
-    "completed": "Completed learning",
-    "inProgress": "In progress",
-    "upcoming": "Areas to explore",
-    "completedItems": [
-      "Software architecture patterns",
-      "Claude Code: Skills, Plugins & MCP Development"
-    ],
-    "inProgressItems": [
-      {
-        "name": "AZ-104 Azure Administrator Associate",
-        "target": "2026"
-      }
-    ],
-    "upcomingItems": [
-      "Databricks Data Engineer Associate",
-      "Databricks Data Engineer Professional",
-      "Databricks Data Analyst Associate",
-      "Apache Airflow and orchestration",
-      "dbt",
-      "LLMs and AI engineering for data"
-    ]
+    title: "Learning Roadmap",
+    completed: "Completed",
+    inProgress: "In Progress",
+    upcoming: "Upcoming"
   },
   repos: {
     title: "Personal Projects",
@@ -578,23 +411,9 @@ export const en = {
     cta: "Looking for a data platform architect who delivers? Let's talk!",
     timeline: [
       {
-        company: "Space sector company",
-        role: "Data Architect",
-        period: "May 2026 - Present",
-        description: [
-          "Designing, building, and managing the architecture of an Azure geospatial platform for a public agency handling data at petabyte scale",
-          "Designing networking and Microsoft Entra ID components within infrastructure built to meet ENS High requirements",
-          "Implementing medallion architecture and distributed HPC workloads on Azure Batch",
-          "Designing and implementing MLOps components and business databases",
-          "Developing an internal control plane library that connects the work of multiple teams",
-          "Writing architecture decision records (ADRs) and architecture documentation"
-        ],
-        technologies: ["Azure", "Azure Batch", "HPC", "Microsoft Entra ID", "MLOps", "Medallion Architecture", "Geospatial Data"]
-      },
-      {
         company: "Knowmad Mood",
         role: "Senior Data Engineer / Software Engineer",
-        period: "Jan 2025 - May 2026",
+        period: "Jan 2025 - Present",
         location: "Valencia, Spain",
         description: [
           "Led the refactor of a core decisioning engine into a clean, testable Python codebase with async and event-driven architecture",
@@ -672,112 +491,34 @@ export const es = {
     card: "Tarjeta"
   },
   hero: {
-    "headline": "Arquitectura de datos en Azure. Del diseño a la operación.",
-    "typingWords": [
-      "Arquitectura",
-      "Implementación",
-      "Operación"
+    headline: "Plataformas de Datos que Funcionan",
+    typingWords: ["Fiables", "Escalables", "Event-Driven", "Hexagonal", "Well-Architected", "Listas para Producción"],
+    subheadline: "Arquitectura, delivery y gobernanza para plataformas de datos Azure en banca, seguros y telecom.",
+    intro: [
+      "Ayudo a equipos a diseñar y evolucionar plataformas de datos que necesitan ser fiables, gobernadas y listas para producción desde el día uno.",
+      "Eso implica landing zones, seguridad, delivery con Databricks, automatización con Terraform, data products orientados a dominio y patrones de software que mantienen la plataforma sostenible.",
+      "Mi mejor encaje: entornos regulados o de alto volumen donde la arquitectura tiene que sobrevivir al mundo real."
     ],
-    "subheadline": "Actualmente arquitecto de datos en el sector espacial, diseñando una plataforma geoespacial para una agencia pública con datos a escala de petabytes.",
-    "intro": [
-      "Actualmente soy arquitecto de datos en el sector espacial, construyendo una plataforma geoespacial para una agencia pública con datos a escala de petabytes.",
-      "Redes e identidad en Azure, capas medallion, HPC en Azure Batch, MLOps y un plano de control compartido.",
-      "Decisiones de arquitectura respaldadas por software y documentación que los equipos pueden utilizar."
-    ],
-    "proofPoints": [
-      "Datos geoespaciales · Petabytes",
-      "Azure Batch · HPC",
-      "Requisitos ENS Alto"
-    ],
-    "contactAction": "Hablemos de plataformas de datos",
-    "experienceAction": "Conoce mi experiencia",
-    "downloadCV": "Descargar CV"
-  },
-  featuredProject: {
-    eyebrow: "Arquitecto de datos · Mayo 2026 – Actualidad",
-    title: "Una plataforma geoespacial a escala de petabytes",
-    summary: "Diseño, construcción y gestión de la arquitectura de una plataforma geoespacial en Azure para una agencia pública, conectando infraestructura, procesamiento de datos y el trabajo de varios equipos.",
-    facts: [
-      { label: "Volumen de datos", value: "Escala de petabytes" },
-      { label: "Cómputo distribuido", value: "HPC sobre Azure Batch" },
-      { label: "Requisitos de seguridad", value: "ENS Alto" }
-    ],
-    responsibilities: [
-      {
-        title: "Infraestructura e identidad",
-        description: "Redes en Azure y Microsoft Entra ID como parte de una infraestructura diseñada para cubrir los requisitos de ENS Alto."
-      },
-      {
-        title: "Arquitectura de datos y cómputo",
-        description: "Arquitectura medallion para datos geoespaciales y cargas HPC distribuidas sobre Azure Batch."
-      },
-      {
-        title: "MLOps y bases de datos de negocio",
-        description: "Diseño e implementación de componentes MLOps y bases de datos de negocio dentro de la arquitectura de la plataforma."
-      },
-      {
-        title: "Un plano de control compartido",
-        description: "Una librería interna que interconecta el trabajo de los equipos, acompañada de registros de decisiones de arquitectura (ADRs) y documentación de arquitectura."
-      }
-    ]
+    proofPoints: ["AZ-305 Certificado", "WAF + CAF", "Data Mesh", "Databricks + Spark", "Terraform + IaC", "Claude · Codex · MCP", "Banca · Seguros · Telecom"],
+    downloadCV: "Descargar CV"
   },
   stats: {
-    "years": "Años en ingeniería",
-    "industries": "Sectores",
-    "scale": "Escala de datos geoespaciales",
-    "compute": "Cómputo distribuido"
-  },
-  deliveryEvidence: {
-    "title": "Arquitectura con experiencia de implementación",
-    "intro": "Una selección de trabajos en banca, seguros y telecomunicaciones anteriores a mi etapa geoespacial actual.",
-    "items": [
-      {
-        "sector": "Banca",
-        "metric": "+25 %",
-        "label": "Capacidad de negocio diaria",
-        "description": "Refactoricé un motor de decisión en servicios Python modulares y orientados a eventos, aumentando la capacidad de 400 a 500 peticiones diarias.",
-        "technologies": "Python · Async · Arquitectura orientada a eventos"
-      },
-      {
-        "sector": "Seguros",
-        "metric": "Horas → minutos",
-        "label": "Ejecución de pipelines",
-        "description": "Mejoré pipelines de datos en un entorno regulado, con validaciones y modelos analíticos para los informes de negocio.",
-        "technologies": "Azure Databricks · PySpark · Delta Lake"
-      },
-      {
-        "sector": "Telecomunicaciones",
-        "metric": "~2 TB/día",
-        "label": "Ingesta en más de 80 tablas",
-        "description": "Diseñé la arquitectura de ingesta y automaticé el mantenimiento del data lake, con CI/CD y despliegues de modelos de machine learning.",
-        "technologies": "Azure · Spark · Terraform · MLOps"
-      }
-    ],
-    "link": "Ver puestos y responsabilidades"
-  },
-  architectureDetail: {
-    "title": "La arquitectura, con más detalle",
-    "summary": "Explorar una arquitectura de referencia en Azure",
-    "description": "Una referencia general de conectividad, identidad, datos y operación. Ilustra mi enfoque y es independiente del proyecto de la agencia pública."
+    years: "Años Experiencia",
+    industries: "Industrias",
+    daily: "Procesamiento Diario",
+    requests: "Peticiones Diarias"
   },
   approach: {
-    "title": "Cómo llevo la arquitectura a la práctica",
-    "body": "Decisiones claras, implementación y una plataforma que el equipo pueda operar.",
-    "principles": [
-      {
-        "name": "Definir la arquitectura",
-        "description": "Alinear requisitos, restricciones de seguridad y responsabilidades de los equipos. Documentar las decisiones y sus compromisos en ADRs."
-      },
-      {
-        "name": "Construir la plataforma",
-        "description": "Conectar infraestructura, capas de datos, cómputo y MLOps. Desarrollar componentes compartidos que permitan trabajar a los equipos de forma coordinada."
-      },
-      {
-        "name": "Hacerla operable",
-        "description": "Documentar el funcionamiento, aclarar responsabilidades y mantener la arquitectura conectada con la implementación a medida que evoluciona el sistema."
-      }
+    title: "Cómo Trabajo",
+    body: "Cómo suelo abordar proyectos de plataforma:",
+    principles: [
+      { name: "Discovery y Alineamiento", description: "Aclaro estado objetivo, restricciones, stakeholders y modelo operativo antes de que las herramientas empiecen a dictar la conversación." },
+      { name: "Arquitectura y Guardrails", description: "Landing zones, seguridad, gobernanza y contratos de datos se definen pronto para que el delivery no genere retrabajo caro." },
+      { name: "Delivery en Producción", description: "Despliegue incremental, testing, observabilidad e infraestructura como código mantienen la plataforma útil más allá del deck de arquitectura." },
+      { name: "Ejecución Asistida por IA", description: "Uso Claude, Codex y workflows conectados por MCP cuando mejoran discovery, documentación, prototipado y velocidad de implementación sin debilitar el criterio de ingeniería." },
+      { name: "Enablement y Handover", description: "Documentación, estándares, mentoría y ownership claro hacen que el equipo pueda operar la plataforma con confianza." }
     ],
-    "closing": "Mi puesto actual abarca el diseño, la implementación y la gestión continua de la arquitectura de la plataforma."
+    closing: "El objetivo no es solo un buen deck de arquitectura. El objetivo es una plataforma que el equipo pueda operar con confianza."
   },
   lakehouse: {
     title: "Arquitectura Lakehouse",
@@ -833,15 +574,9 @@ export const es = {
     title: "Mi Trayectoria",
     items: [
       {
-        company: "Empresa del sector espacial",
-        sector: "Sector público · Geoespacial",
-        period: "May 2026 - Presente",
-        description: "Diseño, construcción y gestión de la arquitectura de una plataforma geoespacial en Azure para una agencia pública con datos a escala de petabytes. Responsabilidad sobre redes, Microsoft Entra ID, MLOps, bases de datos de negocio, arquitectura medallion, HPC distribuido en Azure Batch y una librería interna como plano de control entre equipos."
-      },
-      {
         company: "Knowmad Mood",
         sector: "Banca",
-        period: "Ene 2025 - May 2026",
+        period: "Ene 2025 - Presente",
         description: "Lideré la refactorización de sistemas críticos de negocio hacia arquitecturas modulares y event-driven. Incrementé la capacidad de negocio diaria de 400 a 500 peticiones (+25%) mejorando la fluidez del algoritmo. Mejoras sustanciales en tiempo de ejecución y trazabilidad end-to-end."
       },
       {
@@ -863,7 +598,7 @@ export const es = {
     items: [
       {
         title: "Diseño Azure Enterprise",
-        proof: "WAF, CAF, landing zones y gobernanza por diseño."
+        proof: "AZ-305, WAF, CAF, landing zones y gobernanza por diseño."
       },
       {
         title: "Delivery Databricks en Producción",
@@ -906,6 +641,7 @@ export const es = {
     {
       title: "Arquitectura Cloud",
       keywords: [
+        "AZ-305 Certificado",
         "Azure Well-Architected",
         "CAF Landing Zones",
         "Topología Hub-Spoke",
@@ -1002,104 +738,20 @@ export const es = {
     text: "Si estás diseñando, modernizando o escalando una plataforma de datos y necesitas a alguien que pueda responsabilizarse tanto de la arquitectura como de su entrega, hablemos."
   },
   skills: {
-    "title": "Experiencia técnica aplicada",
-    "subtitle": "Las responsabilidades que asumo en una plataforma y el trabajo que respalda cada capacidad.",
-    "experienceAction": "Ver los proyectos que respaldan esta experiencia",
-    "contactAction": "Hablemos de arquitectura e ingeniería",
-    "categories": [
-      {
-        "id": "architecture",
-        "title": "Arquitectura y dirección técnica",
-        "description": "Diseño y gestión de la arquitectura de una plataforma geoespacial, documentación de decisiones en ADRs y conexión del trabajo de varios equipos.",
-        "tools": [
-          "Decisiones de arquitectura",
-          "Documentación de arquitectura",
-          "Coordinación entre equipos"
-        ]
-      },
-      {
-        "id": "cloud",
-        "title": "Infraestructura e identidad en Azure",
-        "description": "Diseño de redes y componentes de Microsoft Entra ID en una plataforma Azure orientada a cubrir los requisitos de ENS Alto.",
-        "tools": [
-          "Redes en Azure",
-          "Microsoft Entra ID",
-          "Requisitos de seguridad",
-          "Terraform"
-        ]
-      },
-      {
-        "id": "compute",
-        "title": "Datos geoespaciales y cómputo distribuido",
-        "description": "Trabajo en una plataforma para una agencia pública con datos a escala de petabytes y cargas HPC distribuidas sobre Azure Batch.",
-        "tools": [
-          "Datos geoespaciales",
-          "Azure Batch",
-          "HPC",
-          "Plataformas a escala de petabytes"
-        ]
-      },
-      {
-        "id": "data",
-        "title": "Plataformas y modelado de datos",
-        "description": "Arquitectura medallion y bases de datos de negocio, con experiencia previa en modelos analíticos y mejoras de pipelines en seguros.",
-        "tools": [
-          "Arquitectura medallion",
-          "Databricks",
-          "PySpark",
-          "Delta Lake",
-          "SQL"
-        ]
-      },
-      {
-        "id": "delivery",
-        "title": "MLOps e implementación de plataformas",
-        "description": "Implementación de componentes MLOps en la plataforma actual, apoyada en experiencia previa con despliegues de modelos, CI/CD y automatización del data lake.",
-        "tools": [
-          "MLOps",
-          "MLflow",
-          "CI/CD",
-          "Azure DevOps",
-          "Docker"
-        ]
-      },
-      {
-        "id": "software",
-        "title": "Ingeniería de software y herramientas compartidas",
-        "description": "Desarrollo de una librería interna como plano de control entre equipos. Experiencia anterior con servicios Python modulares y un motor de decisión bancario orientado a eventos.",
-        "tools": [
-          "Plano de control compartido",
-          "Python",
-          "Async",
-          "Arquitectura orientada a eventos",
-          "Diseño de software"
-        ]
-      }
-    ]
+    title: "Habilidades Técnicas",
+    subtitle: "Una visión completa de mi experiencia técnica y competencias",
+    levels: {
+      expert: "Experto (90%+)",
+      advanced: "Avanzado (75-89%)",
+      intermediate: "Intermedio (60-74%)"
+    },
+    proficiency: "Niveles de Competencia"
   },
   roadmap: {
-    "title": "Formación continua",
-    "completed": "Aprendizaje completado",
-    "inProgress": "En curso",
-    "upcoming": "Áreas por explorar",
-    "completedItems": [
-      "Patrones de arquitectura de software",
-      "Claude Code: Skills, Plugins y desarrollo MCP"
-    ],
-    "inProgressItems": [
-      {
-        "name": "AZ-104 Azure Administrator Associate",
-        "target": "2026"
-      }
-    ],
-    "upcomingItems": [
-      "Databricks Data Engineer Associate",
-      "Databricks Data Engineer Professional",
-      "Databricks Data Analyst Associate",
-      "Apache Airflow y orquestación",
-      "dbt",
-      "LLMs e ingeniería de IA para datos"
-    ]
+    title: "Roadmap de Aprendizaje",
+    completed: "Completado",
+    inProgress: "En Progreso",
+    upcoming: "Próximos"
   },
   repos: {
     title: "Proyectos Personales",
@@ -1239,23 +891,9 @@ export const es = {
     cta: "¿Buscas un arquitecto de plataformas de datos que entregue resultados? ¡Hablemos!",
     timeline: [
       {
-        company: "Empresa del sector espacial",
-        role: "Arquitecto de datos",
-        period: "May 2026 - Presente",
-        description: [
-          "Diseño, construcción y gestión de la arquitectura de una plataforma geoespacial en Azure para una agencia pública con datos del orden de los petabytes",
-          "Diseño de redes y componentes de Microsoft Entra ID en una infraestructura orientada a cubrir los requisitos de ENS Alto",
-          "Implementación de arquitectura medallion y cargas HPC distribuidas sobre Azure Batch",
-          "Diseño e implementación de componentes MLOps y bases de datos de negocio",
-          "Desarrollo de una librería interna que actúa como plano de control e interconecta el trabajo de los equipos",
-          "Elaboración de registros de decisiones de arquitectura (ADRs) y documentación de arquitectura"
-        ],
-        technologies: ["Azure", "Azure Batch", "HPC", "Microsoft Entra ID", "MLOps", "Arquitectura Medallion", "Datos geoespaciales"]
-      },
-      {
         company: "Knowmad Mood",
         role: "Senior Data Engineer / Software Engineer",
-        period: "Ene 2025 - May 2026",
+        period: "Ene 2025 - Presente",
         location: "Valencia, España",
         description: [
           "Liderazgo en la refactorización de un motor de decisiones core hacia un código Python limpio y testeable con arquitectura async y event-driven",

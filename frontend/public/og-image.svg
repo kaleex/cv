@@ -1,13 +1,13 @@
 <svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#060608"/>
-      <stop offset="50%" style="stop-color:#111009"/>
-      <stop offset="100%" style="stop-color:#25200e"/>
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="50%" style="stop-color:#1e293b"/>
+      <stop offset="100%" style="stop-color:#334155"/>
     </linearGradient>
     <linearGradient id="text-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#d7af18"/>
-      <stop offset="100%" style="stop-color:#27ddd2"/>
+      <stop offset="0%" style="stop-color:#60a5fa"/>
+      <stop offset="100%" style="stop-color:#a78bfa"/>
     </linearGradient>
   </defs>
   
@@ -15,24 +15,24 @@
   
   <!-- Logo AQ -->
   <rect x="60" y="50" width="80" height="80" rx="16" fill="url(#text-gradient)"/>
-  <text x="100" y="105" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="#060608" text-anchor="middle">AQ</text>
+  <text x="100" y="105" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="#0f172a" text-anchor="middle">AQ</text>
   
   <!-- Name -->
-  <text x="600" y="200" font-family="Arial, sans-serif" font-size="32" fill="#d7af18" text-anchor="middle" letter-spacing="3">ALEJANDRO QUILEZ ASENSIO</text>
+  <text x="600" y="200" font-family="Arial, sans-serif" font-size="32" fill="#60a5fa" text-anchor="middle" letter-spacing="3">ALEJANDRO QUILEZ ASENSIO</text>
   
   <!-- Headline -->
-  <text x="600" y="290" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="url(#text-gradient)" text-anchor="middle">Data Architecture</text>
-  <text x="600" y="370" font-family="Arial, sans-serif" font-size="54" font-weight="bold" fill="url(#text-gradient)" text-anchor="middle">From Design to Operation</text>
+  <text x="600" y="290" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="url(#text-gradient)" text-anchor="middle">Data Platforms That</text>
+  <text x="600" y="370" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="url(#text-gradient)" text-anchor="middle">Actually Work</text>
   
   <!-- Subtitle -->
-  <text x="600" y="450" font-family="Arial, sans-serif" font-size="28" fill="#e2e8f0" text-anchor="middle">Azure · Geospatial Platforms · HPC</text>
+  <text x="600" y="450" font-family="Arial, sans-serif" font-size="28" fill="#e2e8f0" text-anchor="middle">Senior Data Engineer · Azure · Databricks</text>
   
   <!-- Stats -->
-  <text x="200" y="550" font-family="Arial, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Petabyte Scale</text>
-  <text x="450" y="550" font-family="Arial, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Public Sector</text>
-  <text x="700" y="550" font-family="Arial, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Azure Batch</text>
-  <text x="950" y="550" font-family="Arial, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">MLOps</text>
+  <text x="250" y="550" font-family="Arial, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">4+ Years</text>
+  <text x="450" y="550" font-family="Arial, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">3 Industries</text>
+  <text x="650" y="550" font-family="Arial, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">2TB/day</text>
+  <text x="850" y="550" font-family="Arial, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">500+ Requests</text>
   
   <!-- URL -->
-  <text x="1050" y="580" font-family="Arial, sans-serif" font-size="20" fill="#d7af18" text-anchor="middle">alejandroquilez.dev</text>
+  <text x="1050" y="580" font-family="Arial, sans-serif" font-size="20" fill="#60a5fa" text-anchor="middle">alejandroquilez.dev</text>
 </svg>
